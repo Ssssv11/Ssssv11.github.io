@@ -15,7 +15,7 @@
   </entry>
   <entry>
     <title>Hello Hexo</title>
-    <url>/2021/03/10/hello-world/</url>
+    <url>/2021/03/10/Hello%20Hexo/</url>
     <content><![CDATA[<p><font size=3 ><a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a>是一个快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。</font></p>
 <span id="more"></span>
 
@@ -47,6 +47,58 @@
 ]]></content>
       <tags>
         <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Learning Plans</title>
+    <url>/2021/03/10/Learning%20Plans/</url>
+    <content><![CDATA[<center>秃头之路</center>
+<span id="more"></span>
+
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ul>
+<li>编程语言 Java C/C++ Python</li>
+<li>基本算法</li>
+<li>基本网络知识: TCP/IP HTTP/HTTPS</li>
+<li>基本的设计模式</li>
+</ul>
+<hr>
+<h2 id="工具方面"><a href="#工具方面" class="headerlink" title="工具方面"></a>工具方面</h2><ul>
+<li>操作系统: Linux(CentOS/Ubuntu/Fe)</li>
+<li>代码管理: SVN/Git</li>
+<li>持续集成(CI/CD): Jenkins</li>
+<li>Java项目管理工具: Maven/Gradle</li>
+</ul>
+<hr>
+<h2 id="框架方面"><a href="#框架方面" class="headerlink" title="框架方面"></a>框架方面</h2><h4 id="应用层框架"><a href="#应用层框架" class="headerlink" title="应用层框架"></a>应用层框架</h4><ul>
+<li><del>SSH: Spring + Struct + hibernate</del></li>
+<li>SSM: Spring + Springmvc + Mybatis</li>
+<li>Spring boot</li>
+</ul>
+<h4 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h4><ul>
+<li>MQ 消息队列</li>
+<li>RPC 通信框架 gRPC thrift dubbo springcloud</li>
+<li>elasticsearch 搜索引擎</li>
+</ul>
+<h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h4><ul>
+<li>SQL: MySQL / Postgre SQL</li>
+<li>NoSQL: Redis / Memcached / mongodb / elasticsearch</li>
+</ul>
+<hr>
+<h2 id="架构方面"><a href="#架构方面" class="headerlink" title="架构方面"></a>架构方面</h2><h4 id="分布式-微服务架构"><a href="#分布式-微服务架构" class="headerlink" title="分布式/微服务架构"></a>分布式/微服务架构</h4><ul>
+<li>Spring cloud</li>
+<li>dubbo</li>
+<li>RPC通信</li>
+</ul>
+<h4 id="虚拟化-容器化技术"><a href="#虚拟化-容器化技术" class="headerlink" title="虚拟化/容器化技术"></a>虚拟化/容器化技术</h4><ul>
+<li>Docker容器化</li>
+<li>k8s kubernetes</li>
+</ul>
+<hr>
+<h4 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h4><p><a href="https://leetcode-cn.com/" title="力扣">力扣</a> (Top 100 Liked Questions)</p>
+<p><a href="https://www.nowcoder.com/contestRoom" title="牛客">牛客</a></p>
+]]></content>
+      <tags>
+        <tag>Plans</tag>
       </tags>
   </entry>
 </search>
