@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>MarkDown学习</title>
+    <url>/2021/03/10/MarkDown/</url>
+    <content><![CDATA[<p><font size=3 ><a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<span id="more"></span>
+
+<h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。最多支持六级标题。</p>
+<h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h1 id="二、转义符"><a href="#二、转义符" class="headerlink" title="二、转义符"></a>二、转义符</h1><p>比如想输入：<br>** 我想输入一对儿星号 **,<br>结果是：<strong>我想输入一对儿星号</strong> ，<br>没有显示出希望的**, 而得到了加粗的结果。<br>这时候可以使用反斜杠 \ 来避免MarkDown解析：\*\*我想输入一对儿星号\*\*,<br>得到结果是 **我想输入一对儿星号** , 这时候星号就正常出现了。</font></p>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello Hexo</title>
     <url>/2021/03/10/hello-world/</url>
     <content><![CDATA[<p><font size=3 ><a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a>是一个快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。</font></p>
@@ -34,19 +47,6 @@
 ]]></content>
       <tags>
         <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MarkDown学习</title>
-    <url>/2021/03/10/MarkDown/</url>
-    <content><![CDATA[<p><font size=3 ><a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
-<span id="more"></span>
-
-<h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。最多支持六级标题。</p>
-<h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h1 id="二、转义符"><a href="#二、转义符" class="headerlink" title="二、转义符"></a>二、转义符</h1><p>比如想输入：<br>** 我想输入一对儿星号 **,<br>结果是：<strong>我想输入一对儿星号</strong> ，<br>没有显示出希望的**, 而得到了加粗的结果。<br>这时候可以使用反斜杠 \ 来避免MarkDown解析：\*\*我想输入一对儿星号\*\*,<br>得到结果是 **我想输入一对儿星号** , 这时候星号就正常出现了。</font></p>
-]]></content>
-      <tags>
-        <tag>Markdown</tag>
       </tags>
   </entry>
 </search>
