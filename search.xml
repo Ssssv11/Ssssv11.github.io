@@ -4,10 +4,9 @@
     <title>Hello Hexo</title>
     <url>/2021/03/10/hello-world/</url>
     <content><![CDATA[<p><font size=3 ><a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a>是一个快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。</font></p>
-<h1 id="Hexo指令说明"><a href="#Hexo指令说明" class="headerlink" title="Hexo指令说明"></a>Hexo指令说明</h1><span id="more"></span>
+<span id="more"></span>
 
-
-<ul>
+<h1 id="Hexo指令说明"><a href="#Hexo指令说明" class="headerlink" title="Hexo指令说明"></a>Hexo指令说明</h1><ul>
 <li> <code>hexo server</code>   <font size=3 >Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</font></li>
 <li><code>hexo server -s</code>  <font size=3 >以静态模式启动</font></li>
 <li><code>hexo server -p 5000</code>  <font size=3 >更改访问端口 (默认端口为3000，’ctrl + c’关闭server)</font></li>
