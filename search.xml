@@ -70,13 +70,13 @@
 </ul>
 <hr>
 <h2 id="框架方面"><a href="#框架方面" class="headerlink" title="框架方面"></a>框架方面</h2><h4 id="应用层框架"><a href="#应用层框架" class="headerlink" title="应用层框架"></a>应用层框架</h4><ul>
-<li><del>SSH: Spring + Struct + hibernate</del></li>
+<li><del>SSH: Spring + Struct + Hibernate</del></li>
 <li>SSM: Spring + Springmvc + Mybatis</li>
-<li>Spring boot</li>
+<li>Spring Boot</li>
 </ul>
 <h4 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h4><ul>
 <li>MQ消息队列</li>
-<li>RPC通信框架 gRPC/thrift/dubbo/springcloud</li>
+<li>RPC通信框架 gRPC/Thrift/Dubbo/SpringCloud</li>
 <li>Elasticsearch 搜索引擎</li>
 </ul>
 <h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h4><ul>
@@ -85,7 +85,7 @@
 </ul>
 <hr>
 <h2 id="架构方面"><a href="#架构方面" class="headerlink" title="架构方面"></a>架构方面</h2><h4 id="分布式-微服务架构"><a href="#分布式-微服务架构" class="headerlink" title="分布式/微服务架构"></a>分布式/微服务架构</h4><ul>
-<li>Springcloud</li>
+<li>SpringCloud</li>
 <li>Dubbo</li>
 <li>RPC通信</li>
 </ul>
@@ -100,5 +100,20 @@
       <tags>
         <tag>Plans</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>$title</title>
+    <url>/2021/03/10/title-2/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>$title</title>
+    <url>/2021/03/10/title-1/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>$title</title>
+    <url>/2021/03/10/title/</url>
+    <content><![CDATA[]]></content>
   </entry>
 </search>
