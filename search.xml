@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello Hexo</title>
+    <url>/2021/03/10/hello-world/</url>
+    <content><![CDATA[<p><font size=3 ><a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a>是一个快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。</font></p>
+<h1 id="Hexo指令说明"><a href="#Hexo指令说明" class="headerlink" title="Hexo指令说明"></a>Hexo指令说明</h1><span id="more"></span>
+
+
+<ul>
+<li> <code>hexo server</code>   <font size=3 >Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</font></li>
+<li><code>hexo server -s</code>  <font size=3 >以静态模式启动</font></li>
+<li><code>hexo server -p 5000</code>  <font size=3 >更改访问端口 (默认端口为3000，’ctrl + c’关闭server)</font></li>
+<li><code>hexo server -i IP地址</code>  <font size=3 >自定义 IP</font></li>
+<li><code>hexo clean</code>  <font size=3 >清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹</font></li>
+<li><code>hexo g</code>  <font size=3 >生成静态网页</font></li>
+<li><code>hexo d</code>  <font size=3 >将本地数据部署到远端服务器(如github)</font></li>
+<li><code>hexo init</code> <font size=3 >文件夹名称 #初始化XX文件夹名称</font></li>
+<li><code>npm update hexo -g</code> <font size=3 >升级</font></li>
+<li><code>npm install hexo -g</code> <font size=3 >安装</font></li>
+<li><code>npm -v</code>  <font size=3 >查看npm版本号</font></li>
+<li><code>git --versio</code>n  <font size=3 >查看git版本号</font></li>
+<li><code>hexo -v</code>  <font size=3 >查看hexo版本号</font></li>
+</ul>
+<hr>
+<ul>
+<li><code>hexo n &quot;&quot;</code> <font size=3 >等价于</font> <code>hexo new &quot;&quot;</code> <font size=3 >等价于</font> <code>hexo new post &quot;&quot;</code></li>
+<li><font color=#00ffff> <code>hexo p</code> </font> <font size=3 >等价于</font> <code>hexo publish</code></li>
+<li><code>hexo g</code> <font size=3 >等价于</font> <code>hexo generate</code></li>
+<li><code>hexo s</code> <font size=3 >等价于</font> <code>hexo server</code></li>
+<li><code>hexo d</code> <font size=3 >等价于</font> <code>hexo deploy</code></li>
+<li><code>hexo deploy -g</code> <font size=3 >等价于</font> <code>hexo deploy --generate</code></li>
+<li><code>hexo generate -d</code> <font size=3 >等价于</font> <code>hexo generate --deploy</code></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MarkDown学习</title>
+    <url>/2021/03/10/MarkDown/</url>
+    <content><![CDATA[<p><font size=3 ><a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<span id="more"></span>
+
+<h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。最多支持六级标题。</p>
+<h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h1 id="二、转义符"><a href="#二、转义符" class="headerlink" title="二、转义符"></a>二、转义符</h1><p>比如想输入：<br>** 我想输入一对儿星号 **,<br>结果是：<strong>我想输入一对儿星号</strong> ，<br>没有显示出希望的**, 而得到了加粗的结果。<br>这时候可以使用反斜杠 \ 来避免MarkDown解析：\*\*我想输入一对儿星号\*\*,<br>得到结果是 **我想输入一对儿星号** , 这时候星号就正常出现了。</font></p>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+</search>

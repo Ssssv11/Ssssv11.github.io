@@ -14,14 +14,14 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=微软雅黑:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"ssssv11.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}};
+    var CONFIG = {"hostname":"ssssv11.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ssssv">
@@ -112,6 +112,7 @@
 
   <div class="site-nav-right">
     <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
 </div>
@@ -121,11 +122,40 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
   </ul>
 </nav>
 
 
 
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
 
 </div>
         
@@ -156,16 +186,25 @@
 
         <div class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ssssv11"
+      src="/images/header.jpg">
   <p class="site-author-name" itemprop="name">Ssssv11</p>
   <div class="site-description" itemprop="description"></div>
 </div>
 <div class="site-state-wrap site-overview-item animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives">
+          <a href="/archives/">
+        
           <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
 </div>
@@ -208,7 +247,7 @@
     <link itemprop="mainEntityOfPage" href="https://ssssv11.github.io/2021/03/10/MarkDown/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/header.jpg">
       <meta itemprop="name" content="Ssssv11">
       <meta itemprop="description" content="">
     </span>
@@ -230,7 +269,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-03-10 14:08:16 / Modified: 15:10:08" itemprop="dateCreated datePublished" datetime="2021-03-10T14:08:16+08:00">2021-03-10</time>
+      <time title="Created: 2021-03-10 14:08:16 / Modified: 17:58:10" itemprop="dateCreated datePublished" datetime="2021-03-10T14:08:16+08:00">2021-03-10</time>
     </span>
 
   
@@ -243,10 +282,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
-<h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。最多支持六级标题。</p>
-<h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><h1 id="二、转义符"><a href="#二、转义符" class="headerlink" title="二、转义符"></a>二、转义符</h1><p>比如想输入：<br>** 我想输入一对儿星号 **,<br>结果是：<strong>我想输入一对儿星号</strong> ，<br>没有显示出希望的**, 而得到了加粗的结果。<br>这时候可以使用反斜杠 \ 来避免MarkDown解析：\*\*我想输入一对儿星号\*\*,<br>得到结果是 **我想输入一对儿星号** , 这时候星号就正常出现了。</p>
-
+          <p><font size=3 ><a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/10/MarkDown/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -275,7 +319,7 @@
     <link itemprop="mainEntityOfPage" href="https://ssssv11.github.io/2021/03/10/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/header.jpg">
       <meta itemprop="name" content="Ssssv11">
       <meta itemprop="description" content="">
     </span>
@@ -297,7 +341,7 @@
       <span class="post-meta-item-text">Posted on</span>
       
 
-      <time title="Created: 2021-03-10 08:52:23 / Modified: 15:59:33" itemprop="dateCreated datePublished" datetime="2021-03-10T08:52:23+08:00">2021-03-10</time>
+      <time title="Created: 2021-03-10 08:52:23 / Modified: 17:57:38" itemprop="dateCreated datePublished" datetime="2021-03-10T08:52:23+08:00">2021-03-10</time>
     </span>
 
   
@@ -310,33 +354,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a>是一个快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。</p>
-<h1 id="Hexo指令说明"><a href="#Hexo指令说明" class="headerlink" title="Hexo指令说明"></a>Hexo指令说明</h1><ul>
-<li> <code>hexo server</code>   Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</li>
-<li><code>hexo server -s</code>  以静态模式启动</li>
-<li><code>hexo server -p 5000</code>  更改访问端口 (默认端口为4000，’ctrl + c’关闭server)</li>
-<li><code>hexo server -i IP地址</code>  自定义 IP</li>
-<li><code>hexo clean</code>  清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹</li>
-<li><code>hexo g</code>  生成静态网页</li>
-<li><code>hexo d</code>  将本地数据部署到远端服务器(如github)</li>
-<li><code>hexo init</code> 文件夹名称 #初始化XX文件夹名称</li>
-<li><code>npm update hexo -g</code> 升级</li>
-<li><code>npm install hexo -g</code> 安装</li>
-<li><code>npm -v</code>  查看npm版本号</li>
-<li><code>git --versio</code>n  查看git版本号</li>
-<li><code>hexo -v</code>  查看hexo版本号</li>
-</ul>
-<hr>
-<ul>
-<li><code>hexo n &quot;&quot;</code> 等价于 <code>hexo new &quot;&quot;</code> 等价于 <code>hexo new post &quot;&quot;</code></li>
-<li><code>hexo p</code> 等价于 <code>hexo publish</code></li>
-<li><code>hexo g</code> 等价于 <code>hexo generate</code></li>
-<li><code>hexo s</code> 等价于 <code>hexo server</code></li>
-<li><code>hexo d</code> 等价于 <code>hexo deploy</code></li>
-<li><code>hexo deploy -g</code> 等价于 <code>hexo deploy --generate</code></li>
-<li><code>hexo generate -d</code> 等价于 <code>hexo generate --deploy</code></li>
-</ul>
-
+          <p><font size=3 ><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a>是一个快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。</font></p>
+<h1 id="Hexo指令说明"><a href="#Hexo指令说明" class="headerlink" title="Hexo指令说明"></a>Hexo指令说明</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/10/hello-world/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -392,6 +419,24 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Ssssv11</span>
 </div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
   <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
   </div>
 
@@ -403,6 +448,7 @@
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
+<script src="/js/local-search.js"></script>
 
 
 
@@ -410,6 +456,7 @@
 
 
   
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
 
