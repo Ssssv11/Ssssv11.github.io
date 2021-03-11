@@ -31,7 +31,7 @@
 <meta property="og:description" content="Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-03-10T06:08:16.173Z">
-<meta property="article:modified_time" content="2021-03-11T10:39:24.220Z">
+<meta property="article:modified_time" content="2021-03-11T10:45:47.141Z">
 <meta property="article:author" content="Ssssv11">
 <meta property="article:tag" content="Markdown">
 <meta name="twitter:card" content="summary">
@@ -282,7 +282,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2021-03-11 18:39:24" itemprop="dateModified" datetime="2021-03-11T18:39:24+08:00">2021-03-11</time>
+        <time title="Modified: 2021-03-11 18:45:47" itemprop="dateModified" datetime="2021-03-11T18:45:47+08:00">2021-03-11</time>
       </span>
 
   
@@ -307,7 +307,9 @@
 
 <h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。最多支持六级标题。</p>
 <p>示例:</p>
-<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题 </span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">## 这是二级标题
+### 这是三级标题
+#### 这是四级标题 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
 <h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><hr>
 <h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><ul>
@@ -323,13 +325,18 @@
 </ul>
 <p>要倾斜和加粗的文字左右分别用三个*包起来</p>
 <p>示例:</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**这是加粗的文字**</span></span><br><span class="line"><span class="strong">*这是倾斜的文字*</span>`</span><br><span class="line"><span class="strong">***这是斜体加粗的文字**</span>*</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">**这是加粗的文字**
+*这是倾斜的文字*&#96;
+***这是斜体加粗的文字***
+~~这是加删除线的文字~~<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
 <p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em><br><em><strong>这是斜体加粗的文字</strong></em><br><del>这是加删除线的文字</del></p>
 <hr>
 <h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;</p>
 <p>示例:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&gt;这是引用的内容
+&gt;&gt;这是引用的内容
+&gt;&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
 <blockquote>
 <p>这是引用的内容</p>
@@ -351,28 +358,41 @@
 <hr>
 <h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。</p>
 <p>示例:</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">***</span></span><br><span class="line"><span class="string">*****</span></span><br><span class="line"><span class="string">*</span> <span class="string">*</span> <span class="string">*</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">----------</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">***
+*****
+* * *
+---
+----------<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
 <hr>
 <hr>
 <hr>
 <hr>
 <h1 id="五、超链接"><a href="#五、超链接" class="headerlink" title="五、超链接"></a>五、超链接</h1><p>语法:</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[超链接名]</span>(超链接地址 <span class="string">&quot;超链接title&quot;</span>)</span><br><span class="line"><span class="selector-tag">title</span>可加可不加</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">[超链接名](超链接地址 &quot;超链接title&quot;)
+title可加可不加<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>示例：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[百度]</span>(<span class="attribute">http</span>:<span class="comment">//baidu.com)</span></span><br><span class="line">[Ssssv](<span class="attribute">https</span>:<span class="comment">//ssssv11.github.io/)</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">[百度](http:&#x2F;&#x2F;baidu.com)
+[Ssssv](https:&#x2F;&#x2F;ssssv11.github.io&#x2F;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>效果如下:<br><a target="_blank" rel="noopener" href="http://baidu.com/">百度</a><br><a href="https://ssssv11.github.io/">Ssssv</a></p>
 <hr>
 <h1 id="六、图片"><a href="#六、图片" class="headerlink" title="六、图片"></a>六、图片</h1><p>语法:</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 <span class="string">&#x27;&#x27;</span>图片titl<span class="string">e&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">![图片alt](图片地址 &#39;&#39;图片title&#39;&#39;)
+
+图片alt就是显示在图片下面的文字，相当于对图片内容的解释。
+图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>示例:</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![MarkDown](http:<span class="regexp">//</span>dwz.win/agy9 <span class="string">&quot;MarkDown&quot;</span>)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">![MarkDown](http:&#x2F;&#x2F;dwz.win&#x2F;agy9 &quot;MarkDown&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <hr>
 <h1 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>无序列表用 - + * 任何一种都可以<br>示例:</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 列表内容</span><br><span class="line"><span class="bullet">+</span> 列表内容</span><br><span class="line"><span class="bullet">*</span> 列表内容</span><br><span class="line"></span><br><span class="line">注：- + <span class="emphasis">* 跟内容之间都要有一个空格</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">- 列表内容
++ 列表内容
+* 列表内容
+
+注：- + * 跟内容之间都要有一个空格<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
 <ul>
 <li>列表内容</li>
@@ -384,7 +404,11 @@
 <li>列表内容</li>
 </ul>
 <h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>数字加点<br>示例:</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 列表内容</span><br><span class="line"><span class="bullet">2.</span> 列表内容</span><br><span class="line"><span class="bullet">3.</span> 列表内容</span><br><span class="line"></span><br><span class="line">注：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">1. 列表内容
+2. 列表内容
+3. 列表内容
+
+注：序号跟内容之间要有空格<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
 <ol>
 <li>列表内容</li>
@@ -393,7 +417,10 @@
 </ol>
 <h2 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h2><p>上一级和下一级之间敲三个空格即可</p>
 <p>示例:</p>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">*一级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">*一级无序列表内容
+   *二级无序列表内容
+   *二级无序列表内容
+   *二级无序列表内容<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
 <ul>
 <li><p>一级无序列表内容</p>
@@ -406,10 +433,24 @@
 </ul>
 <hr>
 <h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><p>语法:</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">表头|<span class="string">表头</span>|<span class="string">表头</span></span><br><span class="line"><span class="string">---</span>|<span class="string">:--:</span>|<span class="string">---:</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="string">第二行分割表头和内容。</span></span><br><span class="line"><span class="string">- 有一个就行，为了对齐，多加了几个</span></span><br><span class="line"><span class="string">文字默认居左</span></span><br><span class="line"><span class="string">-两边加：表示文字居中</span></span><br><span class="line"><span class="string">-右边加：表示文字居右</span></span><br><span class="line"><span class="string">注:表格和正文之间空两行</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">表头|表头|表头
+---|:--:|---:
+内容|内容|内容
+内容|内容|内容
+
+第二行分割表头和内容。
+- 有一个就行，为了对齐，多加了几个
+文字默认居左
+-两边加：表示文字居中
+-右边加：表示文字居右
+注:表格和正文之间空两行<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>示例:</p>
-<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> Name </span>|<span class="string"> Academy </span>|<span class="string"> Score </span>|</span><br><span class="line">|<span class="string"> - </span>|<span class="string"> :-: </span>|<span class="string"> -: </span>|</span><br><span class="line">|<span class="string"> Harry </span>|<span class="string"> Gryffindor </span>|<span class="string"> 90 </span>|</span><br><span class="line">|<span class="string"> Hermione </span>|<span class="string"> Gryffindor</span>|<span class="string"> 100 </span>|</span><br><span class="line">|<span class="string"> Malfo </span>|<span class="string"> Slytherin </span>|<span class="string"> 90 </span>|</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">| Name | Academy | Score |
+| - | :-: | -: |
+| Harry | Gryffindor | 90 |
+| Hermione | Gryffindor| 100 |
+| Malfo | Slytherin | 90 |<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
 <table>
 <thead>
@@ -438,24 +479,40 @@
 <hr>
 <h1 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h1><h2 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h2><p>代码之间分别用一个反引号包起来</p>
 <p>示例:</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">` <span class="keyword">System</span>.println.<span class="keyword">out</span>();`</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&#96; System.println.out();&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>效果如下:<br><code> System.println.out();</code></p>
 <h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
 <p>示例:</p>
-<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">System.println.out();</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&#96;&#96;&#96;
+System.println.out();
+&#96;&#96;&#96;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
-<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">System.println.out();
+System.println.out();
+System.println.out();<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h1 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h1><p>语法:</p>
-<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\```\flow</span></span><br><span class="line">st=&gt;start: 开始框</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 结束框</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond<span class="function"><span class="params">(<span class="literal">yes</span>)</span>-&gt;</span>io-&gt;e</span><br><span class="line">cond<span class="function"><span class="params">(<span class="literal">no</span>)</span>-&gt;</span>sub1<span class="function"><span class="params">(right)</span>-&gt;</span>op</span><br><span class="line"><span class="string">\```\</span></span><br><span class="line">注:反斜杠<span class="string">\是为了防止转义，实际是没有的</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">\&#96;&#96;&#96;\flow
+st&#x3D;&gt;start: 开始框
+op&#x3D;&gt;operation: 处理框
+cond&#x3D;&gt;condition: 判断框(是或否?)
+sub1&#x3D;&gt;subroutine: 子流程
+io&#x3D;&gt;inputoutput: 输入输出框
+e&#x3D;&gt;end: 结束框
+st-&gt;op-&gt;cond
+cond(yes)-&gt;io-&gt;e
+cond(no)-&gt;sub1(right)-&gt;op
+\&#96;&#96;&#96;\
+注:反斜杠\是为了防止转义，实际是没有的<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>效果如下:</p>
 <div id="flowchart-0" class="flow-chart"></div>
 
 <hr>
 <h1 id="十一、转义符"><a href="#十一、转义符" class="headerlink" title="十一、转义符"></a>十一、转义符</h1><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符</p>
 <p>示例:</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**文本加粗**</span> </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">**文本加粗** 
+\*\* 正常显示星号 \*\*<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>效果如下:<br><strong>文本加粗</strong><br>** 正常显示星号 **<br></font><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始框
 op=>operation: 处理框
 cond=>condition: 判断框(是或否?)
