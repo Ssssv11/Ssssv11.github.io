@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7CMicrosoft+YaHei:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ssssv11.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="计算机网络学习的核心内容就是网络协议的学习。网络协议是为计算机网络中进行数据交换而建立的规则、标准或者说是约定的集合。因为不同用户的数据终端可能采取的字符集是不同的，两者需要进行通信，必须要在一定的标准上进行。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Computer Networks">
+<meta property="og:url" content="https://ssssv11.github.io/2021/03/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.html">
+<meta property="og:site_name" content="Ssssv">
+<meta property="og:description" content="计算机网络学习的核心内容就是网络协议的学习。网络协议是为计算机网络中进行数据交换而建立的规则、标准或者说是约定的集合。因为不同用户的数据终端可能采取的字符集是不同的，两者需要进行通信，必须要在一定的标准上进行。">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2021/03/19/QQ20210319125703.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2021/03/19/QQ20210319132116.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133146.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133320.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133443.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133501.png">
+<meta property="article:published_time" content="2021-03-19T04:32:10.255Z">
+<meta property="article:modified_time" content="2021-03-19T05:36:54.132Z">
+<meta property="article:author" content="Ssssv11">
+<meta property="article:tag" content="Networks">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.imagehub.cc/images/2021/03/19/QQ20210319125703.png">
+
+
+<link rel="canonical" href="https://ssssv11.github.io/2021/03/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>Computer Networks | Ssssv</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ssssv</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#1-%E9%80%9F%E7%8E%87%E7%9B%B8%E5%85%B3%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-number">1.</span> <span class="nav-text">1.速率相关性能指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E9%80%9F%E7%8E%87"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 速率</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E5%B8%A6%E5%AE%BD"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 带宽</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E5%90%9E%E5%90%90%E9%87%8F"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 吞吐量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%AA%E4%BA%BA%E7%90%86%E8%A7%A3"><span class="nav-number">1.4.</span> <span class="nav-text">个人理解</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-%E6%97%B6%E5%BB%B6%E7%9B%B8%E5%85%B3%E6%8C%87%E6%A0%87"><span class="nav-number">2.</span> <span class="nav-text">2.时延相关指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E6%97%B6%E5%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 时延</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E6%97%B6%E5%BB%B6%E5%B8%A6%E5%AE%BD%E7%A7%AF"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 时延带宽积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-%E5%BE%80%E8%BF%94%E6%97%B6%E5%BB%B6RTT"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 往返时延RTT</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 利用率</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-1-%E4%BF%A1%E9%81%93%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-number">2.4.1.</span> <span class="nav-text">2.4.1 信道利用率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-2-%E7%BD%91%E7%BB%9C%E5%88%A9%E7%94%A8%E7%8E%87"><span class="nav-number">2.4.2.</span> <span class="nav-text">2.4.2 网络利用率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-3-%E6%97%B6%E5%BB%B6%E5%92%8C%E5%88%A9%E7%94%A8%E7%8E%87%E7%9A%84%E5%85%B3%E7%B3%BB%E5%9B%BE"><span class="nav-number">2.4.3.</span> <span class="nav-text">2.4.3 时延和利用率的关系图</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#3-%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84"><span class="nav-number">3.</span> <span class="nav-text">3.分层结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#3-1-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E5%88%86%E5%B1%82%EF%BC%8C%E5%88%86%E5%B1%82%E8%A6%81%E5%81%9A%E4%BB%80%E4%B9%88"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 为什么要分层，分层要做什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-2-%E6%AD%A3%E5%BC%8F%E8%AE%A4%E8%AF%86%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 正式认识分层结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#4-%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">4.参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-OSI%E6%B5%81%E7%A8%8B%E7%AE%80%E4%BB%8B"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 OSI流程简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-TCP-IP%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 TCP&#x2F;IP参考模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-%E4%BA%94%E5%B1%82%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B%E5%8F%8A%E5%85%B6%E4%BC%A0%E8%BE%93%E8%BF%87%E7%A8%8B%E7%AE%80%E4%BB%8B"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 五层参考模型及其传输过程简介</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ssssv11"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">Ssssv11</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="cc-license site-overview-item animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://ssssv11.github.io/2021/03/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Ssssv11">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ssssv">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Computer Networks
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2021-03-19 12:32:10 / Modified: 13:36:54" itemprop="dateCreated datePublished" datetime="2021-03-19T12:32:10+08:00">2021-03-19</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <font size=3 >
+
+<p>计算机网络学习的核心内容就是网络协议的学习。<br>网络协议是为计算机网络中进行数据交换而建立的规则、标准或者说是约定的集合。<br>因为不同用户的数据终端可能采取的字符集是不同的，两者需要进行通信，必须要在一定的标准上进行。</p>
+<span id="more"></span>
+
+<h1 id="1-速率相关性能指标"><a href="#1-速率相关性能指标" class="headerlink" title="1.速率相关性能指标"></a>1.速率相关性能指标</h1><h2 id="1-1-速率"><a href="#1-1-速率" class="headerlink" title="1.1 速率"></a>1.1 速率</h2><p>定义：连接在计算机网络上的主机在数字信道上传送数据位数的速率<br>单位：b/s, Kb/s, Mb/s, Tb/s<br>如果用字节表示，则是 B/s, KB/s, MB/s, TB/s<br>1Byte = 8Bit</p>
+<h2 id="1-2-带宽"><a href="#1-2-带宽" class="headerlink" title="1.2 带宽"></a>1.2 带宽</h2><p>在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率</p>
+<h2 id="1-3-吞吐量"><a href="#1-3-吞吐量" class="headerlink" title="1.3 吞吐量"></a>1.3 吞吐量</h2><p>指的是单位时间内通过某个网络的数据总量</p>
+<h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><p>速率就是实际网速，带宽是理论网速，吞吐量是一个或多个设备的综合速率，比如说1000m宽带的路由器连着三部手机，每部手机都是10mb/s使用，那么速率就是10mb/s，带宽是宽带的1000m，路由器吞吐量是30mb/s，即三者之和</p>
+<h1 id="2-时延相关指标"><a href="#2-时延相关指标" class="headerlink" title="2.时延相关指标"></a>2.时延相关指标</h1><h2 id="2-1-时延"><a href="#2-1-时延" class="headerlink" title="2.1 时延"></a>2.1 时延</h2><p>时延包括四大类</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+<th align="center">计算公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">发送时延</td>
+<td align="center">数据从主机到信道上所用的时间</td>
+<td align="center">发送的数据长度/发送速率</td>
+</tr>
+<tr>
+<td align="center">传播时延</td>
+<td align="center">数据在信道上传播所花费的时间</td>
+<td align="center">信道长度/电磁波在信道上传播的速率</td>
+</tr>
+<tr>
+<td align="center">排队时延</td>
+<td align="center">数据在路由器前等待前面数据处理的时间</td>
+<td align="center">无计算方式</td>
+</tr>
+<tr>
+<td align="center">处理时延</td>
+<td align="center">数据在路由器中处理需求的时间</td>
+<td align="center">无计算方式</td>
+</tr>
+</tbody></table>
+<p>使用高速链路(提高网速)，只能减小发送时延，无法减少其他三个时延</p>
+<h2 id="2-2-时延带宽积"><a href="#2-2-时延带宽积" class="headerlink" title="2.2 时延带宽积"></a>2.2 时延带宽积</h2><p>公式：时延带宽积=传播时延x带宽<br>意思是链路上有多少比特的数据</p>
+<h2 id="2-3-往返时延RTT"><a href="#2-3-往返时延RTT" class="headerlink" title="2.3 往返时延RTT"></a>2.3 往返时延RTT</h2><p>从发送方发送数据开始，到接收方确认收到为止所花费的时间<br>RTT = 传播时延 * 2 + 处理时间 (有时可能直接忽略)</p>
+<h2 id="2-4-利用率"><a href="#2-4-利用率" class="headerlink" title="2.4 利用率"></a>2.4 利用率</h2><h3 id="2-4-1-信道利用率"><a href="#2-4-1-信道利用率" class="headerlink" title="2.4.1 信道利用率"></a>2.4.1 信道利用率</h3><p>信道利用率 = 有数据通过时间 / 有数据通过时间 + 无数据通过时间</p>
+<h3 id="2-4-2-网络利用率"><a href="#2-4-2-网络利用率" class="headerlink" title="2.4.2 网络利用率"></a>2.4.2 网络利用率</h3><p>网络利用率 = 所有信道利用率加权求平均值</p>
+<h3 id="2-4-3-时延和利用率的关系图"><a href="#2-4-3-时延和利用率的关系图" class="headerlink" title="2.4.3 时延和利用率的关系图"></a>2.4.3 时延和利用率的关系图</h3><p>利用率越高，延迟越大</p>
+<p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319125703.png" alt="函数图"></p>
+<h1 id="3-分层结构"><a href="#3-分层结构" class="headerlink" title="3.分层结构"></a>3.分层结构</h1><h2 id="3-1-为什么要分层，分层要做什么"><a href="#3-1-为什么要分层，分层要做什么" class="headerlink" title="3.1 为什么要分层，分层要做什么"></a>3.1 为什么要分层，分层要做什么</h2><ol>
+<li>发起通信的计算机必须将数据通信的通路进行激活。</li>
+<li>要告诉网络如何识别目的主机。</li>
+<li>发起通信的计算机要查明目的主机是否开机，并且与网络连接正常。</li>
+<li>发起通信的计算机要弄清楚，对方计算机中文件管理程序是否已经做好准备工作。</li>
+<li>确保差错和意外可以解决。</li>
+</ol>
+<h2 id="3-2-正式认识分层结构"><a href="#3-2-正式认识分层结构" class="headerlink" title="3.2 正式认识分层结构"></a>3.2 正式认识分层结构</h2><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319132116.png" alt="正式认识分层结构"></p>
+<h1 id="4-参考模型"><a href="#4-参考模型" class="headerlink" title="4.参考模型"></a>4.参考模型</h1><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">英文</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">应用层</td>
+<td align="center">Application Layer</td>
+<td align="center">直接为用户的应用进程（例如电子邮件、文件传输和终端仿真）提供服务。如HTTP、SMTP、FTP、DNS等</td>
+</tr>
+<tr>
+<td align="center">表示层</td>
+<td align="center">Presentation Layer</td>
+<td align="center">把数据转换为能与接收者的系统格式兼容并适合传输的格式，即让两个系统可以交换信息</td>
+</tr>
+<tr>
+<td align="center">会话层</td>
+<td align="center">Session Layer</td>
+<td align="center">负责在数据传输中设置和维护计算机网络中两台计算机之间的通信连接</td>
+</tr>
+<tr>
+<td align="center">传输层</td>
+<td align="center">Transport Layer</td>
+<td align="center">负责端到端通讯，可靠传输，不可靠传输 ，流量控制，复用分用</td>
+</tr>
+<tr>
+<td align="center">网络层</td>
+<td align="center">Network Layer</td>
+<td align="center">负责选择路由最佳路径，规划IP地址(ipv4和ipv6变化只会影响网络层)，拥塞控制</td>
+</tr>
+<tr>
+<td align="center">数据链路层</td>
+<td align="center">Data Link Layer</td>
+<td align="center">帧的开始和结束，还有透明传输，差错校验(纠错由传输层解决)</td>
+</tr>
+<tr>
+<td align="center">物理层</td>
+<td align="center">Physical Layer</td>
+<td align="center">定义网络设备接口标准，电气标准(电压)，如何在物理链路上传输的更快</td>
+</tr>
+</tbody></table>
+<h2 id="4-1-OSI流程简介"><a href="#4-1-OSI流程简介" class="headerlink" title="4.1 OSI流程简介"></a>4.1 OSI流程简介</h2><p>网络层及以上，每一层都要对上一层发送的数据进行处理（加个头部）<br>数据链路层不仅需要加头部，还需要加尾部<br>物理层什么都不加，只管发送数据（比特流）<br><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133146.png"></p>
+<h2 id="4-2-TCP-IP参考模型"><a href="#4-2-TCP-IP参考模型" class="headerlink" title="4.2 TCP/IP参考模型"></a>4.2 TCP/IP参考模型</h2><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133320.png"></p>
+<h2 id="4-3-五层参考模型及其传输过程简介"><a href="#4-3-五层参考模型及其传输过程简介" class="headerlink" title="4.3 五层参考模型及其传输过程简介"></a>4.3 五层参考模型及其传输过程简介</h2><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133443.png"><br><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133501.png"></p>
+</font>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Networks/" rel="tag"># Networks</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/03/10/Learning%20Plans/" rel="prev" title="Learning Plans">
+                  <i class="fa fa-chevron-left"></i> Learning Plans
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ssssv11</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
