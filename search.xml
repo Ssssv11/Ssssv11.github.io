@@ -1,83 +1,373 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Computer Networks</title>
-      <link href="2021/03/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-      <url>2021/03/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
-      
-        <content type="html"><![CDATA[<font size=3 ><p>计算机网络学习的核心内容就是网络协议的学习。<br>网络协议是为计算机网络中进行数据交换而建立的规则、标准或者说是约定的集合。<br>因为不同用户的数据终端可能采取的字符集是不同的，两者需要进行通信，必须要在一定的标准上进行。</p><span id="more"></span><h1 id="1-速率相关性能指标"><a href="#1-速率相关性能指标" class="headerlink" title="1.速率相关性能指标"></a>1.速率相关性能指标</h1><h2 id="1-1-速率"><a href="#1-1-速率" class="headerlink" title="1.1 速率"></a>1.1 速率</h2><p>定义：连接在计算机网络上的主机在数字信道上传送数据位数的速率<br>单位：b/s, Kb/s, Mb/s, Tb/s<br>如果用字节表示，则是 B/s, KB/s, MB/s, TB/s<br>1Byte = 8Bit</p><h2 id="1-2-带宽"><a href="#1-2-带宽" class="headerlink" title="1.2 带宽"></a>1.2 带宽</h2><p>在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率</p><h2 id="1-3-吞吐量"><a href="#1-3-吞吐量" class="headerlink" title="1.3 吞吐量"></a>1.3 吞吐量</h2><p>指的是单位时间内通过某个网络的数据总量</p><h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><p>速率就是实际网速，带宽是理论网速，吞吐量是一个或多个设备的综合速率，比如说1000m宽带的路由器连着三部手机，每部手机都是10mb/s使用，那么速率就是10mb/s，带宽是宽带的1000m，路由器吞吐量是30mb/s，即三者之和</p><h1 id="2-时延相关指标"><a href="#2-时延相关指标" class="headerlink" title="2.时延相关指标"></a>2.时延相关指标</h1><h2 id="2-1-时延"><a href="#2-1-时延" class="headerlink" title="2.1 时延"></a>2.1 时延</h2><p>时延包括四大类</p><table><thead><tr><th align="center">名称</th><th align="center">描述</th><th align="center">计算公式</th></tr></thead><tbody><tr><td align="center">发送时延</td><td align="center">数据从主机到信道上所用的时间</td><td align="center">发送的数据长度/发送速率</td></tr><tr><td align="center">传播时延</td><td align="center">数据在信道上传播所花费的时间</td><td align="center">信道长度/电磁波在信道上传播的速率</td></tr><tr><td align="center">排队时延</td><td align="center">数据在路由器前等待前面数据处理的时间</td><td align="center">无计算方式</td></tr><tr><td align="center">处理时延</td><td align="center">数据在路由器中处理需求的时间</td><td align="center">无计算方式</td></tr></tbody></table><p>使用高速链路(提高网速)，只能减小发送时延，无法减少其他三个时延</p><h2 id="2-2-时延带宽积"><a href="#2-2-时延带宽积" class="headerlink" title="2.2 时延带宽积"></a>2.2 时延带宽积</h2><p>公式：时延带宽积=传播时延x带宽<br>意思是链路上有多少比特的数据</p><h2 id="2-3-往返时延RTT"><a href="#2-3-往返时延RTT" class="headerlink" title="2.3 往返时延RTT"></a>2.3 往返时延RTT</h2><p>从发送方发送数据开始，到接收方确认收到为止所花费的时间<br>RTT = 传播时延 * 2 + 处理时间 (有时可能直接忽略)</p><h2 id="2-4-利用率"><a href="#2-4-利用率" class="headerlink" title="2.4 利用率"></a>2.4 利用率</h2><h3 id="2-4-1-信道利用率"><a href="#2-4-1-信道利用率" class="headerlink" title="2.4.1 信道利用率"></a>2.4.1 信道利用率</h3><p>信道利用率 = 有数据通过时间 / 有数据通过时间 + 无数据通过时间</p><h3 id="2-4-2-网络利用率"><a href="#2-4-2-网络利用率" class="headerlink" title="2.4.2 网络利用率"></a>2.4.2 网络利用率</h3><p>网络利用率 = 所有信道利用率加权求平均值</p><h3 id="2-4-3-时延和利用率的关系图"><a href="#2-4-3-时延和利用率的关系图" class="headerlink" title="2.4.3 时延和利用率的关系图"></a>2.4.3 时延和利用率的关系图</h3><p>利用率越高，延迟越大</p><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319125703.png" alt="函数图"></p><h1 id="3-分层结构"><a href="#3-分层结构" class="headerlink" title="3.分层结构"></a>3.分层结构</h1><h2 id="3-1-为什么要分层，分层要做什么"><a href="#3-1-为什么要分层，分层要做什么" class="headerlink" title="3.1 为什么要分层，分层要做什么"></a>3.1 为什么要分层，分层要做什么</h2><ol><li>发起通信的计算机必须将数据通信的通路进行激活。</li><li>要告诉网络如何识别目的主机。</li><li>发起通信的计算机要查明目的主机是否开机，并且与网络连接正常。</li><li>发起通信的计算机要弄清楚，对方计算机中文件管理程序是否已经做好准备工作。</li><li>确保差错和意外可以解决。</li></ol><h2 id="3-2-正式认识分层结构"><a href="#3-2-正式认识分层结构" class="headerlink" title="3.2 正式认识分层结构"></a>3.2 正式认识分层结构</h2><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319132116.png" alt="正式认识分层结构"></p><h1 id="4-参考模型"><a href="#4-参考模型" class="headerlink" title="4.参考模型"></a>4.参考模型</h1><table><thead><tr><th align="center">名称</th><th align="center">英文</th><th align="center">作用</th></tr></thead><tbody><tr><td align="center">应用层</td><td align="center">Application Layer</td><td align="center">直接为用户的应用进程（例如电子邮件、文件传输和终端仿真）提供服务。如HTTP、SMTP、FTP、DNS等</td></tr><tr><td align="center">表示层</td><td align="center">Presentation Layer</td><td align="center">把数据转换为能与接收者的系统格式兼容并适合传输的格式，即让两个系统可以交换信息</td></tr><tr><td align="center">会话层</td><td align="center">Session Layer</td><td align="center">负责在数据传输中设置和维护计算机网络中两台计算机之间的通信连接</td></tr><tr><td align="center">传输层</td><td align="center">Transport Layer</td><td align="center">负责端到端通讯，可靠传输，不可靠传输 ，流量控制，复用分用</td></tr><tr><td align="center">网络层</td><td align="center">Network Layer</td><td align="center">负责选择路由最佳路径，规划IP地址(ipv4和ipv6变化只会影响网络层)，拥塞控制</td></tr><tr><td align="center">数据链路层</td><td align="center">Data Link Layer</td><td align="center">帧的开始和结束，还有透明传输，差错校验(纠错由传输层解决)</td></tr><tr><td align="center">物理层</td><td align="center">Physical Layer</td><td align="center">定义网络设备接口标准，电气标准(电压)，如何在物理链路上传输的更快</td></tr></tbody></table><h2 id="4-1-OSI流程简介"><a href="#4-1-OSI流程简介" class="headerlink" title="4.1 OSI流程简介"></a>4.1 OSI流程简介</h2><p>网络层及以上，每一层都要对上一层发送的数据进行处理（加个头部）<br>数据链路层不仅需要加头部，还需要加尾部<br>物理层什么都不加，只管发送数据（比特流）<br><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133146.png"></p><h2 id="4-2-TCP-IP参考模型"><a href="#4-2-TCP-IP参考模型" class="headerlink" title="4.2 TCP/IP参考模型"></a>4.2 TCP/IP参考模型</h2><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133320.png"></p><h2 id="4-3-五层参考模型及其传输过程简介"><a href="#4-3-五层参考模型及其传输过程简介" class="headerlink" title="4.3 五层参考模型及其传输过程简介"></a>4.3 五层参考模型及其传输过程简介</h2><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133443.png"><br><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133501.png"></p></font>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Networks </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Learning Plans</title>
-      <link href="2021/03/10/Learning%20Plans/"/>
-      <url>2021/03/10/Learning%20Plans/</url>
-      
-        <content type="html"><![CDATA[<center>秃头之路</center><span id="more"></span><h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ul><li>编程语言: Java   C/C++   Python</li><li>基本算法</li><li>基本网络知识: TCP/IP HTTP/HTTPS</li><li>基本的设计模式</li></ul><hr><h2 id="工具方面"><a href="#工具方面" class="headerlink" title="工具方面"></a>工具方面</h2><ul><li>操作系统: Linux(CentOS/Ubuntu/Fe)</li><li>代码管理: SVN/Git</li><li>持续集成(CI/CD): Jenkins</li><li>Java项目管理工具: Maven/Gradle</li></ul><hr><h2 id="框架方面"><a href="#框架方面" class="headerlink" title="框架方面"></a>框架方面</h2><h4 id="应用层框架"><a href="#应用层框架" class="headerlink" title="应用层框架"></a>应用层框架</h4><ul><li><del>SSH: Spring + Struct + Hibernate</del></li><li>SSM: Spring + Springmvc + Mybatis</li><li>Spring Boot</li></ul><h4 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h4><ul><li>MQ消息队列</li><li>RPC通信框架 gRPC/Thrift/Dubbo/SpringCloud</li><li>Elasticsearch 搜索引擎</li></ul><h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h4><ul><li>SQL: MySQL/PostgreSQL</li><li>NoSQL: Redis/Memcached/Mongodb/Elasticsearch</li></ul><hr><h2 id="架构方面"><a href="#架构方面" class="headerlink" title="架构方面"></a>架构方面</h2><h4 id="分布式-微服务架构"><a href="#分布式-微服务架构" class="headerlink" title="分布式/微服务架构"></a>分布式/微服务架构</h4><ul><li>SpringCloud</li><li>Dubbo</li><li>RPC通信</li></ul><h4 id="虚拟化-容器化技术"><a href="#虚拟化-容器化技术" class="headerlink" title="虚拟化/容器化技术"></a>虚拟化/容器化技术</h4><ul><li>Docker容器化</li><li>k8s</li></ul><hr><h4 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h4><p><a href="https://leetcode-cn.com/" title="力扣">力扣</a> (Top 100 Liked Questions)</p><p><a href="https://www.nowcoder.com/contestRoom" title="牛客">牛客</a></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Plans </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MarkDown学习</title>
-      <link href="2021/03/10/MarkDown/"/>
-      <url>2021/03/10/MarkDown/</url>
-      
-        <content type="html"><![CDATA[<p><font size=3 ><a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p><span id="more"></span><h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。最多支持六级标题。</p><p>示例:</p><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题 </span><br></pre></td></tr></table></figure><p>效果如下:</p><h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><hr><h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><ul><li>加粗</li></ul><p>要加粗的文字左右分别用两个*包起来</p><ul><li>斜体</li></ul><p>要倾斜的文字左右分别用一个*包起来</p><ul><li>斜线加粗</li></ul><p>要倾斜和加粗的文字左右分别用三个*包起来</p><p>示例:</p><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**这是加粗的文字**</span></span><br><span class="line"><span class="strong">*这是倾斜的文字*</span>`</span><br><span class="line"><span class="strong">***这是斜体加粗的文字**</span>*</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure><p>效果如下:</p><p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em><br><em><strong>这是斜体加粗的文字</strong></em><br><del>这是加删除线的文字</del></p><hr><h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;</p><p>示例:</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span></span><br></pre></td></tr></table></figure><p>效果如下:</p><blockquote><p>这是引用的内容</p><blockquote><p>这是引用的内容</p><blockquote><blockquote><blockquote><blockquote><blockquote><p>这是引用的内容</p></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote><hr><h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。</p><p>示例:</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">***</span></span><br><span class="line"><span class="string">*****</span></span><br><span class="line"><span class="string">*</span> <span class="string">*</span> <span class="string">*</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">----------</span></span><br></pre></td></tr></table></figure><p>效果如下:</p><hr><hr><hr><hr><h1 id="五、超链接"><a href="#五、超链接" class="headerlink" title="五、超链接"></a>五、超链接</h1><p>语法:</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[超链接名]</span>(超链接地址 <span class="string">&quot;超链接title&quot;</span>)</span><br><span class="line"><span class="selector-tag">title</span>可加可不加</span><br></pre></td></tr></table></figure><p>示例：</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[百度]</span>(<span class="attribute">http</span>:<span class="comment">//baidu.com)</span></span><br><span class="line">[Ssssv](<span class="attribute">https</span>:<span class="comment">//ssssv11.github.io/)</span></span><br></pre></td></tr></table></figure><p>效果如下:<br><a href="http://baidu.com/">百度</a><br><a href="https://ssssv11.github.io/">Ssssv</a></p><hr><h1 id="六、图片"><a href="#六、图片" class="headerlink" title="六、图片"></a>六、图片</h1><p>语法:</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 <span class="string">&#x27;&#x27;</span>图片titl<span class="string">e&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure><p>示例:</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![MarkDown](http:<span class="regexp">//</span>dwz.win/agy9 <span class="string">&quot;MarkDown&quot;</span>)</span><br></pre></td></tr></table></figure><hr><h1 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>无序列表用 - + * 任何一种都可以<br>示例:</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 列表内容</span><br><span class="line"><span class="bullet">+</span> 列表内容</span><br><span class="line"><span class="bullet">*</span> 列表内容</span><br><span class="line"></span><br><span class="line">注：- + <span class="emphasis">* 跟内容之间都要有一个空格</span></span><br></pre></td></tr></table></figure><p>效果如下:</p><ul><li>列表内容</li></ul><ul><li>列表内容</li></ul><ul><li>列表内容</li></ul><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>数字加点<br>示例:</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 列表内容</span><br><span class="line"><span class="bullet">2.</span> 列表内容</span><br><span class="line"><span class="bullet">3.</span> 列表内容</span><br><span class="line"></span><br><span class="line">注：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure><p>效果如下:</p><ol><li>列表内容</li><li>列表内容</li><li>列表内容</li></ol><h2 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h2><p>上一级和下一级之间敲三个空格即可</p><p>示例:</p><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">*一级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br></pre></td></tr></table></figure><p>效果如下:</p><ul><li><p>一级无序列表内容</p><ul><li>二级无序列表内容</li><li>二级无序列表内容</li><li>二级无序列表内容</li></ul></li></ul><hr><h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><p>语法:</p><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">表头|<span class="string">表头</span>|<span class="string">表头</span></span><br><span class="line"><span class="string">---</span>|<span class="string">:--:</span>|<span class="string">---:</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="string">第二行分割表头和内容。</span></span><br><span class="line"><span class="string">- 有一个就行，为了对齐，多加了几个</span></span><br><span class="line"><span class="string">文字默认居左</span></span><br><span class="line"><span class="string">-两边加：表示文字居中</span></span><br><span class="line"><span class="string">-右边加：表示文字居右</span></span><br><span class="line"><span class="string">注:表格和正文之间空两行</span></span><br></pre></td></tr></table></figure><p>示例:</p><figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> Name </span>|<span class="string"> Academy </span>|<span class="string"> Score </span>|</span><br><span class="line">|<span class="string"> - </span>|<span class="string"> :-: </span>|<span class="string"> -: </span>|</span><br><span class="line">|<span class="string"> Harry </span>|<span class="string"> Gryffindor </span>|<span class="string"> 90 </span>|</span><br><span class="line">|<span class="string"> Hermione </span>|<span class="string"> Gryffindor</span>|<span class="string"> 100 </span>|</span><br><span class="line">|<span class="string"> Malfo </span>|<span class="string"> Slytherin </span>|<span class="string"> 90 </span>|</span><br></pre></td></tr></table></figure><p>效果如下:</p><table><thead><tr><th>Name</th><th align="center">Academy</th><th align="right">Score</th></tr></thead><tbody><tr><td>Harry</td><td align="center">Gryffindor</td><td align="right">90</td></tr><tr><td>Hermione</td><td align="center">Gryffindor</td><td align="right">100</td></tr><tr><td>Malfo</td><td align="center">Slytherin</td><td align="right">90</td></tr></tbody></table><hr><h1 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h1><h2 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h2><p>代码之间分别用一个反引号包起来</p><p>示例:</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">` <span class="keyword">System</span>.println.<span class="keyword">out</span>();`</span><br></pre></td></tr></table></figure><p>效果如下:<br><code> System.println.out();</code></p><h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p><p>示例:</p><figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">System.println.out();</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span></span><br></pre></td></tr></table></figure><p>效果如下:</p><figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br></pre></td></tr></table></figure><hr><h1 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h1><p>语法:</p><figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\```\flow</span></span><br><span class="line">st=&gt;start: 开始框</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 结束框</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond<span class="function"><span class="params">(<span class="literal">yes</span>)</span>-&gt;</span>io-&gt;e</span><br><span class="line">cond<span class="function"><span class="params">(<span class="literal">no</span>)</span>-&gt;</span>sub1<span class="function"><span class="params">(right)</span>-&gt;</span>op</span><br><span class="line"><span class="string">\```\</span></span><br><span class="line">注:反斜杠<span class="string">\是为了防止转义，实际是没有的</span></span><br></pre></td></tr></table></figure><p>效果如下:</p><div id="flowchart-0" class="flow-chart"></div><hr><h1 id="十一、转义符"><a href="#十一、转义符" class="headerlink" title="十一、转义符"></a>十一、转义符</h1><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符</p><p>示例:</p><figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**文本加粗**</span> </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure><p>效果如下:<br><strong>文本加粗</strong><br>** 正常显示星号 **</p><p>end</p><p></font><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始框op=>operation: 处理框cond=>condition: 判断框(是或否?)sub1=>subroutine: 子流程io=>inputoutput: 输入输出框e=>end: 结束框st->op->condcond(yes)->io->econd(no)->sub1(right)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Markdown </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello Hexo</title>
-      <link href="2021/03/10/Hello%20Hexo/"/>
-      <url>2021/03/10/Hello%20Hexo/</url>
-      
-        <content type="html"><![CDATA[<p><font size=3 ><a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a>是一个快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。</font></p><span id="more"></span><h1 id="Hexo指令说明"><a href="#Hexo指令说明" class="headerlink" title="Hexo指令说明"></a>Hexo指令说明</h1><ul><li> <code>hexo server</code>   <font size=3 >Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</font></li><li><code>hexo server -s</code>  <font size=3 >以静态模式启动</font></li><li><code>hexo server -p 5000</code>  <font size=3 >更改访问端口 (默认端口为3000，’ctrl + c’关闭server)</font></li><li><code>hexo server -i IP地址</code>  <font size=3 >自定义 IP</font></li><li><code>hexo clean</code>  <font size=3 >清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹</font></li><li><code>hexo g</code>  <font size=3 >生成静态网页</font></li><li><code>hexo d</code>  <font size=3 >将本地数据部署到远端服务器(如github)</font></li><li><code>hexo init</code> <font size=3 >文件夹名称 #初始化XX文件夹名称</font></li><li><code>npm update hexo -g</code> <font size=3 >升级</font></li><li><code>npm install hexo -g</code> <font size=3 >安装</font></li><li><code>npm -v</code>  <font size=3 >查看npm版本号</font></li><li><code>git --versio</code>n  <font size=3 >查看git版本号</font></li><li><code>hexo -v</code>  <font size=3 >查看hexo版本号</font></li></ul><hr><ul><li><code>hexo n &quot;&quot;</code> <font size=3 >等价于</font> <code>hexo new &quot;&quot;</code> <font size=3 >等价于</font> <code>hexo new post &quot;&quot;</code></li><li><font color=#00ffff> <code>hexo p</code> </font> <font size=3 >等价于</font> <code>hexo publish</code></li><li><code>hexo g</code> <font size=3 >等价于</font> <code>hexo generate</code></li><li><code>hexo s</code> <font size=3 >等价于</font> <code>hexo server</code></li><li><code>hexo d</code> <font size=3 >等价于</font> <code>hexo deploy</code></li><li><code>hexo deploy -g</code> <font size=3 >等价于</font> <code>hexo deploy --generate</code></li><li><code>hexo generate -d</code> <font size=3 >等价于</font> <code>hexo generate --deploy</code></li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>Hello Hexo</title>
+    <url>/2021/03/10/Hello%20Hexo/</url>
+    <content><![CDATA[<p><font size=3 ><a href="https://hexo.io/zh-cn/" title="Hexo">Hexo</a>是一个快速、简洁且高效的博客框架。<br>Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。即把用户的markdown文件，按照指定的主题解析成静态网页。</font></p>
+<span id="more"></span>
+
+<h1 id="Hexo指令说明"><a href="#Hexo指令说明" class="headerlink" title="Hexo指令说明"></a>Hexo指令说明</h1><ul>
+<li> <code>hexo server</code>   <font size=3 >Hexo 会监视文件变动并自动更新，除修改站点配置文件外,无须重启服务器,直接刷新网页即可生效。</font></li>
+<li><code>hexo server -s</code>  <font size=3 >以静态模式启动</font></li>
+<li><code>hexo server -p 5000</code>  <font size=3 >更改访问端口 (默认端口为3000，’ctrl + c’关闭server)</font></li>
+<li><code>hexo server -i IP地址</code>  <font size=3 >自定义 IP</font></li>
+<li><code>hexo clean</code>  <font size=3 >清除缓存 ,网页正常情况下可以忽略此条命令,执行该指令后,会删掉站点根目录下的public文件夹</font></li>
+<li><code>hexo g</code>  <font size=3 >生成静态网页</font></li>
+<li><code>hexo d</code>  <font size=3 >将本地数据部署到远端服务器(如github)</font></li>
+<li><code>hexo init</code> <font size=3 >文件夹名称 #初始化XX文件夹名称</font></li>
+<li><code>npm update hexo -g</code> <font size=3 >升级</font></li>
+<li><code>npm install hexo -g</code> <font size=3 >安装</font></li>
+<li><code>npm -v</code>  <font size=3 >查看npm版本号</font></li>
+<li><code>git --versio</code>n  <font size=3 >查看git版本号</font></li>
+<li><code>hexo -v</code>  <font size=3 >查看hexo版本号</font></li>
+</ul>
+<hr>
+<ul>
+<li><code>hexo n &quot;&quot;</code> <font size=3 >等价于</font> <code>hexo new &quot;&quot;</code> <font size=3 >等价于</font> <code>hexo new post &quot;&quot;</code></li>
+<li><font color=#00ffff> <code>hexo p</code> </font> <font size=3 >等价于</font> <code>hexo publish</code></li>
+<li><code>hexo g</code> <font size=3 >等价于</font> <code>hexo generate</code></li>
+<li><code>hexo s</code> <font size=3 >等价于</font> <code>hexo server</code></li>
+<li><code>hexo d</code> <font size=3 >等价于</font> <code>hexo deploy</code></li>
+<li><code>hexo deploy -g</code> <font size=3 >等价于</font> <code>hexo deploy --generate</code></li>
+<li><code>hexo generate -d</code> <font size=3 >等价于</font> <code>hexo generate --deploy</code></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MarkDown学习</title>
+    <url>/2021/03/10/MarkDown/</url>
+    <content><![CDATA[<p><font size=3 ><a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<span id="more"></span>
+
+<h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。最多支持六级标题。</p>
+<p>示例:</p>
+<figure class="highlight clean"><table><tr><td class="code"><pre><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题 </span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><hr>
+<h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><ul>
+<li>加粗</li>
+</ul>
+<p>要加粗的文字左右分别用两个*包起来</p>
+<ul>
+<li>斜体</li>
+</ul>
+<p>要倾斜的文字左右分别用一个*包起来</p>
+<ul>
+<li>斜线加粗</li>
+</ul>
+<p>要倾斜和加粗的文字左右分别用三个*包起来</p>
+<p>示例:</p>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">**这是加粗的文字**</span></span><br><span class="line"><span class="strong">*这是倾斜的文字*</span>`</span><br><span class="line"><span class="strong">***这是斜体加粗的文字**</span>*</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em><br><em><strong>这是斜体加粗的文字</strong></em><br><del>这是加删除线的文字</del></p>
+<hr>
+<h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;</p>
+<p>示例:</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span></span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。</p>
+<p>示例:</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="string">***</span></span><br><span class="line"><span class="string">*****</span></span><br><span class="line"><span class="string">*</span> <span class="string">*</span> <span class="string">*</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">----------</span></span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<h1 id="五、超链接"><a href="#五、超链接" class="headerlink" title="五、超链接"></a>五、超链接</h1><p>语法:</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[超链接名]</span>(超链接地址 <span class="string">&quot;超链接title&quot;</span>)</span><br><span class="line"><span class="selector-tag">title</span>可加可不加</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight less"><table><tr><td class="code"><pre><span class="line"><span class="selector-attr">[百度]</span>(<span class="attribute">http</span>:<span class="comment">//baidu.com)</span></span><br><span class="line">[Ssssv](<span class="attribute">https</span>:<span class="comment">//ssssv11.github.io/)</span></span><br></pre></td></tr></table></figure>
+<p>效果如下:<br><a href="http://baidu.com/">百度</a><br><a href="https://ssssv11.github.io/">Ssssv</a></p>
+<hr>
+<h1 id="六、图片"><a href="#六、图片" class="headerlink" title="六、图片"></a>六、图片</h1><p>语法:</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">![图片alt](图片地址 <span class="string">&#x27;&#x27;</span>图片titl<span class="string">e&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight awk"><table><tr><td class="code"><pre><span class="line">![MarkDown](http:<span class="regexp">//</span>dwz.win/agy9 <span class="string">&quot;MarkDown&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>无序列表用 - + * 任何一种都可以<br>示例:</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">-</span> 列表内容</span><br><span class="line"><span class="bullet">+</span> 列表内容</span><br><span class="line"><span class="bullet">*</span> 列表内容</span><br><span class="line"></span><br><span class="line">注：- + <span class="emphasis">* 跟内容之间都要有一个空格</span></span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>数字加点<br>示例:</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="bullet">1.</span> 列表内容</span><br><span class="line"><span class="bullet">2.</span> 列表内容</span><br><span class="line"><span class="bullet">3.</span> 列表内容</span><br><span class="line"></span><br><span class="line">注：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<ol>
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容</li>
+</ol>
+<h2 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h2><p>上一级和下一级之间敲三个空格即可</p>
+<p>示例:</p>
+<figure class="highlight stata"><table><tr><td class="code"><pre><span class="line"><span class="comment">*一级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<ul>
+<li><p>一级无序列表内容</p>
+<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><p>语法:</p>
+<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">表头|<span class="string">表头</span>|<span class="string">表头</span></span><br><span class="line"><span class="string">---</span>|<span class="string">:--:</span>|<span class="string">---:</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="string">第二行分割表头和内容。</span></span><br><span class="line"><span class="string">- 有一个就行，为了对齐，多加了几个</span></span><br><span class="line"><span class="string">文字默认居左</span></span><br><span class="line"><span class="string">-两边加：表示文字居中</span></span><br><span class="line"><span class="string">-右边加：表示文字居右</span></span><br><span class="line"><span class="string">注:表格和正文之间空两行</span></span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight gherkin"><table><tr><td class="code"><pre><span class="line">|<span class="string"> Name </span>|<span class="string"> Academy </span>|<span class="string"> Score </span>|</span><br><span class="line">|<span class="string"> - </span>|<span class="string"> :-: </span>|<span class="string"> -: </span>|</span><br><span class="line">|<span class="string"> Harry </span>|<span class="string"> Gryffindor </span>|<span class="string"> 90 </span>|</span><br><span class="line">|<span class="string"> Hermione </span>|<span class="string"> Gryffindor</span>|<span class="string"> 100 </span>|</span><br><span class="line">|<span class="string"> Malfo </span>|<span class="string"> Slytherin </span>|<span class="string"> 90 </span>|</span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="center">Academy</th>
+<th align="right">Score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Harry</td>
+<td align="center">Gryffindor</td>
+<td align="right">90</td>
+</tr>
+<tr>
+<td>Hermione</td>
+<td align="center">Gryffindor</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td>Malfo</td>
+<td align="center">Slytherin</td>
+<td align="right">90</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h1><h2 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h2><p>代码之间分别用一个反引号包起来</p>
+<p>示例:</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line">` <span class="keyword">System</span>.println.<span class="keyword">out</span>();`</span><br></pre></td></tr></table></figure>
+<p>效果如下:<br><code> System.println.out();</code></p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
+<p>示例:</p>
+<figure class="highlight arcade"><table><tr><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">System.println.out();</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span></span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<figure class="highlight pgsql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h1 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h1><p>语法:</p>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="string">\```\flow</span></span><br><span class="line">st=&gt;start: 开始框</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 结束框</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond<span class="function"><span class="params">(<span class="literal">yes</span>)</span>-&gt;</span>io-&gt;e</span><br><span class="line">cond<span class="function"><span class="params">(<span class="literal">no</span>)</span>-&gt;</span>sub1<span class="function"><span class="params">(right)</span>-&gt;</span>op</span><br><span class="line"><span class="string">\```\</span></span><br><span class="line">注:反斜杠<span class="string">\是为了防止转义，实际是没有的</span></span><br></pre></td></tr></table></figure>
+<p>效果如下:</p>
+<div id="flowchart-0" class="flow-chart"></div>
+
+<hr>
+<h1 id="十一、转义符"><a href="#十一、转义符" class="headerlink" title="十一、转义符"></a>十一、转义符</h1><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符</p>
+<p>示例:</p>
+<figure class="highlight asciidoc"><table><tr><td class="code"><pre><span class="line"><span class="strong">**文本加粗**</span> </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
+<p>效果如下:<br><strong>文本加粗</strong><br>** 正常显示星号 **</p>
+<p>end</p>
+<p></font><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=>start: 开始框
+op=>operation: 处理框
+cond=>condition: 判断框(是或否?)
+sub1=>subroutine: 子流程
+io=>inputoutput: 输入输出框
+e=>end: 结束框
+st->op->cond
+cond(yes)->io->e
+cond(no)->sub1(right)->op</textarea><textarea id="flowchart-0-options" style="display: none">{"scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+]]></content>
+      <tags>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Learning Plans</title>
+    <url>/2021/03/10/Learning%20Plans/</url>
+    <content><![CDATA[<center>秃头之路</center>
+<span id="more"></span>
+
+<h2 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h2><ul>
+<li>编程语言: Java   C/C++   Python</li>
+<li>基本算法</li>
+<li>基本网络知识: TCP/IP HTTP/HTTPS</li>
+<li>基本的设计模式</li>
+</ul>
+<hr>
+<h2 id="工具方面"><a href="#工具方面" class="headerlink" title="工具方面"></a>工具方面</h2><ul>
+<li>操作系统: Linux(CentOS/Ubuntu/Fe)</li>
+<li>代码管理: SVN/Git</li>
+<li>持续集成(CI/CD): Jenkins</li>
+<li>Java项目管理工具: Maven/Gradle</li>
+</ul>
+<hr>
+<h2 id="框架方面"><a href="#框架方面" class="headerlink" title="框架方面"></a>框架方面</h2><h4 id="应用层框架"><a href="#应用层框架" class="headerlink" title="应用层框架"></a>应用层框架</h4><ul>
+<li><del>SSH: Spring + Struct + Hibernate</del></li>
+<li>SSM: Spring + Springmvc + Mybatis</li>
+<li>Spring Boot</li>
+</ul>
+<h4 id="中间件"><a href="#中间件" class="headerlink" title="中间件"></a>中间件</h4><ul>
+<li>MQ消息队列</li>
+<li>RPC通信框架 gRPC/Thrift/Dubbo/SpringCloud</li>
+<li>Elasticsearch 搜索引擎</li>
+</ul>
+<h4 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h4><ul>
+<li>SQL: MySQL/PostgreSQL</li>
+<li>NoSQL: Redis/Memcached/Mongodb/Elasticsearch</li>
+</ul>
+<hr>
+<h2 id="架构方面"><a href="#架构方面" class="headerlink" title="架构方面"></a>架构方面</h2><h4 id="分布式-微服务架构"><a href="#分布式-微服务架构" class="headerlink" title="分布式/微服务架构"></a>分布式/微服务架构</h4><ul>
+<li>SpringCloud</li>
+<li>Dubbo</li>
+<li>RPC通信</li>
+</ul>
+<h4 id="虚拟化-容器化技术"><a href="#虚拟化-容器化技术" class="headerlink" title="虚拟化/容器化技术"></a>虚拟化/容器化技术</h4><ul>
+<li>Docker容器化</li>
+<li>k8s</li>
+</ul>
+<hr>
+<h4 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h4><p><a href="https://leetcode-cn.com/" title="力扣">力扣</a> (Top 100 Liked Questions)</p>
+<p><a href="https://www.nowcoder.com/contestRoom" title="牛客">牛客</a></p>
+]]></content>
+      <tags>
+        <tag>Plans</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Computer Networks</title>
+    <url>/2021/03/19/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h1 id="Part-1-Summary"><a href="#Part-1-Summary" class="headerlink" title="Part 1 : Summary"></a>Part 1 : Summary</h1><font size=3 >
+
+<p>计算机网络学习的核心内容就是网络协议的学习。<br>网络协议是为计算机网络中进行数据交换而建立的规则、标准或者说是约定的集合。<br>因为不同用户的数据终端可能采取的字符集是不同的，两者需要进行通信，必须要在一定的标准上进行。</p>
+<span id="more"></span>
+
+<h1 id="1-速率相关性能指标"><a href="#1-速率相关性能指标" class="headerlink" title="1.速率相关性能指标"></a>1.速率相关性能指标</h1><h2 id="1-1-速率"><a href="#1-1-速率" class="headerlink" title="1.1 速率"></a>1.1 速率</h2><p>定义：连接在计算机网络上的主机在数字信道上传送数据位数的速率<br>单位：b/s, Kb/s, Mb/s, Tb/s<br>如果用字节表示，则是 B/s, KB/s, MB/s, TB/s<br>1Byte = 8Bit</p>
+<h2 id="1-2-带宽"><a href="#1-2-带宽" class="headerlink" title="1.2 带宽"></a>1.2 带宽</h2><p>在计算机网络中，指的是网络设备所支持的最高速度，单位同速率，是理想条件下最高速率</p>
+<h2 id="1-3-吞吐量"><a href="#1-3-吞吐量" class="headerlink" title="1.3 吞吐量"></a>1.3 吞吐量</h2><p>指的是单位时间内通过某个网络的数据总量</p>
+<h2 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h2><p>速率就是实际网速，带宽是理论网速，吞吐量是一个或多个设备的综合速率，比如说1000m宽带的路由器连着三部手机，每部手机都是10mb/s使用，那么速率就是10mb/s，带宽是宽带的1000m，路由器吞吐量是30mb/s，即三者之和</p>
+<h1 id="2-时延相关指标"><a href="#2-时延相关指标" class="headerlink" title="2.时延相关指标"></a>2.时延相关指标</h1><h2 id="2-1-时延"><a href="#2-1-时延" class="headerlink" title="2.1 时延"></a>2.1 时延</h2><p>时延包括四大类</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">描述</th>
+<th align="center">计算公式</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">发送时延</td>
+<td align="center">数据从主机到信道上所用的时间</td>
+<td align="center">发送的数据长度/发送速率</td>
+</tr>
+<tr>
+<td align="center">传播时延</td>
+<td align="center">数据在信道上传播所花费的时间</td>
+<td align="center">信道长度/电磁波在信道上传播的速率</td>
+</tr>
+<tr>
+<td align="center">排队时延</td>
+<td align="center">数据在路由器前等待前面数据处理的时间</td>
+<td align="center">无计算方式</td>
+</tr>
+<tr>
+<td align="center">处理时延</td>
+<td align="center">数据在路由器中处理需求的时间</td>
+<td align="center">无计算方式</td>
+</tr>
+</tbody></table>
+<p>使用高速链路(提高网速)，只能减小发送时延，无法减少其他三个时延</p>
+<h2 id="2-2-时延带宽积"><a href="#2-2-时延带宽积" class="headerlink" title="2.2 时延带宽积"></a>2.2 时延带宽积</h2><p>公式：时延带宽积=传播时延x带宽<br>意思是链路上有多少比特的数据</p>
+<h2 id="2-3-往返时延RTT"><a href="#2-3-往返时延RTT" class="headerlink" title="2.3 往返时延RTT"></a>2.3 往返时延RTT</h2><p>从发送方发送数据开始，到接收方确认收到为止所花费的时间<br>RTT = 传播时延 * 2 + 处理时间 (有时可能直接忽略)</p>
+<h2 id="2-4-利用率"><a href="#2-4-利用率" class="headerlink" title="2.4 利用率"></a>2.4 利用率</h2><h3 id="2-4-1-信道利用率"><a href="#2-4-1-信道利用率" class="headerlink" title="2.4.1 信道利用率"></a>2.4.1 信道利用率</h3><p>信道利用率 = 有数据通过时间 / 有数据通过时间 + 无数据通过时间</p>
+<h3 id="2-4-2-网络利用率"><a href="#2-4-2-网络利用率" class="headerlink" title="2.4.2 网络利用率"></a>2.4.2 网络利用率</h3><p>网络利用率 = 所有信道利用率加权求平均值</p>
+<h3 id="2-4-3-时延和利用率的关系图"><a href="#2-4-3-时延和利用率的关系图" class="headerlink" title="2.4.3 时延和利用率的关系图"></a>2.4.3 时延和利用率的关系图</h3><p>利用率越高，延迟越大</p>
+<p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319125703.png" alt="函数图"></p>
+<h1 id="3-分层结构"><a href="#3-分层结构" class="headerlink" title="3.分层结构"></a>3.分层结构</h1><h2 id="3-1-为什么要分层，分层要做什么"><a href="#3-1-为什么要分层，分层要做什么" class="headerlink" title="3.1 为什么要分层，分层要做什么"></a>3.1 为什么要分层，分层要做什么</h2><ol>
+<li>发起通信的计算机必须将数据通信的通路进行激活。</li>
+<li>要告诉网络如何识别目的主机。</li>
+<li>发起通信的计算机要查明目的主机是否开机，并且与网络连接正常。</li>
+<li>发起通信的计算机要弄清楚，对方计算机中文件管理程序是否已经做好准备工作。</li>
+<li>确保差错和意外可以解决。</li>
+</ol>
+<h2 id="3-2-正式认识分层结构"><a href="#3-2-正式认识分层结构" class="headerlink" title="3.2 正式认识分层结构"></a>3.2 正式认识分层结构</h2><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319132116.png" alt="正式认识分层结构"></p>
+<h1 id="4-参考模型"><a href="#4-参考模型" class="headerlink" title="4.参考模型"></a>4.参考模型</h1><table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">英文</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">应用层</td>
+<td align="center">Application Layer</td>
+<td align="center">直接为用户的应用进程（例如电子邮件、文件传输和终端仿真）提供服务。如HTTP、SMTP、FTP、DNS等</td>
+</tr>
+<tr>
+<td align="center">表示层</td>
+<td align="center">Presentation Layer</td>
+<td align="center">把数据转换为能与接收者的系统格式兼容并适合传输的格式，即让两个系统可以交换信息</td>
+</tr>
+<tr>
+<td align="center">会话层</td>
+<td align="center">Session Layer</td>
+<td align="center">负责在数据传输中设置和维护计算机网络中两台计算机之间的通信连接</td>
+</tr>
+<tr>
+<td align="center">传输层</td>
+<td align="center">Transport Layer</td>
+<td align="center">负责端到端通讯，可靠传输，不可靠传输 ，流量控制，复用分用</td>
+</tr>
+<tr>
+<td align="center">网络层</td>
+<td align="center">Network Layer</td>
+<td align="center">负责选择路由最佳路径，规划IP地址(ipv4和ipv6变化只会影响网络层)，拥塞控制</td>
+</tr>
+<tr>
+<td align="center">数据链路层</td>
+<td align="center">Data Link Layer</td>
+<td align="center">帧的开始和结束，还有透明传输，差错校验(纠错由传输层解决)</td>
+</tr>
+<tr>
+<td align="center">物理层</td>
+<td align="center">Physical Layer</td>
+<td align="center">定义网络设备接口标准，电气标准(电压)，如何在物理链路上传输的更快</td>
+</tr>
+</tbody></table>
+<h2 id="4-1-OSI流程简介"><a href="#4-1-OSI流程简介" class="headerlink" title="4.1 OSI流程简介"></a>4.1 OSI流程简介</h2><p>网络层及以上，每一层都要对上一层发送的数据进行处理（加个头部）<br>数据链路层不仅需要加头部，还需要加尾部<br>物理层什么都不加，只管发送数据（比特流）<br><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133146.png"></p>
+<h2 id="4-2-TCP-IP参考模型"><a href="#4-2-TCP-IP参考模型" class="headerlink" title="4.2 TCP/IP参考模型"></a>4.2 TCP/IP参考模型</h2><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133320.png">  </p>
+<h2 id="4-3-五层参考模型及其传输过程简介"><a href="#4-3-五层参考模型及其传输过程简介" class="headerlink" title="4.3 五层参考模型及其传输过程简介"></a>4.3 五层参考模型及其传输过程简介</h2><p><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133443.png"><br><img src="https://s1.imagehub.cc/images/2021/03/19/QQ20210319133501.png"></p>
+</font>]]></content>
+      <tags>
+        <tag>Networks</tag>
+      </tags>
+  </entry>
 </search>
