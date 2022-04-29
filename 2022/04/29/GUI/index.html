@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7CMicrosoft+YaHei:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ssssv11.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="JavaSE GUI">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GUI">
+<meta property="og:url" content="https://ssssv11.github.io/2022/04/29/GUI/index.html">
+<meta property="og:site_name" content="Ssssv">
+<meta property="og:description" content="JavaSE GUI">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/10/QQ20220310140650.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/10/QQ20220310141540.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/10/QQ20220310161015.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/10/QQ20220310161023.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/10/1342932338_7774.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/10/QQ20220310164507.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/10/QQ20220310165554.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/10/QQ20220310172104.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/11/QQ20220311104622.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/11/QQ20220311114521.png">
+<meta property="article:published_time" content="2022-04-29T13:38:23.310Z">
+<meta property="article:modified_time" content="2022-04-29T13:38:27.435Z">
+<meta property="article:author" content="Ssssv11">
+<meta property="article:tag" content="JavaSE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.imagehub.cc/images/2022/03/10/QQ20220310140650.png">
+
+
+<link rel="canonical" href="https://ssssv11.github.io/2022/04/29/GUI/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>GUI | Ssssv</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ssssv</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">37</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GUI%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">GUI简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#AWT"><span class="nav-number">2.</span> <span class="nav-text">AWT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%84%E4%BB%B6"><span class="nav-number">2.1.</span> <span class="nav-text">组件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%B9%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Window"><span class="nav-number">2.2.1.</span> <span class="nav-text">Window</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Frame"><span class="nav-number">2.2.1.1.</span> <span class="nav-text">Frame</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Panel"><span class="nav-number">2.2.2.</span> <span class="nav-text">Panel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-number">2.2.3.</span> <span class="nav-text">布局管理器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#FlowLayout%EF%BC%88%E6%B5%81%E5%BC%8F%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%89"><span class="nav-number">2.2.3.1.</span> <span class="nav-text">FlowLayout（流式布局管理器）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BorderLayout%EF%BC%88%E8%BE%B9%E7%95%8C%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%89"><span class="nav-number">2.2.3.2.</span> <span class="nav-text">BorderLayout（边界布局管理器）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GridLayout%EF%BC%88%E7%BD%91%E6%A0%BC%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%89"><span class="nav-number">2.2.3.3.</span> <span class="nav-text">GridLayout（网格布局管理器）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A1%88%E4%BE%8B-%E5%88%A9%E7%94%A8%E5%9F%BA%E6%9C%AC%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8%E5%AE%9E%E7%8E%B0%E8%BE%83%E5%A4%8D%E6%9D%82%E5%B8%83%E5%B1%80"><span class="nav-number">2.2.3.4.</span> <span class="nav-text">案例 - 利用基本布局管理器实现较复杂布局</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GridBagLayout%EF%BC%88%E7%BD%91%E6%A0%BC%E5%8C%85%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%89"><span class="nav-number">2.2.3.5.</span> <span class="nav-text">GridBagLayout（网格包布局管理器）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CardLayout%EF%BC%88%E5%8D%A1%E7%89%87%E5%B8%83%E5%B1%80%E7%AE%A1%E7%90%86%E5%99%A8%EF%BC%89"><span class="nav-number">2.2.3.6.</span> <span class="nav-text">CardLayout（卡片布局管理器）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ActionEvent%EF%BC%88%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC%EF%BC%89"><span class="nav-number">2.3.</span> <span class="nav-text">ActionEvent（事件监听）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%89%E9%92%AE%E7%9B%91%E5%90%AC"><span class="nav-number">2.3.1.</span> <span class="nav-text">按钮监听</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E4%B8%AA%E6%8C%89%E9%92%AE%E7%9B%91%E5%90%AC"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">单个按钮监听</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E5%A4%9A%E4%B8%AA%E6%8C%89%E9%92%AE%E5%85%B1%E4%BA%AB%E4%B8%80%E4%B8%AA%E7%9B%91%E5%90%AC"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">实现多个按钮共享一个监听</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E6%A1%86%E7%9B%91%E5%90%AC"><span class="nav-number">2.3.2.</span> <span class="nav-text">文本框监听</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Graphics"><span class="nav-number">2.3.3.</span> <span class="nav-text">Graphics</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%BC%A0%E6%A0%87%E7%9B%91%E5%90%AC"><span class="nav-number">2.3.4.</span> <span class="nav-text">鼠标监听</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AA%97%E5%8F%A3%E7%9B%91%E5%90%AC"><span class="nav-number">2.3.5.</span> <span class="nav-text">窗口监听</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%AE%E7%9B%98%E7%9B%91%E5%90%AC"><span class="nav-number">2.3.6.</span> <span class="nav-text">键盘监听</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Swing"><span class="nav-number">3.</span> <span class="nav-text">Swing</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Window-1"><span class="nav-number">3.1.</span> <span class="nav-text">Window</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JFrame"><span class="nav-number">3.1.1.</span> <span class="nav-text">JFrame</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JDialog"><span class="nav-number">3.1.2.</span> <span class="nav-text">JDialog</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Component"><span class="nav-number">3.2.</span> <span class="nav-text">Component</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JLable"><span class="nav-number">3.2.1.</span> <span class="nav-text">JLable</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Icon"><span class="nav-number">3.2.1.1.</span> <span class="nav-text">Icon</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JPanel"><span class="nav-number">3.2.2.</span> <span class="nav-text">JPanel</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JScrocll"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">JScrocll</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JButton"><span class="nav-number">3.2.3.</span> <span class="nav-text">JButton</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#JRadioButton"><span class="nav-number">3.2.3.1.</span> <span class="nav-text">JRadioButton</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JCheckBox"><span class="nav-number">3.2.3.2.</span> <span class="nav-text">JCheckBox</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JComboBox"><span class="nav-number">3.3.</span> <span class="nav-text">JComboBox</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JList"><span class="nav-number">3.4.</span> <span class="nav-text">JList</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TextField"><span class="nav-number">3.5.</span> <span class="nav-text">TextField</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#JTextField"><span class="nav-number">3.5.1.</span> <span class="nav-text">JTextField</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JPasswordField"><span class="nav-number">3.5.2.</span> <span class="nav-text">JPasswordField</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JTextArea"><span class="nav-number">3.5.3.</span> <span class="nav-text">JTextArea</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ssssv11"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">Ssssv11</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Ssssv11" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Ssssv11" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://ssssv11.github.io/2022/04/29/GUI/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Ssssv11">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ssssv">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          GUI
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-29 21:38:23 / Modified: 21:38:27" itemprop="dateCreated datePublished" datetime="2022-04-29T21:38:23+08:00">2022-04-29</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <center>JavaSE GUI</center>
+
+<span id="more"></span>
+
+<h1 id="GUI简介"><a href="#GUI简介" class="headerlink" title="GUI简介"></a><strong>GUI简介</strong></h1><hr>
+<p>GUI全称是Graphical User Interface，即图形用户界面或图型用户接口，就是应用程序提供给用户操作的图形界面，包括窗口、菜单、按钮、工具栏和其他各种图形界面元素。</p>
+<p>GUI核心技术:</p>
+<ul>
+<li>AWT</li>
+<li>Swing</li>
+</ul>
+<p>由于Java的GUI的界面不美观、需要JRE环境等确定，在当前已经基本很少使用了。但是学习GUI仍有助于理解MVC框架和监听技术，因此有必要学习其思想。</p>
+<br/>
+
+<h1 id="AWT"><a href="#AWT" class="headerlink" title="AWT"></a><strong>AWT</strong></h1><hr>
+<p>AWT适用于创建图形用户界面的一个工具包，它提供了一系类用于实现图形界面的组件，如窗口、按钮、文本框、对话框等。在JDK中针对每个组件都提供了对应的Java类，这些类都是位于java.awt包中，接下来通过一个图例来描述这些类的继承关系。</p>
+<p><img src="https://s1.imagehub.cc/images/2022/03/10/QQ20220310140650.png" alt="QQ20220310140650.png"></p>
+<p><img src="https://s1.imagehub.cc/images/2022/03/10/QQ20220310141540.png" alt="QQ20220310141540.png"></p>
+<br/>
+
+<h2 id="组件"><a href="#组件" class="headerlink" title="组件"></a><strong>组件</strong></h2><p><strong>Component（组件）</strong>：是图形用户界面最基本的部分，也称为构件，是可以以图形化的方式显示在屏幕上，并能与用户进行交互的对象。组件不能独立的显示出来，必须将其放在一定的容器中才可以显示。</p>
+<br/>
+
+<h2 id="容器"><a href="#容器" class="headerlink" title="容器"></a><strong>容器</strong></h2><p><strong>Container（容器）</strong>：是一种特殊的组件，可以用来容纳其他组件。Container容器又分为两种类型，分别是Window（Frame）和Panel。</p>
+<h3 id="Window"><a href="#Window" class="headerlink" title="Window"></a><strong>Window</strong></h3><p>Window类是不依赖其他容器而独立存在的容器，它有两个子类，分别是Frame类和Dialog类。Frame类用于创建一个具有标题栏的框架窗口，作为程序的主页面。Dialog类用于创建一个对话框，实现用户信息交互。<br>        要生成一个窗口，通常使用Window的子类进行实例化，而不是直接使用Window类，框架的外观就像平常Windows系统下的窗口，有标题、边框、菜单和大小等。</p>
+<h4 id="Frame"><a href="#Frame" class="headerlink" title="Frame"></a><strong>Frame</strong></h4><p>Frame类是Window的子类，创建窗口时一般使用Window的子类Frame实例化对象。    </p>
+<p>对Frame窗口的基本操作：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    Frame的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateFrameTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建Frame对象</span></span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">&quot;FrameTest&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置窗口大小</span></span><br><span class="line">        frame.setSize(<span class="number">400</span>, <span class="number">400</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置窗口大小固定</span></span><br><span class="line">        frame.setResizable(<span class="keyword">false</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置背景颜色</span></span><br><span class="line"><span class="comment">//      frame.setBackground(Color.WHITE);</span></span><br><span class="line">        frame.setBackground(<span class="keyword">new</span> Color(<span class="number">193</span>, <span class="number">236</span>, <span class="number">220</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置窗口位置</span></span><br><span class="line">        frame.setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置可见</span></span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将Frame封装以同时创建多个窗口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateFramesTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frames frame1 = <span class="keyword">new</span> Frames(<span class="number">100</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">400</span>, Color.black);</span><br><span class="line">        Frames frame2 = <span class="keyword">new</span> Frames(<span class="number">500</span>, <span class="number">100</span>, <span class="number">400</span>, <span class="number">400</span>, Color.white);</span><br><span class="line">        Frames frame3 = <span class="keyword">new</span> Frames(<span class="number">100</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">400</span>, Color.white);</span><br><span class="line">        Frames frame4 = <span class="keyword">new</span> Frames(<span class="number">500</span>, <span class="number">500</span>, <span class="number">400</span>, <span class="number">400</span>, Color.black);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Frames</span> <span class="keyword">extends</span> <span class="title">Frame</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 窗口id</span></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> id = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     *</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> x - the x-coordinate of the new location&#x27;s top-left corner in the parent&#x27;s coordinate space</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> y - the y-coordinate of the new location&#x27;s top-left corner in the parent&#x27;s coordinate space</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> width - the width of the frame</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> height - the height of the frame</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> color - the background color of the frame</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Frames</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> width, <span class="keyword">int</span> height, Color color)</span> <span class="keyword">throws</span> HeadlessException </span>&#123;</span><br><span class="line">        <span class="comment">// 调用父类构造方法</span></span><br><span class="line">        <span class="keyword">super</span>(<span class="string">&quot;Frames&quot;</span> + (++id));</span><br><span class="line">        setBounds(x, y, width, height);</span><br><span class="line">        setResizable(<span class="keyword">false</span>);</span><br><span class="line">        setBackground(color);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但还这样写还存在点击关闭按钮不能将窗口关闭的问题，只能终止程序的运行。</p>
+<p>对于Frame类，要实现点击关闭就结束程序的功能，需要使用到<strong>监听器</strong>。使用<code>addWindowListener()</code>方法，而它需要传入一个<code>WindowListener</code>参数。若<code>new WindowListener()</code>，则需要实现其中的所有方法，这显然对于只需要实现关闭窗口功能的我们非常麻烦。</p>
+<p>因此，我们需要使用<strong>适配器模式</strong>来只重写其中<code>windowClosing()</code>方法，即<code>new WindowAdapter()</code>:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现关闭窗口的功能(监听器)</span></span><br><span class="line"><span class="comment">// 适配器模式: 实现WindowListener的子类WindowAdapter</span></span><br><span class="line">addWindowListener(<span class="keyword">new</span> WindowAdapter() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">        System.exit(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>这样我们就可以实现关闭窗口的功能了。</p>
+<p>（而实现该功能在JFrame中只需要使用<code>JFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE)</code>)</p>
+<br/>
+
+<h3 id="Panel"><a href="#Panel" class="headerlink" title="Panel"></a><strong>Panel</strong></h3><p>Panel是一种透明的容器，没有标题和边框。与Frame不同，它不能作为最外层的容器单独存在，它首先必须作为一个组件放置在其他容器（Window或其子类）中，一个Panel对象代表一个矩形的区域，在这个区域中可以容纳其它组件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    Panel的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreatePanelTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 创建窗口和面板</span></span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">&quot;PanelTest&quot;</span>);</span><br><span class="line">        Panel panel = <span class="keyword">new</span> Panel();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置布局</span></span><br><span class="line">        frame.setLayout(<span class="keyword">null</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置窗口大小与位置</span></span><br><span class="line">        frame.setBounds(<span class="number">300</span>, <span class="number">300</span>, <span class="number">500</span>, <span class="number">500</span>);</span><br><span class="line">        frame.setBackground(Color.white);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置面板大小与位置(相对于窗口)</span></span><br><span class="line">        panel.setBounds(<span class="number">50</span>, <span class="number">50</span>, <span class="number">400</span>, <span class="number">400</span>);</span><br><span class="line">        panel.setBackground(Color.black);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 将面板添加进窗口</span></span><br><span class="line">        frame.add(panel);</span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="布局管理器"><a href="#布局管理器" class="headerlink" title="布局管理器"></a><strong>布局管理器</strong></h3><p>在上一小节中，我们使用到了<strong>绝对布局</strong><code>frame.setLayout(null)</code>方法，该方法就是用来设置组件在容器中的布局的。绝对布局是硬性指定组件在容器中的位置和大小，可以使用绝对坐标的方式来指定组件的位置。</p>
+<p>在java.awt包中提供了5种布局管理器：</p>
+<ul>
+<li><strong>FlowLayout</strong>（流式布局管理器）</li>
+<li><strong>BorderLayout</strong>（边界布局管理器）</li>
+<li><strong>GridLayout</strong>（网格布局管理器）</li>
+<li>GirdBagLayout（网格包布局管理器）</li>
+<li>CardLayout（卡片布局管理器）</li>
+</ul>
+<p>主要学习前三种布局，对于后两种布局只需了解。</p>
+<h4 id="FlowLayout（流式布局管理器）"><a href="#FlowLayout（流式布局管理器）" class="headerlink" title="FlowLayout（流式布局管理器）"></a><strong>FlowLayout（流式布局管理器）</strong></h4><p>最简单的布局，Panel的默认布局管理器。容器会将组件按照添加顺序<strong>从上到下、从左向右</strong>放置。当到达容器的边界时，会自动将组建放到下一行的开始位置。这些组件可以<strong>左对齐、居中对齐（默认方式）或右对齐</strong>的方式排列。</p>
+<ul>
+<li><code>FlowLayout()</code>    // 组件默认居中对齐，水平、垂直间距默认为5个单位</li>
+<li><code>FlowLayout(int align)</code>   // 制定组件相对于容器的对其方法，水平、垂直间距默认为5个单位</li>
+<li><code>FlowLayout(int align, int hgap, int vgap)</code>  // 指定组件的对齐方式和水平、垂直间距</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ul>
+<li>参数<code>align</code>决定组件在每行中相对于容器边界的对齐方式，可以使用该类中提供的常量作为参数传递给构造方法。<ul>
+<li><code>FlowLayout.LEFT</code> 用于表示左对齐</li>
+<li><code>FlowLayout.RIGHT</code> 用于表示右对齐</li>
+<li><code>FlowLayout.CENTER</code> 用于表示居中对齐</li>
+</ul>
+</li>
+<li>参数<code>hgap</code>和参数<code>vgap</code>分别设定组件之间的水平和垂直间隙，可以填入一个任意数值。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    FlowLayout流式布局演示</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FlowLayoutTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">&quot;FlowLayoutTest&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置流式布局  所有组件左对齐, 水平、垂直间距为20</span></span><br><span class="line">        frame.setLayout(<span class="keyword">new</span> FlowLayout(FlowLayout.LEFT, <span class="number">20</span>, <span class="number">20</span>));</span><br><span class="line"></span><br><span class="line">        frame.setBounds(<span class="number">300</span>, <span class="number">300</span>, <span class="number">200</span>, <span class="number">200</span>);</span><br><span class="line">        frame.add(<span class="keyword">new</span> Button(<span class="string">&quot;button1&quot;</span>));</span><br><span class="line">        frame.add(<span class="keyword">new</span> Button(<span class="string">&quot;button2&quot;</span>));</span><br><span class="line">        frame.add(<span class="keyword">new</span> Button(<span class="string">&quot;button3&quot;</span>));</span><br><span class="line">        frame.add(<span class="keyword">new</span> Button(<span class="string">&quot;button4&quot;</span>));</span><br><span class="line">        frame.add(<span class="keyword">new</span> Button(<span class="string">&quot;button5&quot;</span>));</span><br><span class="line"></span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<center>
+<figure>
+<img src="https://s1.imagehub.cc/images/2022/03/10/QQ20220310161015.png" alt="QQ20220310161015.png" style="zoom: 140%;" /><img src="https://s1.imagehub.cc/images/2022/03/10/QQ20220310161023.png" alt="QQ20220310161023.png" style="zoom: 55%;" /></figure></center>
+
+
+<p><strong>特点：</strong></p>
+<ul>
+<li>所有组件像流水一样依次排列，不需要用户明确地设定，但灵活性上相对差。</li>
+<li>窗体拉伸变宽，按钮的大小和按钮之间的间距保持不变，但按钮相对于容器边界的距离会发生变化。</li>
+</ul>
+<br/>
+
+<h4 id="BorderLayout（边界布局管理器）"><a href="#BorderLayout（边界布局管理器）" class="headerlink" title="BorderLayout（边界布局管理器）"></a><strong>BorderLayout（边界布局管理器）</strong></h4><p>复杂的布局，Frame的默认布局管理器。将容器划为5个区域。</p>
+<ul>
+<li>EAST（东）</li>
+<li>SOUTH（南）</li>
+<li>WEST（西）</li>
+<li>NORTH（北）</li>
+<li>CENTER（中）</li>
+</ul>
+<p>组件可以被放置在这5个区域中的任意一个。</p>
+<p><img src="https://s1.imagehub.cc/images/2022/03/10/1342932338_7774.png" alt="1342932338_7774.png"></p>
+<p><strong>注意：</strong></p>
+<ul>
+<li>在改变容器时，NORTH和SOUTH区域高度不变，长度调整；WEST和EAST区域宽度不变，高度调整；CENTER会进行相应调整。</li>
+<li>向BorderLayout布局管理器中添加组件是，需要使用<code>add(Component comp, Object constraints)</code>方法。<ul>
+<li>参数<code>comp</code>表示要添加的组件</li>
+<li>参数<code>comstraints</code>表示将指定组件添加到布局中的方式和位置对象。它是一个Object类型，在传参时可以使用BorderLayout类型提供5个常量，分别是<code>EAST</code>、<code>SOUTH</code>、<code>WEST</code>、<code>NORTH</code>、<code>CENTER</code></li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    BorderLayout边界布局演示</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BorderLayoutTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">&quot;BorderLayoutTest&quot;</span>);</span><br><span class="line">        frame.setBounds(<span class="number">200</span>, <span class="number">200</span>, <span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置边界布局</span></span><br><span class="line">        frame.setLayout(<span class="keyword">new</span> BorderLayout());</span><br><span class="line"></span><br><span class="line">        Button button1 = <span class="keyword">new</span> Button(<span class="string">&quot;East&quot;</span>);</span><br><span class="line">        Button button2 = <span class="keyword">new</span> Button(<span class="string">&quot;West&quot;</span>);</span><br><span class="line">        Button button3 = <span class="keyword">new</span> Button(<span class="string">&quot;North&quot;</span>);</span><br><span class="line">        Button button4 = <span class="keyword">new</span> Button(<span class="string">&quot;South&quot;</span>);</span><br><span class="line">        Button button5 = <span class="keyword">new</span> Button(<span class="string">&quot;Center&quot;</span>);</span><br><span class="line"></span><br><span class="line">        frame.add(button1, BorderLayout.EAST);</span><br><span class="line">        frame.add(button2, BorderLayout.WEST);</span><br><span class="line">        frame.add(button3, BorderLayout.NORTH);</span><br><span class="line">        frame.add(button4, BorderLayout.SOUTH);</span><br><span class="line">        frame.add(button5, BorderLayout.CENTER);</span><br><span class="line"></span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<p><img src="https://s1.imagehub.cc/images/2022/03/10/QQ20220310164507.png" alt="QQ20220310164507.png"></p>
+<p>特点：</p>
+<ul>
+<li>可以限定各区域的边界，当用户改变容器窗口大小时，各个组件的相对位置不变。</li>
+<li>向BorderLayout的布局管理器中添加组件是，如果不能指定添加到哪个区域，则默认添加到CENTER区域，并且每个区域只能放置一个组件，如果向一个区域中添加多个组件，后放入的组件会覆盖先放入的组件。</li>
+</ul>
+<br/>
+
+<h4 id="GridLayout（网格布局管理器）"><a href="#GridLayout（网格布局管理器）" class="headerlink" title="GridLayout（网格布局管理器）"></a><strong>GridLayout（网格布局管理器）</strong></h4><p>使用纵横线将容器分为n行m列大小相等的网络，每个网络中放置一个组件。添加到容器中的组件首先放置在第一行第一列（左上角）的网络中，然后再第一行的网格中从左向右依次放置其它组件。行满后，继续在下一行中从左至右放置组件。与FlowLayout不同的是，放置在GridLayout布局管理器中的组件将会自动占据网格的整个区域。</p>
+<ul>
+<li><code>GridLayout()</code>  //默认只有一行，每个组件占一列</li>
+<li><code>GridLayout(int rows, int cols)</code>  //指定容器的行数和列数</li>
+<li><code>GridLayout(int rows, int cols, int hgap, int vgap)</code>  //指定容器的行、列数与组件之间水平、垂直间距</li>
+</ul>
+<p><strong>注意：</strong></p>
+<ul>
+<li>参数<code>rows</code>和<code>cols</code>分别代表行数和列数</li>
+<li>参数<code>hgap</code>和<code>vgap</code>规定水平 和垂直方向的间隙</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    GridLayout网格布局演示</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GridLayoutTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">&quot;GridLayoutTest&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置网格布局</span></span><br><span class="line">        frame.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">3</span>, <span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">6</span>; i++) &#123;</span><br><span class="line">            Button button = <span class="keyword">new</span> Button(<span class="string">&quot;button&quot;</span> + i);</span><br><span class="line">            frame.add(button);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        frame.pack();   <span class="comment">// 自适应填充窗口</span></span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<p><img src="https://s1.imagehub.cc/images/2022/03/10/QQ20220310165554.png" alt="QQ20220310165554.png"></p>
+<p><strong>特点：</strong></p>
+<ul>
+<li>组件的相对位置不随区域的缩放而改变，但组件的大小会随之改变，组件始终占据网格的整个区域</li>
+<li>缺点是总忽略组件的最佳大小，所有组件的宽高都相同</li>
+</ul>
+<br/>
+
+<h4 id="案例-利用基本布局管理器实现较复杂布局"><a href="#案例-利用基本布局管理器实现较复杂布局" class="headerlink" title="案例 - 利用基本布局管理器实现较复杂布局"></a><strong>案例 - 利用基本布局管理器实现较复杂布局</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    利用基本布局管理器实现较复杂布局</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LayoutTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">&quot;LayoutTest&quot;</span>);</span><br><span class="line">        frame.setBounds(<span class="number">300</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">400</span>);</span><br><span class="line"></span><br><span class="line">        frame.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">2</span>, <span class="number">1</span>));</span><br><span class="line"></span><br><span class="line">        Panel panel1 = <span class="keyword">new</span> Panel(<span class="keyword">new</span> BorderLayout());</span><br><span class="line">        Panel panel2 = <span class="keyword">new</span> Panel(<span class="keyword">new</span> GridLayout(<span class="number">2</span>, <span class="number">1</span>));</span><br><span class="line">        Panel panel3 = <span class="keyword">new</span> Panel(<span class="keyword">new</span> BorderLayout());</span><br><span class="line">        Panel panel4 = <span class="keyword">new</span> Panel(<span class="keyword">new</span> GridLayout(<span class="number">2</span>, <span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">        Button button1 = <span class="keyword">new</span> Button(<span class="string">&quot;button1&quot;</span>);</span><br><span class="line">        Button button2 = <span class="keyword">new</span> Button(<span class="string">&quot;button2&quot;</span>);</span><br><span class="line">        Button button3 = <span class="keyword">new</span> Button(<span class="string">&quot;button3&quot;</span>);</span><br><span class="line">        Button button4 = <span class="keyword">new</span> Button(<span class="string">&quot;button4&quot;</span>);</span><br><span class="line">        Button button5 = <span class="keyword">new</span> Button(<span class="string">&quot;button5&quot;</span>);</span><br><span class="line">        Button button6 = <span class="keyword">new</span> Button(<span class="string">&quot;button6&quot;</span>);</span><br><span class="line">        Button button7 = <span class="keyword">new</span> Button(<span class="string">&quot;button7&quot;</span>);</span><br><span class="line">        Button button8 = <span class="keyword">new</span> Button(<span class="string">&quot;button8&quot;</span>);</span><br><span class="line">        Button button9 = <span class="keyword">new</span> Button(<span class="string">&quot;button9&quot;</span>);</span><br><span class="line">        Button button10 = <span class="keyword">new</span> Button(<span class="string">&quot;button10&quot;</span>);</span><br><span class="line"></span><br><span class="line">        panel1.add(button1, BorderLayout.WEST);</span><br><span class="line">        panel1.add(button2, BorderLayout.EAST);</span><br><span class="line">        panel2.add(button3);</span><br><span class="line">        panel2.add(button4);</span><br><span class="line">        panel1.add(panel2, BorderLayout.CENTER);</span><br><span class="line"></span><br><span class="line">        panel3.add(button5, BorderLayout.WEST);</span><br><span class="line">        panel3.add(button6, BorderLayout.EAST);</span><br><span class="line">        panel4.add(button7);</span><br><span class="line">        panel4.add(button8);</span><br><span class="line">        panel4.add(button9);</span><br><span class="line">        panel4.add(button10);</span><br><span class="line">        panel3.add(panel4, BorderLayout.CENTER);</span><br><span class="line"></span><br><span class="line">        frame.add(panel1);</span><br><span class="line">        frame.add(panel3);</span><br><span class="line"></span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果如下：</p>
+<p><img src="https://s1.imagehub.cc/images/2022/03/10/QQ20220310172104.png" alt="QQ20220310172104.png"></p>
+<p>在该案例中，我们首先使用<code>GridLayout(2, 1)</code>布局将Frame分为了两行一列然后向第一第二行内分别添加了一个<code>Panel</code>。</p>
+<p>对于第一行，先使用<code>BorderLayout()</code>布局将<code>Panel</code>分为东西南北中五部分，其中的<code>EAST、WEST</code>部分分别添加一个<code>button</code>；然后再在其<code>CENTER</code>部分添加一个<code>Panel(new GirdLayout(2,1))</code>，使其分为两行一列，再向该<code>Panel</code>中添加两个<code>button</code>。</p>
+<p>第二行与第一行相似，只是再其<code>CENTER</code>部分添加了一个两行两列的<code>Panel</code>。</p>
+<br/>
+
+<h4 id="GridBagLayout（网格包布局管理器）"><a href="#GridBagLayout（网格包布局管理器）" class="headerlink" title="GridBagLayout（网格包布局管理器）"></a><strong>GridBagLayout（网格包布局管理器）</strong></h4><p>最灵活、最复杂的布局管理器。与GraiLayout布局管理器类似，不同的是，<strong>它允许网格中的组件大小各不相同，而且允许一个组件跨越一个或者多个网格。</strong></p>
+<br/>
+
+<h4 id="CardLayout（卡片布局管理器）"><a href="#CardLayout（卡片布局管理器）" class="headerlink" title="CardLayout（卡片布局管理器）"></a><strong>CardLayout（卡片布局管理器）</strong></h4><p>在操作系统中经常会遇到通过选项卡按钮来切换程序的界面，这些界面就相当于一张张卡片，而管理这些卡片的布局管理器就是卡片布局管理器（CardLayout）。卡片布局管理器将界面看做是一系列卡片，在任何时候只要其中一张卡片是可见的，这张卡片占据容器的整个区域。</p>
+<br/>
+
+<h2 id="ActionEvent（事件监听）"><a href="#ActionEvent（事件监听）" class="headerlink" title="ActionEvent（事件监听）"></a><strong>ActionEvent（事件监听）</strong></h2><p>事件源（例如文本框、按钮、文本域）可以注册事件监听器对象，并可以向事件监听器对象发送事件对象，事件发生后，事件源将事件对象发给已经注册的所有事件监听器，监听器对象会根据事件对象内的相应方法响应这个事件。简单来说，一旦用户执行某种行为，就会触发已经编写的相应事件。</p>
+<h3 id="按钮监听"><a href="#按钮监听" class="headerlink" title="按钮监听"></a><strong>按钮监听</strong></h3><h4 id="单个按钮监听"><a href="#单个按钮监听" class="headerlink" title="单个按钮监听"></a><strong>单个按钮监听</strong></h4><p>在之前小节中我们曾多次向Frame和Panel中添加Button，但在点击Button的时候却没什么反应。要实现按下按钮后触发一些事件这个功能，就需要使用事件监听器了。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    按下按钮触发事件</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ButtonActionTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">&quot;ActionEventTest&quot;</span>);</span><br><span class="line">        frame.setBounds(<span class="number">300</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">400</span>);</span><br><span class="line">        frame.setLayout(<span class="keyword">new</span> BorderLayout());</span><br><span class="line">        Button button = <span class="keyword">new</span> Button(<span class="string">&quot;button&quot;</span>);</span><br><span class="line">        frame.add(button, BorderLayout.CENTER);</span><br><span class="line"></span><br><span class="line">        windowClosing(frame);</span><br><span class="line">        <span class="comment">// 按下按钮触发事件</span></span><br><span class="line">        button.addActionListener(<span class="keyword">new</span> ActionListener() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;Clicked&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 关闭窗口</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(Frame frame)</span> </span>&#123;</span><br><span class="line">        frame.addWindowListener(<span class="keyword">new</span> WindowAdapter() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">                System.exit(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在实现<code>button.addActionListener()</code>方法时，它需要我们传入一个<code>ActionListener</code>类型的参数，因此我们可以在其中<code>new</code>一个<code>ActionListener</code>对象并实现<code>actionPerformed(ActionEvent e)</code>方法，重写的方法中编写在按钮按下时需要触发的事件。</p>
+<p>另外也可以用lambda表达式来简洁地替换这个匿名内部类：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">button.addActionListener(e -&gt; System.out.println(<span class="string">&quot;Clicked&quot;</span>));</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h4 id="实现多个按钮共享一个监听"><a href="#实现多个按钮共享一个监听" class="headerlink" title="实现多个按钮共享一个监听"></a><strong>实现多个按钮共享一个监听</strong></h4><p>在上一小节实现按钮功能的代码中，我们注意到重写的方法<code>actionPerformed(ActionEvent e)</code>有传入一个<code>ActionEvent</code>类型的参数<code>e</code>。我们来看一些这个参数的一些方法：</p>
+<ul>
+<li><p><code>setActionCommand()</code>  </p>
+<p>设置命令字符串</p>
+</li>
+<li><p><code>getActionCommand()</code></p>
+<p>返回与此操作关联的命令字符串，若未设置则返回组件名称</p>
+</li>
+<li><p><code>getModifiers()</code></p>
+<p>以整数编码的形式返回此动作事件期间按下的修饰键</p>
+</li>
+<li><p><code>getWhen()</code></p>
+<p>返回此事件发生的时间戳</p>
+</li>
+<li><p><code>paramString</code></p>
+<p>返回标识此操作事件的参数字符串</p>
+</li>
+</ul>
+<p>可以看到，若想实现按不同按钮实现不同功能但按钮共享一个监听，就可以使用<code>getActionCommand()</code>方法来判断按下的是哪一个按钮。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    利用多线程和事件监听实现多个按钮共享一个监听</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ButtonsActionTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame();</span><br><span class="line">        frame.setBounds(<span class="number">300</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">400</span>);</span><br><span class="line">        frame.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">2</span>,<span class="number">1</span>));</span><br><span class="line"></span><br><span class="line">        Button button1 = <span class="keyword">new</span> Button(<span class="string">&quot;Start&quot;</span>);</span><br><span class="line">        Button button2 = <span class="keyword">new</span> Button(<span class="string">&quot;Stop&quot;</span>);</span><br><span class="line"></span><br><span class="line">        Monitor monitor = <span class="keyword">new</span> Monitor();</span><br><span class="line">        button1.addActionListener(monitor);</span><br><span class="line">        button2.addActionListener(monitor);</span><br><span class="line"></span><br><span class="line">        frame.add(button1);</span><br><span class="line">        frame.add(button2);</span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Monitor</span> <span class="keyword">implements</span> <span class="title">ActionListener</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">            Thread thread1 = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                <span class="keyword">while</span> (<span class="keyword">true</span>) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (e.getActionCommand().equals(<span class="string">&quot;Start&quot;</span>))&#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            System.out.println(<span class="string">&quot;Start&quot;</span>);</span><br><span class="line">                            Thread.sleep(<span class="number">500</span>);</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (InterruptedException ex) &#123;</span><br><span class="line">                            ex.printStackTrace();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;);</span><br><span class="line">            Thread thread2 = <span class="keyword">new</span> Thread(() -&gt; &#123;</span><br><span class="line">                <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;</span><br><span class="line">                    <span class="keyword">if</span>(e.getActionCommand().equals(<span class="string">&quot;Stop&quot;</span>))&#123;</span><br><span class="line">                        System.out.println(<span class="string">&quot;Stop&quot;</span>);</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">                System.exit(<span class="number">0</span>);</span><br><span class="line">            &#125;);</span><br><span class="line"></span><br><span class="line">            thread1.start();</span><br><span class="line">            thread2.start();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="文本框监听"><a href="#文本框监听" class="headerlink" title="文本框监听"></a><strong>文本框监听</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    利用文本框监听器获取文本框文本</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TextFieldActionTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Frame frame = <span class="keyword">new</span> Frame(<span class="string">&quot;TextFieldActionTest&quot;</span>);</span><br><span class="line">        TextField textField = <span class="keyword">new</span> TextField();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 对文本框内输入的内容用 &#x27;*&#x27; 替换</span></span><br><span class="line">        textField.setEchoChar(<span class="string">&#x27;*&#x27;</span>);</span><br><span class="line">        textField.addActionListener(<span class="keyword">new</span> Monitor());</span><br><span class="line"></span><br><span class="line">        frame.add(textField);</span><br><span class="line">        frame.setBounds(<span class="number">300</span>, <span class="number">300</span>, <span class="number">400</span>, <span class="number">400</span>);</span><br><span class="line">        frame.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Monitor</span> <span class="keyword">implements</span> <span class="title">ActionListener</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 获取文本框内容</span></span><br><span class="line">        TextField textField = (TextField) e.getSource();</span><br><span class="line">        <span class="comment">// 输出文本框内容</span></span><br><span class="line">        System.out.println(textField.getText());</span><br><span class="line">        <span class="comment">// 按下回车清空文本框</span></span><br><span class="line">        textField.setText(<span class="string">&quot;&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>实现简易的计算器:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    实现简易计算器</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CalculatorTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Calculator().loadFrame();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Calculator</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> TextField textField1, textField2, textField3;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadFrame</span><span class="params">()</span></span>&#123;</span><br><span class="line">        textField1 = <span class="keyword">new</span> TextField(<span class="number">10</span>);</span><br><span class="line">        textField2 = <span class="keyword">new</span> TextField(<span class="number">10</span>);</span><br><span class="line">        textField3 = <span class="keyword">new</span> TextField(<span class="number">20</span>);</span><br><span class="line"></span><br><span class="line">        Button button1 = <span class="keyword">new</span> Button(<span class="string">&quot;=&quot;</span>);</span><br><span class="line">        button1.addActionListener(<span class="keyword">new</span> Listener());</span><br><span class="line"></span><br><span class="line">        Label label1 = <span class="keyword">new</span> Label(<span class="string">&quot;+&quot;</span>);</span><br><span class="line"></span><br><span class="line">        setLayout(<span class="keyword">new</span> FlowLayout());</span><br><span class="line">        add(textField1);</span><br><span class="line">        add(label1);</span><br><span class="line">        add(textField2);</span><br><span class="line">        add(button1);</span><br><span class="line">        add(textField3);</span><br><span class="line"></span><br><span class="line">        pack();</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="class"><span class="keyword">class</span> <span class="title">Listener</span> <span class="keyword">implements</span> <span class="title">ActionListener</span> </span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">actionPerformed</span><span class="params">(ActionEvent e)</span> </span>&#123;</span><br><span class="line">            textField3.setText(String.valueOf(Integer.parseInt(textField1.getText()) + Integer.parseInt(textField2.getText())));</span><br><span class="line">            textField1.setText(<span class="string">&quot;&quot;</span>);</span><br><span class="line">            textField2.setText(<span class="string">&quot;&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Graphics"><a href="#Graphics" class="headerlink" title="Graphics"></a><strong>Graphics</strong></h3><ul>
+<li><p><code>drawaLine()</code></p>
+<p>绘制直线</p>
+</li>
+<li><p><code>drawString()</code></p>
+<p>绘制字符串</p>
+</li>
+<li><p><code>drawRect()</code></p>
+<p>绘制矩形</p>
+</li>
+<li><p><code>drawRoundRect()</code></p>
+<p>绘制圆角矩形</p>
+</li>
+<li><p><code>drwaOval()</code></p>
+<p>绘制椭圆</p>
+</li>
+<li><p><code>setColor()</code></p>
+<p>设置画笔颜色</p>
+</li>
+<li><p><code>setFont()</code></p>
+<p>设置字体</p>
+</li>
+</ul>
+<ul>
+<li><p><code>void drawLine(int startX, int startY, int endX, int endY)</code>   </p>
+<p>直线</p>
+</li>
+<li><p><code>void drowRect(int top,int left,int width,int height)</code>  </p>
+<p>矩形</p>
+</li>
+<li><p><code>void fillRect(int top,int left,int width,int height)</code>   </p>
+<p>填充默认颜色的矩形</p>
+</li>
+<li><p><code>void drawRoundRect(int top,int left,int width,int height,int arcWidth,int arcHeight)</code>   </p>
+<p>圆角矩形</p>
+</li>
+<li><p><code>void fillRoundRect(int top, int left, int width, int height, int arcWidth, int arcHeight)</code>  填充默认颜色的矩形</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    Paint的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PaintTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> newPaint().loadFrame();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">newPaint</span> <span class="keyword">extends</span> <span class="title">Frame</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">loadFrame</span><span class="params">()</span></span>&#123;</span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">400</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">paint</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">        g.drawRect(<span class="number">100</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">200</span>);</span><br><span class="line">        g.setColor(Color.RED);</span><br><span class="line">        g.drawLine(<span class="number">100</span>, <span class="number">300</span>, <span class="number">500</span>, <span class="number">300</span>);</span><br><span class="line">        g.drawOval(<span class="number">350</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">50</span>);</span><br><span class="line">        g.setColor(Color.BLUE);</span><br><span class="line">        g.fillOval(<span class="number">350</span>, <span class="number">150</span>, <span class="number">50</span>, <span class="number">50</span>);</span><br><span class="line">        g.drawRoundRect(<span class="number">350</span>, <span class="number">200</span>, <span class="number">50</span>, <span class="number">100</span>, <span class="number">5</span>, <span class="number">5</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<p><img src="https://s1.imagehub.cc/images/2022/03/11/QQ20220311104622.png" alt="QQ20220311104622.png"></p>
+<br/>
+
+<h3 id="鼠标监听"><a href="#鼠标监听" class="headerlink" title="鼠标监听"></a><strong>鼠标监听</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    实现点击鼠标后在窗口上画出一个点</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MouseActionTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> MouseActionFrame(<span class="string">&quot;paint&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MouseActionFrame</span> <span class="keyword">extends</span> <span class="title">Frame</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> ArrayList&lt;Point&gt; points;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MouseActionFrame</span><span class="params">(String title)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(title);</span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        points = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取鼠标点击的位置</span></span><br><span class="line">        <span class="keyword">this</span>.addMouseListener(<span class="keyword">new</span> MouseAdapter() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">mousePressed</span><span class="params">(MouseEvent e)</span> </span>&#123;</span><br><span class="line">                <span class="comment">// 将获取的位置添加进ArrayList</span></span><br><span class="line">                points.add(<span class="keyword">new</span> Point(e.getX(), e.getY()));</span><br><span class="line">                <span class="comment">// 刷新</span></span><br><span class="line">                repaint();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 在鼠标点击的位置画图</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">paint</span><span class="params">(Graphics g)</span> </span>&#123;</span><br><span class="line">        Iterator&lt;Point&gt; iterator = points.iterator();</span><br><span class="line">        <span class="keyword">while</span> (iterator.hasNext()) &#123;</span><br><span class="line">            Point point = iterator.next();</span><br><span class="line">            g.setColor(Color.red);</span><br><span class="line">            g.fillOval(point.x, point.y, <span class="number">10</span>, <span class="number">10</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>要实现点击鼠标后在窗口上画点的功能，就要监听鼠标点击的事件。这里使用了匿名内部类来重写了<code>mousePressed(MouseEvent e)</code>方法，在监听到鼠标点击事件时，会向集合<code>ponits</code>中添加一个<code>Point</code>类型的横纵坐标值，该值通过<code>e.getX(); e.getY()</code>方法获取；然后使用会调用<code>paint()</code>方法的<code>repaint()</code>方法重绘窗口。在重写<code>paint()</code>方法时，我们需要对<code>points</code>集合进行遍历，在集合中的每个点位绘制一个点。</p>
+<p>这样就实现了点击鼠标绘制点的功能，效果如下：</p>
+<p><img src="https://s1.imagehub.cc/images/2022/03/11/QQ20220311114521.png" alt="QQ20220311114521.png"></p>
+<br/>
+
+<h3 id="窗口监听"><a href="#窗口监听" class="headerlink" title="窗口监听"></a><strong>窗口监听</strong></h3><p>对于窗口的监听只演示常用的两个</p>
+<ul>
+<li><p><code>windowClosing(WindowEvent e)</code></p>
+<p>关闭窗口</p>
+</li>
+<li><p><code>windowActivated(WindowEvent e)</code></p>
+<p>激活窗口</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    窗口监听演示</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WindowActionTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> WindowActionFrame(<span class="string">&quot;window&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">WindowActionFrame</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">WindowActionFrame</span><span class="params">(String title)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(title);</span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">       <span class="keyword">this</span>.addWindowListener(<span class="keyword">new</span> WindowAdapter()&#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowClosing</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">               System.out.println(<span class="string">&quot;Bye&quot;</span>);</span><br><span class="line">               setVisible(<span class="keyword">false</span>);</span><br><span class="line">               System.exit(<span class="number">0</span>);</span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">windowActivated</span><span class="params">(WindowEvent e)</span> </span>&#123;</span><br><span class="line">               System.out.println(<span class="string">&quot;WindowActivated&quot;</span>);</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="键盘监听"><a href="#键盘监听" class="headerlink" title="键盘监听"></a><strong>键盘监听</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    演示键盘监听</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">KeyboardActionTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> KeyboardActionFrame();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">KeyboardActionFrame</span> <span class="keyword">extends</span> <span class="title">Frame</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">KeyboardActionFrame</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.addKeyListener(<span class="keyword">new</span> KeyAdapter() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">keyPressed</span><span class="params">(KeyEvent e)</span> </span>&#123;</span><br><span class="line">                <span class="comment">// 输出所按下的键的char值</span></span><br><span class="line">                System.out.println(e.getKeyCode());</span><br><span class="line">                <span class="comment">// 利用KeyEvent的静态属性判断所按下的是哪个键</span></span><br><span class="line">                <span class="keyword">if</span>(e.getKeyCode() == KeyEvent.VK_UP)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;UP&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(e.getKeyCode() == KeyEvent.VK_DOWN)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;Down&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(e.getKeyCode() == KeyEvent.VK_RIGHT)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;Right&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(e.getKeyCode() == KeyEvent.VK_LEFT)&#123;</span><br><span class="line">                    System.out.println(<span class="string">&quot;Left&quot;</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h1 id="Swing"><a href="#Swing" class="headerlink" title="Swing"></a><strong>Swing</strong></h1><hr>
+<p>早期的AWT（抽象窗口工具包）组件开发的图形用户界面，要依赖本地系统，当把AWT组件开发的应用程序移植到其他平台的系统上运行时，不能保证其外观风格，因此AWT是依赖于本地系统平台的。而使用Swing开发的Java应用程序，其界面是不受本地系统平台限制的，也就是说Swing开发的Java应用程序移植到其他系统平台上时，其界面外观是不会改变的。但要注意的是，虽然Swing提供的组件可以方便开发Java应用程序，但是<strong>Swing并不能取代AWT</strong>，在开发Swing程序时通常要借助与AWT的一些对象来共同完成应用程序的设计。</p>
+<ul>
+<li>位于javax.swing</li>
+<li>Swing是纯java组件,使得应用在不同平台中有相同的外观和行为</li>
+</ul>
+<h2 id="Window-1"><a href="#Window-1" class="headerlink" title="Window"></a><strong>Window</strong></h2><h3 id="JFrame"><a href="#JFrame" class="headerlink" title="JFrame"></a><strong>JFrame</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    创建JFrame窗口</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateJFrameTest</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 初始化窗口</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        JFrame jFrame = <span class="keyword">new</span> JFrame();</span><br><span class="line">        jFrame.setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        jFrame.setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        jFrame.setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 设置文字并居中显示</span></span><br><span class="line">        JLabel jLabel = <span class="keyword">new</span> JLabel(<span class="string">&quot;Swing&quot;</span>);</span><br><span class="line">        jLabel.setHorizontalAlignment(SwingConstants.CENTER);</span><br><span class="line">        jFrame.add(jLabel);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 获取jFrame中的容器,设置颜色</span></span><br><span class="line">        jFrame.getContentPane().setBackground(<span class="keyword">new</span> Color(<span class="number">195</span>, <span class="number">248</span>, <span class="number">255</span>));</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭窗口</span></span><br><span class="line">        jFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> CreateJFrameTest().init();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意:</strong></p>
+<ul>
+<li><p>JFrame只是一个窗口，它里面装的是容器和组件。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jFrame.setBackground(<span class="keyword">new</span> Color(<span class="number">195</span>, <span class="number">248</span>, <span class="number">255</span>));</span><br></pre></td></tr></table></figure>
+
+<p>因此这句代码无法实现我们想要的设置背景颜色的功能，因为我们看到的窗口内装的是容器和组件。因此我们需要修改代码为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jFrame.getContentPane().setBackground(<span class="keyword">new</span> Color(<span class="number">195</span>, <span class="number">248</span>, <span class="number">255</span>));</span><br></pre></td></tr></table></figure>
+
+<p>先获取<code>jFrame</code>中的内容面板，再将该内容面板设置背景颜色。</p>
+</li>
+</ul>
+<br/>
+
+<h3 id="JDialog"><a href="#JDialog" class="headerlink" title="JDialog"></a><strong>JDialog</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    创建JDialog弹窗</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateJDialogTest</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> CreateJDialogTest();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CreateJDialogTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        <span class="keyword">this</span>.setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        <span class="keyword">this</span>.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.getContentPane().setLayout(<span class="keyword">null</span>);</span><br><span class="line">        JButton jButton = <span class="keyword">new</span> JButton(<span class="string">&quot;Click&quot;</span>);</span><br><span class="line">        jButton.setBounds(<span class="number">200</span>, <span class="number">250</span>, <span class="number">100</span>, <span class="number">50</span>);</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(jButton);</span><br><span class="line">        <span class="keyword">this</span>.setVisible(<span class="keyword">true</span>);</span><br><span class="line"></span><br><span class="line">        jButton.addActionListener(e -&gt; <span class="keyword">new</span> NewJDialog());</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 弹窗</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">NewJDialog</span> <span class="keyword">extends</span> <span class="title">JDialog</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">NewJDialog</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setSize(<span class="number">250</span>, <span class="number">300</span>);</span><br><span class="line">        <span class="keyword">this</span>.setTitle(<span class="string">&quot;Dialog&quot;</span>);</span><br><span class="line">        <span class="keyword">this</span>.setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().setLayout(<span class="keyword">null</span>);</span><br><span class="line">        JLabel jLabel = <span class="keyword">new</span> JLabel(<span class="string">&quot;I&#x27;m a JDialog&quot;</span>);</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(jLabel);</span><br><span class="line">        jLabel.setBounds(<span class="number">75</span>, <span class="number">100</span>, <span class="number">100</span>, <span class="number">75</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>遇到的问题:</p>
+<ul>
+<li><p>写完代码后运行并没有按钮</p>
+<p>原因：未为jButton设置大小与位置</p>
+</li>
+</ul>
+<br/>
+
+<h2 id="Component"><a href="#Component" class="headerlink" title="Component"></a><strong>Component</strong></h2><h3 id="JLable"><a href="#JLable" class="headerlink" title="JLable"></a><strong>JLable</strong></h3><p>标签由JLabel类定义，可以显示一行只读文本、一个图像或带图像的文本。</p>
+<p>JLabel类提供了许多构造方法，可查看API选择需要的使用，如显示只有文本的标签、只有图标的标签或包含文本与图标的标签等。</p>
+<p>常用语法格式如下，创建的是一个不带图标和文本的JLabel对象：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JLabel jLable = <span class="keyword">new</span> JLabel();</span><br></pre></td></tr></table></figure>
+
+<h4 id="Icon"><a href="#Icon" class="headerlink" title="Icon"></a><strong>Icon</strong></h4><p>　Swing中的<strong>图标可以放置在按钮、标签等组件上</strong>，用于描述组件的用途。图标可以用Java支持的图片文件类型进行创建，也可以使用java.awt.Graphics类提供的功能方法来创建。</p>
+<p>在Swing中通过Icon接口来创建图标，可以在创建时给定图标的大小、颜色等特性。</p>
+<p><strong>注意</strong>：Icon是接口，在使用Icon接口的时候，必须实现Icon接口的三个方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getIconHeight</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getIconWidth</span><span class="params">()</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">paintIcon</span><span class="params">(Component arg0, Graphics arg1, <span class="keyword">int</span> arg2, <span class="keyword">int</span> arg3)</span></span></span><br></pre></td></tr></table></figure>
+
+<p>前两个方法用于获取图片的长宽，<code>paintIcon()</code>方法用于实现在指定坐标位置画图。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    设置icon</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateIconTest</span> <span class="keyword">extends</span> <span class="title">JFrame</span> <span class="keyword">implements</span> <span class="title">Icon</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> width;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> height;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CreateIconTest</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CreateIconTest</span><span class="params">(<span class="keyword">int</span> width, <span class="keyword">int</span> height)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.width = width;</span><br><span class="line">        <span class="keyword">this</span>.height = height;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">paintIcon</span><span class="params">(Component c, Graphics g, <span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">        g.drawOval(x, y, width, height);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getIconWidth</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.width;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getIconHeight</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.height;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">        CreateIconTest icon1 = <span class="keyword">new</span> CreateIconTest(<span class="number">15</span>, <span class="number">15</span>);</span><br><span class="line">        URL icon2Url = CreateIconTest.class.getResource(<span class="string">&quot;radio button.ico&quot;</span>);</span><br><span class="line">        Icon icon2 = <span class="keyword">new</span> ImageIcon(icon2Url);</span><br><span class="line">        getContentPane().add(<span class="keyword">new</span> JLabel(<span class="string">&quot;IconLabel&quot;</span>, icon1, SwingConstants.CENTER));</span><br><span class="line">        JButton jButton = <span class="keyword">new</span> JButton(<span class="string">&quot;IconButton&quot;</span>, icon2);</span><br><span class="line">        jButton.setBounds(<span class="number">200</span>, <span class="number">550</span>, <span class="number">20</span>, <span class="number">20</span>);</span><br><span class="line">        getContentPane().add(jButton);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        <span class="keyword">this</span>.setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        <span class="keyword">this</span>.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">        <span class="keyword">this</span>.setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> CreateIconTest().init();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意:</strong></p>
+<ul>
+<li><p>图片icon的设置:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">URL icon2Url = CreateIconTest.class.getResource(<span class="string">&quot;radio button.ico&quot;</span>);</span><br><span class="line">Icon icon2 = <span class="keyword">new</span> ImageIcon(icon2Url);</span><br></pre></td></tr></table></figure>
+
+<p><code>getResource(String name)</code>方法将会从给定的类<code>CreateIconTest.class</code>搜索文件名与<code>name</code>相同的文件并获取。</p>
+</li>
+</ul>
+<br/>
+
+<h3 id="JPanel"><a href="#JPanel" class="headerlink" title="JPanel"></a><strong>JPanel</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    JPanel的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateJPanelTest</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CreateJPanelTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().setLayout(<span class="keyword">new</span> GridLayout(<span class="number">2</span>, <span class="number">1</span>, <span class="number">10</span>, <span class="number">10</span>));</span><br><span class="line">        JPanel panel1 = <span class="keyword">new</span> JPanel(<span class="keyword">new</span> GridLayout(<span class="number">3</span>, <span class="number">1</span>));</span><br><span class="line">        JPanel panel2 = <span class="keyword">new</span> JPanel(<span class="keyword">new</span> GridLayout(<span class="number">1</span>, <span class="number">3</span>));</span><br><span class="line"></span><br><span class="line">        panel1.add(<span class="keyword">new</span> JButton(<span class="string">&quot;1&quot;</span>));</span><br><span class="line">        panel1.add(<span class="keyword">new</span> JButton(<span class="string">&quot;2&quot;</span>));</span><br><span class="line">        panel1.add(<span class="keyword">new</span> JButton(<span class="string">&quot;3&quot;</span>));</span><br><span class="line">        panel2.add(<span class="keyword">new</span> JButton(<span class="string">&quot;4&quot;</span>));</span><br><span class="line">        panel2.add(<span class="keyword">new</span> JButton(<span class="string">&quot;5&quot;</span>));</span><br><span class="line">        panel2.add(<span class="keyword">new</span> JButton(<span class="string">&quot;6&quot;</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(panel1);</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(panel2);</span><br><span class="line"></span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> CreateJPanelTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>遇到的问题：</p>
+<ul>
+<li><p>在设置窗口参数时写成了</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.getContentPane().setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line"><span class="keyword">this</span>.getContentPane().setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line"><span class="keyword">this</span>.getContentPane().setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line"><span class="keyword">this</span>.getContentPane().setVisible(<span class="keyword">true</span>);</span><br></pre></td></tr></table></figure>
+
+<p>导致不显示窗口。这样写的意思是对JFrame中的内容的设置而不是对JFrame的设置，因此只需要将<code>this.getContentPane()</code>删掉即可正常显示。</p>
+</li>
+</ul>
+<h4 id="JScrocll"><a href="#JScrocll" class="headerlink" title="JScrocll"></a><strong>JScrocll</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    JScrollPane 带滚动条的面板的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CreateJScrollTest</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">CreateJScrollTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        TextArea textArea = <span class="keyword">new</span> TextArea(<span class="number">20</span>, <span class="number">50</span>);</span><br><span class="line">        textArea.setText(<span class="string">&quot;textArea&quot;</span>);</span><br><span class="line">        JScrollPane pane = <span class="keyword">new</span> JScrollPane(textArea);</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(pane);</span><br><span class="line"></span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> CreateJScrollTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="JButton"><a href="#JButton" class="headerlink" title="JButton"></a><strong>JButton</strong></h3><p>JButton在之前的例子中已经出现多次，是较为常用的组件，用于触发特定动作。可以在按钮上显示文本标签，还可以显示图标。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JButton jButton = <span class="keyword">new</span> JButton();</span><br><span class="line">jButton.setIcon(icon);        <span class="comment">// 设置图标</span></span><br><span class="line">jButton.setToolTipText(<span class="string">&quot;图片按钮&quot;</span>);        <span class="comment">// 设置按钮提示</span></span><br></pre></td></tr></table></figure>
+
+<p>在这里不再过多演示。</p>
+<br/>
+
+<h4 id="JRadioButton"><a href="#JRadioButton" class="headerlink" title="JRadioButton"></a><strong>JRadioButton</strong></h4><p>JRadioButton是一个单选按钮组件。</p>
+<p>默认情况下，单选按钮显示一个圆形图标，通常在其旁放置一些说明性文字。当用户选中某个单选按钮后，按钮组中其它按钮将被自动取消，这时就需要按钮组（ButtonGroup）来将同组按钮放在一起，该按钮组中的按钮只能选择一个，而不在此按钮中的按钮不受影响。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    JRadioButton单选按钮的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JRadioButtonTest</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">JRadioButtonTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().setLayout(<span class="keyword">new</span> GridLayout(<span class="number">3</span>, <span class="number">1</span>));</span><br><span class="line">        JRadioButton jRadioButton1 = <span class="keyword">new</span> JRadioButton(<span class="string">&quot;bt1&quot;</span>);</span><br><span class="line">        JRadioButton jRadioButton2 = <span class="keyword">new</span> JRadioButton(<span class="string">&quot;bt2&quot;</span>);</span><br><span class="line">        JRadioButton jRadioButton3 = <span class="keyword">new</span> JRadioButton(<span class="string">&quot;bt3&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 添加按钮组, 同组中按钮只能选择一个</span></span><br><span class="line">        ButtonGroup buttonGroup = <span class="keyword">new</span> ButtonGroup();</span><br><span class="line">        buttonGroup.add(jRadioButton1);</span><br><span class="line">        buttonGroup.add(jRadioButton2);</span><br><span class="line">        buttonGroup.add(jRadioButton3);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(jRadioButton1);</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(jRadioButton2);</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(jRadioButton3);</span><br><span class="line"></span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> JRadioButtonTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将按钮添加进同一个按钮组，则该组内的按钮只能被单选。</p>
+<br/>
+
+<h4 id="JCheckBox"><a href="#JCheckBox" class="headerlink" title="JCheckBox"></a><strong>JCheckBox</strong></h4><p>JCheckBox是一个复选框组件，与单选按钮的区别就是可以多选。每一个复选框都提供“选中”与“不选中”两种状态。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    JCheckBox多选框的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JCheckBoxTest</span> <span class="keyword">extends</span> <span class="title">JFrame</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">JCheckBoxTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().setLayout(<span class="keyword">new</span> GridLayout(<span class="number">1</span>, <span class="number">3</span>));</span><br><span class="line">        JCheckBox jCheckBox1 = <span class="keyword">new</span> JCheckBox(<span class="string">&quot;checkBox1&quot;</span>);</span><br><span class="line">        JCheckBox jCheckBox2 = <span class="keyword">new</span> JCheckBox(<span class="string">&quot;checkBox2&quot;</span>);</span><br><span class="line">        JCheckBox jCheckBox3 = <span class="keyword">new</span> JCheckBox(<span class="string">&quot;checkBox3&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(jCheckBox1);</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(jCheckBox2);</span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(jCheckBox3);</span><br><span class="line"></span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> JCheckBoxTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>与不添加进<code>ButtonGrounp</code>的<code>JRadioButton</code>功能相似，可以多选。</p>
+<br/>
+
+<h2 id="JComboBox"><a href="#JComboBox" class="headerlink" title="JComboBox"></a><strong>JComboBox</strong></h2><p>JComboBox是一个下拉列表，用于显示选择的弹出菜单。用户选择的选项显示在菜单顶部。它继承 JComponent类。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    JComboBox下拉列表的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JComboBoxTest</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">JComboBoxTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">20</span>, <span class="number">2</span>));</span><br><span class="line">        JComboBox&lt;String&gt; comboBox = <span class="keyword">new</span> JComboBox&lt;&gt;();</span><br><span class="line"></span><br><span class="line">        comboBox.addItem(<span class="string">&quot;A&quot;</span>);</span><br><span class="line">        comboBox.addItem(<span class="string">&quot;B&quot;</span>);</span><br><span class="line">        comboBox.addItem(<span class="string">&quot;C&quot;</span>);</span><br><span class="line">        comboBox.addItem(<span class="string">&quot;D&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(comboBox);</span><br><span class="line">        </span><br><span class="line">      	comboBox.addItemListener(e -&gt; &#123;</span><br><span class="line">            System.out.println(comboBox.getItemAt(comboBox.getSelectedIndex()));</span><br><span class="line">        &#125;);</span><br><span class="line"></span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getText</span><span class="params">(JComboBox comboBox)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> comboBox.getItemAt(<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> JComboBoxTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h2 id="JList"><a href="#JList" class="headerlink" title="JList"></a><strong>JList</strong></h2><p>JList是一个列表框，只在窗体上占据固定的大小，如果要使列表框具有滚动效果，可以将列表框放入滚动面板中。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    JList的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JListTest</span> <span class="keyword">extends</span> <span class="title">JFrame</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">JListTest</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setLayout(<span class="keyword">new</span> GridLayout(<span class="number">5</span>, <span class="number">2</span>));</span><br><span class="line"></span><br><span class="line">        String[] contents = &#123;<span class="string">&quot;1&quot;</span>, <span class="string">&quot;2&quot;</span>, <span class="string">&quot;3&quot;</span>&#125;;</span><br><span class="line">        JList&lt;String&gt; jList = <span class="keyword">new</span> JList&lt;&gt;(contents);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.getContentPane().add(jList);</span><br><span class="line"></span><br><span class="line">        setSize(<span class="number">500</span>, <span class="number">600</span>);</span><br><span class="line">        setLocationRelativeTo(<span class="keyword">null</span>);</span><br><span class="line">        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);</span><br><span class="line">        setVisible(<span class="keyword">true</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> JListTest();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可以从集合中获取数值放入JList中：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Vector contents = <span class="keyword">new</span> Vector();</span><br><span class="line">JList jList = <span class="keyword">new</span> JList(contents);</span><br><span class="line">contents.add(<span class="string">&quot;1&quot;</span>);</span><br><span class="line">contents.add(<span class="string">&quot;2&quot;</span>);</span><br><span class="line">contents.add(<span class="string">&quot;3&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h2 id="TextField"><a href="#TextField" class="headerlink" title="TextField"></a><strong>TextField</strong></h2><h3 id="JTextField"><a href="#JTextField" class="headerlink" title="JTextField"></a><strong>JTextField</strong></h3><p>JTextField文本框是用来显示或编辑一个单行文本的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">JTextField jTextField = <span class="keyword">new</span> JTextField(<span class="string">&quot;aaa&quot;</span>);    <span class="comment">// 创建一个文本框，值为aaa</span></span><br><span class="line">JTextField jTextField2 = <span class="keyword">new</span> JTextField(<span class="string">&quot;bbb&quot;</span>, <span class="number">20</span>);    <span class="comment">// 创建一个长度为20的文本框，值为bbb</span></span><br><span class="line">jt.setText(<span class="string">&quot;&quot;</span>);        <span class="comment">// 将文本框置空</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="JPasswordField"><a href="#JPasswordField" class="headerlink" title="JPasswordField"></a><strong>JPasswordField</strong></h3><p>密码框与文本框的定义与用法类似，但会使用户输入的字符串以某种符号进行加密。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 输入的数据以某种符号进行加密</span></span><br><span class="line">JPasswordField jPasswordField = <span class="keyword">new</span> JPasswordField();</span><br><span class="line">jPasswordField.setEchoChar(<span class="string">&#x27;*&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h3 id="JTextArea"><a href="#JTextArea" class="headerlink" title="JTextArea"></a><strong>JTextArea</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 多行</span></span><br><span class="line">JTextArea jTextArea = <span class="keyword">new</span> JTextArea(<span class="number">20</span>, <span class="number">30</span>);</span><br><span class="line">jTextArea.setText(<span class="string">&quot;bbb&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p>end</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Ssssv11 WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/JavaSE/" rel="tag"># JavaSE</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/29/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" rel="prev" title="网络编程">
+                  <i class="fa fa-chevron-left"></i> 网络编程
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/04/29/%E5%8F%8D%E5%B0%84%E4%B8%8E%E6%B3%A8%E8%A7%A3/" rel="next" title="反射与注解">
+                  反射与注解 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ssssv11</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

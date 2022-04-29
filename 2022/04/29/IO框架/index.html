@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7CMicrosoft+YaHei:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ssssv11.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="IO框架">
+<meta property="og:type" content="article">
+<meta property="og:title" content="IO框架">
+<meta property="og:url" content="https://ssssv11.github.io/2022/04/29/IO%E6%A1%86%E6%9E%B6/index.html">
+<meta property="og:site_name" content="Ssssv">
+<meta property="og:description" content="IO框架">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/06/dbb44aed2e738bd4b31c6ba6adda90d6277f9e2f5350.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/06/1e30e924b899a9014c0896a111c41d7b02087bf45f50.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/06/QQ20220306163205.png">
+<meta property="og:image" content="https://s1.imagehub.cc/images/2022/03/06/QQ20220306163353.png">
+<meta property="article:published_time" content="2022-04-29T13:35:36.689Z">
+<meta property="article:modified_time" content="2022-04-29T13:35:40.334Z">
+<meta property="article:author" content="Ssssv11">
+<meta property="article:tag" content="JavaSE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s1.imagehub.cc/images/2022/03/06/dbb44aed2e738bd4b31c6ba6adda90d6277f9e2f5350.png">
+
+
+<link rel="canonical" href="https://ssssv11.github.io/2022/04/29/IO%E6%A1%86%E6%9E%B6/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>IO框架 | Ssssv</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ssssv</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">37</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%81%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">流的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B5%81%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-number">2.</span> <span class="nav-text">流的分类</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%89%E6%96%B9%E5%90%91-%E9%87%8D%E7%82%B9"><span class="nav-number">2.1.</span> <span class="nav-text">按方向[重点]</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%89%E5%8D%95%E4%BD%8D"><span class="nav-number">2.2.</span> <span class="nav-text">按单位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8C%89%E5%8A%9F%E8%83%BD"><span class="nav-number">2.3.</span> <span class="nav-text">按功能</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81"><span class="nav-number">3.</span> <span class="nav-text">字节流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81%E7%9A%84%E7%88%B6%E7%B1%BB-%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">3.1.</span> <span class="nav-text">字节流的父类(抽象类)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E6%B5%81%E7%9A%84%E5%AD%90%E7%B1%BB"><span class="nav-number">3.2.</span> <span class="nav-text">字节流的子类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%AD%97%E8%8A%82%E6%B5%81"><span class="nav-number">3.2.1.</span> <span class="nav-text">文件字节流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E8%8A%82%E7%BC%93%E5%AD%98%E6%B5%81"><span class="nav-number">3.2.2.</span> <span class="nav-text">字节缓存流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%B9%E8%B1%A1%E6%B5%81"><span class="nav-number">3.2.3.</span> <span class="nav-text">对象流</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%88ObjectOutputStream%EF%BC%89"><span class="nav-number">3.2.3.1.</span> <span class="nav-text">序列化（ObjectOutputStream）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%88ObjectInputStream%EF%BC%89"><span class="nav-number">3.2.3.2.</span> <span class="nav-text">反序列化（ObjectInputStream）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96%E5%92%8C%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-number">3.2.3.3.</span> <span class="nav-text">序列化和反序列化注意事项</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">常见字符编码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81"><span class="nav-number">5.</span> <span class="nav-text">字符流</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81%E7%9A%84%E7%88%B6%E7%B1%BB%EF%BC%88%E6%8A%BD%E8%B1%A1%E7%B1%BB%EF%BC%89"><span class="nav-number">5.1.</span> <span class="nav-text">字符流的父类（抽象类）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E6%B5%81%E7%9A%84%E5%AD%90%E7%B1%BB"><span class="nav-number">5.2.</span> <span class="nav-text">字符流的子类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E5%AD%97%E7%AC%A6%E6%B5%81"><span class="nav-number">5.2.1.</span> <span class="nav-text">文件字符流</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%BC%93%E5%86%B2%E6%B5%81"><span class="nav-number">5.2.2.</span> <span class="nav-text">字符缓冲流</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ssssv11"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">Ssssv11</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Ssssv11" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Ssssv11" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://ssssv11.github.io/2022/04/29/IO%E6%A1%86%E6%9E%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Ssssv11">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ssssv">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          IO框架
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-29 21:35:36 / Modified: 21:35:40" itemprop="dateCreated datePublished" datetime="2022-04-29T21:35:36+08:00">2022-04-29</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <center>IO框架</center>
+
+<span id="more"></span>
+
+<h1 id="流的概念"><a href="#流的概念" class="headerlink" title="流的概念"></a><strong>流的概念</strong></h1><hr>
+<ul>
+<li><strong>概念</strong>：内存与存储设备之间传输数据的通道。</li>
+</ul>
+<p><img src="https://s1.imagehub.cc/images/2022/03/06/dbb44aed2e738bd4b31c6ba6adda90d6277f9e2f5350.png" alt="dbb44aed2e738bd4b31c6ba6adda90d6277f9e2f5350.png"></p>
+<ul>
+<li>水借助管道传输；数据借助流传输。</li>
+</ul>
+<h1 id="流的分类"><a href="#流的分类" class="headerlink" title="流的分类"></a><strong>流的分类</strong></h1><hr>
+<h2 id="按方向-重点"><a href="#按方向-重点" class="headerlink" title="按方向[重点]"></a><strong>按方向[重点]</strong></h2><ul>
+<li><strong>输入流</strong>：将&lt;存储设备&gt;中的内容读入到&lt;内存&gt;中。</li>
+<li><strong>输出流</strong>：将&lt;内存&gt;中的内容写入到&lt;存储设备&gt;中。</li>
+</ul>
+<p><img src="https://s1.imagehub.cc/images/2022/03/06/1e30e924b899a9014c0896a111c41d7b02087bf45f50.png" alt="1e30e924b899a9014c0896a111c41d7b02087bf45f50.png"></p>
+<h2 id="按单位"><a href="#按单位" class="headerlink" title="按单位"></a><strong>按单位</strong></h2><ul>
+<li><strong>字节流</strong>：以字节为单位，可以读写所有数据。</li>
+<li><strong>字符流</strong>：以字符为单位，只能读写文本数据。</li>
+</ul>
+<h2 id="按功能"><a href="#按功能" class="headerlink" title="按功能"></a><strong>按功能</strong></h2><ul>
+<li><strong>字节流</strong>：具有实际传输数据的读写功能。</li>
+<li><strong>过滤流</strong>：在节点流的基础之上增强功能。</li>
+</ul>
+<h1 id="字节流"><a href="#字节流" class="headerlink" title="字节流"></a><strong>字节流</strong></h1><hr>
+<p><img src="https://s1.imagehub.cc/images/2022/03/06/QQ20220306163205.png" alt="QQ20220306163205.png"></p>
+<h2 id="字节流的父类-抽象类"><a href="#字节流的父类-抽象类" class="headerlink" title="字节流的父类(抽象类)"></a><strong>字节流的父类(抽象类)</strong></h2><ul>
+<li><p>InputStream</p>
+<p>字节输入流</p>
+<ul>
+<li><code>public int read()&#123;&#125;</code></li>
+<li><code>public int read(byte[] b)&#123;&#125;</code></li>
+<li><code>public int read(byte[] b,int off,int len)&#123;&#125;</code></li>
+</ul>
+</li>
+<li><p>OutputStream</p>
+<p>字节输出流</p>
+<ul>
+<li><code>public void write(int n)&#123;&#125;</code></li>
+<li><code>public void write(byte[] b)&#123;&#125;</code></li>
+<li><code>public void write(byte[] b,int off,int len)&#123;&#125;</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="字节流的子类"><a href="#字节流的子类" class="headerlink" title="字节流的子类"></a><strong>字节流的子类</strong></h2><h3 id="文件字节流"><a href="#文件字节流" class="headerlink" title="文件字节流"></a><strong>文件字节流</strong></h3><ul>
+<li><strong>FileInputStream</strong><ul>
+<li><code>public int read()</code>//从输入流中读取一个字节数据，返回读到的字节数据，如果达到文件末尾，返回-1。</li>
+<li><code>public int read(byte[] b)</code>//从输入流中读取字节数组长度的字节数据存入数组中，返回实际读到的字节数；如果达到文件的尾部，则返回-1。</li>
+</ul>
+</li>
+<li><strong>FileOutputStream</strong><ul>
+<li><code>public void write(int b)</code>//将指定字节写入输出流。</li>
+<li><code>public void write(bute[] b)</code>//一次写多个字节，将b数组中所有字节，写入输出流。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    FileInputStream的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileInputStreamTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 创建对象流并指定文件路径</span></span><br><span class="line">        FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;F:\\Study\\JavaSE\\src\\ioFrameWork\\fileIOStream\\fileInputStreamTest.txt&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 读取文件</span></span><br><span class="line">        <span class="comment">// 单个字节读取</span></span><br><span class="line">        <span class="keyword">int</span> data = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>((data = fileInputStream.read()) != -<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.print((<span class="keyword">char</span>)data);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(<span class="string">&quot;\nRead completely&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 多个字节读取(注意将单个字节读取的代码注释掉,否则指针已经指向文件末尾导致下面多字节读取无法读取到数据)</span></span><br><span class="line">        <span class="keyword">byte</span> [] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>((count = fileInputStream.read(buffer)) != -<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.println(<span class="keyword">new</span> String(buffer, <span class="number">0</span>, count));</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭流</span></span><br><span class="line">        fileInputStream.close();</span><br><span class="line">        System.out.println(<span class="string">&quot;Stream closed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在用<code>FileInputStream</code>读取文件时需要用一个<code>int</code>类型的数据来存储读到的值。如果在读取时仅仅使用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(fileInputStream.read() != -<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.print((<span class="keyword">char</span>)fileInputStram.read());</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<p>则会隔数据输出：第一次读取到第一个数据进入循环，但在输出时又向下读取了一个数据并输出。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    FileOutputStream的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">FileOutputStreamTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 创建对象流</span></span><br><span class="line">        FileOutputStream fileOutputStream = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;F:\\Study\\JavaSE\\src\\ioFrameWork\\fileIOStream\\fileOutputStreamTest.txt&quot;</span>);</span><br><span class="line"><span class="comment">//        使用 FileOutputStream(String name, boolean append)构造方法可以使文件数据不被覆盖.</span></span><br><span class="line"><span class="comment">//        FileOutputStream fileOutputStream = new FileOutputStream(&quot;F:\\Study\\JavaSE\\src\\ioFrameWork\\fileIOStream\\fileOutputStreamTest.txt&quot;, true);</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">// 写入文件</span></span><br><span class="line">        <span class="comment">// 单个字节写入</span></span><br><span class="line">        fileOutputStream.write(<span class="number">97</span>);</span><br><span class="line">        fileOutputStream.write(<span class="string">&#x27;b&#x27;</span>);</span><br><span class="line">        fileOutputStream.write(<span class="string">&#x27;c&#x27;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 多个字节写入</span></span><br><span class="line">        <span class="keyword">byte</span> [] data = &#123;<span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>, <span class="string">&#x27;f&#x27;</span>, <span class="string">&#x27;g&#x27;</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(count &lt; data.length)&#123;</span><br><span class="line">            fileOutputStream.write(data[count]);</span><br><span class="line">            count++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        String s = <span class="string">&quot;hijkl&quot;</span>;</span><br><span class="line">        fileOutputStream.write(s.getBytes());</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭流</span></span><br><span class="line">        fileOutputStream.close();</span><br><span class="line">        System.out.println(<span class="string">&quot;Stream Closed&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    使用文件字节流实现文件的复制</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">fileIOStreamTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 创建输入输出流对象</span></span><br><span class="line">        FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;F:\\Study\\JavaSE\\src\\ioFrameWork\\fileIOStream\\20220306.jpg&quot;</span>);</span><br><span class="line">        FileOutputStream fileOutputStream = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;F:\\Study\\JavaSE\\src\\ioFrameWork\\fileIOStream\\new20220306.jpg&quot;</span>);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 边读边写</span></span><br><span class="line">        <span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> ((count = fileInputStream.read(buffer)) != -<span class="number">1</span>)&#123;</span><br><span class="line">            fileOutputStream.write(buffer, <span class="number">0</span>, count);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭流</span></span><br><span class="line">        fileInputStream.close();</span><br><span class="line">        fileOutputStream.close();</span><br><span class="line">        System.out.println(<span class="string">&quot;Copy Completely&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="字节缓存流"><a href="#字节缓存流" class="headerlink" title="字节缓存流"></a><strong>字节缓存流</strong></h3><p><strong>缓冲流</strong>：BufferedInputStream/BufferedOutputStream</p>
+<ul>
+<li>提高IO效率，减少硬盘访问次数。</li>
+<li>数据存储在缓冲区中，用<code>flush()</code>方法将缓冲区的内容写入文件中，也可以直接<code>close()</code>。</li>
+<li>是<code>FileInputStream/FileOutputStream</code>的增强。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    BufferedInputString的使用(字节缓冲流)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BufferedInputStreamTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 创建对象流</span></span><br><span class="line">        FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;F:\\Study\\JavaSE\\src\\ioFrameWork\\bufferedIOStream\\bufferedInputStreamTest.txt&quot;</span>);</span><br><span class="line">        <span class="comment">// BufferedInputStream是FileInputStream的增强</span></span><br><span class="line">        BufferedInputStream bufferedInputStream = <span class="keyword">new</span> BufferedInputStream(fileInputStream);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 读取文件</span></span><br><span class="line">        <span class="keyword">int</span> data = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> ((data = bufferedInputStream.read()) != -<span class="number">1</span>)&#123;</span><br><span class="line">            System.out.print((<span class="keyword">char</span>)data);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭流(直接关闭bufferedInputStream就可以)</span></span><br><span class="line">        bufferedInputStream.close();</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    BufferedOutputStream的使用</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BufferedOutputStreamTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 创建对象流</span></span><br><span class="line">        FileOutputStream fileOutputStream = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;F:\\Study\\JavaSE\\src\\ioFrameWork\\bufferedIOStream\\bufferedOutStreamTest.txt&quot;</span>);</span><br><span class="line">        BufferedOutputStream bufferedOutputStream = <span class="keyword">new</span> BufferedOutputStream(fileOutputStream);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 写入文件</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">            bufferedOutputStream.write(<span class="string">&quot;BufferedOutputStream\n&quot;</span>.getBytes());    <span class="comment">// 写入缓冲区(8K)</span></span><br><span class="line">            bufferedOutputStream.flush();   <span class="comment">// 刷新到硬盘(写在for循环中效率低但可以防止数据丢失)</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭流(内部调用flush()方法)</span></span><br><span class="line">        bufferedOutputStream.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="对象流"><a href="#对象流" class="headerlink" title="对象流"></a><strong>对象流</strong></h3><ul>
+<li><p><strong>对象流</strong>：ObjectOutputStream/ObjectInputStream</p>
+<ul>
+<li>增加了缓冲区功能。</li>
+<li>增强了读写8种基本数据类型和字符串功能。</li>
+<li>增强了读写对象的功能：<ul>
+<li><code>readObject()</code>    //从流中读取一个对象。</li>
+<li><code>writeObject(Object obj)</code>    //向流中写入一个对象。</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用流传输对象的过程称为序列化、反序列化。</strong></p>
+</li>
+</ul>
+<h4 id="序列化（ObjectOutputStream）"><a href="#序列化（ObjectOutputStream）" class="headerlink" title="序列化（ObjectOutputStream）"></a><strong>序列化（ObjectOutputStream）</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 学生类</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Student</span><span class="params">(String name, <span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.age = age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;Student [name=&quot;</span> + name + <span class="string">&quot;, age=&quot;</span> + age + <span class="string">&quot;]&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    使用ObjectOutputStream实现对象的序列化</span></span><br><span class="line"><span class="comment">    要求: 1.序列化的类必须要实现Serializable接口 2.序列化的类中对象的属性也要实现Serializable接口</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectOutputStreamTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">// 创建对象流</span></span><br><span class="line">        <span class="comment">// 这个文件后缀名表示二进制文件，可以写成其他如obj等任意后缀</span></span><br><span class="line">        FileOutputStream fileOutputStream = <span class="keyword">new</span> FileOutputStream(<span class="string">&quot;F:\\Study\\JavaSE\\src\\ioFrameWork\\objectIOStream\\stu.bin&quot;</span>);</span><br><span class="line">        ObjectOutputStream objectOutputStream = <span class="keyword">new</span> ObjectOutputStream(fileOutputStream);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 序列化(写入操作)</span></span><br><span class="line">        Student s1 = <span class="keyword">new</span> Student(<span class="string">&quot;abc&quot;</span>, <span class="number">22</span>);</span><br><span class="line">        objectOutputStream.writeObject(s1);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭流</span></span><br><span class="line">        objectOutputStream.close();</span><br><span class="line">        System.out.println(<span class="string">&quot;WriteObject Completely&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>注</strong>：执行上述代码后IDE会抛出<code>java.io.NotSerializableException</code>，意思是Student类不能被序列化。需要实现Serializable接口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COPY<span class="comment">//不需要实现任何方法</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">implements</span> <span class="title">Serializable</span></span>&#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>Serializable其实是一个标志接口，用来标志该类是否可以被序列化。该接口不含任何属性和抽象方法。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">COPYpublic <span class="class"><span class="keyword">interface</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="反序列化（ObjectInputStream）"><a href="#反序列化（ObjectInputStream）" class="headerlink" title="反序列化（ObjectInputStream）"></a><strong>反序列化（ObjectInputStream）</strong></h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">    使用ObjectOutputStream实现对象的反序列化(读取重构成对象)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ObjectInputStreamTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException, ClassNotFoundException </span>&#123;</span><br><span class="line">        <span class="comment">// 创建对象流</span></span><br><span class="line">        FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(<span class="string">&quot;F:\\Study\\JavaSE\\src\\ioFrameWork\\objectIOStream\\stu.bin&quot;</span>);</span><br><span class="line">        ObjectInputStream objectInputStream = <span class="keyword">new</span> ObjectInputStream(fileInputStream);</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 反序列化(读取操作)</span></span><br><span class="line">        Student s = (Student) objectInputStream.readObject();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 关闭流</span></span><br><span class="line">        objectInputStream.close();</span><br><span class="line">        System.out.println(<span class="string">&quot;ReadObject Completely: &quot;</span> + s.toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="序列化和反序列化注意事项"><a href="#序列化和反序列化注意事项" class="headerlink" title="序列化和反序列化注意事项"></a><strong>序列化和反序列化注意事项</strong></h4><ul>
+<li><p><strong>序列化类必须实现<code>Serializable</code>接口</strong>。</p>
+</li>
+<li><p><strong>序列化类中的对象属性也要求实现<code>Serializable</code>接口</strong>。也就是说如果<code>Student</code>类中有一个<code>Parents</code>类型的属性<code>private Parents info;</code>那么<code>Parents</code>这个类也要实现<code>Serializable</code>接口。</p>
+</li>
+<li><p><strong>序列化类中可以添加序列化版本号ID，以保证序列化的类和被序列化的类是同一个类</strong>。在上面的代码中没有添加序列号版本，虽然IDE没有报错，但是会显示一个警告，提示我添加序列化版本号（串行版本标识）。我们可以在<code>Student</code>类中添加：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">100L</span>;</span><br></pre></td></tr></table></figure>
+
+<p>此时再运行<code>ObjectInputStreamTest</code>就会报一个无效类的异常：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java.io.InvalidClassException: ioFrameWork.objectIOStream.Student; </span><br><span class="line">local class incompatible: stream classdesc serialVersionUID = 6434269056674371883, local class serialVersionUID = 100</span><br></pre></td></tr></table></figure>
+
+<p><strong>这是因为之前序列化的<code>Student</code>和现在添加完<code>serialVersionUID = 100L</code>的序列化版本号不同</strong>。当未添加序列版本号时，会自动生成了。我们再运行<code>ObjectOutputStreamTest</code>将<code>Student</code>重新序列化后，再反序列化就可以正常执行了。</p>
+</li>
+<li><p><strong>使用<code>transient</code>（短暂的）修饰属性，可以避免该属性被序列化</strong>。如用它来修饰<code>age</code>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">transient</span> <span class="keyword">int</span> age;</span><br></pre></td></tr></table></figure>
+
+<p>把<code>s1</code>这个对象序列化后再反序列化，这个对象的<code>age</code>属性就变成了 0。</p>
+</li>
+<li><p><strong>静态属性不能被序列化</strong>。</p>
+</li>
+<li><p><strong>可以利用集合来序列化多个对象</strong>：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Student&gt; arrayList=<span class="keyword">new</span> ArrayList&lt;Student&gt;();</span><br><span class="line">arrayList.add(s1);</span><br><span class="line">arrayList.add(s2);</span><br><span class="line">arrayList.add(s3);</span><br><span class="line">objectOutputStream.writeObject(arrayList);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ArrayList&lt;Student&gt; list=(ArrayList&lt;Student&gt;)objectInputStream.readObject();</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="常见字符编码"><a href="#常见字符编码" class="headerlink" title="常见字符编码"></a><strong>常见字符编码</strong></h1><hr>
+<ul>
+<li><p>IOS-8859-1</p>
+<p>收录除ASCII外，还包括西欧、希腊语、泰语、阿拉伯语、希伯来语对应的文字符号。采用1个字节来表示，最多只能表示256个字符。</p>
+</li>
+<li><p>UTF-8</p>
+<p>针对Unicode码表的可变长度字符编码。国际上使用的编码，也称为“万国码”，收录了几乎所有国家的常用字符。采用1至3个字节来表示一个字符。</p>
+</li>
+<li><p>GB2312</p>
+<p>简体中文，采用1个或2个字节来表示字符，95年之前所采用的编码。</p>
+</li>
+<li><p>GBK</p>
+<p>简体中文的扩充，GB2312的升级版本。</p>
+</li>
+<li><p>BIG5</p>
+<p>台湾，繁体中文。</p>
+</li>
+</ul>
+<p><strong>当编码方式和解码方式不一致时，会出现乱码。</strong>如果在<code>FileInputStreamTest</code>中的文件<code>fileInputStreamTest.txt</code>中存储的是：“中文中文”这样的中文字符，那么用<code>FileInputStreamTest</code>读取出来的数据就会是乱码。这是因为在<code>fileInputStreamTest.txt</code>文件中，中文是<strong>UTF-8</strong>编码方式，这种编码方式中中文一个字占<strong>3个</strong>字节，而字节流按字节读取。在读取的时候一个字节一个字节的读取就会使读取出来的信息出现乱码。</p>
+<p>因此，对于中文就应该使用<strong>字符流</strong>对其进行读取和写入。</p>
+<h1 id="字符流"><a href="#字符流" class="headerlink" title="字符流"></a><strong>字符流</strong></h1><hr>
+<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/l7614"><img src="https://s1.imagehub.cc/images/2022/03/06/QQ20220306163353.png" alt="QQ20220306163353.png"></a></p>
+<h2 id="字符流的父类（抽象类）"><a href="#字符流的父类（抽象类）" class="headerlink" title="字符流的父类（抽象类）"></a><strong>字符流的父类（抽象类）</strong></h2><ul>
+<li><p><strong>Reader：</strong>字符输入流</p>
+<ul>
+<li><p><code>public int read()</code></p>
+<p>从流中读取单个字符，用整型来返回读取的字符；当读到流底部时返回-1。</p>
+</li>
+<li><p><code>public int read(char[] c)</code></p>
+<p>从流中读取字符保存到c数组中，返回读取的字符个数，当读到流底部时返回-1。</p>
+</li>
+<li><p><code>public int read(char[] cbuf,int off,int len)&#123;&#125;</code></p>
+<p>抽象方法。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>Writer：</strong>字符输出流</p>
+<ul>
+<li><p><code>public void write(int n)</code></p>
+<p>写入单个字符，只能写入包含16位低阶字节的整型数值，16位高阶字节将会被忽略。</p>
+</li>
+<li><p><code>public void write(String str)</code></p>
+<p>写入一个字符串。</p>
+</li>
+<li><p><code>public void write(char[] cbuf)</code></p>
+<p>写入一个字符数组。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="字符流的子类"><a href="#字符流的子类" class="headerlink" title="字符流的子类"></a><strong>字符流的子类</strong></h2><h3 id="文件字符流"><a href="#文件字符流" class="headerlink" title="文件字符流"></a><strong>文件字符流</strong></h3><ul>
+<li><p><strong>FileReader：</strong></p>
+<ul>
+<li><p><code>public int read()</code></p>
+<p>继承自InputStreamReader类。读取单个字符，返回读取的字符，当读到流底部时返回-1。</p>
+</li>
+<li><p><code>public int read(char[] c)</code></p>
+<p>继承自Reader类。</p>
+</li>
+<li><p><code>public int read(char[] cbuf,int offset,int length)</code></p>
+<p>继承自InputStreamReader类。从流中读取部分字符到cbuf中指定位置，返回读取到的字符个数，当读到流底部时返回-1。</p>
+</li>
+</ul>
+</li>
+<li><p><strong>FileWriter:</strong></p>
+<ul>
+<li><p><code>public void write(int c)</code></p>
+<p>继承自OutputStreamWriter类，写入一个字符。</p>
+</li>
+<li><p><code>public void write(String str)</code></p>
+<p>继承自Writer类。</p>
+</li>
+<li><p><code>public void Write(char[] cbuf)</code></p>
+<p>继承自Writer类。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="字符缓冲流"><a href="#字符缓冲流" class="headerlink" title="字符缓冲流"></a><strong>字符缓冲流</strong></h3>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Ssssv11 WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/JavaSE/" rel="tag"># JavaSE</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/29/%E5%B8%B8%E7%94%A8%E7%B1%BB/" rel="prev" title="常用类">
+                  <i class="fa fa-chevron-left"></i> 常用类
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/04/29/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="next" title="多线程">
+                  多线程 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ssssv11</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>

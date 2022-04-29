@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic%7CMicrosoft+YaHei:300,300italic,400,400italic,700,700italic%7CRoboto+Slab:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"ssssv11.github.io","root":"/","images":"/images","scheme":"Pisces","version":"8.2.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MarkDown学习">
+<meta property="og:url" content="https://ssssv11.github.io/2022/04/29/MarkDown/index.html">
+<meta property="og:site_name" content="Ssssv">
+<meta property="og:description" content="Markdown是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-29T13:32:42.944Z">
+<meta property="article:modified_time" content="2022-04-29T13:32:57.884Z">
+<meta property="article:author" content="Ssssv11">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ssssv11.github.io/2022/04/29/MarkDown/">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+<title>MarkDown学习 | Ssssv</title>
+  
+
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">Ssssv</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">23</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">37</span></a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E6%A0%87%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">一、标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">这是二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E4%B8%89%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.</span> <span class="nav-text">这是三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%99%E6%98%AF%E5%9B%9B%E7%BA%A7%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">这是四级标题</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%AD%97%E4%BD%93"><span class="nav-number">2.</span> <span class="nav-text">二、字体</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%BC%95%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">三、引用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E5%88%86%E5%89%B2%E7%BA%BF"><span class="nav-number">4.</span> <span class="nav-text">四、分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">5.</span> <span class="nav-text">五、超链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E5%9B%BE%E7%89%87"><span class="nav-number">6.</span> <span class="nav-text">六、图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%88%97%E8%A1%A8"><span class="nav-number">7.</span> <span class="nav-text">七、列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">7.1.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">7.2.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97"><span class="nav-number">7.3.</span> <span class="nav-text">列表嵌套</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%AB%E3%80%81%E8%A1%A8%E6%A0%BC"><span class="nav-number">8.</span> <span class="nav-text">八、表格</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B9%9D%E3%80%81%E4%BB%A3%E7%A0%81"><span class="nav-number">9.</span> <span class="nav-text">九、代码</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%95%E8%A1%8C%E4%BB%A3%E7%A0%81"><span class="nav-number">9.1.</span> <span class="nav-text">单行代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97"><span class="nav-number">9.2.</span> <span class="nav-text">代码块</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%81%E3%80%81%E6%B5%81%E7%A8%8B%E5%9B%BE"><span class="nav-number">10.</span> <span class="nav-text">十、流程图</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E8%BD%AC%E4%B9%89%E7%AC%A6"><span class="nav-number">11.</span> <span class="nav-text">十一、转义符</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Ssssv11"
+      src="/images/header.jpg">
+  <p class="site-author-name" itemprop="name">Ssssv11</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">23</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Ssssv11" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Ssssv11" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://ssssv11.github.io/2022/04/29/MarkDown/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/header.jpg">
+      <meta itemprop="name" content="Ssssv11">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ssssv">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          MarkDown学习
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+      
+
+      <time title="Created: 2022-04-29 21:32:42 / Modified: 21:32:57" itemprop="dateCreated datePublished" datetime="2022-04-29T21:32:42+08:00">2022-04-29</time>
+    </span>
+
+  
+    <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">Views: </span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><font size=3 ><a target="_blank" rel="noopener" href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>是一种纯文本格式的标记语言。通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<span id="more"></span>
+
+<h1 id="一、标题"><a href="#一、标题" class="headerlink" title="一、标题"></a>一、标题</h1><p>在想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，以此类推。最多支持六级标题。</p>
+<p>示例:</p>
+<figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">## 这是二级标题</span><br><span class="line">### 这是三级标题</span><br><span class="line">#### 这是四级标题 </span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<h2 id="这是二级标题"><a href="#这是二级标题" class="headerlink" title="这是二级标题"></a>这是二级标题</h2><h3 id="这是三级标题"><a href="#这是三级标题" class="headerlink" title="这是三级标题"></a>这是三级标题</h3><h4 id="这是四级标题"><a href="#这是四级标题" class="headerlink" title="这是四级标题"></a>这是四级标题</h4><hr>
+<br/>
+
+<h1 id="二、字体"><a href="#二、字体" class="headerlink" title="二、字体"></a>二、字体</h1><ul>
+<li>加粗</li>
+</ul>
+<p>要加粗的文字左右分别用两个*包起来</p>
+<ul>
+<li>斜体</li>
+</ul>
+<p>要倾斜的文字左右分别用一个*包起来</p>
+<ul>
+<li>斜线加粗</li>
+</ul>
+<p>要倾斜和加粗的文字左右分别用三个*包起来</p>
+<p>示例:</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**这是加粗的文字**</span></span><br><span class="line"><span class="strong">*这是倾斜的文字*</span>`</span><br><span class="line"><span class="strong">***这是斜体加粗的文字**</span>*</span><br><span class="line">~~这是加删除线的文字~~</span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<p><strong>这是加粗的文字</strong><br><em>这是倾斜的文字</em><br><em><strong>这是斜体加粗的文字</strong></em><br><del>这是加删除线的文字</del></p>
+<hr>
+<br/>
+
+<h1 id="三、引用"><a href="#三、引用" class="headerlink" title="三、引用"></a>三、引用</h1><p>在引用的文字前加&gt;即可。引用也可以嵌套，如加两个&gt;&gt;三个&gt;&gt;&gt;</p>
+<p>示例:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;</span><span class="bash">这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;这是引用的内容</span></span><br><span class="line"><span class="meta">&gt;</span><span class="bash">&gt;&gt;&gt;&gt;&gt;&gt;这是引用的内容</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<br/>
+
+<h1 id="四、分割线"><a href="#四、分割线" class="headerlink" title="四、分割线"></a>四、分割线</h1><p>可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。</p>
+<p>示例:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">***</span></span><br><span class="line"><span class="string">*****</span></span><br><span class="line"><span class="string">*</span> <span class="string">*</span> <span class="string">*</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="string">----------</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<hr>
+<hr>
+<hr>
+<hr>
+<br/>
+
+<h1 id="五、超链接"><a href="#五、超链接" class="headerlink" title="五、超链接"></a>五、超链接</h1><p>语法:</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[超链接名]</span>(超链接地址 <span class="string">&quot;超链接title&quot;</span>)</span><br><span class="line"><span class="selector-tag">title</span>可加可不加</span><br></pre></td></tr></table></figure>
+
+<p>示例：</p>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[百度]</span>(<span class="attribute">http</span>:<span class="comment">//baidu.com)</span></span><br><span class="line">[Ssssv](<span class="attribute">https</span>:<span class="comment">//ssssv11.github.io/)</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下:<br><a target="_blank" rel="noopener" href="http://baidu.com/">百度</a><br><a href="https://ssssv11.github.io/">Ssssv</a></p>
+<hr>
+<br/>
+
+<h1 id="六、图片"><a href="#六、图片" class="headerlink" title="六、图片"></a>六、图片</h1><p>语法:</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![图片alt](图片地址 <span class="string">&#x27;&#x27;</span>图片titl<span class="string">e&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">图片alt就是显示在图片下面的文字，相当于对图片内容的解释。</span><br><span class="line">图片title是图片的标题，当鼠标移到图片上时显示的内容。title可加可不加</span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![MarkDown](http:<span class="regexp">//</span>dwz.win/agy9 <span class="string">&quot;MarkDown&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<br/>
+
+<h1 id="七、列表"><a href="#七、列表" class="headerlink" title="七、列表"></a>七、列表</h1><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><p>无序列表用 - + * 任何一种都可以<br>示例:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 列表内容</span><br><span class="line"><span class="bullet">+</span> 列表内容</span><br><span class="line"><span class="bullet">*</span> 列表内容</span><br><span class="line"></span><br><span class="line">注：- + <span class="emphasis">* 跟内容之间都要有一个空格</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><p>数字加点<br>示例:</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 列表内容</span><br><span class="line"><span class="bullet">2.</span> 列表内容</span><br><span class="line"><span class="bullet">3.</span> 列表内容</span><br><span class="line"></span><br><span class="line">注：序号跟内容之间要有空格</span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<ol>
+<li>列表内容</li>
+<li>列表内容</li>
+<li>列表内容</li>
+</ol>
+<h2 id="列表嵌套"><a href="#列表嵌套" class="headerlink" title="列表嵌套"></a>列表嵌套</h2><p>上一级和下一级之间敲三个空格即可</p>
+<p>示例:</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">*一级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br><span class="line"><span class="comment">   *二级无序列表内容</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<ul>
+<li><p>一级无序列表内容</p>
+<ul>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+<li>二级无序列表内容</li>
+</ul>
+</li>
+</ul>
+<hr>
+<br/>
+
+<h1 id="八、表格"><a href="#八、表格" class="headerlink" title="八、表格"></a>八、表格</h1><p>语法:</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">表头|<span class="string">表头</span>|<span class="string">表头</span></span><br><span class="line"><span class="string">---</span>|<span class="string">:--:</span>|<span class="string">---:</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"><span class="string">内容</span>|<span class="string">内容</span>|<span class="string">内容</span></span><br><span class="line"></span><br><span class="line"><span class="string">第二行分割表头和内容。</span></span><br><span class="line"><span class="string">- 有一个就行，为了对齐，多加了几个</span></span><br><span class="line"><span class="string">文字默认居左</span></span><br><span class="line"><span class="string">-两边加：表示文字居中</span></span><br><span class="line"><span class="string">-右边加：表示文字居右</span></span><br><span class="line"><span class="string">注:表格和正文之间空两行</span></span><br></pre></td></tr></table></figure>
+
+<p>示例:</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|<span class="string"> Name </span>|<span class="string"> Academy </span>|<span class="string"> Score </span>|</span><br><span class="line">|<span class="string"> - </span>|<span class="string"> :-: </span>|<span class="string"> -: </span>|</span><br><span class="line">|<span class="string"> Harry </span>|<span class="string"> Gryffindor </span>|<span class="string"> 90 </span>|</span><br><span class="line">|<span class="string"> Hermione </span>|<span class="string"> Gryffindor</span>|<span class="string"> 100 </span>|</span><br><span class="line">|<span class="string"> Malfo </span>|<span class="string"> Slytherin </span>|<span class="string"> 90 </span>|</span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th align="center">Academy</th>
+<th align="right">Score</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Harry</td>
+<td align="center">Gryffindor</td>
+<td align="right">90</td>
+</tr>
+<tr>
+<td>Hermione</td>
+<td align="center">Gryffindor</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td>Malfo</td>
+<td align="center">Slytherin</td>
+<td align="right">90</td>
+</tr>
+</tbody></table>
+<hr>
+<br/>
+
+<h1 id="九、代码"><a href="#九、代码" class="headerlink" title="九、代码"></a>九、代码</h1><h2 id="单行代码"><a href="#单行代码" class="headerlink" title="单行代码"></a>单行代码</h2><p>代码之间分别用一个反引号包起来</p>
+<p>示例:</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">` <span class="keyword">System</span>.println.<span class="keyword">out</span>();`</span><br></pre></td></tr></table></figure>
+
+<p>效果如下:<br><code> System.println.out();</code></p>
+<h2 id="代码块"><a href="#代码块" class="headerlink" title="代码块"></a>代码块</h2><p>代码之间分别用三个反引号包起来，且两边的反引号单独占一行</p>
+<p>示例:</p>
+<figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">``</span><span class="string">`</span></span><br><span class="line"><span class="string">System.println.out();</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br><span class="line"><span class="keyword">System</span>.println.<span class="keyword">out</span>();</span><br></pre></td></tr></table></figure>
+
+<hr>
+<br/>
+
+<h1 id="十、流程图"><a href="#十、流程图" class="headerlink" title="十、流程图"></a>十、流程图</h1><p>语法:</p>
+<figure class="highlight livescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">\```\flow</span></span><br><span class="line">st=&gt;start: 开始框</span><br><span class="line">op=&gt;operation: 处理框</span><br><span class="line">cond=&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1=&gt;subroutine: 子流程</span><br><span class="line">io=&gt;inputoutput: 输入输出框</span><br><span class="line">e=&gt;end: 结束框</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond<span class="function"><span class="params">(<span class="literal">yes</span>)</span>-&gt;</span>io-&gt;e</span><br><span class="line">cond<span class="function"><span class="params">(<span class="literal">no</span>)</span>-&gt;</span>sub1<span class="function"><span class="params">(right)</span>-&gt;</span>op</span><br><span class="line"><span class="string">\```\</span></span><br><span class="line">注:反斜杠<span class="string">\是为了防止转义，实际是没有的</span></span><br></pre></td></tr></table></figure>
+
+<p>效果如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始框</span><br><span class="line">op&#x3D;&gt;operation: 处理框</span><br><span class="line">cond&#x3D;&gt;condition: 判断框(是或否?)</span><br><span class="line">sub1&#x3D;&gt;subroutine: 子流程</span><br><span class="line">io&#x3D;&gt;inputoutput: 输入输出框</span><br><span class="line">e&#x3D;&gt;end: 结束框</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;io-&gt;e</span><br><span class="line">cond(no)-&gt;sub1(right)-&gt;op</span><br></pre></td></tr></table></figure>
+
+<hr>
+<br/>
+
+<h1 id="十一、转义符"><a href="#十一、转义符" class="headerlink" title="十一、转义符"></a>十一、转义符</h1><p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符</p>
+<p>示例:</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**文本加粗**</span> </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
+
+<p>效果如下:<br><strong>文本加粗</strong><br>** 正常显示星号 **</p>
+<p>end</p>
+</font>
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>Buy me a coffee</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    Donate
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="Ssssv11 WeChat Pay">
+        <span>WeChat Pay</span>
+      </div>
+
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Markdown/" rel="tag"># Markdown</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/04/29/Hello%20Hexo/" rel="prev" title="Hello Hexo">
+                  <i class="fa fa-chevron-left"></i> Hello Hexo
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/04/29/Learning%20Plans/" rel="next" title="Learning Plans">
+                  Learning Plans <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ssssv11</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="Total Visitors">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="Total Views">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+</body>
+</html>
