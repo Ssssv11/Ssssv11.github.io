@@ -342,7 +342,7 @@
 <p>所有的版本数据都保存在服务器上，协同开发者从服务器上同步更新或上传自己的修改</p>
 <p><img src="https://s1.imagehub.cc/images/2022/04/10/QQ20220410153825.png" alt="QQ20220410153825.png"></p>
 <p>所有的版本数据都存在服务器上，用户的本地只有自己以前所同步的版本，如果不连网的话，用户就看不到历史版本，也无法切换版本验证问题，或在不同分支工作。而且，所有数据都保存在单一的服务器上，有很大的风险这个服务器会损坏，这样就会丢失所有的数据，当然可以定期备份。代表产品：SVN、CVS、VSS</p>
-<p><strong>3、分布式版本控制     Git</strong></p>
+<p><strong>3、分布式版本控制 	Git</strong></p>
 <p>每个人都拥有全部的代码。</p>
 <p><img src="https://s1.imagehub.cc/images/2022/04/10/QQ20220410153855.png" alt="QQ20220410153855.png"></p>
 <p>所有版本信息仓库全部同步到本地的每个用户，这样就可以在本地查看所有版本历史，可以离线在本地提交，只需在连网时push到相应的服务器或其他用户那里。由于每个用户那里保存的都是所有的版本数据，只要有一个用户的设备没有问题就可以恢复所有的数据，但这增加了本地存储空间的占用。</p>
@@ -378,7 +378,7 @@
 <li><p><code>mv</code> : 移动文件, <code>mv xxx.xxx zzz </code> </p>
 <p>xxx.xxx是要移动的文件, zzz是目标文件夹。这样写必须保证文件和目标文件夹在同一目录下</p>
 </li>
-<li><p><code>reset</code> : 重新初始化终端/清屏</p>
+<li><p><code>reset</code> : 重新初始化终端&#x2F;清屏</p>
 </li>
 <li><p><code>clear</code> : 清屏</p>
 </li>
@@ -394,7 +394,7 @@
 <br>
 
 <h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>设定用户名和邮箱来区分不同的用户：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config -<span class="literal">-global</span> user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config -<span class="literal">-global</span> user.email <span class="string">&quot;email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config <span class="literal">--global</span> user.name <span class="string">&quot;Your Name&quot;</span></span><br><span class="line">git config <span class="literal">--global</span> user.email <span class="string">&quot;email@example.com&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>查看配置 : <code>git config -l</code></p>
 <p>查看系统配置 : <code>config --system --list</code></p>
@@ -404,11 +404,11 @@
 <p>C:\Users\Administrator\ .gitconfig   只适用于当前登录用户的配置  –global 全局</p>
 <br/>
 
-<h1 id="Git基本理论"><a href="#Git基本理论" class="headerlink" title="Git基本理论"></a>Git基本理论</h1><h2 id="三个区域"><a href="#三个区域" class="headerlink" title="三个区域"></a>三个区域</h2><p>Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage/Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：</p>
+<h1 id="Git基本理论"><a href="#Git基本理论" class="headerlink" title="Git基本理论"></a>Git基本理论</h1><h2 id="三个区域"><a href="#三个区域" class="headerlink" title="三个区域"></a>三个区域</h2><p>Git本地有三个工作区域：工作目录（Working Directory）、暂存区(Stage&#x2F;Index)、资源库(Repository或Git Directory)。如果在加上远程的git仓库(Remote Directory)就可以分为四个工作区域。文件在这四个区域之间的转换关系如下：</p>
 <p><img src="https://s1.imagehub.cc/images/2022/04/10/QQ20220410163348.png" alt="QQ20220410163348.png"></p>
 <ul>
 <li>Workspace：工作区，就是你平时存放项目代码的地方</li>
-<li>Index / Stage：暂存区，用于临时存放你的改动，事实上它只是一个文件，保存即将提交到文件列表信息</li>
+<li>Index &#x2F; Stage：暂存区，用于临时存放你的改动，事实上它只是一个文件，保存即将提交到文件列表信息</li>
 <li>Repository：仓库区（或本地仓库），就是安全存放数据的位置，这里面有你提交到所有版本的数据。其中HEAD指向最新放入仓库的版本</li>
 <li>Remote：远程仓库，托管代码的服务器，可以简单的认为是你项目组中的一台电脑用于远程数据交换</li>
 </ul>
@@ -418,9 +418,9 @@
 <li>Directory：使用Git管理的一个目录，也就是一个仓库，包含我们的工作空间和Git的管理空间。</li>
 <li>WorkSpace：需要通过Git进行版本控制的目录和文件，这些目录和文件组成了工作空间。</li>
 <li>.git：存放Git管理信息的目录，初始化仓库的时候自动创建。</li>
-<li>Index/Stage：暂存区，或者叫待提交更新区，在提交进入repo之前，我们可以把所有的更新放在暂存区。</li>
+<li>Index&#x2F;Stage：暂存区，或者叫待提交更新区，在提交进入repo之前，我们可以把所有的更新放在暂存区。</li>
 <li>Local Repo：本地仓库，一个存放在本地的版本库；HEAD会只是当前的开发分支（branch）。</li>
-<li>Stash：隐藏，是一个工作状态保存栈，用于保存/恢复WorkSpace中的临时状态。</li>
+<li>Stash：隐藏，是一个工作状态保存栈，用于保存&#x2F;恢复WorkSpace中的临时状态。</li>
 </ul>
 <br/>
 
@@ -463,10 +463,10 @@
 <li>忽略文件中的空行或以井号（#）开始的行将会被忽略。</li>
 <li>可以使用Linux通配符。例如：星号（*）代表任意多个字符，问号（？）代表一个字符，方括号（[abc]）代表可选字符范围，大括号（{string1,string2,…}）代表可选的字符串等。</li>
 <li>如果名称的最前面有一个感叹号（!），表示例外规则，将不被忽略。</li>
-<li>如果名称的最前面是一个路径分隔符（/），表示要忽略的文件在此目录下，而子目录中的文件不忽略。</li>
-<li>如果名称的最后面是一个路径分隔符（/），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）。</li>
+<li>如果名称的最前面是一个路径分隔符（&#x2F;），表示要忽略的文件在此目录下，而子目录中的文件不忽略。</li>
+<li>如果名称的最后面是一个路径分隔符（&#x2F;），表示要忽略的是此目录下该名称的子目录，而非文件（默认文件或目录都忽略）。</li>
 </ol>
-<figure class="highlight vala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># 这样就会匹配所有以txt结尾的文件</span></span><br><span class="line">*.txt</span><br><span class="line"><span class="meta"># 虽然上面排除了所有txt结尾的文件，但是这个不排除</span></span><br><span class="line">!<span class="number">666.</span>txt</span><br><span class="line"><span class="meta"># 也可以直接指定一个文件夹，文件夹下的所有文件将全部忽略</span></span><br><span class="line">test/</span><br><span class="line"><span class="meta"># 目录中所有以txt结尾的文件，但不包括子目录</span></span><br><span class="line">xxx<span class="comment">/*.txt</span></span><br><span class="line"><span class="comment"># 目录中所有以txt结尾的文件，包括子目录</span></span><br><span class="line"><span class="comment">xxx/**/</span>*.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这样就会匹配所有以txt结尾的文件</span></span><br><span class="line">*<span class="string">.txt</span></span><br><span class="line"><span class="comment"># 虽然上面排除了所有txt结尾的文件，但是这个不排除</span></span><br><span class="line">!666.txt</span><br><span class="line"><span class="comment"># 也可以直接指定一个文件夹，文件夹下的所有文件将全部忽略</span></span><br><span class="line">test/</span><br><span class="line"><span class="comment"># 目录中所有以txt结尾的文件，但不包括子目录</span></span><br><span class="line">xxx/*<span class="string">.txt</span></span><br><span class="line"><span class="comment"># 目录中所有以txt结尾的文件，包括子目录</span></span><br><span class="line">xxx/**/*<span class="string">.txt</span></span><br></pre></td></tr></table></figure>
 
 <br/>
 
@@ -484,10 +484,10 @@
 
 <p>现在文件名称的颜色变成了绿色，并且是处于Changes to be committed下面，因此，我们的hello.txt现在已经被添加到暂存区了。</p>
 <p>接着我们来尝试将其提交到Git本地仓库中，注意需要输入提交的描述以便后续查看，比如你这次提交修改了或是新增了哪些内容：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#39;Hello World&#39;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &#x27;Hello World&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>接着我们可以查看我们的提交记录：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br><span class="line">git log -<span class="literal">-graph</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git log</span><br><span class="line">git log <span class="literal">--graph</span></span><br></pre></td></tr></table></figure>
 
 <p>还可以查看最近一次变更的详细内容：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show [也可以加上<span class="type">commit</span> <span class="type">ID</span>查看指定的提交记录]</span><br></pre></td></tr></table></figure>
@@ -505,7 +505,7 @@
 <br/>
 
 <h2 id="回滚"><a href="#回滚" class="headerlink" title="回滚"></a>回滚</h2><p>当我们想要回退到过去的版本时，就可以执行回滚操作，执行后，可以将工作空间的内容恢复到指定提交的状态：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset -<span class="literal">-hard</span> commitID</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset <span class="literal">--hard</span> commitID</span><br></pre></td></tr></table></figure>
 
 <p>执行后，会直接重置为那个时候的状态。再次查看提交日志发现之后的日志全部消失了。</p>
 <p>可以通过查看所有分支的所有操作记录：</p>
@@ -529,7 +529,7 @@
 
 <p>我们会发现，文件变成了此分支创建的时的状态，也就是说，在不同分支下我们的文件内容是相互隔离的。</p>
 <p>我们现在再来提交一次变更，会发现它只生效在yyds分支上。我们可以看看当前的分支状态：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log -<span class="literal">-all</span> -<span class="literal">-graph</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git log <span class="literal">--all</span> <span class="literal">--graph</span></span><br></pre></td></tr></table></figure>
 
 <br/>
 
@@ -575,10 +575,10 @@
 
 <p>接着需要在GitHub上传公钥，当再次访问GitHub时会自动验证，就无需进行登录了。</p>
 <p>接着修改一下工作区的内容，提交到本地仓库后，再推送到远程仓库，提交的过程中我们注意观察提交记录：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git commit <span class="literal">-a</span> <span class="literal">-m</span> <span class="string">&#x27;Modify files&#x27;</span></span><br><span class="line">git log -<span class="literal">-all</span> -<span class="literal">-oneline</span> -<span class="literal">-graph</span></span><br><span class="line">git push origin master </span><br><span class="line">git log -<span class="literal">-all</span> -<span class="literal">-oneline</span> -<span class="literal">-graph</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git commit <span class="literal">-a</span> <span class="literal">-m</span> <span class="string">&#x27;Modify files&#x27;</span></span><br><span class="line">git log <span class="literal">--all</span> <span class="literal">--oneline</span> <span class="literal">--graph</span></span><br><span class="line">git push origin master </span><br><span class="line">git log <span class="literal">--all</span> <span class="literal">--oneline</span> <span class="literal">--graph</span></span><br></pre></td></tr></table></figure>
 
 <p>可以将远端和本地的分支进行绑定，绑定后就不需要指定分支名称了：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push -<span class="literal">-set</span><span class="literal">-upstream</span> origin master:master</span><br><span class="line">git push origin</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push <span class="literal">--set-upstream</span> origin master:master</span><br><span class="line">git push origin</span><br></pre></td></tr></table></figure>
 
 <p>在一个本地仓库对应一个远程仓库的情况下，远程仓库基本上就是纯粹的代码托管</p>
 <br/>
