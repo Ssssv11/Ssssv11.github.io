@@ -2015,6 +2015,9 @@ pre code {
   font-size: 0.875em;
   margin-left: 4px;
 }
+.post-body .fa-external-link-alt {
+  display: none;
+}
 .post-body .image-caption,
 .post-body .figure .caption {
   color: #999;

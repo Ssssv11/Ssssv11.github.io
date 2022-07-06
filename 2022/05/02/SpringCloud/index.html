@@ -559,7 +559,7 @@
 </ul>
 <br>
 
-<h1 id="Spring-Cloud-Netflix"><a href="#Spring-Cloud-Netflix" class="headerlink" title="Spring Cloud  Netflix"></a>Spring Cloud  Netflix</h1><h2 id="Eureka-注册中心"><a href="#Eureka-注册中心" class="headerlink" title="Eureka 注册中心"></a>Eureka 注册中心</h2><p><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-cloud-netflix/docs/current/reference/html/">官方文档</a></p>
+<h1 id="Spring-Cloud-Netflix"><a href="#Spring-Cloud-Netflix" class="headerlink" title="Spring Cloud  Netflix"></a>Spring Cloud  Netflix</h1><h2 id="Eureka-注册中心"><a href="#Eureka-注册中心" class="headerlink" title="Eureka 注册中心"></a>Eureka 注册中心</h2><p><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctY2xvdWQtbmV0ZmxpeC9kb2NzL2N1cnJlbnQvcmVmZXJlbmNlL2h0bWwv">官方文档<i class="fa fa-external-link-alt"></i></span></p>
 <p>在学习过程中需要多看官方文档，详细的功能和用法在官方文档中都写的很清楚。</p>
 <h3 id="微服务项目结构"><a href="#微服务项目结构" class="headerlink" title="微服务项目结构"></a>微服务项目结构</h3><p>现在重新设计之前的图书管理系统项目，将原有的大型项目进行拆分。项目拆分一定要尽可能保证单一职责，相同的业务不要在多个微服务中重复出现，如果出现需要借助其他业务完成的服务，那么可以使用服务之间相互调用的形式来实现：</p>
 <ul>
@@ -683,7 +683,7 @@
 <br>
 
 <h4 id="搭建-Eureka"><a href="#搭建-Eureka" class="headerlink" title="搭建 Eureka"></a>搭建 Eureka</h4><p>只需要创建一个新的 Maven 项目 service-eureka，然后在父工程中添加 Spring Cloud 依赖的版本控制。</p>
-<p>这里选用<code>2021.0.2</code>版本（Spring Cloud 最新的版本命名方式变更了，现在是 <em><strong>YEAR.x</strong></em> 命名方式，具体可以在官网查看：<a target="_blank" rel="noopener" href="https://spring.io/projects/spring-cloud#learn%EF%BC%89%EF%BC%9A">https://spring.io/projects/spring-cloud#learn）：</a></p>
+<p>这里选用<code>2021.0.2</code>版本（Spring Cloud 最新的版本命名方式变更了，现在是 <em><strong>YEAR.x</strong></em> 命名方式，具体可以在官网查看：<span class="exturl" data-url="aHR0cHM6Ly9zcHJpbmcuaW8vcHJvamVjdHMvc3ByaW5nLWNsb3VkI2xlYXJuJUVGJUJDJTg5JUVGJUJDJTlB">https://spring.io/projects/spring-cloud#learn）：<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2021.0.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>为新的 eureka 服务导入依赖：</p>
@@ -802,7 +802,7 @@
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OZeaPH"><img src="https://s1.ax1x.com/2022/05/04/OZeaPH.png" alt="OZeaPH.png"></a></p>
 <br>
 
-<h4 id="OpenFeign-实现负载均衡"><a href="#OpenFeign-实现负载均衡" class="headerlink" title="OpenFeign 实现负载均衡"></a>OpenFeign 实现负载均衡</h4><p>官方文档：<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/">https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/</a></p>
+<h4 id="OpenFeign-实现负载均衡"><a href="#OpenFeign-实现负载均衡" class="headerlink" title="OpenFeign 实现负载均衡"></a>OpenFeign 实现负载均衡</h4><p>官方文档：<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctY2xvdWQtb3BlbmZlaWduL2RvY3MvY3VycmVudC9yZWZlcmVuY2UvaHRtbC8=">https://docs.spring.io/spring-cloud-openfeign/docs/current/reference/html/<i class="fa fa-external-link-alt"></i></span></p>
 <p>Feign 和 RestTemplate 一样，是 HTTP 客户端请求工具，但是它的使用方式更加便捷。首先是依赖：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-openfeign<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -826,7 +826,7 @@
 
 <h2 id="Hystrix-服务熔断"><a href="#Hystrix-服务熔断" class="headerlink" title="Hystrix 服务熔断"></a>Hystrix 服务熔断</h2><p>在微服务架构中，一个应用往往由多个服务组成，这些服务之间相互依赖，依赖关系错综复杂。</p>
 <p>例如一个微服务系统中存在 A、B、C、D、E 、F 等多个服务，它们的依赖关系如下图。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OetB0e"><img src="https://s1.ax1x.com/2022/05/05/OetB0e.png" alt="OetB0e.png"></a>](<a target="_blank" rel="noopener" href="https://imgtu.com/i/OeYLee">https://imgtu.com/i/OeYLee</a>)</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OetB0e"><img src="https://s1.ax1x.com/2022/05/05/OetB0e.png" alt="OetB0e.png"></a>](<span class="exturl" data-url="aHR0cHM6Ly9pbWd0dS5jb20vaS9PZVlMZWU=">https://imgtu.com/i/OeYLee<i class="fa fa-external-link-alt"></i></span>)</p>
 <p>当服务 E 发生故障或网络延迟时，会出现以下情况：</p>
 <ol>
 <li>即使其他所有服务都可用，由于服务 E 的不可用，那么用户请求就会处于阻塞状态，等待服务 E 的响应。在高并发的场景下，会导致整个服务器的线程资源在短时间内迅速消耗殆尽。</li>
@@ -837,7 +837,7 @@
 <br>
 
 <h3 id="熔断器"><a href="#熔断器" class="headerlink" title="熔断器"></a>熔断器</h3><p>熔断器（Circuit Breaker）一词来源物理学中的电路知识，它的作用是当线路出现故障时，迅速切断电源以保护电路的安全。</p>
-<p>在微服务领域，熔断器最早是由 Martin Fowler 在他发表的 《<a target="_blank" rel="noopener" href="https://martinfowler.com/bliki/CircuitBreaker.html">Circuit Breaker</a>》一文中提出。与物理学中的熔断器作用相似，微服务架构中的熔断器能够在某个服务发生故障后，向服务调用方返回一个符合预期的、可处理的降级响应（FallBack），而不是长时间的等待或者抛出调用方无法处理的异常。这样就保证了服务调用方的线程不会被长时间、不必要地占用，避免故障在微服务系统中的蔓延，防止系统雪崩效应的发生。</p>
+<p>在微服务领域，熔断器最早是由 Martin Fowler 在他发表的 《<span class="exturl" data-url="aHR0cHM6Ly9tYXJ0aW5mb3dsZXIuY29tL2JsaWtpL0NpcmN1aXRCcmVha2VyLmh0bWw=">Circuit Breaker<i class="fa fa-external-link-alt"></i></span>》一文中提出。与物理学中的熔断器作用相似，微服务架构中的熔断器能够在某个服务发生故障后，向服务调用方返回一个符合预期的、可处理的降级响应（FallBack），而不是长时间的等待或者抛出调用方无法处理的异常。这样就保证了服务调用方的线程不会被长时间、不必要地占用，避免故障在微服务系统中的蔓延，防止系统雪崩效应的发生。</p>
 <br>
 
 <h3 id="Spring-Cloud-Hystrix"><a href="#Spring-Cloud-Hystrix" class="headerlink" title="Spring Cloud Hystrix"></a>Spring Cloud Hystrix</h3><p>Spring Cloud Hystrix 是一款服务容错与保护组件。它是基于 Netflix 公司的开源组件 Hystrix 实现的，它提供了熔断器功能，能够有效地阻止分布式微服务系统中出现联动故障，以提高微服务系统的弹性。Spring Cloud Hystrix 具有服务降级、服务熔断、线程隔离、请求缓存、请求合并以及实时故障监控等强大功能。</p>
@@ -958,9 +958,9 @@
 <p>为被监控的服务的配置文件添加配置：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">management:</span></span><br><span class="line">  <span class="attr">endpoints:</span></span><br><span class="line">    <span class="attr">web:</span></span><br><span class="line">      <span class="attr">exposure:</span></span><br><span class="line">        <span class="attr">include:</span> <span class="string">&#x27;*&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<p>启动 Hystrix 管理页面服务，访问 <a target="_blank" rel="noopener" href="http://localhost:8900/hystrix">http://localhost:8900/hystrix</a> :</p>
+<p>启动 Hystrix 管理页面服务，访问 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4OTAwL2h5c3RyaXg=">http://localhost:8900/hystrix<i class="fa fa-external-link-alt"></i></span> :</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oeg1FP"><img src="https://s1.ax1x.com/2022/05/05/Oeg1FP.png" alt="Oeg1FP.png"></a></p>
-<p>在中间填写要监控的服务，如借阅服务：<a target="_blank" rel="noopener" href="http://localhost:8102/actuator/hystrix.stream%EF%BC%8C%E7%84%B6%E5%90%8E%E7%82%B9%E5%87%BB">http://localhost:8102/actuator/hystrix.stream，然后点击</a> Monitor Stream 进入监控页面：</p>
+<p>在中间填写要监控的服务，如借阅服务：<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MTAyL2FjdHVhdG9yL2h5c3RyaXguc3RyZWFtJUVGJUJDJThDJUU3JTg0JUI2JUU1JTkwJThFJUU3JTgyJUI5JUU1JTg3JUJC">http://localhost:8102/actuator/hystrix.stream，然后点击<i class="fa fa-external-link-alt"></i></span> Monitor Stream 进入监控页面：</p>
 <p>![image-20220505160915704](&#x2F;Users&#x2F;houjuncai&#x2F;Library&#x2F;Application Support&#x2F;typora-user-images&#x2F;image-20220505160915704.png)</p>
 <br>
 
@@ -1059,7 +1059,7 @@
 <li>一个请求想要转发到指定的路由上，就必须同时匹配路由上的所有断言。</li>
 <li>当一个请求同时满足多个路由的断言条件时，请求只会被首个成功匹配的路由转发。</li>
 </ul>
-<p>常见的 Predicate 断言如下表（假设转发的 URI 为 <a href="http://localhost:8001）。">http://localhost:8001）。</a></p>
+<p>常见的 Predicate 断言如下表（假设转发的 URI 为 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDAx77yJ44CC">http://localhost:8001）。<i class="fa fa-external-link-alt"></i></span></p>
 <table>
 <thead>
 <tr>
@@ -1071,40 +1071,40 @@
 <tbody><tr>
 <td>Path</td>
 <td>- Path&#x3D;&#x2F;dept&#x2F;list&#x2F;**</td>
-<td>当请求路径与 &#x2F;dept&#x2F;list&#x2F;** 匹配时，该请求才能被转发到 <a target="_blank" rel="noopener" href="http://localhost:8001/">http://localhost:8001</a> 上。</td>
+<td>当请求路径与 &#x2F;dept&#x2F;list&#x2F;** 匹配时，该请求才能被转发到 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDAxLw==">http://localhost:8001<i class="fa fa-external-link-alt"></i></span> 上。</td>
 </tr>
 <tr>
 <td>Before</td>
 <td>- Before&#x3D;2022-5-5T11:47:34.255+08:00[Asia&#x2F;Shanghai]</td>
-<td>在 2021 年 10 月 20 日 11 时 47 分 34.255 秒之前的请求，才会被转发到 <a target="_blank" rel="noopener" href="http://localhost:8001/">http://localhost:8001</a> 上。</td>
+<td>在 2021 年 10 月 20 日 11 时 47 分 34.255 秒之前的请求，才会被转发到 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDAxLw==">http://localhost:8001<i class="fa fa-external-link-alt"></i></span> 上。</td>
 </tr>
 <tr>
 <td>After</td>
 <td>- After&#x3D;2022-5-5T11:47:34.255+08:00[Asia&#x2F;Shanghai]</td>
-<td>在 2021 年 10 月 20 日 11 时 47 分 34.255 秒之后的请求，才会被转发到 <a target="_blank" rel="noopener" href="http://localhost:8001/">http://localhost:8001</a> 上。</td>
+<td>在 2021 年 10 月 20 日 11 时 47 分 34.255 秒之后的请求，才会被转发到 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDAxLw==">http://localhost:8001<i class="fa fa-external-link-alt"></i></span> 上。</td>
 </tr>
 <tr>
 <td>Between</td>
 <td>- Between&#x3D;2022-5-5T15:18:33.226+08:00[Asia&#x2F;Shanghai],2022-5-5T15:23:33.226+08:00[Asia&#x2F;Shanghai]</td>
-<td>在 2021 年 10 月 20 日 15 时 18 分 33.226 秒 到 2021 年 10 月 20 日 15 时 23 分 33.226 秒之间的请求，才会被转发到 <a target="_blank" rel="noopener" href="http://localhost:8001/">http://localhost:8001</a> 服务器上。</td>
+<td>在 2021 年 10 月 20 日 15 时 18 分 33.226 秒 到 2021 年 10 月 20 日 15 时 23 分 33.226 秒之间的请求，才会被转发到 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDAxLw==">http://localhost:8001<i class="fa fa-external-link-alt"></i></span> 服务器上。</td>
 </tr>
 <tr>
 <td>Cookie</td>
 <td>- Cookie&#x3D;name,c.biancheng.net</td>
-<td>携带 Cookie 且 Cookie 的内容为 name&#x3D;c.biancheng.net 的请求，才会被转发到 <a target="_blank" rel="noopener" href="http://localhost:8001/">http://localhost:8001</a> 上。</td>
+<td>携带 Cookie 且 Cookie 的内容为 name&#x3D;c.biancheng.net 的请求，才会被转发到 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDAxLw==">http://localhost:8001<i class="fa fa-external-link-alt"></i></span> 上。</td>
 </tr>
 <tr>
 <td>Header</td>
 <td>- Header&#x3D;X-Request-Id,\d+</td>
-<td>请求头上携带属性 X-Request-Id 且属性值为整数的请求，才会被转发到 <a target="_blank" rel="noopener" href="http://localhost:8001/">http://localhost:8001</a> 上。</td>
+<td>请求头上携带属性 X-Request-Id 且属性值为整数的请求，才会被转发到 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDAxLw==">http://localhost:8001<i class="fa fa-external-link-alt"></i></span> 上。</td>
 </tr>
 <tr>
 <td>Method</td>
 <td>- Method&#x3D;GET</td>
-<td>只有 GET 请求才会被转发到 <a target="_blank" rel="noopener" href="http://localhost:8001/">http://localhost:8001</a> 上。</td>
+<td>只有 GET 请求才会被转发到 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MDAxLw==">http://localhost:8001<i class="fa fa-external-link-alt"></i></span> 上。</td>
 </tr>
 </tbody></table>
-<p>更多参考<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#gateway-request-predicates-factories">官方文档</a>。</p>
+<p>更多参考<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctY2xvdWQtZ2F0ZXdheS9kb2NzL2N1cnJlbnQvcmVmZXJlbmNlL2h0bWwvI2dhdGV3YXktcmVxdWVzdC1wcmVkaWNhdGVzLWZhY3Rvcmllcw==">官方文档<i class="fa fa-external-link-alt"></i></span>。</p>
 <br>
 
 <h3 id="部署网关"><a href="#部署网关" class="headerlink" title="部署网关"></a>部署网关</h3><p>创建一个新项目作为网关，导入依赖：</p>
@@ -1121,7 +1121,7 @@
 <p>但现在还未对网关进行任何的路由配置，因此需要再在配置文件为其添加路由功能的配置：</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">gateway:</span></span><br><span class="line">    	<span class="comment"># 配置路由，注意这里是个列表，每一项都包含了很多信息</span></span><br><span class="line">      <span class="attr">routes:</span></span><br><span class="line">        <span class="bullet">-</span> <span class="attr">id:</span> <span class="string">borrow-service</span>   <span class="comment"># 路由名称</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">lb://borrowservice</span>  <span class="comment"># 路由的地址，lb表示使用负载均衡到微服务，也可以使用http正常转发</span></span><br><span class="line">          <span class="attr">predicates:</span> <span class="comment"># 路由规则，断言什么请求会被路由</span></span><br><span class="line">            <span class="bullet">-</span> <span class="string">Path=/borrow/**</span>  <span class="comment"># 只要是访问的这个路径，一律都被路由到上面指定的服务</span></span><br></pre></td></tr></table></figure>
 
-<p>启动网关，访问 <a target="_blank" rel="noopener" href="http://localhost:8500/borrow/user/1%EF%BC%9A">http://localhost:8500/borrow/user/1：</a></p>
+<p>启动网关，访问 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4NTAwL2JvcnJvdy91c2VyLzElRUYlQkMlOUE=">http://localhost:8500/borrow/user/1：<i class="fa fa-external-link-alt"></i></span></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OeTWvt"><img src="https://s1.ax1x.com/2022/05/05/OeTWvt.png" alt="OeTWvt.png"></a></p>
 <p>现在可以直接通过路由来访问服务了，此时依然可以通过原有的服务地址进行访问：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oe7naD"><img src="https://s1.ax1x.com/2022/05/05/Oe7naD.png" alt="Oe7naD.png"></a></p>
@@ -1222,7 +1222,7 @@
 <td>- name: RequestSize   args:    maxSize: 5000000</td>
 </tr>
 </tbody></table>
-<p>更多参考<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#gatewayfilter-factories">官方文档</a></p>
+<p>更多参考<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctY2xvdWQtZ2F0ZXdheS9kb2NzL2N1cnJlbnQvcmVmZXJlbmNlL2h0bWwvI2dhdGV3YXlmaWx0ZXItZmFjdG9yaWVz">官方文档<i class="fa fa-external-link-alt"></i></span></p>
 <br>
 
 <h4 id="配置过滤器"><a href="#配置过滤器" class="headerlink" title="配置过滤器"></a>配置过滤器</h4><p>比如希望请求到达时，在请求头中添加一些信息再转发给服务，这时候就可以使用路由过滤器来完成，只需要对配置文件进行修改：</p>
@@ -1240,7 +1240,7 @@
 <h4 id="全局过滤器"><a href="#全局过滤器" class="headerlink" title="全局过滤器"></a>全局过滤器</h4><p>GlobalFilter 是一种作用于所有的路由上的全局过滤器，通过它，我们可以实现一些统一化的业务功能，例如权限认证、IP 访问限制等。当某个请求被路由匹配时，那么所有的 GlobalFilter 会和该路由自身配置的 GatewayFilter 组合成一个过滤器链。</p>
 <p>Spring Cloud Gateway 为我们提供了多种默认的 GlobalFilter，例如与转发、路由、负载均衡等相关的全局过滤器。但在实际的项目开发中，通常我们都会自定义一些自己的 GlobalFilter 全局过滤器以满足我们自身的业务需求，而很少直接使用 Spring Cloud Config 提供这些默认的 GlobalFilter。</p>
 <blockquote>
-<p>关于默认的全局过滤器的详细内容，请参考 <a target="_blank" rel="noopener" href="https://docs.spring.io/spring-cloud-gateway/docs/current/reference/html/#global-filters">Spring Cloud 官网</a>。</p>
+<p>关于默认的全局过滤器的详细内容，请参考 <span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctY2xvdWQtZ2F0ZXdheS9kb2NzL2N1cnJlbnQvcmVmZXJlbmNlL2h0bWwvI2dsb2JhbC1maWx0ZXJz">Spring Cloud 官网<i class="fa fa-external-link-alt"></i></span>。</p>
 </blockquote>
 <p>比如要实现拦截没有携带指定请求参数的请求：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Component</span>   <span class="comment">// 需要注册为Bean</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyFilter</span> <span class="keyword">implements</span> <span class="title class_">GlobalFilter</span> &#123;</span><br><span class="line">    <span class="comment">// 只需要实现此方法</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Mono&lt;Void&gt; <span class="title function_">filter</span><span class="params">(ServerWebExchange exchange, GatewayFilterChain chain)</span> &#123;   </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1301,7 +1301,7 @@
 <li>当配置发生变化时，微服务不需要重启即可感知到配置的变化，并自动获取和应用最新配置。</li>
 <li>一个应用可能有多个环境，例如开发（dev）环境、测试（test）环境、生产（prod）环境等等，开发人员可以通过 Spring Cloud Config 对不同环境的各配置进行管理，且能够确保应用在环境迁移后仍然有完整的配置支持其正常运行。</li>
 </ul>
-<p>更多参考<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-cloud-config/docs/current/reference/html/">官方文档</a></p>
+<p>更多参考<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctY2xvdWQtY29uZmlnL2RvY3MvY3VycmVudC9yZWZlcmVuY2UvaHRtbC8=">官方文档<i class="fa fa-external-link-alt"></i></span></p>
 <br>
 
 <h3 id="部署配置中心"><a href="#部署配置中心" class="headerlink" title="部署配置中心"></a>部署配置中心</h3><p>创建一个新的项目，导入依赖：</p>
@@ -1323,7 +1323,7 @@
 <p>vim 编辑：</p>
 <figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">spring:</span></span><br><span class="line"><span class="symbol">  datasource:</span></span><br><span class="line">    driver-class-name: com.mysql.cj.jdbc.Driver</span><br><span class="line"><span class="symbol">    url:</span> jdbc:mysql:<span class="comment">//43.138.201.82:3306/cloudstudy</span></span><br><span class="line"><span class="symbol">    username:</span> hjc</span><br><span class="line"><span class="symbol">    password:</span> <span class="number">123456</span></span><br></pre></td></tr></table></figure>
 
-<p>在配置文件中添加本地仓库的信息（远程仓库同理），<a target="_blank" rel="noopener" href="https://docs.spring.io/spring-cloud-config/docs/current/reference/html/#_git_backend">详细使用教程</a></p>
+<p>在配置文件中添加本地仓库的信息（远程仓库同理），<span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctY2xvdWQtY29uZmlnL2RvY3MvY3VycmVudC9yZWZlcmVuY2UvaHRtbC8jX2dpdF9iYWNrZW5k">详细使用教程<i class="fa fa-external-link-alt"></i></span></p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">cloud:</span></span><br><span class="line">    <span class="attr">config:</span></span><br><span class="line">      <span class="attr">server:</span></span><br><span class="line">        <span class="attr">git:</span></span><br><span class="line">        	<span class="comment"># 这里填写的是本地仓库地址，远程仓库直接填写远程仓库地址 http://git...</span></span><br><span class="line">          <span class="attr">uri:</span> <span class="string">file://$&#123;user.home&#125;/IdeaProjects/config-repo</span></span><br><span class="line">          <span class="comment"># 默认分支设定为你自己本地或是远程分支的名称</span></span><br><span class="line">          <span class="attr">default-label:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
 
 <p>Spring Cloud Config 规定了一套配置文件访问规则，如下表。</p>
@@ -1358,9 +1358,9 @@
 <li>{suffix}：配置文件的后缀，例如 config-dev.yml 的后缀为 yml。</li>
 </ul>
 <p>通过这套规则，我们在浏览器上就直接对配置文件进行访问。</p>
-<p>比如我们要访问图书服务的生产环境代码，可以使用 <a target="_blank" rel="noopener" href="http://localhost:8700/bookservice/dex/master">http://localhost:8700/bookservice/dex/master</a> 链接，它会显示详细信息：</p>
+<p>比如我们要访问图书服务的生产环境代码，可以使用 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4NzAwL2Jvb2tzZXJ2aWNlL2RleC9tYXN0ZXI=">http://localhost:8700/bookservice/dex/master<i class="fa fa-external-link-alt"></i></span> 链接，它会显示详细信息：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Om9w7j"><img src="https://s1.ax1x.com/2022/05/05/Om9w7j.png" alt="Om9w7j.png"></a></p>
-<p>也可以使用 <a target="_blank" rel="noopener" href="http://localhost:8700/master/bookservice-dev.yml">http://localhost:8700/master/bookservice-dev.yml</a> 链接，它仅显示配置文件原文：</p>
+<p>也可以使用 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4NzAwL21hc3Rlci9ib29rc2VydmljZS1kZXYueW1s">http://localhost:8700/master/bookservice-dev.yml<i class="fa fa-external-link-alt"></i></span> 链接，它仅显示配置文件原文：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Om9HgK"><img src="https://s1.ax1x.com/2022/05/05/Om9HgK.png" alt="Om9HgK.png"></a></p>
 <p>当然，除了使用Git来保存之外，还支持一些其他的方式，详细情况请查阅官网。</p>
 <br>
@@ -1386,7 +1386,7 @@
 <li><strong>配置中心：</strong>Config（属于<em>SpringCloud</em>官方）</li>
 </ul>
 <p>可见，我们之前使用的整套解决方案中，超过半数的组件都已经处于不可用状态，并且部分组件都是 SpringCloud官方提供的框架进行解决。</p>
-<p>阿里巴巴给出了一套全新的解决方案：<a target="_blank" rel="noopener" href="https://spring-cloud-alibaba-group.github.io/github-pages/2021/zh-cn/index.html">官方网站</a></p>
+<p>阿里巴巴给出了一套全新的解决方案：<span class="exturl" data-url="aHR0cHM6Ly9zcHJpbmctY2xvdWQtYWxpYmFiYS1ncm91cC5naXRodWIuaW8vZ2l0aHViLXBhZ2VzLzIwMjEvemgtY24vaW5kZXguaHRtbA==">官方网站<i class="fa fa-external-link-alt"></i></span></p>
 <blockquote>
 <p>Spring Cloud Alibaba 致力于提供微服务开发的一站式解决方案。此项目包含开发分布式应用服务的必需组件，方便开发者通过 Spring Cloud 编程模型轻松使用这些组件来开发分布式应用服务。</p>
 <p>依托 Spring Cloud Alibaba，您只需要添加一些注解和少量配置，就可以将 Spring Cloud 应用接入阿里分布式应用解决方案，通过阿里中间件来迅速搭建分布式应用系统。</p>
@@ -1407,7 +1407,7 @@
 <br>
 
 <h2 id="Nacos-更加全能的注册中心"><a href="#Nacos-更加全能的注册中心" class="headerlink" title="Nacos 更加全能的注册中心"></a>Nacos 更加全能的注册中心</h2><p>Nacos 英文全称为 Dynamic Naming and Configuration Service，是一个由阿里巴巴团队使用 Java 语言开发的开源项目。</p>
-<p>Nacos 是一个更易于帮助构建云原生应用的动态服务发现、配置和服务管理平台（参考自 <a target="_blank" rel="noopener" href="https://nacos.io/zh-cn/index.html">Nacos 官网</a>）。</p>
+<p>Nacos 是一个更易于帮助构建云原生应用的动态服务发现、配置和服务管理平台（参考自 <span class="exturl" data-url="aHR0cHM6Ly9uYWNvcy5pby96aC1jbi9pbmRleC5odG1s">Nacos 官网<i class="fa fa-external-link-alt"></i></span>）。</p>
 <p>Nacos 的命名是由 3 部分组成：</p>
 <table>
 <thead>
@@ -1433,12 +1433,12 @@
 <td>即服务，表示 Nacos 实现的服务注册中心和配置中心都是以服务为核心的。</td>
 </tr>
 </tbody></table>
-<p>我们可以将 Nacos 理解成服务注册中心和配置中心的组合体，它可以替换 <a target="_blank" rel="noopener" href="http://c.biancheng.net/springcloud/eureka.html">Eureka</a> 作为服务注册中心，实现服务的注册与发现；还可以替换 <a target="_blank" rel="noopener" href="http://c.biancheng.net/springcloud/config.html">Spring Cloud Config</a> 作为配置中心，实现配置的动态刷新。</p>
+<p>我们可以将 Nacos 理解成服务注册中心和配置中心的组合体，它可以替换 <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zcHJpbmdjbG91ZC9ldXJla2EuaHRtbA==">Eureka<i class="fa fa-external-link-alt"></i></span> 作为服务注册中心，实现服务的注册与发现；还可以替换 <span class="exturl" data-url="aHR0cDovL2MuYmlhbmNoZW5nLm5ldC9zcHJpbmdjbG91ZC9jb25maWcuaHRtbA==">Spring Cloud Config<i class="fa fa-external-link-alt"></i></span> 作为配置中心，实现配置的动态刷新。</p>
 <p>Nacos 作为服务注册中心经历了十年“双十一”的洪峰考验，具有简单易用、稳定可靠、性能卓越等优点，可以帮助用户更敏捷、容易地构建和管理微服务应用。</p>
 <p>Nacos 支持几乎所有主流类型“服务”的发现、配置和管理：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://kubernetes.io/docs/concepts/services-networking/service/">Kubernetes Service</a></li>
-<li><a target="_blank" rel="noopener" href="https://grpc.io/docs/what-is-grpc/core-concepts#service-definition">gRPC </a>&amp; <a target="_blank" rel="noopener" href="https://dubbo.apache.org/zh/">Dubbo RPC Service</a></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9rdWJlcm5ldGVzLmlvL2RvY3MvY29uY2VwdHMvc2VydmljZXMtbmV0d29ya2luZy9zZXJ2aWNlLw==">Kubernetes Service<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9ncnBjLmlvL2RvY3Mvd2hhdC1pcy1ncnBjL2NvcmUtY29uY2VwdHMjc2VydmljZS1kZWZpbml0aW9u">gRPC <i class="fa fa-external-link-alt"></i></span>&amp; <span class="exturl" data-url="aHR0cHM6Ly9kdWJiby5hcGFjaGUub3JnL3poLw==">Dubbo RPC Service<i class="fa fa-external-link-alt"></i></span></li>
 <li>Spring Cloud RESTful Service</li>
 </ul>
 <br>
@@ -1505,13 +1505,13 @@
 </ol>
 <br>
 
-<h4 id="安装与部署"><a href="#安装与部署" class="headerlink" title="安装与部署"></a>安装与部署</h4><p>Nacos服务器是独立安装部署的，因此需要下载最新的 Nacos 服务端程序，下载地址：<a target="_blank" rel="noopener" href="https://github.com/alibaba/nacos">https://github.com/alibaba/nacos</a> 下载 zip 文件进行解压。</p>
+<h4 id="安装与部署"><a href="#安装与部署" class="headerlink" title="安装与部署"></a>安装与部署</h4><p>Nacos服务器是独立安装部署的，因此需要下载最新的 Nacos 服务端程序，下载地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FsaWJhYmEvbmFjb3M=">https://github.com/alibaba/nacos<i class="fa fa-external-link-alt"></i></span> 下载 zip 文件进行解压。</p>
 <p>然后将解压后的文件拖入项目文件夹下，便于在 IDEA 内部启动，添加运行配置：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OulPf0"><img src="https://s1.ax1x.com/2022/05/06/OulPf0.png" alt="OulPf0.png"></a></p>
 <p>其中 <code>-m standalone </code>表示单节点模式，Mac 和 Linux 下记得将解释器设定为 <code>/bin/bash</code>，由于 Nacos 在 Mac&#x2F;Linux 默认是后台启动模式，需要修改它的 bash 文件让它变成前台启动，这样  IDEA 关闭了Nacos 就自动关闭：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 注释掉原有的两行启动</span></span><br><span class="line"><span class="comment"># start</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$JAVA</span> <span class="variable">$&#123;JAVA_OPT&#125;</span>&quot;</span> &gt; <span class="variable">$&#123;BASE_DIR&#125;</span>/logs/start.out 2&gt;&amp;1 &amp;</span><br><span class="line"><span class="comment">#nohup $JAVA $&#123;JAVA_OPT&#125; nacos.nacos &gt;&gt; $&#123;BASE_DIR&#125;/logs/start.out 2&gt;&amp;1 &amp;</span></span><br><span class="line"><span class="comment">#echo &quot;nacos is starting，you can check the $&#123;BASE_DIR&#125;/logs/start.out&quot;</span></span><br><span class="line"><span class="variable">$JAVA</span> <span class="variable">$&#123;JAVA_OPT&#125;</span> nacos.nacos</span><br></pre></td></tr></table></figure>
 
-<p>启动后访问管理页面地址 <a target="_blank" rel="noopener" href="http://localhost:8848/nacos/index.html%EF%BC%9A">http://localhost:8848/nacos/index.html：</a></p>
+<p>启动后访问管理页面地址 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4ODQ4L25hY29zL2luZGV4Lmh0bWwlRUYlQkMlOUE=">http://localhost:8848/nacos/index.html：<i class="fa fa-external-link-alt"></i></span></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ou1Lqg"><img src="https://s1.ax1x.com/2022/05/06/Ou1Lqg.png" alt="Ou1Lqg.png"></a></p>
 <p>默认的用户名和管理员密码都是 <code>nacos</code>：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ou3mJ1"><img src="https://s1.ax1x.com/2022/05/06/Ou3mJ1.png" alt="Ou3mJ1.png"></a></p>
@@ -1651,12 +1651,12 @@
 
 <h4 id="实现高可用"><a href="#实现高可用" class="headerlink" title="实现高可用"></a>实现高可用</h4><p>在实际的项目开发中，一个微服务系统往往由十几，几十个甚至几百个微服务组成。 这些服务若全部注册到同一台 Nacos Server，就极有可能导致 Nacos Server 因为不堪重负而崩溃，最终导致整个微服务系统瘫痪。解决这个问题最直接的办法就是使用 Nacos Server 集群。</p>
 <p>Nacos Server 的集群化部署有一个十分明显的优点，那就是可以保障系统的高可用性。在集群化部署中，只要不是所有的 Nacos Server 都停止工作，Nacos Client 就还可以从集群中正常的 Nacos Server 上获取服务信息及配置，而不会导致系统的整体瘫痪，这就是 Nacos Server 集群化部署的高可用性。</p>
-<p>官方方案：<a target="_blank" rel="noopener" href="https://nacos.io/zh-cn/docs/cluster-mode-quick-start.html">https://nacos.io/zh-cn/docs/cluster-mode-quick-start.html</a></p>
+<p>官方方案：<span class="exturl" data-url="aHR0cHM6Ly9uYWNvcy5pby96aC1jbi9kb2NzL2NsdXN0ZXItbW9kZS1xdWljay1zdGFydC5odG1s">https://nacos.io/zh-cn/docs/cluster-mode-quick-start.html<i class="fa fa-external-link-alt"></i></span></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OK3m9I"><img src="https://s1.ax1x.com/2022/05/06/OK3m9I.png" alt="OK3m9I.png"></a></p>
 <blockquote>
-<p><a href="http://ip1:port/openAPI：直连">http://ip1:port/openAPI：直连</a> iP 模式，机器崩溃则需要修改 iP 才可以使用。</p>
-<p><a href="http://SLB:port/openAPI：挂载SLB">http://SLB:port/openAPI：挂载SLB</a>  模式(内网SLB，不可暴露到公网，以免带来安全风险)，直连 SLB 即可，下面挂 S erver 真实 iP，可读性不好。</p>
-<p><a href="http://nacos.com:port/openAPI：域名">http://nacos.com:port/openAPI：域名</a> + SLB模式(内网 SLB，不可暴露到公网，以免带来安全风险)，可读性好，且换 iP 方便，推荐模式</p>
+<p><span class="exturl" data-url="aHR0cDovL2lwMTpwb3J0L29wZW5BUEnvvJrnm7Tov54=">http://ip1:port/openAPI：直连<i class="fa fa-external-link-alt"></i></span> iP 模式，机器崩溃则需要修改 iP 才可以使用。</p>
+<p><span class="exturl" data-url="aHR0cDovL1NMQjpwb3J0L29wZW5BUEnvvJrmjILovb1TTEI=">http://SLB:port/openAPI：挂载SLB<i class="fa fa-external-link-alt"></i></span>  模式(内网SLB，不可暴露到公网，以免带来安全风险)，直连 SLB 即可，下面挂 S erver 真实 iP，可读性不好。</p>
+<p><span class="exturl" data-url="aHR0cDovL25hY29zLmNvbTpwb3J0L29wZW5BUEnvvJrln5/lkI0=">http://nacos.com:port/openAPI：域名<i class="fa fa-external-link-alt"></i></span> + SLB模式(内网 SLB，不可暴露到公网，以免带来安全风险)，可读性好，且换 iP 方便，推荐模式</p>
 </blockquote>
 <p>官方推荐在所有的 Nacos 服务端之前建立负载均衡，我们通过访问负载均衡服务器来间接访问到各个 Nacos 服务器。</p>
 <p>比如有三个 Nacos 服务器做集群，每个服务不会访问 Nacos 进行注册，只需要在任意 Nacos 服务器上注册就可以，Nacos 服务器之间会自动同步信息。</p>
@@ -1713,11 +1713,11 @@
 <p>从功能上来说，Sentinel 与 Spring Cloud Netfilx Hystrix 类似，但 Sentinel 要比 Hystrix 更加强大，例如 Sentinel 提供了流量控制功能、比 Hystrix 更加完善的实时监控功能等等。</p>
 <br>
 
-<h3 id="安装与部署-1"><a href="#安装与部署-1" class="headerlink" title="安装与部署"></a>安装与部署</h3><p>和 Nacos 相同，Sentinel 也是独立安装和部署的：<a target="_blank" rel="noopener" href="https://github.com/alibaba/Sentinel/releases">https://github.com/alibaba/Sentinel/releases</a></p>
+<h3 id="安装与部署-1"><a href="#安装与部署-1" class="headerlink" title="安装与部署"></a>安装与部署</h3><p>和 Nacos 相同，Sentinel 也是独立安装和部署的：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FsaWJhYmEvU2VudGluZWwvcmVsZWFzZXM=">https://github.com/alibaba/Sentinel/releases<i class="fa fa-external-link-alt"></i></span></p>
 <p>下载后是一个 <code>.jar</code> 文件（SpringBoot 项目），需要在 IDEA 中添加运行配置：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OMo8M9"><img src="https://s1.ax1x.com/2022/05/07/OMo8M9.png" alt="OMo8M9.png" style="zoom:67%;" /></a></p>
 <p>默认端口占用 8080，如果需要修改，可以添加环境变量。然后直接启动，</p>
-<p>启动后访问 Sentinel 的监控页面，用户名和密码都是<code>sentinel</code>，地址：<a target="_blank" rel="noopener" href="http://localhost:8858/#/dashboard">http://localhost:8858/#/dashboard</a></p>
+<p>启动后访问 Sentinel 的监控页面，用户名和密码都是<code>sentinel</code>，地址：<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4ODU4LyMvZGFzaGJvYXJk">http://localhost:8858/#/dashboard<i class="fa fa-external-link-alt"></i></span></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OMoWi8"><img src="https://s1.ax1x.com/2022/05/07/OMoWi8.png" alt="OMoWi8.png"></a></p>
 <p>这样就成功开启了监控页面，然后需要让我们的服务连接到 Sentinel 控制台，导入依赖：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-starter-alibaba-sentinel<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1781,7 +1781,7 @@
 <p>同一个资源可以创建多条流控规则，Sentinel 会遍历这些规则，直到有规则触发限流或者所有规则遍历完毕为止。</p>
 <p>Sentinel 触发限流时，资源会抛出 BlockException 异常，此时我们可以捕捉 BlockException 来自定义被限流之后的处理逻辑。</p>
 <blockquote>
-<p>注意：详细的流控规则配置，请参考 <a target="_blank" rel="noopener" href="https://sentinelguard.io/zh-cn/docs/flow-control.html">Sentinel 官方流控文档</a>。</p>
+<p>注意：详细的流控规则配置，请参考 <span class="exturl" data-url="aHR0cHM6Ly9zZW50aW5lbGd1YXJkLmlvL3poLWNuL2RvY3MvZmxvdy1jb250cm9sLmh0bWw=">Sentinel 官方流控文档<i class="fa fa-external-link-alt"></i></span>。</p>
 </blockquote>
 <p>实现流量控制的策略</p>
 <ul>
@@ -1892,9 +1892,9 @@
 
 <h3 id="热点参数限流"><a href="#热点参数限流" class="headerlink" title="热点参数限流"></a>热点参数限流</h3><p>还可以对某一热点数据进行精准限流，比如在某一时刻，不同参数被携带访问的频率是不一样的：</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="http://localhost:8301/test2?a=10">http://localhost:8301/test2?a=10</a>  访问100次</li>
-<li><a target="_blank" rel="noopener" href="http://localhost:8301/test2?b=10">http://localhost:8301/test2?b=10</a>  访问0次</li>
-<li><a target="_blank" rel="noopener" href="http://localhost:8301/test2?c=10">http://localhost:8301/test2?c=10</a>  访问3次</li>
+<li><span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MzAxL3Rlc3QyP2E9MTA=">http://localhost:8301/test2?a=10<i class="fa fa-external-link-alt"></i></span>  访问100次</li>
+<li><span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MzAxL3Rlc3QyP2I9MTA=">http://localhost:8301/test2?b=10<i class="fa fa-external-link-alt"></i></span>  访问0次</li>
+<li><span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4MzAxL3Rlc3QyP2M9MTA=">http://localhost:8301/test2?c=10<i class="fa fa-external-link-alt"></i></span>  访问3次</li>
 </ul>
 <p>由于携带参数<code>a</code>的请求比较多，我们就可以只对携带参数<code>a</code>的请求进行限流。</p>
 <p>这里我们创建一个新的测试请求映射：</p>
@@ -2123,7 +2123,7 @@
 
 <h2 id="Seata与分布式事务"><a href="#Seata与分布式事务" class="headerlink" title="Seata与分布式事务"></a>Seata与分布式事务</h2><p>随着业务的不断发展，单体架构已经无法满足我们的需求，分布式微服务架构逐渐成为大型互联网平台的首选，但所有使用分布式微服务架构的应用都必须面临一个十分棘手的问题，那就是“分布式事务”问题。</p>
 <p>在分布式微服务架构中，几乎所有业务操作都需要多个服务协作才能完成。对于其中的某个服务而言，它的数据一致性可以交由其自身数据库事务来保证，但从整个分布式微服务架构来看，其全局数据的一致性却是无法保证的。</p>
-<p><strong>官方文档：</strong><a target="_blank" rel="noopener" href="https://seata.io/zh-cn/docs/overview/what-is-seata.html">https://seata.io/zh-cn/docs/overview/what-is-seata.html</a></p>
+<p><strong>官方文档：</strong><span class="exturl" data-url="aHR0cHM6Ly9zZWF0YS5pby96aC1jbi9kb2NzL292ZXJ2aWV3L3doYXQtaXMtc2VhdGEuaHRtbA==">https://seata.io/zh-cn/docs/overview/what-is-seata.html<i class="fa fa-external-link-alt"></i></span></p>
 <p>数据库事务的特性：</p>
 <ul>
 <li><strong>原子性：</strong>一个事务（transaction）中的所有操作，要么全部完成，要么全部不完成，不会结束在中间某个环节。事务在执行过程中发生错误，会被回滚（Rollback）到事务开始前的状态，就像这个事务从来没有执行过一样。</li>
@@ -2289,7 +2289,7 @@
 </blockquote>
 <p>Seata 提供了 AT、TCC、SAGA 和 XA 四种事务模式，可以快速有效地对分布式事务进行控制。</p>
 <p>在这四种事务模式中使用最多，最方便的就是 AT 模式。与其他事务模式相比，AT 模式可以应对大多数的业务场景，且基本可以做到无业务入侵，开发人员能够有更多的精力关注于业务逻辑开发。</p>
-<p>官网文档：<a target="_blank" rel="noopener" href="https://seata.io/zh-cn/docs/overview/what-is-seata.html">https://seata.io/zh-cn/docs/overview/what-is-seata.html</a></p>
+<p>官网文档：<span class="exturl" data-url="aHR0cHM6Ly9zZWF0YS5pby96aC1jbi9kb2NzL292ZXJ2aWV3L3doYXQtaXMtc2VhdGEuaHRtbA==">https://seata.io/zh-cn/docs/overview/what-is-seata.html<i class="fa fa-external-link-alt"></i></span></p>
 <ul>
 <li><p>AT：本质上是 2PC 的升级版，在 AT 模式下，用户只需关心自己的 “业务 SQL”</p>
 <ol>
@@ -2323,8 +2323,8 @@
 <li>得到服务名后，去注册中心去拉取服务列表，获得后端真实的 TC 服务列表。</li>
 </ol>
 <p>这样，事务分组可以作为资源的逻辑隔离单位，出现某集群故障时可以快速 failover。只切换对应分组可以把故障缩减到服务级别。</p>
-<p>服务端下载地址：<a target="_blank" rel="noopener" href="https://github.com/seata/seata/releases/download/v1.4.2/seata-server-1.4.2.zip">https://github.com/seata/seata/releases/download/v1.4.2/seata-server-1.4.2.zip</a></p>
-<p>源码下：<a target="_blank" rel="noopener" href="https://github.com/seata/seata/archive/refs/heads/develop.zip">https://github.com/seata/seata/archive/refs/heads/develop.zip</a></p>
+<p>服务端下载地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NlYXRhL3NlYXRhL3JlbGVhc2VzL2Rvd25sb2FkL3YxLjQuMi9zZWF0YS1zZXJ2ZXItMS40LjIuemlw">https://github.com/seata/seata/releases/download/v1.4.2/seata-server-1.4.2.zip<i class="fa fa-external-link-alt"></i></span></p>
+<p>源码下：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3NlYXRhL3NlYXRhL2FyY2hpdmUvcmVmcy9oZWFkcy9kZXZlbG9wLnppcA==">https://github.com/seata/seata/archive/refs/heads/develop.zip<i class="fa fa-external-link-alt"></i></span></p>
 <p>下载完成后放入 IDEA 项目目录中，添加启动配置使用端口 8868：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O1g5n0"><img src="https://s1.ax1x.com/2022/05/08/O1g5n0.png" alt="O1g5n0.png" style="zoom:67%;" /></a></p>
 <p>然后需要将各个服务作为 Seate 的客户端，导入依赖：</p>
@@ -2405,7 +2405,7 @@
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O1XTh9"><img src="https://s1.ax1x.com/2022/05/08/O1XTh9.png" alt="O1XTh9.png"></a></p>
 <br>
 
-<h1 id="Spring-Cloud-消息组件"><a href="#Spring-Cloud-消息组件" class="headerlink" title="Spring Cloud 消息组件"></a>Spring Cloud 消息组件</h1><h2 id="SpringCloud-Stream"><a href="#SpringCloud-Stream" class="headerlink" title="SpringCloud Stream"></a>SpringCloud Stream</h2><p><strong>官方文档：</strong><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-cloud-stream/docs/3.2.2/reference/html/">https://docs.spring.io/spring-cloud-stream/docs/3.2.2/reference/html/</a></p>
+<h1 id="Spring-Cloud-消息组件"><a href="#Spring-Cloud-消息组件" class="headerlink" title="Spring Cloud 消息组件"></a>Spring Cloud 消息组件</h1><h2 id="SpringCloud-Stream"><a href="#SpringCloud-Stream" class="headerlink" title="SpringCloud Stream"></a>SpringCloud Stream</h2><p><strong>官方文档：</strong><span class="exturl" data-url="aHR0cHM6Ly9kb2NzLnNwcmluZy5pby9zcHJpbmctY2xvdWQtc3RyZWFtL2RvY3MvMy4yLjIvcmVmZXJlbmNlL2h0bWwv">https://docs.spring.io/spring-cloud-stream/docs/3.2.2/reference/html/<i class="fa fa-external-link-alt"></i></span></p>
 <p>有些时候我们可能会遇到不同的系统在用不同的消息队列，比如系统 A 使用 Kafka、系统 B 使用 RabbitMQ，但是我们现在并不会使用 Kafka。</p>
 <p>Spring Cloud Stream 就能够屏蔽底层实现，使用统一的消息队列操作方式就能操作多种不同类型的消息队列。</p>
 <p><img src="https://tva1.sinaimg.cn/large/e6c9d24ely1h1hqdnqlqsj21iu0l0myd.jpg" alt="image-20220421225215709"></p>
@@ -2543,10 +2543,10 @@
 <br>
 
 <h3 id="接口测试"><a href="#接口测试" class="headerlink" title="接口测试"></a>接口测试</h3><p>启动服务器，然后使用 Postman 进行接口测试。</p>
-<h4 id="客户端模式"><a href="#客户端模式" class="headerlink" title="客户端模式"></a>客户端模式</h4><p>首先从最简单的客户端模式进行测试，客户端模式只需要提供 ID 和 secret 即可获取到 Token。注意需要再添加 grant_type 来表明我们的授权方式，默认请求路径为 <a target="_blank" rel="noopener" href="http://localhost:8500/sso/oauth/token">http://localhost:8500/sso/oauth/token</a></p>
+<h4 id="客户端模式"><a href="#客户端模式" class="headerlink" title="客户端模式"></a>客户端模式</h4><p>首先从最简单的客户端模式进行测试，客户端模式只需要提供 ID 和 secret 即可获取到 Token。注意需要再添加 grant_type 来表明我们的授权方式，默认请求路径为 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4NTAwL3Nzby9vYXV0aC90b2tlbg==">http://localhost:8500/sso/oauth/token<i class="fa fa-external-link-alt"></i></span></p>
 <p>发起请求后，返回了JSON格式的 Token：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OGzqpD"><img src="https://s1.ax1x.com/2022/05/09/OGzqpD.png" alt="OGzqpD.png"></a></p>
-<p>还可以访问 <a target="_blank" rel="noopener" href="http://localhost:8500/sso/oauth/check_token">http://localhost:8500/sso/oauth/check_token</a> 来验证 Token 是否有效：</p>
+<p>还可以访问 <span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4NTAwL3Nzby9vYXV0aC9jaGVja190b2tlbg==">http://localhost:8500/sso/oauth/check_token<i class="fa fa-external-link-alt"></i></span> 来验证 Token 是否有效：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OJSnA0"><img src="https://s1.ax1x.com/2022/05/09/OJSnA0.png" alt="OJSnA0.png"></a></p>
 <p>可以看到 active 为 true，表示我们刚刚申请到的 Token 是有效的。</p>
 <br>
@@ -2563,7 +2563,7 @@
 <p>查询 Token 信息还可以看到登录的具体用户以及角色权限等。</p>
 <br>
 
-<h4 id="隐式授权模式"><a href="#隐式授权模式" class="headerlink" title="隐式授权模式"></a>隐式授权模式</h4><p>隐式授权模式需要在验证服务器上进行登录操作而不是直接请求 Token，验证登录请求地址：<a target="_blank" rel="noopener" href="http://localhost:8500/sso/oauth/authorize?client_id=web&amp;response_type=token">http://localhost:8500/sso/oauth/authorize?client_id=web&amp;response_type=token</a></p>
+<h4 id="隐式授权模式"><a href="#隐式授权模式" class="headerlink" title="隐式授权模式"></a>隐式授权模式</h4><p>隐式授权模式需要在验证服务器上进行登录操作而不是直接请求 Token，验证登录请求地址：<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4NTAwL3Nzby9vYXV0aC9hdXRob3JpemU/Y2xpZW50X2lkPXdlYiZhbXA7cmVzcG9uc2VfdHlwZT10b2tlbg==">http://localhost:8500/sso/oauth/authorize?client_id=web&amp;response_type=token<i class="fa fa-external-link-alt"></i></span></p>
 <p>注意 response_type 一定要是 token 类型，这样才会直接返回 Token。浏览器发起请求后会进入 Spring Security 的登录界面：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OJ9JFx"><img src="https://s1.ax1x.com/2022/05/09/OJ9JFx.png" alt="OJ9JFx.png"></a></p>
 <p>输入我们指定的用户名和密码登录后会出现一个错误：</p>
@@ -2580,7 +2580,7 @@
 <p> Token 也是有效的且 JSON 内容和密码模式基本一致。</p>
 <br>
 
-<h4 id="授权码模式"><a href="#授权码模式" class="headerlink" title="授权码模式"></a>授权码模式</h4><p>授权码模式流程与前面一样的，但请求的是 code 类型：<a target="_blank" rel="noopener" href="http://localhost:8500/sso/oauth/authorize?client_id=web&amp;response_type=code">http://localhost:8500/sso/oauth/authorize?client_id=web&amp;response_type=code</a></p>
+<h4 id="授权码模式"><a href="#授权码模式" class="headerlink" title="授权码模式"></a>授权码模式</h4><p>授权码模式流程与前面一样的，但请求的是 code 类型：<span class="exturl" data-url="aHR0cDovL2xvY2FsaG9zdDo4NTAwL3Nzby9vYXV0aC9hdXRob3JpemU/Y2xpZW50X2lkPXdlYiZhbXA7cmVzcG9uc2VfdHlwZT1jb2Rl">http://localhost:8500/sso/oauth/authorize?client_id=web&amp;response_type=code<i class="fa fa-external-link-alt"></i></span></p>
 <p>访问后也会要求进行登录然后进入到回调地址，但此时返回的是授权码而不是直接给 Token：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OJEC4A"><img src="https://s1.ax1x.com/2022/05/09/OJEC4A.png" alt="OJEC4A.png"></a></p>
 <p>需要携带授权码和 secret 一起请求才能获取 Token，正常情况下是由回调的服务器进行处理，这里我们在 Postman 中进行：</p>
@@ -2590,7 +2590,7 @@
 <br>
 
 <h4 id="刷新令牌"><a href="#刷新令牌" class="headerlink" title="刷新令牌"></a>刷新令牌</h4><p>当 Token 过期时可以使用 refresh_token 来申请一个新的 Token，refresh_token 的值是请求后返回的：</p>
-<p>[![OJ<a target="_blank" rel="noopener" href="https://imgtu.com/i/OJZBnK"><img src="https://s1.ax1x.com/2022/05/09/OJZBnK.png" alt="OJZBnK.png"></a>](<a target="_blank" rel="noopener" href="https://imgtu.com/i/OJVzYd">https://imgtu.com/i/OJVzYd</a>)</p>
+<p>[![OJ<a target="_blank" rel="noopener" href="https://imgtu.com/i/OJZBnK"><img src="https://s1.ax1x.com/2022/05/09/OJZBnK.png" alt="OJZBnK.png"></a>](<span class="exturl" data-url="aHR0cHM6Ly9pbWd0dS5jb20vaS9PSlZ6WWQ=">https://imgtu.com/i/OJVzYd<i class="fa fa-external-link-alt"></i></span>)</p>
 <p>但执行后出现了一个内部错误，</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OJZ87F"><img src="https://s1.ax1x.com/2022/05/09/OJZ87F.png" alt="OJZ87F.png"></a></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OJZWct"><img src="https://s1.ax1x.com/2022/05/09/OJZWct.png" alt="OJZWct.png"></a></p>
@@ -2663,7 +2663,7 @@
 </ul>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OtemUU"><img src="https://s1.ax1x.com/2022/05/10/OtemUU.png" alt="OtemUU.png"></a></p>
 <p>第二种需要使用 Postman 来完成：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Otn8AK"><img src="https://s1.ax1x.com/2022/05/10/Otn8AK.png" alt="Otn8AK.png"></a>](<a target="_blank" rel="noopener" href="https://imgtu.com/i/Otm3WQ">https://imgtu.com/i/Otm3WQ</a>)</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Otn8AK"><img src="https://s1.ax1x.com/2022/05/10/Otn8AK.png" alt="Otn8AK.png"></a>](<span class="exturl" data-url="aHR0cHM6Ly9pbWd0dS5jb20vaS9PdG0zV1E=">https://imgtu.com/i/Otm3WQ<i class="fa fa-external-link-alt"></i></span>)</p>
 <p>添加验证信息后，会被转换成请求头信息：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OtmJQs"><img src="https://s1.ax1x.com/2022/05/10/OtmJQs.png" alt="OtmJQs.png"></a></p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OtnwnI"><img src="https://s1.ax1x.com/2022/05/10/OtnwnI.png" alt="OtnwnI.png"></a></p>
@@ -2719,8 +2719,8 @@
 <p>这样就成功将三个服务都作为了资源服务器。与客户端不同，作为客户端只需要验证通过且需要保存 Session 信息，相当于只是将登录流程换到统一的验证服务器上进行。而将其作为资源服务器需要另外的客户端（可以是浏览器、小程序、App、第三方服务等）来访问，并且也需要先进行验证然后再携带 Token 进行访问。这种模式是比较常见的模式。</p>
 <br>
 
-<h3 id="使用-JWT-存储-Token"><a href="#使用-JWT-存储-Token" class="headerlink" title="使用 JWT 存储 Token"></a>使用 JWT 存储 Token</h3><p>官网：<a target="_blank" rel="noopener" href="https://jwt.io/">https://jwt.io</a></p>
-<p>JSON Web Token令牌（JWT）是一个开放标准（<a target="_blank" rel="noopener" href="https://tools.ietf.org/html/rfc7519">RFC 7519</a>），它定义了一种紧凑和自成一体的方式，用于在各方之间作为 JSON 对象安全地传输信息。由于它是数字签名因此这些信息可以被验证和信任。JWT 可以使用密钥（使用 <strong>HMAC</strong> 算法）或使用 <strong>RSA</strong> 或 <strong>ECDSA</strong> 进行公钥&#x2F;私钥对进行签名。</p>
+<h3 id="使用-JWT-存储-Token"><a href="#使用-JWT-存储-Token" class="headerlink" title="使用 JWT 存储 Token"></a>使用 JWT 存储 Token</h3><p>官网：<span class="exturl" data-url="aHR0cHM6Ly9qd3QuaW8v">https://jwt.io<i class="fa fa-external-link-alt"></i></span></p>
+<p>JSON Web Token令牌（JWT）是一个开放标准（<span class="exturl" data-url="aHR0cHM6Ly90b29scy5pZXRmLm9yZy9odG1sL3JmYzc1MTk=">RFC 7519<i class="fa fa-external-link-alt"></i></span>），它定义了一种紧凑和自成一体的方式，用于在各方之间作为 JSON 对象安全地传输信息。由于它是数字签名因此这些信息可以被验证和信任。JWT 可以使用密钥（使用 <strong>HMAC</strong> 算法）或使用 <strong>RSA</strong> 或 <strong>ECDSA</strong> 进行公钥&#x2F;私钥对进行签名。</p>
 <p>实际上，我们之前都是携带 Token 向资源服务器发起请求后，资源服务器由于不知道我们 Token 的用户信息，所以需要向验证服务器询问此 Token 的认证信息，这样才能得到 Token 代表的用户信息，但是各位是否考虑过，如果每次用户请求都去查询用户信息，那么在大量请求下，验证服务器的压力可能会非常的大。而使用 JWT 之后，Token 中会直接保存用户信息，这样资源服务器就不再需要询问验证服务器，自行就可以完成解析，我们的目标是不联系验证服务器就能直接完成验证。</p>
 <p>JWT 令牌的格式如下：</p>
 <p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OtBLFO"><img src="https://s1.ax1x.com/2022/05/10/OtBLFO.png" alt="OtBLFO.png"></a></p>
