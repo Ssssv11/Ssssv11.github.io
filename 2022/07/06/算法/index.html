@@ -32,7 +32,7 @@
 <meta property="og:description" content="LeetCode 刷题笔记">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-06T08:26:01.683Z">
-<meta property="article:modified_time" content="2022-07-06T08:27:17.545Z">
+<meta property="article:modified_time" content="2022-07-07T08:01:57.997Z">
 <meta property="article:author" content="Ssssv11">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -188,7 +188,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9B%AE%E5%BD%95"><span class="nav-number">2.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">3.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BC%80%E5%92%8C%E3%80%81%E5%89%8D%E7%BC%80%E7%A7%AF"><span class="nav-number">3.1.</span> <span class="nav-text">前缀和、前缀积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84"><span class="nav-number">3.2.</span> <span class="nav-text">差分数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="nav-number">3.3.</span> <span class="nav-text">双指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88"><span class="nav-number">3.3.1.</span> <span class="nav-text">快慢指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A6%E5%8F%B3%E6%8C%87%E9%92%88"><span class="nav-number">3.3.2.</span> <span class="nav-text">左右指针</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86%E9%97%AE%E9%A2%98"><span class="nav-number">3.4.</span> <span class="nav-text">二维数组的遍历问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="nav-number">3.5.</span> <span class="nav-text">滑动窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="nav-number">3.6.</span> <span class="nav-text">二分查找</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E4%B8%80%E4%B8%AA%E6%95%B0"><span class="nav-number">3.6.1.</span> <span class="nav-text">查找一个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BB%E6%89%BE%E8%BE%B9%E7%95%8C%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2"><span class="nav-number">3.6.2.</span> <span class="nav-text">寻找边界的二分搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E9%97%AE%E9%A2%98%E7%9A%84%E6%B3%9B%E5%8C%96"><span class="nav-number">3.6.3.</span> <span class="nav-text">二分查找问题的泛化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">4.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88-1"><span class="nav-number">4.1.</span> <span class="nav-text">双指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E3%80%81%E5%88%86%E8%A7%A3%E9%93%BE%E8%A1%A8"><span class="nav-number">4.1.1.</span> <span class="nav-text">合并、分解链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC-k-%E4%B8%AA%E8%8A%82%E7%82%B9"><span class="nav-number">4.1.2.</span> <span class="nav-text">单链表的倒数第 k 个节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E7%82%B9"><span class="nav-number">4.1.3.</span> <span class="nav-text">单链表的中点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E7%8E%AF"><span class="nav-number">4.1.4.</span> <span class="nav-text">判断链表是否包含环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4"><span class="nav-number">4.1.5.</span> <span class="nav-text">两个链表是否相交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="nav-number">4.1.6.</span> <span class="nav-text">反转链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8"><span class="nav-number">4.1.7.</span> <span class="nav-text">回文链表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">5.</span> <span class="nav-text">字符串</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%95%B0%E7%BB%84"><span class="nav-number">2.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E7%BC%80%E5%92%8C%E3%80%81%E5%89%8D%E7%BC%80%E7%A7%AF"><span class="nav-number">2.1.</span> <span class="nav-text">前缀和、前缀积</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84"><span class="nav-number">2.2.</span> <span class="nav-text">差分数组</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88"><span class="nav-number">2.3.</span> <span class="nav-text">双指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88"><span class="nav-number">2.3.1.</span> <span class="nav-text">快慢指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B7%A6%E5%8F%B3%E6%8C%87%E9%92%88"><span class="nav-number">2.3.2.</span> <span class="nav-text">左右指针</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86%E9%97%AE%E9%A2%98"><span class="nav-number">2.4.</span> <span class="nav-text">二维数组的遍历问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3"><span class="nav-number">2.5.</span> <span class="nav-text">滑动窗口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE"><span class="nav-number">2.6.</span> <span class="nav-text">二分查找</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E6%89%BE%E4%B8%80%E4%B8%AA%E6%95%B0"><span class="nav-number">2.6.1.</span> <span class="nav-text">查找一个数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BB%E6%89%BE%E8%BE%B9%E7%95%8C%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2"><span class="nav-number">2.6.2.</span> <span class="nav-text">寻找边界的二分搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E9%97%AE%E9%A2%98%E7%9A%84%E6%B3%9B%E5%8C%96"><span class="nav-number">2.6.3.</span> <span class="nav-text">二分查找问题的泛化</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">3.</span> <span class="nav-text">链表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8C%E6%8C%87%E9%92%88-1"><span class="nav-number">3.1.</span> <span class="nav-text">双指针</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%88%E5%B9%B6%E3%80%81%E5%88%86%E8%A7%A3%E9%93%BE%E8%A1%A8"><span class="nav-number">3.1.1.</span> <span class="nav-text">合并、分解链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC-k-%E4%B8%AA%E8%8A%82%E7%82%B9"><span class="nav-number">3.1.2.</span> <span class="nav-text">单链表的倒数第 k 个节点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E7%82%B9"><span class="nav-number">3.1.3.</span> <span class="nav-text">单链表的中点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A4%E6%96%AD%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E7%8E%AF"><span class="nav-number">3.1.4.</span> <span class="nav-text">判断链表是否包含环</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4"><span class="nav-number">3.1.5.</span> <span class="nav-text">两个链表是否相交</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8"><span class="nav-number">3.1.6.</span> <span class="nav-text">反转链表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8"><span class="nav-number">3.1.7.</span> <span class="nav-text">回文链表</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">4.</span> <span class="nav-text">字符串</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">5.</span> <span class="nav-text">二叉树</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BA%B2%E9%A2%86"><span class="nav-number">5.1.</span> <span class="nav-text">纲领</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -280,10 +280,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-07-06 16:26:01 / Modified: 16:27:17" itemprop="dateCreated datePublished" datetime="2022-07-06T16:26:01+08:00">2022-07-06</time>
+      <time title="Created: 2022-07-06 16:26:01" itemprop="dateCreated datePublished" datetime="2022-07-06T16:26:01+08:00">2022-07-06</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-07-07 16:01:57" itemprop="dateModified" datetime="2022-07-07T16:01:57+08:00">2022-07-07</time>
+      </span>
 
   
     <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -308,40 +314,9 @@
 
 <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>算法学习的记录，LeetCode 刷题中…</p>
 <p>感谢 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xhYnVsYWRvbmcvZnVja2luZy1hbGdvcml0aG0=">Labuladong<i class="fa fa-external-link-alt"></i></span> 、<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL3lvdW5neWFuZ3lhbmcwNC9sZWV0Y29kZS1tYXN0ZXI=">Carl<i class="fa fa-external-link-alt"></i></span> 等大佬免费的学习资料</p>
-<h1 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h1><ul>
-<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
-<li><a href="#%E6%95%B0%E7%BB%84">数组</a> <ul>
-<li><a href="#%E5%89%8D%E7%BC%80%E5%92%8C%E5%89%8D%E7%BC%80%E7%A7%AF">前缀和、前缀积</a></li>
-<li><a href="#%E5%B7%AE%E5%88%86%E6%95%B0%E7%BB%84">差分数组</a></li>
-<li><a href="#%E5%8F%8C%E6%8C%87%E9%92%88">双指针</a> <ul>
-<li><a href="#%E5%BF%AB%E6%85%A2%E6%8C%87%E9%92%88">快慢指针</a></li>
-<li><a href="#%E5%B7%A6%E5%8F%B3%E6%8C%87%E9%92%88">左右指针</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E7%9A%84%E9%81%8D%E5%8E%86%E9%97%AE%E9%A2%98">二维数组的遍历问题</a></li>
-<li><a href="#%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3">滑动窗口</a></li>
-<li><a href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE">二分查找</a> <ul>
-<li><a href="#%E6%9F%A5%E6%89%BE%E4%B8%80%E4%B8%AA%E6%95%B0">查找一个数</a></li>
-<li><a href="#%E5%AF%BB%E6%89%BE%E8%BE%B9%E7%95%8C%E7%9A%84%E4%BA%8C%E5%88%86%E6%90%9C%E7%B4%A2">寻找边界的二分搜索</a></li>
-<li><a href="#%E4%BA%8C%E5%88%86%E6%9F%A5%E6%89%BE%E9%97%AE%E9%A2%98%E7%9A%84%E6%B3%9B%E5%8C%96">二分查找问题的泛化</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E9%93%BE%E8%A1%A8">链表</a> <ul>
-<li><a href="#%E5%8F%8C%E6%8C%87%E9%92%88-1">双指针</a> <ul>
-<li><a href="#%E5%90%88%E5%B9%B6%E5%88%86%E8%A7%A3%E9%93%BE%E8%A1%A8">合并、分解链表</a></li>
-<li><a href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%AC-k-%E4%B8%AA%E8%8A%82%E7%82%B9">单链表的倒数第 k 个节点</a></li>
-<li><a href="#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E4%B8%AD%E7%82%B9">单链表的中点</a></li>
-<li><a href="#%E5%88%A4%E6%96%AD%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E5%8C%85%E5%90%AB%E7%8E%AF">判断链表是否包含环</a></li>
-<li><a href="#%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E6%98%AF%E5%90%A6%E7%9B%B8%E4%BA%A4">两个链表是否相交</a></li>
-<li><a href="#%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8">反转链表</a></li>
-<li><a href="#%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8">回文链表</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
+</br>
+
+
 <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="前缀和、前缀积"><a href="#前缀和、前缀积" class="headerlink" title="前缀和、前缀积"></a>前缀和、前缀积</h2><p><strong>前缀和技巧适用于快速、频繁地计算一个索引区间内的元素之和，它不会修改原始数组。</strong><br />核⼼思路是创建⼀个数组 <code>preSum</code>， <code>preSum[i]</code> 记录 <code>nums[0..i-1]</code> 的累加和(<code>preSum[0] = 0</code>)。若需要计算某个索引区间 <code>[i, j]</code> 内的元素之和，只需要计算 <code>preSum[j+1] - preSum[i]</code> 的值即可。</p>
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8zMDMuJUU1JThDJUJBJUU1JTlGJTlGJUU1JTkyJThDJUU2JUEzJTgwJUU3JUI0JUEyLSVFNiU5NSVCMCVFNyVCQiU4NCVFNCVCOCU4RCVFNSU4RiVBRiVFNSU4RiU5OC5qYXZh">303.区域和检索-数组不可变<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9yYW5nZS1zdW0tcXVlcnktaW1tdXRhYmxlLw==">🔗<i class="fa fa-external-link-alt"></i></span></li>
@@ -356,6 +331,9 @@
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8xMzUyLiVFNiU5QyU4MCVFNSU5MCU4RS1rLSVFNCVCOCVBQSVFNiU5NSVCMCVFNyU5QSU4NCVFNCVCOSU5OCVFNyVBNyVBRi5qYXZh">1352.最后-k-个数的乘积<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9wcm9kdWN0LW9mLXRoZS1sYXN0LWstbnVtYmVycy8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>与前缀和思想相似，这两道求积的问题也可以通过先求前缀积再根据具体情况考虑特殊之处。如 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8yMzguJUU5JTk5JUE0JUU4JTg3JUFBJUU4JUJBJUFCJUU0JUJCJUE1JUU1JUE0JTk2JUU2JTk1JUIwJUU3JUJCJTg0JUU3JTlBJTg0JUU0JUI5JTk4JUU3JUE3JUFGLmphdmE=">#238<i class="fa fa-external-link-alt"></i></span> 可以使用 <em>前缀积+后缀积</em> 的方式来实现不使用除法解答；<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8xMzUyLiVFNiU5QyU4MCVFNSU5MCU4RS1rLSVFNCVCOCVBQSVFNiU5NSVCMCVFNyU5QSU4NCVFNCVCOSU5OCVFNyVBNyVBRi5qYXZh">#1352<i class="fa fa-external-link-alt"></i></span> 需要在插入 0 后清空当前前缀积重新开始计算。</p>
+</br>
+
+
 <h2 id="差分数组"><a href="#差分数组" class="headerlink" title="差分数组"></a>差分数组</h2><p><strong>差分数组的主要适⽤场景是频繁对原始数组的某个区间的元素进⾏增减。</strong><br />若需要对数组 <code>nums[i..j]</code> 全部加 1，再给 <code>nums[k..l]</code> 全部减 2 等等一系列增减操作，最后返回增减后的数组。常规思路就是使用 for 循环对指定区间内的元素进行加减，但这样对 <code>nums</code> 的修改非常频繁且效率低下，时间复杂度为 <code>O(N)</code>。<br />使用差分数组与前缀和构造的 <code>preSum</code> 数组相似，可以为 <code>nums</code> 数组构造⼀个差分数组 <code>diff</code>， <code>diff[i]</code> 就是 <code>nums[i]</code> 和 <code>nums[i-1]</code> 的差：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// nums[] = &#123;5, 7, 9, 2, 3&#125;</span></span><br><span class="line"><span class="comment">// diff[] = &#123;5, 2, 2, -7, 1&#125;</span></span><br><span class="line"><span class="type">int</span>[] diff = <span class="keyword">new</span> <span class="title class_">int</span>[nums.length];</span><br><span class="line"><span class="comment">// 构造差分数组</span></span><br><span class="line">diff[<span class="number">0</span>] = nums[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">    diff[i] = nums[i] - nums[i - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -377,12 +355,17 @@
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8xMDk0LiVFNiU4QiVCQyVFOCVCRCVBNi5qYXZh">1094.拼车<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9jYXItcG9vbGluZy8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>这三道题都是典型的需要使用差分数组进行解答的题目，可以抽象出一个 <code>Diff</code> 差分数组工具类来提升代码的复用性。需要注意在初始化 <code>nums[]</code> 时其长度的选择：进行增减操作次数的最大值。</p>
+</br>
+
+
 <h2 id="双指针"><a href="#双指针" class="headerlink" title="双指针"></a>双指针</h2><p><strong>双指针技巧主要分为两类：左右指针和快慢指针。</strong></p>
 <ul>
 <li>左右指针：两个指针相向而行或者相背而行，一左一右。</li>
 <li>快慢指针：两个指针同向而行，一快一慢。</li>
 </ul>
 <p>在数组中并没有真正意义上的指针，但可以把索引当做数组中的指针，这样也可以在数组中施展双指针技巧。</p>
+</br>
+
 <h3 id="快慢指针"><a href="#快慢指针" class="headerlink" title="快慢指针"></a>快慢指针</h3><p><strong>快慢指针常用在数组问题中要求原地修改数组。</strong></p>
 <p>原地修改即不允许 <code>new</code> 新数组，只能在原数组上操作，返回一个长度，通过返回的长度和原始数组得到结果。<br />快慢指针通过慢指针指向需要修改的元素，快指针遍历数组，当快指针找到符合条件的元素时，将慢指针指向的元素修改为新值，然后慢指针向后移动一位，快指针向后移动一位，继续遍历。</p>
 <ul>
@@ -391,6 +374,9 @@
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8yODMuJUU3JUE3JUJCJUU1JThBJUE4JUU5JTlCJUI2LmphdmE=">283.移动零<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9tb3ZlLXplcm9lcy8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>这三道题非常相似，都使用快慢指针来实现原地修改。</p>
+<br>
+
+
 <h3 id="左右指针"><a href="#左右指针" class="headerlink" title="左右指针"></a>左右指针</h3><p><strong>左右指针常用在有序数组和字符串问题中。</strong></p>
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS81LiVFNiU5QyU4MCVFOSU5NSVCRiVFNSU5QiU5RSVFNiU5NiU4NyVFNSVBRCU5MCVFNCVCOCVCMi5qYXZh">5.最长回文子串<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9sb25nZXN0LXBhbGluZHJvbWljLXN1YnN0cmluZy8=">🔗<i class="fa fa-external-link-alt"></i></span> </li>
@@ -399,12 +385,18 @@
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8zNDQuJUU1JThGJThEJUU4JUJEJUFDJUU1JUFEJTk3JUU3JUFDJUE2JUU0JUI4JUIyLmphdmE=">344.反转字符串<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9yZXZlcnNlLXN0cmluZy8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>左右指针比较简单，根据题意进行相应操作即可。在二分查找中也有体现左右指针的特性。</p>
+<br>
+
+
 <h2 id="二维数组的遍历问题"><a href="#二维数组的遍历问题" class="headerlink" title="二维数组的遍历问题"></a>二维数组的遍历问题</h2><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS80OC4lRTYlOTclOEIlRTglQkQlQUMlRTUlOUIlQkUlRTUlODMlOEYuamF2YQ==">48.旋转图像<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9yb3RhdGUtaW1hZ2Uv">🔗<i class="fa fa-external-link-alt"></i></span> </li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS81NC4lRTglOUUlQkElRTYlOTclOEIlRTclOUYlQTklRTklOTglQjUuamF2YQ==">54.螺旋矩阵<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9zcGlyYWwtbWF0cml4Lw==">🔗<i class="fa fa-external-link-alt"></i></span> </li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS81OS4lRTglOUUlQkElRTYlOTclOEIlRTclOUYlQTklRTklOTglQjUtaWkuamF2YQ==">59.螺旋矩阵 II<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9zcGlyYWwtbWF0cml4LWlpLw==">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>对于矩阵的各种遍历需要多归纳总结规律，如矩阵的逆时针旋转可以按副对角线进行镜像对称，这与 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS80OC4lRTYlOTclOEIlRTglQkQlQUMlRTUlOUIlQkUlRTUlODMlOEYuamF2YQ==">#48<i class="fa fa-external-link-alt"></i></span> 题相反。</p>
+</br>
+
+
 <h2 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h2><p><strong>滑动窗口常用于解决子串问题。</strong></p>
 <p>滑动窗口也是利用双指针来实现的，一个用于延伸现有窗口的 <code>right</code> 指针，和一个用于收缩窗口的 <code>left</code> 指针。在任意时刻，只有一个指针运动，而另一个保持静止。</p>
 <hr>
@@ -423,6 +415,9 @@
 <li>什么时候应该缩小窗口？ </li>
 <li>什么时候得到一个合法的答案？</li>
 </ol>
+<br>
+
+
 <h2 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h2><p>二分查找也称折半查找（Binary Search），它是一种效率较高的查找方法。但是，折半查找要求线性表必须采用顺序存储结构，而且表中元素按关键字有序排列。</p>
 <hr>
 <p>二分查找代码框架（<strong>在有序数组中搜索指定元素</strong>）：</p>
@@ -430,7 +425,10 @@
 
 <p>分析二分查找的一个技巧是：不要出现 <code>else</code>，而是把所有情况用 <code>else if</code> 写清楚，这样可以清楚地展现所有细节。</p>
 <p>其中 <code>...</code> 标记的部分，就是可能出现细节问题的地方，当见到一个二分查找的代码时，首先注意这几个地方。</p>
-<p><strong>计算 <strong><code>**mid**</code></strong> 时需要防止溢出，代码中 <strong><code>**left + (right - left) / 2**</code></strong> 与 <strong><code>**(left + right) / 2**</code></strong> 等价，但是有效防止了 <strong><code>**left**</code></strong> 和 <strong><code>**right**</code></strong> 太大，直接相加导致溢出的情况。</strong></p>
+<p><strong>计算 <code>mid</code> 时需要防止溢出，代码中 <code>left + (right - left) / 2</code>与 <code>(left + right) / 2</code> 等价，但是有效防止了 <code>left</code> 和 <code>right</code> 太大，直接相加导致溢出的情况。</strong></p>
+<br>
+
+
 <h3 id="查找一个数"><a href="#查找一个数" class="headerlink" title="查找一个数"></a>查找一个数</h3><p>二分查找最普通的用法，即搜索一个数，如果存在，返回其索引，否则返回 -1。</p>
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS83MDQuJUU0JUJBJThDJUU1JTg4JTg2JUU2JTlGJUE1JUU2JTg5JUJFLmphdmE=">704.二分查找<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9iaW5hcnktc2VhcmNoLw==">🔗<i class="fa fa-external-link-alt"></i></span></li>
@@ -456,11 +454,17 @@
 </ol>
 <p>如有序数组 <code>nums = [1,2,2,2,3]</code>，<code>target</code> 为 2，此算法返回的索引为 2。但如果想得到 <code>target</code> 的左侧边界，即索引 1，或者 <code>target</code> 的右侧边界，即索引 3 的话此算法是无法处理的。</p>
 <p>但是如果当找到一个 <code>target</code>，然后向左或向右线性搜索又难以保证二分查找对数级的复杂度。</p>
+<br>
+
+
 <h3 id="寻找边界的二分搜索"><a href="#寻找边界的二分搜索" class="headerlink" title="寻找边界的二分搜索"></a>寻找边界的二分搜索</h3><p>对普通二分查找算法稍加改动就可以实现寻找边界的二分查找。重点是在查找到 <code>target</code> 时并不马上返回，而是继续缩小范围继续查找左边或右边是否还有 <code>target。</code></p>
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8zNC4lRTUlOUMlQTglRTYlOEUlOTIlRTUlQkElOEYlRTYlOTUlQjAlRTclQkIlODQlRTQlQjglQUQlRTYlOUYlQTUlRTYlODklQkUlRTUlODUlODMlRTclQjQlQTAlRTclOUElODQlRTclQUMlQUMlRTQlQjglODAlRTQlQjglQUElRTUlOTIlOEMlRTYlOUMlODAlRTUlOTAlOEUlRTQlQjglODAlRTQlQjglQUElRTQlQkQlOEQlRTclQkQlQUUuamF2YQ==">34.在排序数组中查找元素的第一个和最后一个位置<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9maW5kLWZpcnN0LWFuZC1sYXN0LXBvc2l0aW9uLW9mLWVsZW1lbnQtaW4tc29ydGVkLWh0dHBzOi8vZ2l0aHViLmNvbS9Tc3NzdjExL0FsZ29yaXRobU5vdGUvYmxvYi9tYXN0ZXIvQXJyYXkv">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p><strong>二分思维的精髓就是：通过已知信息尽可能多地收缩（折半）搜索空间，从而增加穷举效率，快速找到目标。</strong></p>
+<br>
+
+
 <h3 id="二分查找问题的泛化"><a href="#二分查找问题的泛化" class="headerlink" title="二分查找问题的泛化"></a>二分查找问题的泛化</h3><p>什么问题可以运用二分搜索算法技巧？</p>
 <p>首先要从题目中抽象出一个自变量 <code>x</code>，一个关于 <code>x</code> 的函数 <code>f(x)</code>，以及一个目标值 <code>target</code>。</p>
 <p>同时，<code>x</code>, <code>f(x)</code>, <code>target</code> 还要满足以下条件：</p>
@@ -479,6 +483,9 @@
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8xMDExLiVFNSU5QyVBOEQlRTUlQTQlQTklRTUlODYlODUlRTklODAlODElRTglQkUlQkUlRTUlOEMlODUlRTglQTMlQjklRTclOUElODQlRTglODMlQkQlRTUlOEElOUIuamF2YQ==">1011.在D天内送达包裹的能力<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9jYXBhY2l0eS10by1zaGlwLXBhY2thZ2VzLXdpdGhpbi1kLWRheXMv">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>最重要的是从题目中抽象出满足使用二分查找的自变量 <code>x</code>，以及关于 <code>x</code> 的函数 <code>f(x)</code>，以及目标值 <code>target</code>。其次是考虑如何编写 <code>f(x)</code> 以满足题目需求。</p>
+<br>
+
+
 <h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1><h2 id="双指针-1"><a href="#双指针-1" class="headerlink" title="双指针"></a>双指针</h2><h3 id="合并、分解链表"><a href="#合并、分解链表" class="headerlink" title="合并、分解链表"></a>合并、分解链表</h3><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzIxLiVFNSU5MCU4OCVFNSVCOSVCNiVFNCVCOCVBNCVFNCVCOCVBQSVFNiU5QyU4OSVFNSVCQSU4RiVFOSU5MyVCRSVFOCVBMSVBOC5qYXZh">21.合并两个有序链表<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9tZXJnZS10d28tc29ydGVkLWxpc3RzLw==">🔗<i class="fa fa-external-link-alt"></i></span> </li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzIzLiVFNSU5MCU4OCVFNSVCOSVCNmslRTQlQjglQUElRTUlOEQlODclRTUlQkElOEYlRTklOTMlQkUlRTglQTElQTguamF2YQ==">23.合并k个升序链表<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9tZXJnZS1rLXNvcnRlZC1saXN0cy8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
@@ -488,14 +495,23 @@
 <ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0Lzg2LiVFNSU4OCU4NiVFOSU5QSU5NCVFOSU5MyVCRSVFOCVBMSVBOC5qYXZh">86.分隔链表<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9wYXJ0aXRpb24tbGlzdC8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
+<br>
+
+
 <h3 id="单链表的倒数第-k-个节点"><a href="#单链表的倒数第-k-个节点" class="headerlink" title="单链表的倒数第 k 个节点"></a>单链表的倒数第 k 个节点</h3><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzE5LiVFNSU4OCVBMCVFOSU5OSVBNCVFOSU5MyVCRSVFOCVBMSVBOCVFNyU5QSU4NCVFNSU4MCU5MiVFNiU5NSVCMCVFNyVBQyVBQy1uLSVFNCVCOCVBQSVFNyVCQiU5MyVFNyU4MiVCOS5qYXZh">19.删除链表的倒数第n个结点<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9yZW1vdmUtbnRoLW5vZGUtZnJvbS1lbmQtb2YtbGlzdC8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>如何找到链表的倒数第 <code>k</code> 个节点是本题的重点，一般可以先遍历一次计算出链表的长度，第二次遍历删除第 <code>n - k</code> 个节点即可。但这样需要遍历两次链表。若使用两个指针 <code>p1</code>、<code>p2</code>，先让 <code>p1</code> 前进 <code>k</code> 步，再让 <code>p2</code> 与 <code>p1</code> 一起前进，那么当 <code>p1</code> 到达链表末端时 <code>p2</code> 所处的位置就是第 <code>n - k</code> 个节点处，即倒数第 <code>k</code> 个节点处。这样只需要一次遍历就能找到倒数第 <code>k</code> 个节点了。</p>
+<br>
+
+
 <h3 id="单链表的中点"><a href="#单链表的中点" class="headerlink" title="单链表的中点"></a>单链表的中点</h3><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0Lzg3Ni4lRTklOTMlQkUlRTglQTElQTglRTclOUElODQlRTQlQjglQUQlRTklOTclQjQlRTclQkIlOTMlRTclODIlQjkuamF2YQ==">876.链表的中间结点<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9taWRkbGUtb2YtdGhlLWxpbmtlZC1saXN0Lw==">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>常规方法是先遍历链表得到 <code>n</code>，再遍历一次得到 <code>n / 2</code> 个节点。如果想一次遍历得到中间节点，可以使用<code>快慢指针</code>。让两个指针 <code>slow</code> 和 <code>fast</code> 同时从 <code>head</code> 出发，每当慢指针 <code>slow</code> 前进一步，快指针 <code>fast</code> 就前进两步。这样，当 <code>fast</code> 到达链表末尾时，<code>slow</code> 刚好指向了链表的中点。</p>
+<br>
+
+
 <h3 id="判断链表是否包含环"><a href="#判断链表是否包含环" class="headerlink" title="判断链表是否包含环"></a>判断链表是否包含环</h3><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzE0MS4lRTclOEUlQUYlRTUlQkQlQTIlRTklOTMlQkUlRTglQTElQTguamF2YQ==">141.环形链表<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9saW5rZWQtbGlzdC1jeWNsZS8=">🔗<i class="fa fa-external-link-alt"></i></span> </li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzE0Mi4lRTclOEUlQUYlRTUlQkQlQTIlRTklOTMlQkUlRTglQTElQTgtSUkuamF2YQ==">142.环形链表 II<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9saW5rZWQtbGlzdC1jeWNsZS1paS8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
@@ -505,6 +521,8 @@
 <blockquote>
 <p>假设指针相遇时，慢指针 <code>slow</code> 走了 <code>k</code> 步，那么快指针 <code>fast</code> 一定走了 <code>2k</code> 步。<code>fast</code> 一定比 <code>slow</code> 多走了 <code>k</code> 步，这多走的 <code>k</code> 步就是 <code>fast</code> 指针在环里转圈，所以 <code>k</code> 的值就是环长度的「整数倍」。<br />假设相遇点距环起点的距离为 <code>m</code>，那么环起点距头结点 <code>head</code> 的距离为 <code>k - m</code>，也就是说如果从 <code>head</code> 前进 <code>k - m</code> 步就能到达环起点。<br />如果从相遇点继续前进 <code>k - m</code> 步，也恰好到达环起点。因为 <code>fast</code> 指针从相遇点开始走 <code>k</code> 步可以转回到相遇点，那走 <code>k - m</code> 步肯定就走到环起点了。<br />所以，只要把快慢指针中的任一个重新指向 <code>head</code>，然后两个指针同速前进，<code>k - m</code> 步后一定会相遇，相遇之处就是环的起点了。</p>
 </blockquote>
+<br>
+
 <h3 id="两个链表是否相交"><a href="#两个链表是否相交" class="headerlink" title="两个链表是否相交"></a>两个链表是否相交</h3><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzE2MC4lRTclOUIlQjglRTQlQkElQTQlRTklOTMlQkUlRTglQTElQTguamF2YQ==">160.相交链表<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9pbnRlcnNlY3Rpb24tb2YtdHdvLWxpbmtlZC1saXN0cy8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
@@ -514,6 +532,7 @@
 <p>另外，也可以使两个指针到达尾部的距离相同来保证两个指针能够同时到达相交节点：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> ListNode <span class="title function_">getIntersectionNode</span><span class="params">(ListNode headA, ListNode headB)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">lenA</span> <span class="operator">=</span> <span class="number">0</span>, lenB = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 计算两条链表的长度</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">ListNode</span> <span class="variable">p1</span> <span class="operator">=</span> headA; p1 != <span class="literal">null</span>; p1 = p1.next) &#123;</span><br><span class="line">        lenA++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">ListNode</span> <span class="variable">p2</span> <span class="operator">=</span> headB; p2 != <span class="literal">null</span>; p2 = p2.next) &#123;</span><br><span class="line">        lenB++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 让 p1 和 p2 到达尾部的距离相同</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">p1</span> <span class="operator">=</span> headA, p2 = headB;</span><br><span class="line">    <span class="keyword">if</span> (lenA &gt; lenB) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; lenA - lenB; i++) &#123;</span><br><span class="line">            p1 = p1.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; lenB - lenA; i++) &#123;</span><br><span class="line">            p2 = p2.next;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 看两个指针是否会相同，p1 == p2 时有两种情况：</span></span><br><span class="line">    <span class="comment">// 1. 两条链表不相交，同时走到尾部空指针</span></span><br><span class="line">    <span class="comment">// 2. 两条链表相交，走到两条链表的相交点</span></span><br><span class="line">    <span class="keyword">while</span> (p1 != p2) &#123;</span><br><span class="line">        p1 = p1.next;</span><br><span class="line">        p2 = p2.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> p1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<br>
 
 <h3 id="反转链表"><a href="#反转链表" class="headerlink" title="反转链表"></a>反转链表</h3><ol>
 <li>递归反转整个链表</li>
@@ -548,14 +567,14 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">ListNode <span class="title function_">reverseBetween</span><span class="params">(ListNode head, <span class="type">int</span> m, <span class="type">int</span> n)</span> &#123;</span><br><span class="line">    <span class="comment">// base case</span></span><br><span class="line">    <span class="keyword">if</span> (m == <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> reverseN(head, n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 前进到反转的起点触发 base case</span></span><br><span class="line">    head.next = reverseBetween(head.next, m - <span class="number">1</span>, n - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <ul>
-<li>[92.反转链表 II](<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzkyLiVFNSU4RiU4RCVFOCVCRCVBQyVFOSU5MyVCRSVFOCVBMSVBOA==">https://github.com/Ssssv11/AlgorithmNote/blob/master/LinkedList/92.反转链表<i class="fa fa-external-link-alt"></i></span> II.java)  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9yZXZlcnNlLWxpbmtlZC1saXN0LWlpLw==">🔗<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzkyLiVFNSU4RiU4RCVFOCVCRCVBQyVFOSU5MyVCRSVFOCVBMSVBOC1paS5qYXZh">92.反转链表 II<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9yZXZlcnNlLWxpbmtlZC1saXN0LWlpLw==">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>虽然迭代实现的时间复杂度与递归实现的时间复杂度相同，且递归实现的空间复杂度更高，但递归的思想很值得学习。</p>
 <ol start="4">
 <li>K 个一组反转链表</li>
 </ol>
 <ul>
-<li><a href="%5Bhttps://github.com/Ssssv11/AlgorithmNote/blob/master/LinkedList/25.K%5D(https://github.com/Ssssv11/AlgorithmNote/blob/master/LinkedList/25.K">25.K 个一组反转链表</a> 个一组反转链表.java)  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9yZXZlcnNlLW5vZGVzLWluLWstZ3JvdXAv">🔗<i class="fa fa-external-link-alt"></i></span></li>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzI1LmstJUU0JUI4JUFBJUU0JUI4JTgwJUU3JUJCJTg0JUU3JUJGJUJCJUU4JUJEJUFDJUU5JTkzJUJFJUU4JUExJUE4LmphdmE=">25.K 个一组反转链表<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9yZXZlcnNlLW5vZGVzLWluLWstZ3JvdXAv">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>由于对链表每次都进行 K 个一组的反转后，剩下的节点同样是一条链表，且规模较原链表小，因此递归同样适用于这个问题。先反转以 <code>head</code> 为头节点的 K 个节点，之后将第 <code>K + 1</code> 个节点作为 <code>head</code> 继续递归反转再将结果拼接即可。</p>
 <p>迭代地反转一个区间内的节点：首先若反转整个链表：</p>
@@ -567,6 +586,7 @@
 <p>对于 <code>reverseKGroup</code> ：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">ListNode <span class="title function_">reverseKGroup</span><span class="params">(ListNode head, <span class="type">int</span> k)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="literal">null</span>) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">// 区间 [a, b) 包含 k 个待反转元素</span></span><br><span class="line">    ListNode a, b;</span><br><span class="line">    a = b = head;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; k; i++) &#123;</span><br><span class="line">        <span class="comment">// 不足 k 个，不需要反转，base case</span></span><br><span class="line">        <span class="keyword">if</span> (b == <span class="literal">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">        b = b.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 反转前 k 个元素</span></span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">newHead</span> <span class="operator">=</span> reverse(a, b);</span><br><span class="line">    <span class="comment">// 递归反转后续链表并连接起来</span></span><br><span class="line">    a.next = reverseKGroup(b, k);</span><br><span class="line">    <span class="keyword">return</span> newHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<br>
 
 <h3 id="回文链表"><a href="#回文链表" class="headerlink" title="回文链表"></a>回文链表</h3><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9MaW5rZWRMaXN0LzIzNC4lRTUlOUIlOUUlRTYlOTYlODclRTklOTMlQkUlRTglQTElQTguamF2YQ==">234.回文链表<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9wYWxpbmRyb21lLWxpbmtlZC1saXN0Lw==">🔗<i class="fa fa-external-link-alt"></i></span></li>
@@ -579,6 +599,8 @@
 <p>需要注意的是，若链表长度为奇数即 <code>fast</code> 指针没有指向 <code>null</code>，<code>slow</code> 还需要再前进一步。且此方法需要修改原链表。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">boolean</span> <span class="title function_">isPalindrome</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">    ListNode slow, fast;</span><br><span class="line">    slow = fast = head;</span><br><span class="line">    <span class="keyword">while</span> (fast != <span class="literal">null</span> &amp;&amp; fast.next != <span class="literal">null</span>) &#123;</span><br><span class="line">        slow = slow.next;</span><br><span class="line">        fast = fast.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (fast != <span class="literal">null</span>)</span><br><span class="line">        slow = slow.next;</span><br><span class="line">    </span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">left</span> <span class="operator">=</span> head;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">right</span> <span class="operator">=</span> reverse(slow);</span><br><span class="line">    <span class="keyword">while</span> (right != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (left.val != right.val)</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        left = left.next;</span><br><span class="line">        right = right.next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">ListNode <span class="title function_">reverse</span><span class="params">(ListNode head)</span> &#123;</span><br><span class="line">    <span class="type">ListNode</span> <span class="variable">pre</span> <span class="operator">=</span> <span class="literal">null</span>, cur = head;</span><br><span class="line">    <span class="keyword">while</span> (cur != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="type">ListNode</span> <span class="variable">next</span> <span class="operator">=</span> cur.next;</span><br><span class="line">        cur.next = pre;</span><br><span class="line">        pre = cur;</span><br><span class="line">        cur = next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> pre;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<br>
+
 <h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><ul>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9TdHJpbmcvNy4lRTYlOTUlQjQlRTYlOTUlQjAlRTUlOEYlOEQlRTglQkQlQUMuamF2YQ==">7.整数反转<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9yZXZlcnNlLWludGVnZXIv">🔗<i class="fa fa-external-link-alt"></i></span> </li>
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9TdHJpbmcvOC4lRTUlQUQlOTclRTclQUMlQTYlRTQlQjglQjIlRTglQkQlQUMlRTYlOEQlQTIlRTYlOTUlQjQlRTYlOTUlQjAtYXRvaS5qYXZh">8.字符串转换整数<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9zdHJpbmctdG8taW50ZWdlci1hdG9pLw==">🔗<i class="fa fa-external-link-alt"></i></span> </li>
@@ -590,6 +612,58 @@
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9TdHJpbmcvMzg3LiVFNSVBRCU5NyVFNyVBQyVBNiVFNCVCOCVCMiVFNCVCOCVBRCVFNyU5QSU4NCVFNyVBQyVBQyVFNCVCOCU4MCVFNCVCOCVBQSVFNSU5NCVBRiVFNCVCOCU4MCVFNSVBRCU5NyVFNyVBQyVBNi5qYXZh">387.字符串中的第一个唯一字符<i class="fa fa-external-link-alt"></i></span>  <span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9maXJzdC11bmlxdWUtY2hhcmFjdGVyLWluLWEtc3RyaW5nLw==">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>其中 <a href="String/242.%E6%9C%89%E6%95%88%E7%9A%84%E5%AD%97%E6%AF%8D%E5%BC%82%E4%BD%8D%E8%AF%8D.java">#242</a> 和 <a href="String/387.%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E5%AD%97%E7%AC%A6.java">#387</a> 很相似，都是通过 Hash 映射比较异同，遇到这类题首先可以考虑使用 Hash。而 <a href="String/8.%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi.java">#7</a> 与 <a href="String/8.%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%95%B4%E6%95%B0-atoi.java">#8</a> 需要仔细考虑溢出问题。</p>
+<br>
+
+<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><h2 id="纲领"><a href="#纲领" class="headerlink" title="纲领"></a>纲领</h2><p>二叉树解题的思维模式分两类：</p>
+<ol>
+<li><p>是否可以通过遍历一遍二叉树得到答案？如果可以，用一个 <code>traverse</code> 函数配合外部变量来实现，这叫「遍历」的思维模式。</p>
+</li>
+<li><p>是否可以定义一个递归函数，通过子问题（子树）的答案推导出原问题的答案？如果可以，写出这个递归函数的定义，并充分利用这个函数的返回值，这叫「分解问题」的思维模式。</p>
+</li>
+</ol>
+<p>无论使用哪种思维模式，都需要思考：</p>
+<p>如果单独抽出一个二叉树节点，它需要做什么事情？需要在什么时候（前&#x2F;中&#x2F;后序位置）做？递归函数会在所有节点上执行相同的操作，因此只需考虑一个节点。</p>
+<p>前序位置，就是刚进入一个节点（元素）的时候，后序位置就是即将离开一个节点（元素）的时候，把代码写在不同位置，代码执行的时机也不同。</p>
+<p><strong>前中后序是遍历二叉树过程中处理每一个节点的三个特殊时间点</strong>，绝不仅仅是三个顺序不同的 <code>List</code>。</p>
+<p><strong>二叉树的所有问题，就是在前中后序位置注入巧妙的代码逻辑，去达到自己的目的。我们只需要单独思考每一个节点应该做什么，其他的交给二叉树遍历框架，递归会在所有节点上做相同的操作。</strong></p>
+<ul>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9UcmVlLzEwMS4lRTUlQUYlQjklRTclQTclQjAlRTQlQkElOEMlRTUlOEYlODklRTYlQTAlOTEuamF2YQ==">101.对称二叉树<i class="fa fa-external-link-alt"></i></span> &amp;emsp;<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9zeW1tZXRyaWMtdHJlZS8=">🔗<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9UcmVlLzEwNC4lRTQlQkElOEMlRTUlOEYlODklRTYlQTAlOTElRTclOUElODQlRTYlOUMlODAlRTUlQTQlQTclRTYlQjclQjElRTUlQkElQTYuamF2YQ==">104.二叉树的最大深度<i class="fa fa-external-link-alt"></i></span> &amp;emsp;<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9tYXhpbXVtLWRlcHRoLW9mLWJpbmFyeS10cmVlLw==">🔗<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+<li><p><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9UcmVlLzEwMi4lRTQlQkElOEMlRTUlOEYlODklRTYlQTAlOTElRTclOUElODQlRTUlQjElODIlRTUlQkElOEYlRTklODElOEQlRTUlOEUlODYuamF2YQ==">102.二叉树的层序遍历<i class="fa fa-external-link-alt"></i></span> &amp;emsp;<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9iaW5hcnktdHJlZS1sZXZlbC1vcmRlci10cmF2ZXJzYWwv">🔗<i class="fa fa-external-link-alt"></i></span></p>
+</li>
+</ul>
+<p>如 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9UcmVlLzEwNC4lRTQlQkElOEMlRTUlOEYlODklRTYlQTAlOTElRTclOUElODQlRTYlOUMlODAlRTUlQTQlQTclRTYlQjclQjElRTUlQkElQTYuamF2YQ==">#104<i class="fa fa-external-link-alt"></i></span>，显然遍历一遍二叉树，用一个外部变量记录每个节点所在的深度，取最大值就可以得到最大深度，这就是遍历二叉树计算答案的思路。代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="comment">// 记录最大深度</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">depth</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 记录遍历到的节点的深度</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">maxDepth</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        traverse(root);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 遍历二叉树</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">traverse</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span>(root == <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 前序遍历位置</span></span><br><span class="line">        depth++;</span><br><span class="line">        <span class="comment">// 遍历的过程中记录最大深度</span></span><br><span class="line">        res = res &lt; depth ? depth : res;</span><br><span class="line">        traverse(root.left);</span><br><span class="line">        traverse(root.right);</span><br><span class="line">        <span class="comment">// 后序遍历位置</span></span><br><span class="line">        depth--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个解法很好理解，但为什么需要在前序位置增加 <code>depth</code>，在后序位置减小 <code>depth</code>？</p>
+<p>因为前序位置是进入一个节点的时候，后序位置是离开一个节点的时候，<code>depth</code> 记录当前递归到的节点深度，把 <code>traverse</code> 理解成在二叉树上游走的一个指针，所以当然要这样维护。</p>
+<p>至于对 <code>res</code> 的更新放到前中后序位置都可以，只要保证在进入节点之后，离开节点之前（即 <code>depth</code> 自增之后，自减之前）就行了。</p>
+<p>一棵二叉树的最大深度也可以通过子树的最大深度推导出来，这就是分解问题计算答案的思路。代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义：输入根节点，返回这棵二叉树的最大深度</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">maxDepth</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 利用定义，计算左右子树的最大深度</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">leftMax</span> <span class="operator">=</span> maxDepth(root.left);</span><br><span class="line">    <span class="type">int</span> <span class="variable">rightMax</span> <span class="operator">=</span> maxDepth(root.right);</span><br><span class="line">    <span class="comment">// 整棵树的最大深度等于左右子树的最大深度取最大值，</span></span><br><span class="line">    <span class="comment">// 然后再加上根节点自己</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">res</span> <span class="operator">=</span> Math.max(leftMax, rightMax) + <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>只要明确递归函数的定义，这个解法也不难理解，但为什么主要的代码逻辑集中在后序位置？</p>
+<p>因为这个思路正确的核心在于通过子树的最大深度推导出原树的深度首先需要利用递归函数的定义算出左右子树的最大深度，然后推出原树的最大深度，主要逻辑自然放在后序位置。</p>
+<p>可以发现前序位置的代码执行是自顶向下的，而后序位置的代码执行是自底向上的。</p>
+<p>因此，<strong>前序位置的代码只能从函数参数中获取父节点传递来的数据，而后序位置的代码不仅可以获取参数数据，还可以获取到子树通过函数返回值传递回来的数据</strong>。</p>
+<p>举具体的例子，有一棵二叉树：</p>
+<ol>
+<li><p>如果把根节点看做第 1 层，如何打印出每一个节点所在的层数？</p>
+</li>
+<li><p>如何打印出每个节点的左右子树各有多少节点？</p>
+</li>
+</ol>
+<p>第一个问题：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 二叉树遍历函数</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">traverse</span><span class="params">(TreeNode root, <span class="type">int</span> level)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 前序位置</span></span><br><span class="line">    printf(<span class="string">&quot;节点 %s 在第 %d 层&quot;</span>, root, level);</span><br><span class="line">    traverse(root.left, level + <span class="number">1</span>);</span><br><span class="line">    traverse(root.right, level + <span class="number">1</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line">traverse(root, <span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+<p>第二个问题：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 定义：输入一棵二叉树，返回这棵二叉树的节点总数</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">count</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="type">int</span> <span class="variable">leftCount</span> <span class="operator">=</span> count(root.left);</span><br><span class="line">    <span class="type">int</span> <span class="variable">rightCount</span> <span class="operator">=</span> count(root.right);</span><br><span class="line">    <span class="comment">// 后序位置</span></span><br><span class="line">    printf(<span class="string">&quot;节点 %s 的左子树有 %d 个节点，右子树有 %d 个节点&quot;</span>,</span><br><span class="line">            root, leftCount, rightCount);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> leftCount + rightCount + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这两个问题的根本区别在于：一个节点在第几层，从根节点遍历过来的过程就能顺带记录；而以一个节点为根的整棵子树有多少个节点，需要遍历完子树之后才能数清楚。</p>
+<p><strong>一旦发现题目和子树有关，那大概率要给函数设置合理的定义和返回值，在后序位置写代码了。</strong></p>
+<br>
+
 
     </div>
 
