@@ -32,7 +32,7 @@
 <meta property="og:description" content="LeetCode 刷题笔记">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-06T08:26:01.683Z">
-<meta property="article:modified_time" content="2022-07-09T09:53:04.345Z">
+<meta property="article:modified_time" content="2022-07-09T09:59:13.705Z">
 <meta property="article:author" content="Ssssv11">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -288,7 +288,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-07-09 17:53:04" itemprop="dateModified" datetime="2022-07-09T17:53:04+08:00">2022-07-09</time>
+        <time title="Modified: 2022-07-09 17:59:13" itemprop="dateModified" datetime="2022-07-09T17:59:13+08:00">2022-07-09</time>
       </span>
 
   
@@ -693,7 +693,7 @@
 <li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9UcmVlLzY1NC4lRTYlOUMlODAlRTUlQTQlQTclRTQlQkElOEMlRTUlOEYlODklRTYlQTAlOTEuamF2YQ==">654.最大二叉树<i class="fa fa-external-link-alt"></i></span> &amp;emsp;<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS1jbi5jb20vcHJvYmxlbXMvbWF4aW11bS1iaW5hcnktdHJlZS8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
 </ul>
 <p>每个二叉树节点都可以认为是一棵子树的根节点，对于根节点，首先要做的是把想办法把自己先构造出来，然后想办法构造自己的左右子树。</p>
-<p>所以需要遍历数组把找到最大值 <code>maxVal</code>，从而把根节点 <code>root</code> 做出来，然后对 <code>maxVal</code> 左边的数组和右边的数组进行递归构建，作为 <code>root</code> 的左右子树。</p>
+<p>所以需要遍历数组找到最大值 <code>maxVal</code>，从而把根节点 <code>root</code> 做出来，然后对 <code>maxVal</code> 左边的数组和右边的数组进行递归构建，作为 <code>root</code> 的左右子树。</p>
 <p>伪码如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">TreeNode <span class="title function_">constructMaximumBinaryTree</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (nums is empty) <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">// 找到数组中的最大值</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">maxVal</span> <span class="operator">=</span> Integer.MIN_VALUE;</span><br><span class="line">    <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] &gt; maxVal) &#123;</span><br><span class="line">            maxVal = nums[i];</span><br><span class="line">            index = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="type">TreeNode</span> <span class="variable">root</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TreeNode</span>(maxVal);</span><br><span class="line">    <span class="comment">// 递归调用构造左右子树</span></span><br><span class="line">    root.left = constructMaximumBinaryTree(nums[<span class="number">0.</span>.index-<span class="number">1</span>]);</span><br><span class="line">    root.right = constructMaximumBinaryTree(nums[index+<span class="number">1.</span>.nums.length-<span class="number">1</span>]);</span><br><span class="line">    <span class="keyword">return</span> root;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
