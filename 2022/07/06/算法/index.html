@@ -32,7 +32,7 @@
 <meta property="og:description" content="LeetCode 刷题笔记">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-07-06T08:26:01.683Z">
-<meta property="article:modified_time" content="2022-07-09T11:11:57.334Z">
+<meta property="article:modified_time" content="2022-07-10T07:00:27.861Z">
 <meta property="article:author" content="Ssssv11">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -288,7 +288,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-07-09 19:11:57" itemprop="dateModified" datetime="2022-07-09T19:11:57+08:00">2022-07-09</time>
+        <time title="Modified: 2022-07-10 15:00:27" itemprop="dateModified" datetime="2022-07-10T15:00:27+08:00">2022-07-10</time>
       </span>
 
   
@@ -427,6 +427,9 @@
 <p>二分查找代码框架（<strong>在有序数组中搜索指定元素</strong>）：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">binarySearch</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">left</span> <span class="operator">=</span> <span class="number">0</span>, right = ...;</span><br><span class="line">    <span class="keyword">while</span>(...) &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] == target) &#123;</span><br><span class="line">            ...</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] &lt; target) &#123;</span><br><span class="line">            left = ...</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            right = ...</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> ...;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li><span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8yNzguJUU3JUFDJUFDJUU0JUI4JTgwJUU0JUI4JUFBJUU5JTk0JTk5JUU4JUFGJUFGJUU3JTlBJTg0JUU3JTg5JTg4JUU2JTlDJUFDLmphdmE=">278.第一个错误的版本<i class="fa fa-external-link-alt"></i></span> &amp;emsp;<span class="exturl" data-url="aHR0cHM6Ly9sZWV0Y29kZS5jbi9wcm9ibGVtcy9maXJzdC1iYWQtdmVyc2lvbi8=">🔗<i class="fa fa-external-link-alt"></i></span></li>
+</ul>
 <p>分析二分查找的一个技巧是：不要出现 <code>else</code>，而是把所有情况用 <code>else if</code> 写清楚，这样可以清楚地展现所有细节。</p>
 <p>其中 <code>...</code> 标记的部分，就是可能出现细节问题的地方，当见到一个二分查找的代码时，首先注意这几个地方。</p>
 <p><strong>计算 <code>mid</code> 时需要防止溢出，代码中 <code>left + (right - left) / 2</code>与 <code>(left + right) / 2</code> 等价，但是有效防止了 <code>left</code> 和 <code>right</code> 太大，直接相加导致溢出的情况。</strong></p>
