@@ -2032,6 +2032,14 @@ pre code {
 .post-body video,
 .post-body embed {
   margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px 1px rgba(0,0,0,0.3);
+  border: 1px solid #e4e4e4;
+}
+.post-body img {
+  border-radius: 8px;
+  box-shadow: 0px 8px 15px 1px rgba(0,0,0,0.3);
+  border: 1px solid #e4e4e4;
 }
 .post-body .video-container {
   height: 0;
