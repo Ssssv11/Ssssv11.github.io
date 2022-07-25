@@ -181,7 +181,7 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: JetBrains Mono, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1em;
   line-height: 2;
   min-height: 100%;
@@ -194,7 +194,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Helvetica, Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: etBrains Mono, JetBrains Mono, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -471,23 +471,23 @@ figure.highlight::before {
   width: 12px;
 }
 code,
-kbd,
+kbd {
+  background-color: rgba(175,184,193,0.2);
+  color: #e96900;
+}
 figure.highlight,
 pre {
   background: var(--highlight-background);
   color: var(--highlight-foreground);
-}
-figure.highlight,
-pre {
   line-height: 1.6;
   margin: 0 auto 20px;
 }
 pre,
 code {
-  font-family: Menlo, consolas, Menlo, monospace, 'PingFang SC', 'Microsoft YaHei';
+  font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, "Ubuntu Mono", Consolas, HYZhengYuan;
 }
 code {
-  border-radius: 3px;
+  border-radius: 6px;
   font-size: 0.875em;
   padding: 2px 4px;
   overflow-wrap: break-word;
@@ -1208,7 +1208,7 @@ pre code {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: Helvetica, Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: etBrains Mono, JetBrains Mono, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 1.375em;
   font-weight: normal;
   margin: 0;
@@ -1922,7 +1922,7 @@ pre code {
   width: 4px;
 }
 .post-body {
-  font-family: Helvetica, Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: JetBrains Mono, JetBrains Mono, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   overflow-wrap: break-word;
 }
 @media (min-width: 1200px) {
@@ -2127,7 +2127,7 @@ pre code {
 }
 .posts-expand .post-meta-container {
   color: #999;
-  font-family: Helvetica, Helvetica, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-family: JetBrains Mono, JetBrains Mono, 'PingFang SC', 'Microsoft YaHei', sans-serif;
   font-size: 0.75em;
   margin-top: 3px;
 }
