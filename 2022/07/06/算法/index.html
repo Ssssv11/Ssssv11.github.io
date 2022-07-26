@@ -15,7 +15,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/css?family=JetBrains+Mono:300,300italic,400,400italic,700,700italic%7CetBrains+Mono:300,300italic,400,400italic,700,700italic%7CFira+Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="https://fonts.lug.ustc.edu.cn/css?family=JetBrains+Mono:300,300italic,400,400italic,700,700italic%7CFira+Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
@@ -188,7 +188,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/24/jjVh0e.png#crop=0&crop=0&crop=1&crop=1&id=MZCOq&originHeight=392&originWidth=640&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=shadow&title=">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/24/jjVHpt.png#crop=0&crop=0&crop=1&crop=1&id=FBbF6&originHeight=398&originWidth=656&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=shadow&title=">
 <meta property="article:published_time" content="2022-07-06T08:26:01.683Z">
-<meta property="article:modified_time" content="2022-07-26T08:14:03.842Z">
+<meta property="article:modified_time" content="2022-07-26T08:26:33.856Z">
 <meta property="article:author" content="Ssssv11">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -444,7 +444,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-07-26 16:14:03" itemprop="dateModified" datetime="2022-07-26T16:14:03+08:00">2022-07-26</time>
+        <time title="Modified: 2022-07-26 16:26:33" itemprop="dateModified" datetime="2022-07-26T16:26:33+08:00">2022-07-26</time>
       </span>
 
   
@@ -595,7 +595,7 @@
 </ul>
 <p>分析二分查找的一个技巧是：不要出现 <code>else</code>，而是把所有情况用 <code>else if</code> 写清楚，这样可以清楚地展现所有细节。</p>
 <p>其中 <code>...</code> 标记的部分，就是可能出现细节问题的地方，当见到一个二分查找的代码时，首先注意这几个地方。</p>
-<p><strong>计算 <code>mid</code> 时需要防止溢出，代码中 <code>left + (right - left) / 2</code>与 <code>(left + right) / 2</code> 等价，但是有效防止了 <code>left</code> 和 <code>right</code> 太大，直接相加导致溢出的情况。</strong></p>
+<p><strong>计算 <code>mid</code> 时需要防止溢出，代码中 <code>left + (right - left) / 2</code> 与 <code>(left + right) / 2</code> 等价，但是有效防止了 <code>left</code> 和 <code>right</code> 太大，直接相加导致溢出的情况。</strong></p>
 <br>
 
 
@@ -1569,7 +1569,7 @@
 <li>「排列」和「组合」的主要区别在于是否考虑顺序的差异。 </li>
 <li>排列、组合总数的计算公式：<br>$A(n, k) &#x3D; \frac{n!}{(n - k)!}$<br>$C(n, k) &#x3D; \frac{n!}{k!(n - k)!}$</li>
 </ol>
-<p>排列组合问题的各种变体都可以抽象成「球盒模型」，P(n, k) 就可以抽象成下面这个场景：</p>
+<p>排列组合问题的各种变体都可以抽象成「球盒模型」，<code>P(n, k)</code> 就可以抽象成下面这个场景：</p>
 <p><img src="https://s1.ax1x.com/2022/07/26/jzkTx0.png#crop=0&crop=0&crop=1&crop=1&id=cmIM1&originHeight=754&originWidth=1098&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
 <p>即，将 <code>n</code> 个标记了不同序号的球（标号为了体现顺序的差异），放入 <code>k</code> 个标记了不同序号的盒子中（其中 <code>n &gt;= k</code>，每个盒子最终都装有恰好一个球），共有 <code>A(n, k)</code> 种不同的方法。</p>
 <p>若站在盒子的视角，每个盒子必然要选择一个球。第一个盒子可以选择 <code>n</code> 个球中的任意一个，然后需要让剩下 <code>k - 1</code> 个盒子在 <code>n - 1</code> 个球中选择：</p>
@@ -2960,6 +2960,39 @@
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
 
+
+
+  <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'none'
+      },
+      options: {
+        renderActions: {
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              const target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    const script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.1.2/es5/tex-mml-chtml.js';
+    script.defer = true;
+    document.head.appendChild(script);
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.typesetClear();
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
 
 
 
