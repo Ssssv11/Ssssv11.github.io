@@ -39,9 +39,10 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/30/Lz4qBD.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/30/LzI9i9.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/30/LzIBQ0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2022/07/29/vCI7TK.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/04/30/Lz7zOx.png">
 <meta property="article:published_time" content="2022-04-30T14:03:24.562Z">
-<meta property="article:modified_time" content="2022-04-30T14:04:14.968Z">
+<meta property="article:modified_time" content="2022-07-28T19:11:05.173Z">
 <meta property="article:author" content="Ssssv11">
 <meta property="article:tag" content="中间件">
 <meta name="twitter:card" content="summary">
@@ -288,10 +289,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-04-30 22:03:24 / Modified: 22:04:14" itemprop="dateCreated datePublished" datetime="2022-04-30T22:03:24+08:00">2022-04-30</time>
+      <time title="Created: 2022-04-30 22:03:24" itemprop="dateCreated datePublished" datetime="2022-04-30T22:03:24+08:00">2022-04-30</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-07-29 03:11:05" itemprop="dateModified" datetime="2022-07-29T03:11:05+08:00">2022-07-29</time>
+      </span>
 
   
     <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -346,7 +353,7 @@
 <li>服务之间的高效调用：使用 RPC 或者 HTTP 进行通信</li>
 <li>服务治理：服务权重、负载均衡、服务熔断、限流等等一些服务治理方面的问题</li>
 </ul>
-<p><img src="https://s1.imagehub.cc/images/2022/04/20/architecture.png" alt="architecture.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/20/architecture.png" alt="architecture.png"></p>
 <p>服务发现的一个核心组件是注册中心，Provider 注册地址到注册中心，Consumer 从注册中心读取和订阅 Provider 地址列表。</p>
 <br/>
 
@@ -407,7 +414,7 @@
 <p>简单的说，Dubbo 就是一个远程服务调用的分布式服务框架 。只有在有分布式需求时，才会有 Dubbo 这样的分布式服务框架的需求。</p>
 <br>
 
-<h2 id="Dubbo-实现远程通信"><a href="#Dubbo-实现远程通信" class="headerlink" title="Dubbo 实现远程通信"></a>Dubbo 实现远程通信</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LvAmz6"><img src="https://s1.ax1x.com/2022/04/29/LvAmz6.png" alt="LvAmz6.png"></a></p>
+<h2 id="Dubbo-实现远程通信"><a href="#Dubbo-实现远程通信" class="headerlink" title="Dubbo 实现远程通信"></a>Dubbo 实现远程通信</h2><p><img data-src="https://s1.ax1x.com/2022/04/29/LvAmz6.png" alt="LvAmz6.png"></p>
 <p>服务消费者去注册中心订阅到服务提供者的信息。然后通过dubbo进行远程调用。</p>
 <br>
 
@@ -539,7 +546,7 @@
 <br>
 
 <h2 id="集群容错"><a href="#集群容错" class="headerlink" title="集群容错"></a>集群容错</h2><p>在集群调用失败时，Dubbo 提供了多种容错方案。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LxuKRH"><img src="https://s1.ax1x.com/2022/04/29/LxuKRH.png" alt="LxuKRH.png"></a></p>
+<p><img data-src="https://s1.ax1x.com/2022/04/29/LxuKRH.png" alt="LxuKRH.png"></p>
 <p>各节点关系：</p>
 <ul>
 <li>这里的 <code>Invoker</code> 是 <code>Provider</code> 的一个可调用 <code>Service</code> 的抽象，<code>Invoker</code> 封装了 <code>Provider</code> 地址及 <code>Service</code> 接口信息</li>
@@ -623,7 +630,7 @@
 
 <h2 id="异步调用"><a href="#异步调用" class="headerlink" title="异步调用"></a>异步调用</h2><p>从 2.7.0 开始，Dubbo 的所有异步编程接口开始以 CompletableFuture 为基础</p>
 <p>基于 NIO 的非阻塞实现并行调用，客户端不需要启动多线程即可完成并行调用多个远程服务，相对多线程开销较小。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LxnzIU"><img src="https://s1.ax1x.com/2022/04/29/LxnzIU.png" alt="LxnzIU.png"></a></p>
+<p><img data-src="https://s1.ax1x.com/2022/04/29/LxnzIU.png" alt="LxnzIU.png"></p>
 <p>消费者通过异步调用，不用等待服务提供者返回结果就立即完成任务，待有结果后再执行之前设定好的监听逻辑。</p>
 <ul>
 <li>接口层</li>
@@ -773,18 +780,21 @@
 <ul>
 <li><p>首先计算四台服务器的 IP 地址对应的 Hash 值</p>
 <p>Hash(Server1.IP)，Hash(Server2.IP)，Hash(Server3.IP)，Hash(Server4.IP)，计算出来的 Hash 在一致性 Hash 环上分布如下：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Lz4qBD"><img src="https://s1.ax1x.com/2022/04/30/Lz4qBD.png" alt="Lz4qBD.png" style="zoom: 50%;" /></a></p>
+<img data-src="https://s1.ax1x.com/2022/04/30/Lz4qBD.png" alt="Lz4qBD.png" style="zoom: 50%;" />
 </li>
 <li><p>当消费者在向服务器进行请求时，首先会根据 Hash(消费者IP) 计算路由规则(Hash 值)，然后根据 Hash 值落在 一致性 Hash 环上的位置顺时针寻找距离最近的服务器的 iP 作为路由 iP</p>
 </li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LzI9i9"><img src="https://s1.ax1x.com/2022/04/30/LzI9i9.png" alt="LzI9i9.png" style="zoom: 50%;" /></a></p>
+<img data-src="https://s1.ax1x.com/2022/04/30/LzI9i9.png" alt="LzI9i9.png" style="zoom: 50%;" />
+
 <p>由上图可知，User1 的请求会顺时针落到 Server1 进行处理，User2 的请求会顺时针落到 Server2 进行处理，User3，User4 的请求会顺时针落到 Server3 进行处理，User5 的请求会顺时针落到 Server4 进行处理。</p>
 <p>当 Server2 挂了，一致性 Hash 环如下图：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LzIBQ0"><img src="https://s1.ax1x.com/2022/04/30/LzIBQ0.png" alt="LzIBQ0.png" style="zoom:50%;" /></a></p>
+<img data-src="https://s1.ax1x.com/2022/04/30/LzIBQ0.png" alt="LzIBQ0.png" style="zoom:50%;" />
+
 <p>根据顺时针规则可知，User2 的请求都会落在 Server3 进行处理，而其他用户的请求对应的服务器均不受影响。也就是只有之前被 Server2 处理的一部分映射关系被破坏了，并且请求被顺时针的下一个服务器处理。</p>
 <p>当新增一个 Server5 服务器，一致性 Hash 环如下图：</p>
-<p>&lt;img src&#x3D;”data:image&#x2F;svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1278 1050"></svg>“ alt&#x3D;”image-20220430125225231” style&#x3D;”zoom:50%;” &#x2F;&gt;</p>
+<img data-src="https://s1.ax1x.com/2022/07/29/vCI7TK.png" alt="vCI7TK.png" style="zoom:50%;" />
+
 <p>根据顺时针规则可知，之前的 User3 请求会被 Server3 处理，现在被新增的 Server5 处理，其他用户的请求处理服务器不变。也就是新增的服务器顺时针最近的服务器的一部分请求会被新增的服务器处理。</p>
 <br>
 
@@ -807,7 +817,7 @@
 
 <br>
 
-<h1 id="Dubbo-服务调用过程"><a href="#Dubbo-服务调用过程" class="headerlink" title="Dubbo 服务调用过程"></a>Dubbo 服务调用过程</h1><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Lz7zOx"><img src="https://s1.ax1x.com/2022/04/30/Lz7zOx.png" alt="Lz7zOx.png"></a></p>
+<h1 id="Dubbo-服务调用过程"><a href="#Dubbo-服务调用过程" class="headerlink" title="Dubbo 服务调用过程"></a>Dubbo 服务调用过程</h1><p><img data-src="https://s1.ax1x.com/2022/04/30/Lz7zOx.png" alt="Lz7zOx.png"></p>
 <p>服务提供者的集群里有几个服务提供者就有几个invoker，invoker 可以理解成调用一个服务提供者需要的完整的细节所封装成的对象。</p>
 <p>集群可以从注册中心获得服务提供者的数量，注册中心获得的数据封装在 RegistryDirectory 对象中。那么RegistryDirectory 通过 zk 客户端 ZookeeperRegistry 得到注册中心中的 URL 地址。</p>
 <p>RegistryDirectory 里包含了  ZookeeperRegistry，RegistryDirectory 维护了所有的 invoker 调用器，调用器通过 RegsitryDirectory(ZookeeperRegistry) 的方法获得的。</p>
