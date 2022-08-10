@@ -534,7 +534,7 @@
 </blockquote>
 <p>corePoolSize 指的是核心线程数：线程池完成初始化后，默认情况下线程池中没有任何线程。线程池会等待有任务到来时再创建新线程去执行任务。在任务执行完后即使它们是空闲的也会保留下来(unless allowCoreThreadTimeOut is set)。</p>
 <p>同时线程池可能会在核心线程数的基础上额外增加一些线程，而总的线程数具有一个上限，即 maxPoolSize。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OoXzUU"><img src="https://s1.ax1x.com/2022/05/18/OoXzUU.png" alt="OoXzUU.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OoXzUU"><img data-src="https://s1.ax1x.com/2022/05/18/OoXzUU.png" alt="OoXzUU.png"></a></p>
 <br>
 
 <h3 id="线程添加规则"><a href="#线程添加规则" class="headerlink" title="线程添加规则"></a>线程添加规则</h3><ol>
@@ -543,7 +543,7 @@
 <li>如果任务队列已满并且线程数小于 maxPoolSize，则创建一个新的线程来执行任务。</li>
 <li>如果任务队列已满并且线程数大于等于 maxPoolSize，则拒绝该任务。</li>
 </ol>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ooxi0x"><img src="https://s1.ax1x.com/2022/05/18/Ooxi0x.png" alt="Ooxi0x.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ooxi0x"><img data-src="https://s1.ax1x.com/2022/05/18/Ooxi0x.png" alt="Ooxi0x.png"></a></p>
 <p>因此，是否需要增加线程的判断顺序是：</p>
 <ul>
 <li>corePoolSize</li>
@@ -645,7 +645,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> ExecutorService <span class="title function_">newCachedThreadPool</span><span class="params">()</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">ThreadPoolExecutor</span>(<span class="number">0</span>, Integer.MAX_VALUE,</span><br><span class="line">                                  <span class="number">60L</span>, TimeUnit.SECONDS,</span><br><span class="line">                                  <span class="keyword">new</span> <span class="title class_">SynchronousQueue</span>&lt;Runnable&gt;());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><code>corePoolSize</code> 为 0，<code>maxPoolSize</code> 为最大整数，<code>keepAliveTime</code> 为 60s，使用 <code>SynchronousQueue</code> 作为工作队列。这样，当有大量任务来临时，<code>SynchronousQueue</code> 会将任务直接交给线程池，每交一个任务线程池就会创建一个新的线程来执行，执行完毕线程空闲 60 秒后线程就失效。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OTQICF"><img src="https://s1.ax1x.com/2022/05/18/OTQICF.png" alt="OTQICF.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OTQICF"><img data-src="https://s1.ax1x.com/2022/05/18/OTQICF.png" alt="OTQICF.png"></a></p>
 <p>对于 <code>CachedThreadPool</code>，它的 <code>maxPoolSize</code> 被设置为了 <code>Integer.MAX_VALUE</code> 也可能会导致创建数量非常多的线程，甚至导致 OOM。</p>
 <br>
 
@@ -763,7 +763,7 @@
 <li>TIDYING：所有任务都已经终止、<code>workerCount()</code> 为 0 时线程池会进入 TIDYING 状态，会运行<code>terminate()</code> 钩子方法。当线程池在 SHUTDOWN 状态，阻塞队列为空并且线程池中执行的任务也为空时，就会由 SHUTDOWN 状态进入 TIDYING 状态。当线程池在 STOP 状态，线程池中执行的任务为空时，就会由 STOP 状态 进入 TIDYING 状态。</li>
 <li>TERMINATIED：线程池彻底终止就进入 TERMINATED 状态。当线程池在 TIDYING 状态，执行完 <code>terminated()</code> 后，就会由 TIDYING 状态进入 TERMINATED 状态。</li>
 </ul>
-<h2 id="Executor-家族"><a href="#Executor-家族" class="headerlink" title="Executor 家族"></a>Executor 家族</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O7SZuj"><img src="https://s1.ax1x.com/2022/05/18/O7SZuj.png" alt="O7SZuj.png"></a></p>
+<h2 id="Executor-家族"><a href="#Executor-家族" class="headerlink" title="Executor 家族"></a>Executor 家族</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O7SZuj"><img data-src="https://s1.ax1x.com/2022/05/18/O7SZuj.png" alt="O7SZuj.png"></a></p>
 <h3 id="Executor"><a href="#Executor" class="headerlink" title="Executor"></a>Executor</h3><p>Executor 家族的首长。父接口，其中只有一个方法</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">Executor</span> &#123;</span><br><span class="line"><span class="comment">// 在将来的某个时间执行给定的命令</span></span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">execute</span><span class="params">(Runnable command)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -879,7 +879,7 @@
 <h2 id="ThreadLocal-原理"><a href="#ThreadLocal-原理" class="headerlink" title="ThreadLocal 原理"></a>ThreadLocal 原理</h2><p>在 Thread 类中又这样一个 ThreadLocalMap 类型成员变量 threadLocals：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* ThreadLocal values pertaining to this thread. This map is maintained</span></span><br><span class="line"><span class="comment"> * by the ThreadLocal class. */</span></span><br><span class="line">ThreadLocal.<span class="type">ThreadLocalMap</span> <span class="variable">threadLocals</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ObCXJ1"><img src="https://s1.ax1x.com/2022/05/19/ObCXJ1.png" alt="ObCXJ1.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ObCXJ1"><img data-src="https://s1.ax1x.com/2022/05/19/ObCXJ1.png" alt="ObCXJ1.png"></a></p>
 <p>每一个 Thread 对象都持有一个 ThreadLocalMap 成员变量，这个 Map 存储了 ThreadLocal 和其绑定的对象（KV）。</p>
 <br>
 
@@ -989,7 +989,7 @@
 
 <br>
 
-<h2 id="锁的分类"><a href="#锁的分类" class="headerlink" title="锁的分类"></a>锁的分类</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OLLRLd"><img src="https://s1.ax1x.com/2022/05/20/OLLRLd.png" alt="OLLRLd.png"></a></p>
+<h2 id="锁的分类"><a href="#锁的分类" class="headerlink" title="锁的分类"></a>锁的分类</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OLLRLd"><img data-src="https://s1.ax1x.com/2022/05/20/OLLRLd.png" alt="OLLRLd.png"></a></p>
 <h2 id="锁的可见性保证"><a href="#锁的可见性保证" class="headerlink" title="锁的可见性保证"></a>锁的可见性保证</h2><h3 id="volatile关键字"><a href="#volatile关键字" class="headerlink" title="volatile关键字"></a>volatile关键字</h3><p>JMM 的三个特性:</p>
 <ul>
 <li>原子性：要做事情要么做完，要么就不做，不存在做一半的情况。</li>
@@ -1021,7 +1021,7 @@
 <li>保证某些变量的内存可见性（volatile 的内存可见性就是依靠这个实现的）</li>
 </ul>
 <p>由于编译器和处理器都能执行指令重排的优化，如果在指令间插入一条 Memory Barrier，则会告诉编译器和 CPU，不管什么指令都不能和这条 Memory Barrier 指令重排序。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bOE9cd"><img src="https://s1.ax1x.com/2022/03/14/bOE9cd.jpg" alt="bOE9cd.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bOE9cd"><img data-src="https://s1.ax1x.com/2022/03/14/bOE9cd.jpg" alt="bOE9cd.jpg"></a></p>
 <table>
 <thead>
 <tr>
@@ -1423,7 +1423,7 @@
 <li>base 变量：竞争不激烈，直接累加到该变量上</li>
 <li>Cell[] 数组：竞争激烈，各个线程分散累加到自己的槽 Cell[i] 中</li>
 </ul>
-<p><img src="https://s2.loli.net/2022/03/25/usjpfJ9Id5OUHlK.png"></p>
+<p><img data-src="https://s2.loli.net/2022/03/25/usjpfJ9Id5OUHlK.png"></p>
 <br>
 
 <h4 id="sum-源码分析"><a href="#sum-源码分析" class="headerlink" title="sum() 源码分析"></a>sum() 源码分析</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="type">long</span> <span class="title function_">sum</span><span class="params">()</span> &#123;</span><br><span class="line">    Cell[] as = cells; Cell a;</span><br><span class="line">    <span class="type">long</span> <span class="variable">sum</span> <span class="operator">=</span> base;</span><br><span class="line">  	<span class="comment">// 当 Cell 数组为空时直接返回 base</span></span><br><span class="line">  	<span class="comment">// 当 Cell 数组不为空就遍历 Cell 数组求和并加上 base 并返回</span></span><br><span class="line">    <span class="keyword">if</span> (as != <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; as.length; ++i) &#123;</span><br><span class="line">            <span class="keyword">if</span> ((a = as[i]) != <span class="literal">null</span>)</span><br><span class="line">                sum += a.value;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1444,7 +1444,7 @@
 
 <h1 id="CAS"><a href="#CAS" class="headerlink" title="CAS"></a>CAS</h1><h2 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h2><p>CAS（Compare And Swap）是一种无锁算法，它并不会为对象加锁，而是在执行的时候，判断当前数据的值是否与预期的值相同。如果是就正常进行替换，如果不是就替换失败。</p>
 <p>如有 2 个线程都需要修改变量 <code>i = 10</code> 的值。线程 1 要将其修改为 20，线程 2 要将其修改为 30。如果它们都使用 CAS 算法，那么就不会加锁访问 <code>i</code>，而是直接尝试修改 <code>i</code> 的值。但在修改时需要确认 <code>i</code> 是不是 10，如果是则表示其他线程还没对其进行修改，如果不是则说明其他线程已经将其修改，此时不能完成修改任务，修改失败。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OjaKns"><img src="https://s1.ax1x.com/2022/05/21/OjaKns.md.png" alt="OjaKns.md.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OjaKns"><img data-src="https://s1.ax1x.com/2022/05/21/OjaKns.md.png" alt="OjaKns.md.png"></a></p>
 <p>CAS 有三个操作数：内存值 V、预期值 A、要修改的值 B。当且仅当预期值 A 和内存值 V 相同时才将内存值修改为 B，否则放弃修改，最后返回现在的 V 值。</p>
 <p>在 CPU 中，CAS 操作使用的是 <code>cmpxchg</code> 指令，能够从最底层硬件层面得到效率的提升。</p>
 <br>
@@ -1479,7 +1479,7 @@
 <br>
 
 <h2 id="CAS-的缺点"><a href="#CAS-的缺点" class="headerlink" title="CAS 的缺点"></a>CAS 的缺点</h2><h3 id="ABA-问题"><a href="#ABA-问题" class="headerlink" title="ABA 问题"></a>ABA 问题</h3><p>ABA 问题是指在 CAS 操作时，其他线程将变量值 A 改为了 B，然后又被改回了 A。等到本线程使用期望值 A 与当前变量进行比较时，发现变量 A 没有变，于是 CAS 就将 A 值进行了交换操作，但是实际上该值已经被其他线程改变过。</p>
-<p><img src="https://s2.loli.net/2022/03/25/hnHQdtLoxcOpUjE.png"></p>
+<p><img data-src="https://s2.loli.net/2022/03/25/hnHQdtLoxcOpUjE.png"></p>
 <p>解决方案：</p>
 <p>可以沿用 MySQL 中版本号的方法： 在变量前面加上版本号，每次变量更新的时候变量的版本号都 +1，即 A -&gt; B -&gt; A 就变成了1A -&gt; 2B -&gt; 3A。只要变量被某一线程修改过，变量对应的版本号就会发生递增变化，从而解决了 ABA 问题。</p>
 <p>同时 JUC 也提供了AtomicStampedReference&lt;E&gt; 来实现带版本号的引用类型，只需要每次操作都记录版本号且版本号不重复，就可以解决 ABA 问题。</p>
@@ -1570,7 +1570,7 @@
 </ul>
 <br>
 
-<h2 id="ConcurrentHashMap"><a href="#ConcurrentHashMap" class="headerlink" title="ConcurrentHashMap"></a>ConcurrentHashMap</h2><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p><img src="https://s1.imagehub.cc/images/2022/03/09/e1fe9925bc315c6034a8da4d73e1dc1349540923d94a.png"></p>
+<h2 id="ConcurrentHashMap"><a href="#ConcurrentHashMap" class="headerlink" title="ConcurrentHashMap"></a>ConcurrentHashMap</h2><h3 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h3><p><img data-src="https://s1.imagehub.cc/images/2022/03/09/e1fe9925bc315c6034a8da4d73e1dc1349540923d94a.png"></p>
 <p>HashMap 线程不安全的原因：</p>
 <ul>
 <li>多个线程同时 put 碰撞导致数据丢失：多个线程计算出同一个 Hash 值就会导致只有一个数据能够 put 进</li>
@@ -1584,11 +1584,11 @@
 <br>
 
 <h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><h4 id="HashMap-结构"><a href="#HashMap-结构" class="headerlink" title="HashMap 结构"></a>HashMap 结构</h4><p>在 JDK 1.7 中的 HashMap</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XppRc4"><img src="https://s1.ax1x.com/2022/05/23/XppRc4.png" alt="XppRc4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XppRc4"><img data-src="https://s1.ax1x.com/2022/05/23/XppRc4.png" alt="XppRc4.png"></a></p>
 <p><code>HashMap(int initialCapacity, float loadFactor)</code></p>
 <p>HashMap 底层实现还是数组，只是数组的每一项都是一条链。其中参数 initialCapacity 就代表了该数组的长度。Hash 值相同的元素被存在链表中。</p>
 <p>而 JDK 1.8 中的 HashMap 除了有链表结构，还在链表长度达到一定阈值时会自动升级为红黑树的结构来优化查找效率：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Xp9orj"><img src="https://s1.ax1x.com/2022/05/23/Xp9orj.png" alt="Xp9orj.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Xp9orj"><img data-src="https://s1.ax1x.com/2022/05/23/Xp9orj.png" alt="Xp9orj.png"></a></p>
 <br>
 
 <h4 id="HashMap-关于并发的特点"><a href="#HashMap-关于并发的特点" class="headerlink" title="HashMap 关于并发的特点"></a>HashMap 关于并发的特点</h4><ol>
@@ -1600,10 +1600,10 @@
 <br>
 
 <h3 id="ConcurrentHashMap-1"><a href="#ConcurrentHashMap-1" class="headerlink" title="ConcurrentHashMap"></a>ConcurrentHashMap</h3><h4 id="ConcurrentHashMap-结构"><a href="#ConcurrentHashMap-结构" class="headerlink" title="ConcurrentHashMap 结构"></a>ConcurrentHashMap 结构</h4><p>在 JDK 1.7 中 ConcurrentHashMap 的结构：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XpCcy4"><img src="https://s1.ax1x.com/2022/05/23/XpCcy4.png" alt="XpCcy4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XpCcy4"><img data-src="https://s1.ax1x.com/2022/05/23/XpCcy4.png" alt="XpCcy4.png"></a></p>
 <p>最外层是多个 Segment，每个 Segment 的底层数据结构与 HashMap 类似，仍是数组和链表组成的拉链法。每个 Segment 独立上 ReentrantLock，因此它们之间互不影响，提高了并发效率。ConcurrentHashMap 默认有 16 个 Segment，所以最多可以支持 16 个线程并发写（操作分别分布在不同的 Segment 上）。这个默认值可以在初始化的时候设置为其他值，但一旦初始化后就不可以扩容。</p>
 <p>在 JDK 1.8 中 ConcurrentHashMap 的结构：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XpPFmj"><img src="https://s1.ax1x.com/2022/05/23/XpPFmj.png" alt="XpPFmj.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XpPFmj"><img data-src="https://s1.ax1x.com/2022/05/23/XpPFmj.png" alt="XpPFmj.png"></a></p>
 <p>结构与 JDK 1.8 中的 HashMap 十分类似，但不再采用分段锁，而是采用无锁算法CAS。其中的 <code>put()</code> 操作：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> V <span class="title function_">put</span><span class="params">(K key, V value)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> putVal(key, value, <span class="literal">false</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">final</span> V <span class="title function_">putVal</span><span class="params">(K key, V value, <span class="type">boolean</span> onlyIfAbsent)</span> &#123;</span><br><span class="line">  	<span class="comment">// 如果键值为空则抛出异常</span></span><br><span class="line">    <span class="keyword">if</span> (key == <span class="literal">null</span> || value == <span class="literal">null</span>) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">NullPointerException</span>(); </span><br><span class="line">  	<span class="comment">// 计算键的hash值，用于确定在哈希表中的位置</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">hash</span> <span class="operator">=</span> spread(key.hashCode());    </span><br><span class="line">  	<span class="comment">// 用来记录链表长度</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">binCount</span> <span class="operator">=</span> <span class="number">0</span>;   </span><br><span class="line">    <span class="keyword">for</span> (Node&lt;K,V&gt;[] tab = table;;) &#123;</span><br><span class="line">        Node&lt;K,V&gt; f; <span class="type">int</span> n, i, fh;</span><br><span class="line">      	<span class="comment">// 如果数组（哈希表）为空则进行初始化，然后再进入下一轮循环</span></span><br><span class="line">        <span class="keyword">if</span> (tab == <span class="literal">null</span> || (n = tab.length) == <span class="number">0</span>)</span><br><span class="line">            tab = initTable();    </span><br><span class="line">      	<span class="comment">// 如果哈希值对应的map位置为空则CAS插入结点作为头结（这里会将f设置当前哈希表位置上的头结点）</span></span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span> ((f = tabAt(tab, i = (n - <span class="number">1</span>) &amp; hash)) == <span class="literal">null</span>) &#123;  </span><br><span class="line">          	<span class="comment">// CAS操作，利用Unsafe类</span></span><br><span class="line">            <span class="keyword">if</span> (casTabAt(tab, i, <span class="literal">null</span>,</span><br><span class="line">                         <span class="keyword">new</span> <span class="title class_">Node</span>&lt;K,V&gt;(hash, key, value, <span class="literal">null</span>)))  </span><br><span class="line">              	<span class="comment">// 如果CAS成功就break结束put方法，失败就继续下一轮循环</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">         	<span class="comment">// 如果头结点哈希值为-1是因为正在扩容</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> ((fh = f.hash) == MOVED) </span><br><span class="line">          	<span class="comment">// 帮助进行迁移后再下一次循环</span></span><br><span class="line">            tab = helpTransfer(tab, f); </span><br><span class="line">      	<span class="comment">// 除了上面的if、else if特殊情况之外的正常情况</span></span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="type">V</span> <span class="variable">oldVal</span> <span class="operator">=</span> <span class="literal">null</span>;</span><br><span class="line">          	<span class="comment">// 将头结点作为锁加锁，防止同一时间其他线程也在操作哈希表中这个位置上的链表或红黑树</span></span><br><span class="line">            <span class="keyword">synchronized</span> (f) &#123;   </span><br><span class="line">                <span class="keyword">if</span> (tabAt(tab, i) == f) &#123;</span><br><span class="line">                  	<span class="comment">// 头结点的哈希值大于等于0说明是链表，下面就是针对链表的操作</span></span><br><span class="line">                    <span class="keyword">if</span> (fh &gt;= <span class="number">0</span>) &#123;    </span><br><span class="line">                        ...实现细节略</span><br><span class="line">                      <span class="comment">// 红黑树，下面就是针对红黑树的操作</span></span><br><span class="line">                    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (f <span class="keyword">instanceof</span> TreeBin) &#123;   </span><br><span class="line">                      	<span class="comment">// 在ConcurrentHashMap并不是直接存储的TreeNode，而是TreeBin</span></span><br><span class="line">                        ...实现细节略</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">          	<span class="comment">// 根据链表长度决定是否要进化为红黑树</span></span><br><span class="line">            <span class="keyword">if</span> (binCount != <span class="number">0</span>) &#123;</span><br><span class="line">              	<span class="comment">// 链表长度是否超过阈值</span></span><br><span class="line">                <span class="keyword">if</span> (binCount &gt;= TREEIFY_THRESHOLD)</span><br><span class="line">                  	<span class="comment">// 若满足进化红黑树条件则进化。如果当前哈希表的长度小于64，会优先考虑对哈希表进行扩容</span></span><br><span class="line">                    treeifyBin(tab, i);</span><br><span class="line">              	<span class="comment">// 返回值</span></span><br><span class="line">                <span class="keyword">if</span> (oldVal != <span class="literal">null</span>)</span><br><span class="line">                    <span class="keyword">return</span> oldVal;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    addCount(<span class="number">1L</span>, binCount);</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -1630,7 +1630,7 @@
 <li>返回结果或空</li>
 </ul>
 <p>综上，ConcurrentHashMap 的 <code>put()</code> 操作实际上是对哈希表上的所有头结点元素分别加锁，理论上来说哈希表的长度很大程度上决定了 ConcurrentHashMap 在同一时间能够处理的线程数量，这也是为什么 <code>treeifyBin()</code> 会优先考虑为哈希表进行扩容的原因。显然，这种加锁方式比 JDK 1.7 的分段锁机制性能更好。</p>
-<p><img src="https://s2.loli.net/2022/03/25/9a4rnUBTj6ZQJwW.png" alt="image-20220325181747104"></p>
+<p><img data-src="https://s2.loli.net/2022/03/25/9a4rnUBTj6ZQJwW.png" alt="image-20220325181747104"></p>
 <br>
 
 <h4 id="1-8-较-1-7-的升级"><a href="#1-8-较-1-7-的升级" class="headerlink" title="1.8 较 1.7 的升级"></a>1.8 较 1.7 的升级</h4><ul>
@@ -1906,7 +1906,7 @@
 <li><p><code>countDown()</code>：将 count 值减 1 ，直到为 0 时等待的线程才会被唤醒。</p>
 </li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XkVF4U"><img src="https://s1.ax1x.com/2022/05/25/XkVF4U.png" alt="XkVF4U.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XkVF4U"><img data-src="https://s1.ax1x.com/2022/05/25/XkVF4U.png" alt="XkVF4U.png"></a></p>
 <br>
 
 <h3 id="典型用法"><a href="#典型用法" class="headerlink" title="典型用法"></a>典型用法</h3><p>一个线程需要等待五个线程都完成了各种的任务后才算完成：</p>
@@ -2029,7 +2029,7 @@
 <li>队列的管理</li>
 </ul>
 <p>因此，AQS 将这些功能实现后，其他类只需要关心具体的业务逻辑而不需要每个类都单独实现这些功能了。AQS 的实现类有：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XELtXD"><img src="https://s1.ax1x.com/2022/05/26/XELtXD.png" alt="XELtXD.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XELtXD"><img data-src="https://s1.ax1x.com/2022/05/26/XELtXD.png" alt="XELtXD.png"></a></p>
 <br>
 
 <h2 id="AQS-内部原理"><a href="#AQS-内部原理" class="headerlink" title="AQS 内部原理"></a>AQS 内部原理</h2><p>AQS 最核心的三大部分：</p>
@@ -2049,7 +2049,7 @@
 
 <h3 id="FIFO-队列"><a href="#FIFO-队列" class="headerlink" title="FIFO 队列"></a>FIFO 队列</h3><p>这个队列用来存放等待的线程。AQS 像是个排队管理器，当多个线程争用同一把锁时，必须有排队机制将没能获取到锁的线程串在一起。当锁释放时，锁管理器就会挑选一个合适的线程来占有这个刚刚释放的锁。</p>
 <p>AQS 会维护一个等待的线程队列，把线程都放到这个队列里，且这个队列是双向链表的形式：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XEjFkd"><img src="https://s1.ax1x.com/2022/05/26/XEjFkd.png" alt="XEjFkd.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/XEjFkd"><img data-src="https://s1.ax1x.com/2022/05/26/XEjFkd.png" alt="XEjFkd.png"></a></p>
 <p>其中 head 是持有锁的线程，其余 node 即为等待队列中的其他线程。</p>
 <br>
 

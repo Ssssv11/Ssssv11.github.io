@@ -349,18 +349,18 @@
 <br/>
 
 <h3 id="JVM跨平台及原理"><a href="#JVM跨平台及原理" class="headerlink" title="JVM跨平台及原理"></a><strong>JVM跨平台及原理</strong></h3><p>Java程序之所以能够实现跨平台，本质就是因为它是运行在虚拟机之上的，而不同平台只需要安装对应平台的Java虚拟机即可运行（在JRE中包含），所有的Java程序都采用统一的标准，在任何平台编译出来的字节码文件(.class)也是同样的，最后实际上是将编译后的字节码交给JVM处理执行。</p>
-<img src="https://s1.imagehub.cc/images/2022/03/12/jvm.webp" alt="jvm.webp" style="zoom: 50%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/03/12/jvm.webp" alt="jvm.webp" style="zoom: 50%;" />
 
 <p>也正是得益于这种统一规范，除了Java以外，还有多种JVM语言，比如Kotlin、Groovy等，它们的语法虽然和Java不一样，但是最终编译得到的字节码文件，和Java是同样的规范，同样可以交给JVM处理。</p>
 <p>所以，JVM是我们需要去关注的一个部分，通过了解Java的底层运作机制，我们的技术会得到质的提升。</p>
 <br/>
 
-<h3 id="JVM的位置"><a href="#JVM的位置" class="headerlink" title="JVM的位置"></a><strong>JVM的位置</strong></h3><img src="https://s1.imagehub.cc/images/2022/03/12/14359229-ef6fa4ec504acc2f.webp" alt="14359229-ef6fa4ec504acc2f.webp" style="zoom:50%;" />
+<h3 id="JVM的位置"><a href="#JVM的位置" class="headerlink" title="JVM的位置"></a><strong>JVM的位置</strong></h3><img data-src="https://s1.imagehub.cc/images/2022/03/12/14359229-ef6fa4ec504acc2f.webp" alt="14359229-ef6fa4ec504acc2f.webp" style="zoom:50%;" />
 
 <p>JVM位于操作系统上层，但是位于应用程序下层，与硬件没有直接的交互。</p>
 <br/>
 
-<h3 id="JVM体系结构"><a href="#JVM体系结构" class="headerlink" title="JVM体系结构"></a><strong>JVM体系结构</strong></h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/b78Z1U"><img src="https://s1.ax1x.com/2022/03/12/b78Z1U.png" alt="b78Z1U.png"></a></p>
+<h3 id="JVM体系结构"><a href="#JVM体系结构" class="headerlink" title="JVM体系结构"></a><strong>JVM体系结构</strong></h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/b78Z1U"><img data-src="https://s1.ax1x.com/2022/03/12/b78Z1U.png" alt="b78Z1U.png"></a></p>
 <p>如上图所示，JVM分为三个主要子系统：</p>
 <ul>
 <li><strong>类加载器子系统(Class Loader Subsystem)</strong><ul>
@@ -425,7 +425,7 @@
 <p>—— 《深入理解Java虚拟机》周志明·著</p>
 </blockquote>
 <p> Java虚拟机将描述类的数据从class字节码文件加载到内存，并且对数据进行校验，转化，解析，初始化的工作，最终形成在内存中可以直接使用的数据类型。 这个过程叫做虚拟机的类加载机制。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/b7wjVU"><img src="https://s1.ax1x.com/2022/03/12/b7wjVU.png" alt="b7wjVU.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/b7wjVU"><img data-src="https://s1.ax1x.com/2022/03/12/b7wjVU.png" alt="b7wjVU.png"></a></p>
 <br/>
 
 <h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a><strong>作用</strong></h2><ul>
@@ -435,7 +435,7 @@
 </ul>
 <br/>
 
-<h2 id="类加载器扮演的角色"><a href="#类加载器扮演的角色" class="headerlink" title="类加载器扮演的角色"></a><strong>类加载器扮演的角色</strong></h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/b7rqW4"><img src="https://s1.ax1x.com/2022/03/12/b7rqW4.png" alt="b7rqW4.png"></a></p>
+<h2 id="类加载器扮演的角色"><a href="#类加载器扮演的角色" class="headerlink" title="类加载器扮演的角色"></a><strong>类加载器扮演的角色</strong></h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/b7rqW4"><img data-src="https://s1.ax1x.com/2022/03/12/b7rqW4.png" alt="b7rqW4.png"></a></p>
 <ul>
 <li><p>Car.class存放于本地硬盘中，在运行的时候，JVM将Car.class文件加载到JVM中，被称为DNA元数据模板</p>
 <p>存放在JVM的方法区中，之后根据元数据模板实例化出相应的对象。</p>
@@ -450,7 +450,7 @@
 
 
 <h2 id="类加载的过程"><a href="#类加载的过程" class="headerlink" title="类加载的过程"></a><strong>类加载的过程</strong></h2><p>类的生命周期：</p>
-<p><img src="https://s1.ax1x.com/2022/03/12/b7Lmxs.png" alt="b7Lmxs.png"></p>
+<p><img data-src="https://s1.ax1x.com/2022/03/12/b7Lmxs.png" alt="b7Lmxs.png"></p>
 <p>为支持运行时绑定，解析过程在某些情况下可在初始化之后再开始，除解析过程外的其他加载过程必须按照如图顺序开始。</p>
 <p>类加载的过程主要分为三个阶段：<strong>加载，链接，初始化</strong>。 而链接阶段又可以细分为<strong>验证，准备，解析</strong>三个子阶段。</p>
 <br/>
@@ -480,7 +480,7 @@
 <p>加载结束之后，外部的二进制字节流就会以JVM所设定的格式存在于方法区中了。 之后会在堆中实例化一个java.lang.class类型的对象， 这个对象作为程序访问方法区中的类型数据的入口。</p>
 <br/>
 
-<h3 id="链接（Linking）"><a href="#链接（Linking）" class="headerlink" title="链接（Linking）"></a><strong>链接（Linking）</strong></h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/b74Bad"><img src="https://s1.ax1x.com/2022/03/12/b74Bad.png" alt="b74Bad.png"></a></p>
+<h3 id="链接（Linking）"><a href="#链接（Linking）" class="headerlink" title="链接（Linking）"></a><strong>链接（Linking）</strong></h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/b74Bad"><img data-src="https://s1.ax1x.com/2022/03/12/b74Bad.png" alt="b74Bad.png"></a></p>
 <h4 id="验证（Verification）"><a href="#验证（Verification）" class="headerlink" title="验证（Verification）"></a><strong>验证（Verification）</strong></h4><p><strong>目的:</strong></p>
 <p><strong>在于确保Class文件的字节流中所包含的信息符合当前JVM规范要求，保证被加载类的正确性，不会危害虚拟机自身安全</strong>。</p>
 <p><strong>主要包括四种验证</strong></p>
@@ -556,7 +556,7 @@
 <br/>
 
 <h3 id="类加载器的分类"><a href="#类加载器的分类" class="headerlink" title="类加载器的分类"></a><strong>类加载器的分类</strong></h3><p>无论类加载器的类型如何划分，在程序中我们最常见的类加载器始终只有三个:</p>
-<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/oIRXp"><img src="https://s1.imagehub.cc/images/2022/03/12/image-20210730200638388.md.png" alt="image-20210730200638388.md.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/oIRXp"><img data-src="https://s1.imagehub.cc/images/2022/03/12/image-20210730200638388.md.png" alt="image-20210730200638388.md.png"></a></p>
 <ul>
 <li><p><strong>启动类加载器（根加载器）</strong></p>
 <p>负责加载<code>JAVA_HOME/lib</code>目录下的可以被虚拟机识别的字节码文件。（如<code>rt.jar</code>、<code>tools.jar</code>）</p>
@@ -650,7 +650,7 @@
 
 <h2 id="双亲委派机制"><a href="#双亲委派机制" class="headerlink" title="双亲委派机制"></a><strong>双亲委派机制</strong></h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a><strong>概述</strong></h3><p> Java虚拟机对class文件采用的是按需加载的方式，也就是说当需要使用该类时才会将它的class文件加载到内存生成的class对象。</p>
 <p> 在加载某个类的class文件时，JVM采用的是双亲委派模式。即把请求交由父类处理，它是一种任务委派模式。</p>
-<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a><strong>流程</strong></h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bHCPpV"><img src="https://s1.ax1x.com/2022/03/12/bHCPpV.png" alt="bHCPpV.png" style="zoom: 67%;" /></a></p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a><strong>流程</strong></h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bHCPpV"><img data-src="https://s1.ax1x.com/2022/03/12/bHCPpV.png" alt="bHCPpV.png" style="zoom: 67%;" /></a></p>
 <ol>
 <li>如果一个类加载器收到了类加载的请求，它并不会自己加载，而是先把请求委托给父类的加载器执行。</li>
 <li>如果父类加载器还有父类，则进一步向上委托，依次递归，请求到达最顶层的引导类加载器。</li>
@@ -702,7 +702,7 @@
 <h2 id="运行时数据区概述"><a href="#运行时数据区概述" class="headerlink" title="运行时数据区概述"></a><strong>运行时数据区概述</strong></h2><p>运行时数据区（Runtime Data Area），用于保存Java程序运行过程中需要用到的数据和相关信息。经常说的把数据读入内存，包括类加载之后的信息，从磁盘读取文件信息等都是指运行时数据区。</p>
 <br/>
 
-<h2 id="运行时数据区结构"><a href="#运行时数据区结构" class="headerlink" title="运行时数据区结构"></a><strong>运行时数据区结构</strong></h2><p><img src="https://s1.imagehub.cc/images/2022/03/12/imagertd.png" alt="imagertd.png"></p>
+<h2 id="运行时数据区结构"><a href="#运行时数据区结构" class="headerlink" title="运行时数据区结构"></a><strong>运行时数据区结构</strong></h2><p><img data-src="https://s1.imagehub.cc/images/2022/03/12/imagertd.png" alt="imagertd.png"></p>
 <ul>
 <li><p>方法区（Method Area）</p>
 <p>方法区对应JDK8之后的元数据区</p>
@@ -724,7 +724,7 @@
 <br/>
 
 <h4 id="作用-1"><a href="#作用-1" class="headerlink" title="作用"></a><strong>作用</strong></h4><p>PC寄存器是用来存储指向下一条指令的地址，也即将将要执行的指令代码。由执行引擎读取下一条指令。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbJGmF"><img src="https://s1.ax1x.com/2022/03/13/bbJGmF.png" alt="bbJGmF.png"  /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbJGmF"><img data-src="https://s1.ax1x.com/2022/03/13/bbJGmF.png" alt="bbJGmF.png"  /></a></p>
 <br/>
 
 <h4 id="特征"><a href="#特征" class="headerlink" title="特征"></a><strong>特征</strong></h4><ul>
@@ -749,7 +749,7 @@
 <br/>
 
 <h3 id="虚拟机栈"><a href="#虚拟机栈" class="headerlink" title="虚拟机栈"></a><strong>虚拟机栈</strong></h3><p>每个JVM的线程在创建的时候，都会创建一个栈。一个栈包含很多栈桢。JVM的栈好比传统语言C的栈，它维持(存储)本地变量和部分结果，并在方法调用和返回中(被)使用。这个栈是一个后进先出的数据结构，所以当前正在执行的方法在栈的顶端。每当一个方法被调用时，一个新的栈帧就会被创建然后放在了栈的顶端。当方法正常返回或者发生了未捕获的异常，栈帧就会从栈里移除。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbhbE4"><img src="https://s1.ax1x.com/2022/03/13/bbhbE4.png" alt="bbhbE4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbhbE4"><img data-src="https://s1.ax1x.com/2022/03/13/bbhbE4.png" alt="bbhbE4.png"></a></p>
 <h4 id="栈帧"><a href="#栈帧" class="headerlink" title="栈帧"></a><strong>栈帧</strong></h4><p>JVM为每个方法调用创建一个新的栈帧并推到每个方法调用的栈顶。当方法正常返回或者遇到了未捕获的异常，这个栈帧将被移除。</p>
 <p>每个栈帧包含了：</p>
 <ul>
@@ -759,7 +759,7 @@
 <li>方法返回地址（Return Address）（或方法正常退出或者异常退出的定义）</li>
 <li>附加信息</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbaWsx"><img src="https://s1.ax1x.com/2022/03/13/bbaWsx.png" alt="bbaWsx.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbaWsx"><img data-src="https://s1.ax1x.com/2022/03/13/bbaWsx.png" alt="bbaWsx.png"></a></p>
 <p><strong>影响栈帧大小的主要是局部变量表</strong>。</p>
 <br/>
 
@@ -848,7 +848,7 @@
 
 <h4 id="动态链接（Dynamic-Linking）"><a href="#动态链接（Dynamic-Linking）" class="headerlink" title="动态链接（Dynamic Linking）"></a><strong>动态链接（Dynamic Linking）</strong></h4><p>每一个栈帧内部都包含一个指向运行时常量池或该栈帧所属方法的引用。包含这个引用的目的就是为了支持当前方法的代码能够实现动态链接。比如invokedynamic指令</p>
 <p>在Java源文件被编译成字节码文件中时，所有的变量和方法引用都作为符号引用（symbolic Refenrence）保存在class文件的常量池里。比如：描述一个方法调用了另外的其他方法时，就是通过常量池中指向方法的符号引用来表示的，那么<strong>动态链接的作用就是为了将这些符号引用转换为调用方法的直接引用。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbfuSP"><img src="https://s1.ax1x.com/2022/03/13/bbfuSP.png" alt="bbfuSP.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbfuSP"><img data-src="https://s1.ax1x.com/2022/03/13/bbfuSP.png" alt="bbfuSP.png"></a></p>
 <br/>
 
 <h4 id="方法的调用：解析与分派"><a href="#方法的调用：解析与分派" class="headerlink" title="方法的调用：解析与分派"></a><strong>方法的调用：解析与分派</strong></h4><p>在JVM中，将符号引用转换为调用方法的直接引用与方法的绑定机制相关</p>
@@ -918,7 +918,7 @@
 </ul>
 </li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbqsKA"><img src="https://s1.ax1x.com/2022/03/13/bbqsKA.png" alt="bbqsKA.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bbqsKA"><img data-src="https://s1.ax1x.com/2022/03/13/bbqsKA.png" alt="bbqsKA.png"></a></p>
 <br/>
 
 
@@ -984,7 +984,7 @@
 </ol>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * -Xms600m -Xmx600m</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">HeapInstanceTest</span> &#123;</span><br><span class="line">    <span class="type">byte</span>[] buffer = <span class="keyword">new</span> <span class="title class_">byte</span>[<span class="keyword">new</span> <span class="title class_">Random</span>().nextInt(<span class="number">1024</span> * <span class="number">200</span>)];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        ArrayList&lt;HeapInstanceTest&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;HeapInstanceTest&gt;();</span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">            list.add(<span class="keyword">new</span> <span class="title class_">HeapInstanceTest</span>());</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Thread.sleep(<span class="number">10</span>);</span><br><span class="line">            &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqpDxK"><img src="https://s1.ax1x.com/2022/03/13/bqpDxK.png" alt="bqpDxK.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqpDxK"><img data-src="https://s1.ax1x.com/2022/03/13/bqpDxK.png" alt="bqpDxK.png"></a></p>
 <p>伊甸园区的分配如图所示，当分配的对象到达150M，则进行一次垃圾回收，将非垃圾放入幸存者1区，继续分配放入伊甸园区，到达150之后，将对象放入0区，并且将之前1区中的对象放入老年区，以此类推。直到老年区满400M，爆出OOM(OutOfMemory)异常。</p>
 <p><strong>总结</strong>：</p>
 <ul>
@@ -1028,7 +1028,7 @@
 <br/>
 
 <h4 id="为对象分配TLAB"><a href="#为对象分配TLAB" class="headerlink" title="为对象分配TLAB"></a><strong>为对象分配TLAB</strong></h4><h5 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a><strong>概念</strong></h5><p>TLAB是从内存模型而不是垃圾收集的角度，对Eden区域继续进行划分，JVM为每个线程分配了一个私有缓存区域，它包含在Eden空间内。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqSYtI"><img src="https://s1.ax1x.com/2022/03/13/bqSYtI.jpg" alt="bqSYtI.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqSYtI"><img data-src="https://s1.ax1x.com/2022/03/13/bqSYtI.jpg" alt="bqSYtI.jpg"></a></p>
 <p>多线程同时分配内存时，使用TLAB可以避免一系列的非线程安全问题，同时还能够提升内存分配的吞吐量，因此我们可以将这种内存分配方式称之为快速分配策略。</p>
 <p>所有OpenJDK衍生出来的JVM都提供了TLAB的设计。</p>
 <br/>
@@ -1040,7 +1040,7 @@
 </ul>
 <br/>
 
-<h5 id="过程"><a href="#过程" class="headerlink" title="过程"></a><strong>过程</strong></h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqSL36"><img src="https://s1.ax1x.com/2022/03/13/bqSL36.png" alt="bqSL36.png"></a></p>
+<h5 id="过程"><a href="#过程" class="headerlink" title="过程"></a><strong>过程</strong></h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqSL36"><img data-src="https://s1.ax1x.com/2022/03/13/bqSL36.png" alt="bqSL36.png"></a></p>
 <br/>
 
 <h4 id="利用JProfile工具分析OOM原因"><a href="#利用JProfile工具分析OOM原因" class="headerlink" title="利用JProfile工具分析OOM原因"></a><strong>利用JProfile工具分析OOM原因</strong></h4><h5 id="JProfile功能"><a href="#JProfile功能" class="headerlink" title="JProfile功能"></a><strong>JProfile功能</strong></h5><ul>
@@ -1056,9 +1056,9 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">java.lang.OutOfMemoryError: Java heap space</span><br><span class="line">Dumping heap to java_pid11996.hprof ...</span><br><span class="line">Heap dump file created [<span class="number">9988778</span> bytes in <span class="number">0.024</span> secs]</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
 
 <p>到项目文件目录下找到生成的文件用JProfile打开查看:</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqmlGD"><img src="https://s1.ax1x.com/2022/03/13/bqmlGD.png" alt="bqmlGD.png" style="zoom: 50%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqmlGD"><img data-src="https://s1.ax1x.com/2022/03/13/bqmlGD.png" alt="bqmlGD.png" style="zoom: 50%;" /></a></p>
 <p>我们可以发现在大对象中，java.util.ArrayList占用了84%的堆内存。再去Thread Dump中查看各个线程：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqmZrR"><img src="https://s1.ax1x.com/2022/03/13/bqmZrR.png" alt="bqmZrR.png" style="zoom:50%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqmZrR"><img data-src="https://s1.ax1x.com/2022/03/13/bqmZrR.png" alt="bqmZrR.png" style="zoom:50%;" /></a></p>
 <p>发现在<code>main()</code>中代码第18行发生错误：<code>list.add(new OOM());</code></p>
 <p>经过这些步骤，我们就可以在遇到OOM时进行排错了。</p>
 <p>相关VM参数：</p>
@@ -1128,7 +1128,7 @@
 <br/>
 
 <h4 id="变更"><a href="#变更" class="headerlink" title="变更"></a><strong>变更</strong></h4><p><strong>JDK8 之前，Hotspot 中方法区的实现是永久代（Perm），JDK8 开始使用元空间（Metaspace），以前永久代所有内容的字符串常量移至堆内存，其他内容移至元空间，元空间直接在本地内存分配。</strong></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqYAzt"><img src="https://s1.ax1x.com/2022/03/13/bqYAzt.jpg" alt="bqYAzt.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqYAzt"><img data-src="https://s1.ax1x.com/2022/03/13/bqYAzt.jpg" alt="bqYAzt.jpg"></a></p>
 <p>为什么要使用元空间取代永久代的实现？</p>
 <ol>
 <li>字符串存在永久代中，容易出现性能问题和内存溢出。</li>
@@ -1161,18 +1161,18 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;abc&quot;</span>);</span><br><span class="line"></span><br><span class="line">    System.out.println(str1 == str2);</span><br><span class="line">    System.out.println(str1.equals(str2));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>得到的结果也是显而易见的，由于<code>str1</code>和<code>str2</code>是单独创建的两个对象，那么这两个对象实际上会在堆中存放，保存在不同的地址：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqUKoD"><img src="https://s1.ax1x.com/2022/03/13/bqUKoD.jpg" alt="bqUKoD.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqUKoD"><img data-src="https://s1.ax1x.com/2022/03/13/bqUKoD.jpg" alt="bqUKoD.jpg"></a></p>
 <p>所以当我们使用<code>==</code>判断时，得到的结果<code>false</code>，而使用<code>equals</code>时因为比较的是值，所以得到<code>true</code>。现在我们来稍微修改一下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="string">&quot;abc&quot;</span>;</span><br><span class="line">    <span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> <span class="string">&quot;abc&quot;</span>;</span><br><span class="line"></span><br><span class="line">    System.out.println(str1 == str2);</span><br><span class="line">    System.out.println(str1.equals(str2));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>现在我们没有使用new的形式，而是直接使用双引号创建，那么这时得到的结果就变成了两个<code>true</code>，这是为什么呢？这其实是因为我们直接使用双引号赋值，会先在常量池中查找是否存在相同的字符串，若存在，则将引用直接指向该字符串；若不存在，则在常量池中生成一个字符串，再将引用指向该字符串：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqUwFg"><img src="https://s1.ax1x.com/2022/03/13/bqUwFg.jpg" alt="bqUwFg.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqUwFg"><img data-src="https://s1.ax1x.com/2022/03/13/bqUwFg.jpg" alt="bqUwFg.jpg"></a></p>
 <p>实际上两次调用String类的<code>intern()</code>方法，和上面的效果差不多，也是第一次调用会将堆中字符串复制并放入常量池中，第二次通过此方法获取字符串时，会查看常量池中是否包含，如果包含那么会直接返回常量池中字符串的地址：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;  </span><br><span class="line">    <span class="comment">//不能直接写&quot;abc&quot;，双引号的形式，写了就直接在常量池里面吧abc创好了</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;ab&quot;</span>)+<span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;c&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;ab&quot;</span>)+<span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;c&quot;</span>);</span><br><span class="line"></span><br><span class="line">    System.out.println(str1.intern() == str2.intern());</span><br><span class="line">    System.out.println(str1.equals(str2));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqUsln"><img src="https://s1.ax1x.com/2022/03/13/bqUsln.jpg" alt="bqUsln.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqUsln"><img data-src="https://s1.ax1x.com/2022/03/13/bqUsln.jpg" alt="bqUsln.jpg"></a></p>
 <p>所以上述结果中得到的依然是两个<code>true</code>。在JDK1.7之后，稍微有一些区别，在调用<code>intern()</code>方法时，当常量池中没有对应的字符串时，不会再进行复制操作，而是将其直接修改为指向当前字符串堆中的的引用：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqU4fJ"><img src="https://s1.ax1x.com/2022/03/13/bqU4fJ.jpg" alt="bqU4fJ.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqU4fJ"><img data-src="https://s1.ax1x.com/2022/03/13/bqU4fJ.jpg" alt="bqU4fJ.jpg"></a></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">  	<span class="comment">//不能直接写&quot;abc&quot;，双引号的形式，写了就直接在常量池里面吧abc创好了</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;ab&quot;</span>)+<span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;c&quot;</span>);</span><br><span class="line">    System.out.println(str1.intern() == str1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">str1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;ab&quot;</span>)+<span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;c&quot;</span>);</span><br><span class="line">    <span class="type">String</span> <span class="variable">str2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;ab&quot;</span>)+<span class="keyword">new</span> <span class="title class_">String</span>(<span class="string">&quot;c&quot;</span>);</span><br><span class="line"></span><br><span class="line">    System.out.println(str1 == str1.intern());</span><br><span class="line">    System.out.println(str2.intern() == str1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1313,19 +1313,19 @@
 <br/>
 
 <h3 id="对象的访问定位"><a href="#对象的访问定位" class="headerlink" title="对象的访问定位"></a><strong>对象的访问定位</strong></h3><p>JVM通过栈帧中栈上reference访问到对象引用内部的对象实例。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqtuX6"><img src="https://s1.ax1x.com/2022/03/13/bqtuX6.png" alt="bqtuX6.png" style="zoom: 67%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqtuX6"><img data-src="https://s1.ax1x.com/2022/03/13/bqtuX6.png" alt="bqtuX6.png" style="zoom: 67%;" /></a></p>
 <br/>
 
-<h4 id="对象访问的方式"><a href="#对象访问的方式" class="headerlink" title="对象访问的方式"></a><strong>对象访问的方式</strong></h4><h5 id="句柄访问"><a href="#句柄访问" class="headerlink" title="句柄访问"></a><strong>句柄访问</strong></h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqtwB8"><img src="https://s1.ax1x.com/2022/03/13/bqtwB8.png" alt="bqtwB8.png"></a></p>
+<h4 id="对象访问的方式"><a href="#对象访问的方式" class="headerlink" title="对象访问的方式"></a><strong>对象访问的方式</strong></h4><h5 id="句柄访问"><a href="#句柄访问" class="headerlink" title="句柄访问"></a><strong>句柄访问</strong></h5><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqtwB8"><img data-src="https://s1.ax1x.com/2022/03/13/bqtwB8.png" alt="bqtwB8.png"></a></p>
 <p>通过句柄访问的实现方式中，JVM堆中会专门有一块区域用来作为句柄池，存储相关句柄所执行的实例数据地址（包括在堆中地址和在方法区中的地址）。这种实现方法由于用句柄表示地址，因此十分稳定。</p>
 <br/>
 
-<h4 id="直接访问（HotShot采用）"><a href="#直接访问（HotShot采用）" class="headerlink" title="直接访问（HotShot采用）"></a><strong>直接访问（HotShot采用）</strong></h4><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqtdnf"><img src="https://s1.ax1x.com/2022/03/13/bqtdnf.png" alt="bqtdnf.png"></a></p>
+<h4 id="直接访问（HotShot采用）"><a href="#直接访问（HotShot采用）" class="headerlink" title="直接访问（HotShot采用）"></a><strong>直接访问（HotShot采用）</strong></h4><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqtdnf"><img data-src="https://s1.ax1x.com/2022/03/13/bqtdnf.png" alt="bqtdnf.png"></a></p>
 <p>通过直接指针访问的方式中，reference中存储的就是对象在堆中的实际地址，在堆中存储的对象信息中包含了在方法区中的相应类型数据。这种方法最大的优势是速度快，在HotSpot虚拟机中用的就是这种方式。</p>
 <br/>
 
 <h3 id="直接内存（Direct-Memory）"><a href="#直接内存（Direct-Memory）" class="headerlink" title="直接内存（Direct Memory）"></a><strong>直接内存（Direct Memory）</strong></h3><p>Java中的内存分为两个部分，一部分是不需要JVM管理的直接内存，也被称为堆外内存。堆外内存就是把内存对象分配在JVM堆意外的内存区域，这部分内存不是虚拟机管理，而是由操作系统来管理，这样可以减少垃圾回收对应用程序的影响。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqNDr6"><img src="https://s1.ax1x.com/2022/03/13/bqNDr6.jpg" alt="bqNDr6.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqNDr6"><img data-src="https://s1.ax1x.com/2022/03/13/bqNDr6.jpg" alt="bqNDr6.jpg"></a></p>
 <p>通常，访问直接内存的速度会优于Java堆。即读写性能高</p>
 <ul>
 <li>因此出于性能考虑，读写频繁的场合可能会考虑使用直接内存</li>
@@ -1346,7 +1346,7 @@
 <br/>
 
 <h1 id="执行引擎"><a href="#执行引擎" class="headerlink" title="执行引擎"></a><strong>执行引擎</strong></h1><hr>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqdEb6"><img src="https://s1.ax1x.com/2022/03/13/bqdEb6.png" alt="bqdEb6.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqdEb6"><img data-src="https://s1.ax1x.com/2022/03/13/bqdEb6.png" alt="bqdEb6.png"></a></p>
 <h2 id="概述-3"><a href="#概述-3" class="headerlink" title="概述"></a><strong>概述</strong></h2><p>执行引擎是 Java 虚拟机核心的组成部分之一。“虚拟机”是一个相对于“物理机”的概念，这两种机器都有代码执行能力，其区别是物理机的执行处理是直接建立在处理器、缓存、指令集和操作系统层面上的，而虚拟机的执行处理则是由软件自行实现的，因此可以不受物理条件制约地定制指令集与执行引擎的结构体系，能够执行那些不被硬件直接支持的指令集格式。</p>
 <p>JVM 的主要任务是负责装载字节码到其内部，但字节码并不能够直接运行在操作系统之上，因为字节码指令并非等价于本地机器指令，它内部包含的仅仅只是一些能够被 JVM 所识别的字节码指令、符号表，以及其他辅助信息。</p>
 <p>那么，如果想要让一个 Java 程序运行起来，执行引擎（Execution Engine）的任务就是将字节码指令解释&#x2F;编译为对应平台上的本地机器指令才可以。简单来说，JVM 中的执行引擎充当了将高级语言翻译为机器语言的译者。</p>
@@ -1362,7 +1362,7 @@
 <br/>
 
 <h2 id="Java代码编译执行过程"><a href="#Java代码编译执行过程" class="headerlink" title="Java代码编译执行过程"></a><strong>Java代码编译执行过程</strong></h2><p>大部分程序代码转换成物理机的目标代码或虚拟机能执行的指令集之前,都需要经过下图各个步骤</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqwNex"><img src="https://s1.ax1x.com/2022/03/13/bqwNex.png" alt="bqwNex.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqwNex"><img data-src="https://s1.ax1x.com/2022/03/13/bqwNex.png" alt="bqwNex.png"></a></p>
 <ul>
 <li>前面橙色是生成字节码文件的过程 和JVM无关</li>
 <li>后面蓝色和绿色是JVM需要考虑的过程</li>
@@ -1560,7 +1560,7 @@
 <br/>
 
 <h3 id="复制算法"><a href="#复制算法" class="headerlink" title="复制算法"></a><strong>复制算法</strong></h3><h4 id="概念-6"><a href="#概念-6" class="headerlink" title="概念"></a><strong>概念</strong></h4><p> 将活着的内存空间分为两块，每次使用一块，进行垃圾回收的时候，将存活对象复制到另一块未使用的区域，然后将源区域清空，然后交换两个内存的角色。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqyjtx"><img src="https://s1.ax1x.com/2022/03/13/bqyjtx.png" alt="bqyjtx.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqyjtx"><img data-src="https://s1.ax1x.com/2022/03/13/bqyjtx.png" alt="bqyjtx.png"></a></p>
 <br/>
 
 <h4 id="优缺点-1"><a href="#优缺点-1" class="headerlink" title="优缺点"></a><strong>优缺点</strong></h4><p><strong>优点</strong></p>
@@ -1582,7 +1582,7 @@
 <li>标记：Collector从引用的根节点开始遍历，标记所有的被引用的对象，在对象的对象头中记录为可达对象。</li>
 <li>清除：将对象头中没有标记为可达对象的对象进行清除。</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bq6du4"><img src="https://s1.ax1x.com/2022/03/13/bq6du4.png" alt="bq6du4.png" style="zoom: 67%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bq6du4"><img data-src="https://s1.ax1x.com/2022/03/13/bq6du4.png" alt="bq6du4.png" style="zoom: 67%;" /></a></p>
 <br/>
 
 <p><strong>优缺点</strong></p>
@@ -1604,7 +1604,7 @@
 <li>第二阶段将所有的存活对象压缩到内存的一端，按顺序排放。</li>
 <li>之后，清理边界外所有的空间。</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bq6b28"><img src="https://s1.ax1x.com/2022/03/13/bq6b28.png" alt="bq6b28.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bq6b28"><img data-src="https://s1.ax1x.com/2022/03/13/bq6b28.png" alt="bq6b28.png"></a></p>
 <ul>
 <li>标记一压缩算法的最终效果等同于标记一清除算法执行完成后，再进行一次内存碎片整理，因此，也可以把它称为标记一清除一压缩（Mark一 Sweep一Compact）算法。</li>
 <li>二者的本质差异在于<strong>标记清除算法是一种非移动式</strong>的回收算法，<strong>标记压缩是移动式</strong>的。是否移动回收后的存活对象是一项优缺点并存的风险决策。</li>
@@ -1716,7 +1716,7 @@
 <p>JMM规定了所有的变量都存储在主内存（Main Memory）中。每个线程还有自己的工作内存（Working Memory）,线程的工作内存中保存了该线程使用到的变量的主内存的副本拷贝，线程对变量的所有操作（读取、赋值等）都必须在工作内存中进行，而不能直接读写主内存中的变量（volatile变量仍然有工作内存的拷贝，但是由于它特殊的操作顺序性规定，所以看起来如同直接在主内存中读写访问一般）。不同的线程之间也无法直接访问对方工作内存中的变量，线程之间值的传递都需要通过主内存来完成。</p>
 </blockquote>
 <h4 id="主内存和本地内存结构"><a href="#主内存和本地内存结构" class="headerlink" title="主内存和本地内存结构"></a><strong>主内存和本地内存结构</strong></h4><p>从抽象的角度来看，JMM定义了线程和主内存之间的抽象关系：线程之间的共享变量存储在主内存（main memory）中，每个线程都有一个私有的本地内存（local memory），本地内存中存储了该线程以读&#x2F;写共享变量的副本。本地内存是JMM的一个抽象概念，并不真实存在。本地内存它涵盖了缓存，写缓冲区，寄存器以及其他的硬件和编译器优化之后的一个数据存放位置。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqWbnO"><img src="https://s1.ax1x.com/2022/03/13/bqWbnO.jpg" alt="bqWbnO.jpg"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/bqWbnO"><img data-src="https://s1.ax1x.com/2022/03/13/bqWbnO.jpg" alt="bqWbnO.jpg"></a></p>
 <p>一句话概括本地内存和主内存的关系：线程无法直接对共享变量进行读取、修改操作，因此在线程中开辟了一块工作内存，存放共享变量的变量副本。</p>
 <br/>
 

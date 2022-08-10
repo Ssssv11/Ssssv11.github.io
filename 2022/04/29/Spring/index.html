@@ -336,7 +336,7 @@
 <li>语言: Kotlin，Groovy，动态语言</li>
 </ul>
 </blockquote>
-<p><img src="https://s1.imagehub.cc/images/2022/03/29/QQ20220329160554.png" alt="QQ20220329160554.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/29/QQ20220329160554.png" alt="QQ20220329160554.png"></p>
 <br/>
 
 <h1 id="Spring环境搭建"><a href="#Spring环境搭建" class="headerlink" title="Spring环境搭建"></a>Spring环境搭建</h1><h2 id="导入Spring依赖"><a href="#导入Spring依赖" class="headerlink" title="导入Spring依赖"></a>导入Spring依赖</h2><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-webmvc<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -359,13 +359,13 @@
 
 <h1 id="IoC"><a href="#IoC" class="headerlink" title="IoC"></a>IoC</h1><p>在我们之前的图书管理系统Web应用程序中，整个程序是依靠各个部分相互协作、共同完成一个操作的。比如要展示借阅信息列表，那么首先需要使用Servlet进行请求和响应的数据处理，然后请求的数据全部交给对应的Service（业务层）来处理。当Service发现要从数据库中获取数据时，再向对应的Mapper发起请求。</p>
 <p>它们之间就像连接在一起的齿轮，谁也离不开谁：</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/29/445aedfa22e773f4140b2e6a2ea1a616.png" alt="445aedfa22e773f4140b2e6a2ea1a616.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/29/445aedfa22e773f4140b2e6a2ea1a616.png" alt="445aedfa22e773f4140b2e6a2ea1a616.png"></p>
 <p>是一种高度耦合的体系。</p>
 <p>虽然这样的体系逻辑非常清晰，整个流程也能够让人快速了解。但是这样存在一个很严重的问题：当对产品进行更新换代时，之前写好的代码、实现的功能，需要全部改动为新的功能。当修改某个模块上的功能时，与其紧密连接的层也需要改，导致代码大面积修改。</p>
 <p>因此，高耦合度带来的缺点是很明显的，也是现代软件开发中很致命的问题。如果要改善这种情况，我们只能将各个模块进行解耦，让各个模块之间的依赖性变低。</p>
 <p>也就是说，Service的实现类，不再由程序决定，而是让容器推送，所有的实现类对象，全部交给容器来管理，所有对象之间的关系，也由容器来动态决定，这样就引入了IoC理论。IoC意味着将设计好的对象交给容器控制，而不是传统的在对象内部直接控制。</p>
 <p>IoC是Inversion of Control的缩写，翻译为：“控制反转”，把复杂系统分解成相互合作的对象，这些对象类通过封装以后，内部实现对外部是透明的，从而降低了解决问题的复杂度，而且可以灵活地被重用和扩展。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/29/2363b48db6636a057a54bea64f409c61.png" alt="2363b48db6636a057a54bea64f409c61.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/29/2363b48db6636a057a54bea64f409c61.png" alt="2363b48db6636a057a54bea64f409c61.png"></p>
 <p><strong>谁控制谁、控制什么</strong></p>
 <p>传统JavaSE程序设计是直接在对象内部通过<strong>new</strong>进行对象的创建，是<strong>程序主动</strong>去创建依赖对象。IoC是有专门一个<strong>容器来创建</strong>这些对象，即由IoC容器来控制对象的创建。因此：</p>
 <ul>
@@ -608,12 +608,12 @@
 <br/>
 
 <h1 id="代理设计模式"><a href="#代理设计模式" class="headerlink" title="代理设计模式"></a>代理设计模式</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>将核心功能与辅助功能(事务、日志、性能监控代码)分离，达到核心业务功能更纯粹、辅助业务功能可复用。</p>
-<img src="https://s1.imagehub.cc/images/2022/03/30/QQ20220330125701.png" alt="QQ20220330125701.png" style="zoom:80%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/03/30/QQ20220330125701.png" alt="QQ20220330125701.png" style="zoom:80%;" />
 
 <br/>
 
 <h2 id="静态代理设计模式"><a href="#静态代理设计模式" class="headerlink" title="静态代理设计模式"></a>静态代理设计模式</h2><p>通过代理类的对象为原始类的对象（目标类的对象）添加辅助功能，更容易更换代理实现类、利于维护。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/30/QQ20220330130346.png" alt="QQ20220330130346.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/30/QQ20220330130346.png" alt="QQ20220330130346.png"></p>
 <p>房东Service接口：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">HouseOwnerService</span> &#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">rent</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -659,7 +659,7 @@
 <br/>
 
 <h2 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h2><p>Spring的AOP编程即是通过动态代理类为原始类的方法添加辅助功能。也就是通过AOP我们可以在保证原有业务不变的情况下，添加额外的动作。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/30/v2-e777957e808c92fefcbcbec3945a2f91_720w.png" alt="v2-e777957e808c92fefcbcbec3945a2f91_720w.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/30/v2-e777957e808c92fefcbcbec3945a2f91_720w.png" alt="v2-e777957e808c92fefcbcbec3945a2f91_720w.png"></p>
 <p>Spring会利用JDK Proxy或CGLib Proxy来实现动态代理。</p>
 <br/>
 
@@ -757,7 +757,7 @@
 <h2 id="后处理器"><a href="#后处理器" class="headerlink" title="后处理器"></a>后处理器</h2><p>Spring中定义了很多后处理器：</p>
 <p>每个bean在创建完成之前，都会有一个后处理过程，即再加工，对bean做出相关改变和调整。</p>
 <p>Spring-AOP中就有一个专门的后处理器，负责通过原始业务组件(Service),再加工得到一个代理组件。</p>
-<img src="https://s1.imagehub.cc/images/2022/03/30/QQ20220330161623.png" alt="QQ20220330161623.png" style="zoom:80%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/03/30/QQ20220330161623.png" alt="QQ20220330161623.png" style="zoom:80%;" />
 
 <br/>
 
@@ -790,7 +790,7 @@
 </blockquote>
 <p>JDBC定义了一个数据源的标准，也就是DataSource接口，告诉数据源数据库的连接信息，并将所有的连接全部交给数据源进行集中管理，当需要一个Connection对象时，可以向数据源申请，数据源会根据内部机制，合理地分配连接对象给我们。</p>
 <p>一般比较常用的DataSource实现，都是采用池化技术，就是在一开始就创建好N个连接，这样之后使用就无需再次进行连接，而是直接使用现成的Connection对象进行数据库操作。</p>
-<img src="https://s1.imagehub.cc/images/2022/03/30/QQ20220330184644.png" alt="QQ20220330184644.png"  />
+<img data-src="https://s1.imagehub.cc/images/2022/03/30/QQ20220330184644.png" alt="QQ20220330184644.png"  />
 
 <p>也可以使用传统的即用即连的方式获取<code>Connection</code>对象。Mybatis提供了几个默认的数据源实现，我们之前使用的是官方的默认配置，也就是池化数据源：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dataSource</span> <span class="attr">type</span>=<span class="string">&quot;POOLED&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;driver&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;driver&#125;&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;url&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;url&#125;&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;username&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;username&#125;&quot;</span>/&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">&quot;password&quot;</span> <span class="attr">value</span>=<span class="string">&quot;$&#123;password&#125;&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dataSource</span>&gt;</span></span><br></pre></td></tr></table></figure>

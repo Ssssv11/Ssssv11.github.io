@@ -369,11 +369,11 @@
 <p>Spring为我们想清楚了整个从开始构建应用到大型分布式应用全流程方案。</p>
 <br/>
 
-<h1 id="SpringBoot项目"><a href="#SpringBoot项目" class="headerlink" title="SpringBoot项目"></a>SpringBoot项目</h1><h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/RoZjp"><img src="https://s1.imagehub.cc/images/2022/04/04/QQ20220404103926.md.png" alt="QQ20220404103926.md.png"></a></p>
-<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/RoRfa"><img src="https://s1.imagehub.cc/images/2022/04/04/QQ20220404103950.md.png" alt="QQ20220404103950.md.png"></a></p>
+<h1 id="SpringBoot项目"><a href="#SpringBoot项目" class="headerlink" title="SpringBoot项目"></a>SpringBoot项目</h1><h2 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h2><p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/RoZjp"><img data-src="https://s1.imagehub.cc/images/2022/04/04/QQ20220404103926.md.png" alt="QQ20220404103926.md.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/RoRfa"><img data-src="https://s1.imagehub.cc/images/2022/04/04/QQ20220404103950.md.png" alt="QQ20220404103950.md.png"></a></p>
 <br/>
 
-<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><img src="https://s1.imagehub.cc/images/2022/04/04/QQ20220404104140.png" alt="QQ20220404104140.png" style="zoom:67%;" />
+<h2 id="结构"><a href="#结构" class="headerlink" title="结构"></a>结构</h2><img data-src="https://s1.imagehub.cc/images/2022/04/04/QQ20220404104140.png" alt="QQ20220404104140.png" style="zoom:67%;" />
 
 <p>我们在创建SpringBoot项目之后，首先会自动生成一个主类，而主类中的<code>main</code>方法中调用了<code>SpringApplication</code>类的静态方法来启动整个SpringBoot项目，并且我们可以看到主类的上方有一个<code>@SpringBootApplication</code>注解：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@SpringBootApplication</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SpringBootTestApplication</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        SpringApplication.run(SpringBootTestApplication.class, args);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -739,7 +739,7 @@
 <li>POP3 协议（主要用于接收邮件 Post Office Protocol 3）</li>
 </ol>
 <p>为解决 SMTP 传送非 ASCII 码文本的问题，提出了多用途因特网邮件扩展 MIME</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/19/de58efc9230c7dc92aa4605291fe0510.png" alt="de58efc9230c7dc92aa4605291fe0510.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/19/de58efc9230c7dc92aa4605291fe0510.png" alt="de58efc9230c7dc92aa4605291fe0510.png"></p>
 <p>SpringBoot 提供了封装好的邮件模块使用：</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.boot<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-boot-starter-mail<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -1029,10 +1029,10 @@
 
 <h1 id="前后端分离跨域处理"><a href="#前后端分离跨域处理" class="headerlink" title="前后端分离跨域处理"></a>前后端分离跨域处理</h1><p><strong>不分离：</strong></p>
 <p>前端页面看到的都是由后端控制，由后端渲染页面或重定向，后端需要控制前端的展示，前端与后端的耦合度很高。比如我们之前都是使用后端来执行重定向操作或是使用 Thymeleaf 来填充数据，而最终返回的是整个渲染好的页。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/19/ec93dd486864708a4bfc333e52ab64a0.png" alt="ec93dd486864708a4bfc333e52ab64a0.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/19/ec93dd486864708a4bfc333e52ab64a0.png" alt="ec93dd486864708a4bfc333e52ab64a0.png"></p>
 <p><strong>分离：</strong></p>
 <p>后端仅返回前端所需的数据，不再渲染 HTML 页面，不再控制前端的效果。至于前端用户看到什么效果，从后端请求的数据如何加载到前端中，都由前端通过 JS 等进行动态数据填充和渲染。这样后端只返回 JSON 数据，前端处理 JSON 数据并展示，这样前后端的职责就非常明确了。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/19/a8b97171eecbcfb4ea332f4c9a947570.png" alt="a8b97171eecbcfb4ea332f4c9a947570.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/19/a8b97171eecbcfb4ea332f4c9a947570.png" alt="a8b97171eecbcfb4ea332f4c9a947570.png"></p>
 <p>实现前后端分离有两种方案:</p>
 <ul>
 <li>直接放入 SpringBoot 的资源文件夹下，但是这样实际上还是在依靠 SpringBoot 内嵌的 Tomcat 服务器进行页面和静态资源的发送</li>

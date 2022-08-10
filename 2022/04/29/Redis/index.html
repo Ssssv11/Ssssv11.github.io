@@ -1344,7 +1344,7 @@
 
 <h1 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h1><p>Redis 是内存数据库，如果不将内存中的数据库状态保存到磁盘，那么一旦服务器进程退出，服务器中的数据库状态也会消失。所以 Redis 提供了持久化功能</p>
 <h2 id="RDB-Redis-DataBase"><a href="#RDB-Redis-DataBase" class="headerlink" title="RDB(Redis DataBase)"></a>RDB(Redis DataBase)</h2><p>RDB 持久化是指在指定的时间间隔内将内存中的数据集快照写入磁盘，实际操作过程是 fork 一个子进程，先将数据集写入临时文件，写入成功后，再替换之前的文件，用二进制压缩存储。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/98160f6c57976b8fce706c0da5031070.jpg" alt="98160f6c57976b8fce706c0da5031070.jpg"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/98160f6c57976b8fce706c0da5031070.jpg" alt="98160f6c57976b8fce706c0da5031070.jpg"></p>
 <p><strong>RDB保存的文件默认是dump.rdb</strong></p>
 <p><strong>优点</strong></p>
 <ul>
@@ -1362,14 +1362,14 @@
 
 
 
-<img src="https://s1.imagehub.cc/images/2022/04/18/v2-3036a75a8358d30a8433786839a497e9_720w.jpg" alt="v2-3036a75a8358d30a8433786839a497e9_720w.jpg" style="zoom:67%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/04/18/v2-3036a75a8358d30a8433786839a497e9_720w.jpg" alt="v2-3036a75a8358d30a8433786839a497e9_720w.jpg" style="zoom:67%;" />
 
 <p>执行完成时候如果存在老的 RDB 文件，就把新的替代掉旧的。我们的客户端可能都是几万或者是几十万，这种方式显然不可取。</p>
 <p>这种 save 触发阻塞 Redis 服务器是因为占用了 Redis 主线程去进行 rdb 文件的处理。</p>
 <br/>
 
 <h3 id="bgsave-触发"><a href="#bgsave-触发" class="headerlink" title="bgsave 触发"></a>bgsave 触发</h3><p>与 save 不同的是，执行过程中它并不会阻塞客户端的请求。而是将持久化工作交给子进程来执行，主进程仍负责客户端请求的处理工作。</p>
-<img src="https://s1.imagehub.cc/images/2022/04/18/v2-05967df1adcf64a26f0edfe54d879b5f_720w.jpg" alt="v2-05967df1adcf64a26f0edfe54d879b5f_720w.jpg" style="zoom:67%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/04/18/v2-05967df1adcf64a26f0edfe54d879b5f_720w.jpg" alt="v2-05967df1adcf64a26f0edfe54d879b5f_720w.jpg" style="zoom:67%;" />
 
 <p>具体操作是 Redis 进程执行 fork 操作创建子进程，RDB 持久化过程由子进程负责，完成后自动结束。阻塞只发生在 fork 阶段，一般时间很短。基本上 Redis 内部所有的 RDB 操作都是采用 bgsave 命令。</p>
 <br/>
@@ -1379,12 +1379,12 @@
 
 <br/>
 
-<h3 id="文件恢复"><a href="#文件恢复" class="headerlink" title="文件恢复"></a>文件恢复</h3><p><img src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418161747.png" alt="QQ20220418161747.png"></p>
+<h3 id="文件恢复"><a href="#文件恢复" class="headerlink" title="文件恢复"></a>文件恢复</h3><p><img data-src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418161747.png" alt="QQ20220418161747.png"></p>
 <p>开启自动持久化后，数据会存储到名为 dump.rdb 的文件中。当 Redis 服务器重启时，检测到 dump.rdb 文件后，会自动加载进行数据恢复。</p>
 <br/>
 
 <h2 id="AOF-Append-Only-File"><a href="#AOF-Append-Only-File" class="headerlink" title="AOF(Append Only File)"></a>AOF(Append Only File)</h2><p>AOF 即<strong>文件追加持久化</strong>。与 RDB 不同的是，它以日志的形式来记录每个写操作，将 Redis 执行过的所有写指令记录下来（读操作不记录），只允许追加文件，不允许修改文件，Redis 启动之初会读取该文件重新构建数据，换句话说就是，Redis 重启时就根据日志文件的内容将写指令从前到后执行一次以完成数据的恢复工作。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/79246ba78da4898308a7ca3d0a80c674.png" alt="79246ba78da4898308a7ca3d0a80c674.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/79246ba78da4898308a7ca3d0a80c674.png" alt="79246ba78da4898308a7ca3d0a80c674.png"></p>
 <p>写日志的方式：Redis 先执行命令把数据写入内存，然后再记录日志到文件中。</p>
 <p>由于 Redis 在写入日志之前不对命令进行语法检查，所以只记录执行成功的命令，避免出现记录错误命令的情况，而且在命令执行后再写日志不会阻塞当前的写操作。</p>
 <p>后写日志主要有两个风险可能会发生：</p>
@@ -1421,7 +1421,7 @@
 <p>子进程还带来了一个问题，就是在子进程在生成 AOF 重写日志的时候，主进程还在处理新的请求，那么这段区间的写命令是没有记录下来的。Linux 的进程之间的通信可以 pipe 机制进行，Redis 通过该机制，主进程将该段区间执行的命令传递给子进程，然后子进程将这些命令追加到 AOF 重写日志的末尾，因而解决了这个问题。</p>
 <br/>
 
-<h3 id="AOF-文件恢复"><a href="#AOF-文件恢复" class="headerlink" title="AOF 文件恢复"></a>AOF 文件恢复</h3><img src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418164219.png" alt="QQ20220418164219.png" style="zoom: 67%;" />
+<h3 id="AOF-文件恢复"><a href="#AOF-文件恢复" class="headerlink" title="AOF 文件恢复"></a>AOF 文件恢复</h3><img data-src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418164219.png" alt="QQ20220418164219.png" style="zoom: 67%;" />
 
 <p>和 RBD 不同的是，Redis 中是通过创建一个不带网络连接的伪客户端来进行实现的。AOF 文件中的数据格式，都是由命令组成的。通过客户端直接执行每条命令就可以将数据进行恢复。</p>
 <p>在这里需要注意的是，如果服务器开启了 AOF 持久化功能，会优先使用 AOF 文件来进行恢复。只有在 AOF 关闭状态下，服务器才会使用 RDB 文件来进行还原。</p>
@@ -1432,7 +1432,7 @@
 <br/>
 
 <h2 id="混合持久化"><a href="#混合持久化" class="headerlink" title="混合持久化"></a>混合持久化</h2><p><strong>混合持久化</strong>其实就是 RDB 与 AOF 的混合模式，这是 Redis4.0 之后新增的。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/1614350-20201107154043136-1912792479.png" alt="1614350-20201107154043136-1912792479.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/1614350-20201107154043136-1912792479.png" alt="1614350-20201107154043136-1912792479.png"></p>
 <h3 id="持久化方式"><a href="#持久化方式" class="headerlink" title="持久化方式"></a>持久化方式</h3><p>混合持久化是通过 aof-use-rdb-preamble 参数来开启的。它的操作方式是这样的，在写入的时候先把数据以 RDB 的形式写入文件的开头，再将后续的写命令以 AOF 的格式追加到文件中。这样既能保证数据恢复时的速度，同时又能减少数据丢失的风险。</p>
 <br/>
 
@@ -1458,9 +1458,9 @@
 <h1 id="Redis发布订阅"><a href="#Redis发布订阅" class="headerlink" title="Redis发布订阅"></a>Redis发布订阅</h1><p>Redis 发布订阅 (pub&#x2F;sub) 是一种<strong>消息通信模式</strong>：发送者 (pub) 发送消息，订阅者 (sub) 接收消息。(了解即可，一般使用 MQ 来实现)</p>
 <p>Redis 客户端可以订阅任意数量的频道。</p>
 <p>下图展示了频道 channel1，以及订阅这个频道的三个客户端 —— client2 、client5 和 client1 之间的关系：</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/pubsub1.png" alt="pubsub1.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/pubsub1.png" alt="pubsub1.png"></p>
 <p>当有新消息通过 PUBLISH 命令发送给频道 channel1 时， 这个消息就会被发送给订阅它的三个客户端：</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/pubsub2.png" alt="pubsub2.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/pubsub2.png" alt="pubsub2.png"></p>
 <br/>
 
 <h2 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h2><p>需要开启两个 redis-cli 客户端</p>
@@ -1614,7 +1614,7 @@
 <li>从节点加载 RDB 的时间</li>
 <li>可能的 AOF 重写时间(在最后从加载完 RDB 之后如果开启了 AOF，会做 AOF 重写)</li>
 </ol>
-<img src="https://s1.imagehub.cc/images/2022/04/18/aHR0cHM6Ly9xaW5pdS5nYW9iaW56aGFuLmNvbS8yMDIwLzA2LzAzLzczNTFiMzg5NTRhYjkucG5n.png" alt="aHR0cHM6Ly9xaW5pdS5nYW9iaW56aGFuLmNvbS8yMDIwLzA2LzAzLzczNTFiMzg5NTRhYjkucG5n.png" style="zoom:67%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/04/18/aHR0cHM6Ly9xaW5pdS5nYW9iaW56aGFuLmNvbS8yMDIwLzA2LzAzLzczNTFiMzg5NTRhYjkucG5n.png" alt="aHR0cHM6Ly9xaW5pdS5nYW9iaW56aGFuLmNvbS8yMDIwLzA2LzAzLzczNTFiMzg5NTRhYjkucG5n.png" style="zoom:67%;" />
 
 <p>全量复制除了上述开销之外，还会有个问题：</p>
 <p>假如 master 和 slave 网络发生了抖动，那一段时间内这些数据就会丢失，对于 slave 来说这段时间master 更新的数据是不知道的。最简单的方式就是再做一次全量复制，从而获取到最新的数据，在redis2.8之前是这么做的。</p>
@@ -1626,7 +1626,7 @@
 <li>从会执行 <code>pysnc</code> 命令，将当前自己的 offset 和主的 runid 传递给 master </li>
 <li>如果发现传输的 offset 偏移量是在 buffer 内的，不在期间内就证明你已经错过了很多数据，buffer也是有限的，默认是 1M，会将 offset 开始到队列结束的数据同步给从。这样 master 和 slave 就达到了一致。</li>
 </ol>
-<img src="https://s1.imagehub.cc/images/2022/04/18/aHR0cHM6Ly9xaW5pdS5nYW9iaW56aGFuLmNvbS8yMDIwLzA2LzA0LzY1YjBlNzYzZjRmZDIucG5n.png" alt="aHR0cHM6Ly9xaW5pdS5nYW9iaW56aGFuLmNvbS8yMDIwLzA2LzA0LzY1YjBlNzYzZjRmZDIucG5n.png" style="zoom:67%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/04/18/aHR0cHM6Ly9xaW5pdS5nYW9iaW56aGFuLmNvbS8yMDIwLzA2LzA0LzY1YjBlNzYzZjRmZDIucG5n.png" alt="aHR0cHM6Ly9xaW5pdS5nYW9iaW56aGFuLmNvbS8yMDIwLzA2LzA0LzY1YjBlNzYzZjRmZDIucG5n.png" style="zoom:67%;" />
 
 <p>通过增量复制有效的降低了全量复制的开销。</p>
 <br/>
@@ -1640,11 +1640,11 @@
 <li>通过发送命令，让 Redis 服务器返回监控其运行状态，包括主服务器和从服务器。</li>
 <li>当哨兵监测到 master 宕机，会自动将 slave 切换成 master，然后通过发布订阅模式通知其他的从服务器，修改配置文件，让它们切换主机。</li>
 </ul>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/33e280b274e04fb2214335b8438991e7.jpg" alt="33e280b274e04fb2214335b8438991e7.jpg"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/33e280b274e04fb2214335b8438991e7.jpg" alt="33e280b274e04fb2214335b8438991e7.jpg"></p>
 <p>然而一个哨兵进程对 Redis 服务器进行监控可能会出现问题，为此我们可以使用多个哨兵进行监控。各个哨兵之间还会进行监控，这样就形成了多哨兵模式。</p>
 <p>故障切换(failover)的过程：假设主服务器宕机，哨兵1先检测到这个结果，系统并不会马上进行 failover 过程，仅仅是哨兵1主观的认为主服务器不可用，这个现象成为主观下线。当后面的哨兵也检测到主服务器不可用，并且数量达到一定值时，那么哨兵之间就会进行一次投票，投票的结果由一个哨兵发起，进行failover 操作。切换成功后，就会通过发布订阅模式，让各个哨兵把自己监控的从服务器实现切换主机，这个过程称为客观下线。这样对于客户端而言，一切都是透明的。</p>
 <p>如果有三个哨兵，不仅每个哨兵会监视主机和从机，而且哨兵之间也会互相监视，如下图：</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418185141.png" alt="QQ20220418185141.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418185141.png" alt="QQ20220418185141.png"></p>
 <br/>
 
 <h2 id="开启哨兵模式"><a href="#开启哨兵模式" class="headerlink" title="开启哨兵模式"></a>开启哨兵模式</h2><h3 id="配置文件sentinel-conf"><a href="#配置文件sentinel-conf" class="headerlink" title="配置文件sentinel.conf"></a>配置文件sentinel.conf</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[root@Ssssv myconf]<span class="comment"># vim sentinel.conf</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># sentinel monitor 被监控的服务器的名称 host port 至少几个sentinel判断主机挂了开始开始投票</span></span><br><span class="line">sentinel monitor myredis 127.0.0.1 6379 1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 如果被监控的主机redis服务器有密码的话，还有在sentinel.conf文件中加上认证密码</span></span><br><span class="line"><span class="comment"># sentinel auth-pass 被监控的服务器的名称 password</span></span><br><span class="line">sentinel auth-pass myredis 123456</span><br></pre></td></tr></table></figure>
@@ -1675,7 +1675,7 @@
 <br/>
 
 <h1 id="使用Redis做缓存"><a href="#使用Redis做缓存" class="headerlink" title="使用Redis做缓存"></a>使用Redis做缓存</h1><p>Redis 常用来作为缓存服务器。缓存的好处是减少服务器的压力，数据查询速度快，解决数据响应慢的问题。</p>
-<h2 id="Mybatis二级缓存"><a href="#Mybatis二级缓存" class="headerlink" title="Mybatis二级缓存"></a>Mybatis二级缓存</h2><p>Mybatis 的二级缓存是 Mapper 级别的缓存，能够作用与所有会话。由于 Mybatis 的默认二级缓存只能是单机的，如果存在多台服务器访问同一个数据库，二级缓存只会在各自的服务器上生效，而不是多台服务器都能使用同一个二级缓存。<img src="https://s1.imagehub.cc/images/2022/04/18/5afd7713f9a97615dc3a0b1d3bc7db27.png" alt="5afd7713f9a97615dc3a0b1d3bc7db27.png"></p>
+<h2 id="Mybatis二级缓存"><a href="#Mybatis二级缓存" class="headerlink" title="Mybatis二级缓存"></a>Mybatis二级缓存</h2><p>Mybatis 的二级缓存是 Mapper 级别的缓存，能够作用与所有会话。由于 Mybatis 的默认二级缓存只能是单机的，如果存在多台服务器访问同一个数据库，二级缓存只会在各自的服务器上生效，而不是多台服务器都能使用同一个二级缓存。<img data-src="https://s1.imagehub.cc/images/2022/04/18/5afd7713f9a97615dc3a0b1d3bc7db27.png" alt="5afd7713f9a97615dc3a0b1d3bc7db27.png"></p>
 <p>我们可以将 Redis 作为 Mybatis 的二级缓存，这样就能实现多台服务器使用同一个二级缓存，所有的缓存数据全部存储在 Redis 服务器上。</p>
 <p>实现 Mybatis 提供的 Cache 接口：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 实现Mybatis的Cache接口</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RedisMybatisCache</span> <span class="keyword">implements</span> <span class="title class_">Cache</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> String id;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> RedisTemplate&lt;Object, Object&gt; template;</span><br><span class="line"></span><br><span class="line">   	<span class="comment">// 构造方法必须带一个String类型的参数接收id</span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">RedisMybatisCache</span><span class="params">(String id)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.id = id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">  	<span class="comment">// 初始化时通过配置类传入RedisTemplate</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">setTemplate</span><span class="params">(RedisTemplate&lt;Object, Object&gt; template)</span> &#123;</span><br><span class="line">        RedisMybatisCache.template = template;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">getId</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> id;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">putObject</span><span class="params">(Object o, Object o1)</span> &#123;</span><br><span class="line">      	<span class="comment">// 向Redis数据库中存入数据</span></span><br><span class="line">        template.opsForValue().set(o, o1, <span class="number">60</span>, TimeUnit.SECONDS);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">getObject</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">      	<span class="comment">// 根据Key从Redis数据库中获取值</span></span><br><span class="line">        <span class="keyword">return</span> template.opsForValue().get(o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> Object <span class="title function_">removeObject</span><span class="params">(Object o)</span> &#123;</span><br><span class="line">      	<span class="comment">// 根据Key删除</span></span><br><span class="line">        <span class="keyword">return</span> template.delete(o);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">clear</span><span class="params">()</span> &#123;</span><br><span class="line">      	<span class="comment">// 由于template中没封装清除操作，只能通过connection来执行</span></span><br><span class="line">				template.execute((RedisCallback&lt;Void&gt;) connection -&gt; &#123;</span><br><span class="line">          	<span class="comment">// 通过connection对象执行清空操作</span></span><br><span class="line">            connection.flushDb();</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">getSize</span><span class="params">()</span> &#123;</span><br><span class="line">      	<span class="comment">// 使用connection对象来获取当前的Key数量</span></span><br><span class="line">        <span class="keyword">return</span> template.execute(RedisServerCommands::dbSize).intValue();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1694,7 +1694,7 @@
 
 <h1 id="三大缓存问题"><a href="#三大缓存问题" class="headerlink" title="三大缓存问题"></a>三大缓存问题</h1><p>Redis 经常用于系统中的缓存，这样可以解决目前 IO 设备无法满足互联网应用海量的读写请求的问题。但缓存存在一些潜在的问题。</p>
 <h2 id="缓存穿透"><a href="#缓存穿透" class="headerlink" title="缓存穿透"></a>缓存穿透</h2><h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><p>请求的 key 在缓存及数据库中都不存在。数据库查询不存在，不进行缓存设置，导致每次请求都落地到数据库。如果是恶意的请求，将造成数据库压力过大。如发起 id 为 -1 的数据或者特别大的不存在的数据。有可能是黑客利用漏洞攻击从而去压垮应用的数据库。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418194935.png" alt="QQ20220418194935.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418194935.png" alt="QQ20220418194935.png"></p>
 <br/>
 
 <h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
@@ -1711,7 +1711,7 @@
 <p>而<code>BloomFilter</code>解决这个问题的方案很简单。首先用多个bit位去代替HashMap中的数组，这样的话储存空间就下来了，之后就是对 Key 进行多次哈希，将 Key 哈希后的值所对应的 bit 位置为1。</p>
 <p>当判断一个元素是否存在时，就去判断这个值哈希出来的比特位是否都为1，如果都为1，那么可能存在，也可能不存在（如下图F）。但是如果有一个bit位不为1，那么这个Key就肯定不存在。</p>
 </blockquote>
-<img src="https://s1.imagehub.cc/images/2022/04/18/1614350-20201209082514905-1720451943.png" alt="1614350-20201209082514905-1720451943.png" style="zoom: 80%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/04/18/1614350-20201209082514905-1720451943.png" alt="1614350-20201209082514905-1720451943.png" style="zoom: 80%;" />
 
 <p>注意：<code>BloomFilter</code>并不支持删除操作，只支持添加操作。这一点很容易理解，因为你如果要删除数据，就得将对应的 bit 位置为0，但是这个 Key 对应的 bit 位可能其他的 Key 也对应着。</p>
 <br/>
@@ -1724,7 +1724,7 @@
 <br/>
 
 <h2 id="缓存击穿"><a href="#缓存击穿" class="headerlink" title="缓存击穿"></a>缓存击穿</h2><h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3><p>缓存击穿是指当前热点数据存储到期时，多个线程同时并发访问热点数据。因为缓存刚过期，所有并发请求都会到数据库中查询数据。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418195434.png" alt="QQ20220418195434.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418195434.png" alt="QQ20220418195434.png"></p>
 <br/>
 
 <h3 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h3><ol>
@@ -1743,7 +1743,7 @@
 <li>在大量 Redis 请求失败后，这些请求将会去访问数据库；</li>
 <li>由于应用的设计依赖于数据库和 Redis 服务，很快就会造成服务器集群的雪崩，最终导致整个系统的瘫痪。</li>
 </ol>
-<p><img src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418195601.png" alt="QQ20220418195601.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/18/QQ20220418195601.png" alt="QQ20220418195601.png"></p>
 <br/>
 
 <h3 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h3><ol>

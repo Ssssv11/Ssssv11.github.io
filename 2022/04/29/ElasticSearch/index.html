@@ -356,7 +356,7 @@
 <p>为了增加效率，搜索引擎会把正向索引变为反向索引（倒排索引）即把 “文档 → 单词” 的形式变为 “单词 → 文档” 的形式。</p>
 <p><strong>倒排索引(Inverted Index)</strong></p>
 <p>倒排索引是实现“单词-文档矩阵”的一种具体存储形式，通过倒排索引，可以根据单词快速获取包含这个单词的文档列表。倒排索引主要由两个部分组成：”单词词典”和”倒排文件”。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfaZtI"><img src="https://s1.ax1x.com/2022/04/23/LfaZtI.png" alt="LfaZtI.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfaZtI"><img data-src="https://s1.ax1x.com/2022/04/23/LfaZtI.png" alt="LfaZtI.png"></a></p>
 <p><strong>实例</strong></p>
 <p>比如在文件中有句子：</p>
 <ol>
@@ -430,7 +430,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-Xms512m</span><br><span class="line">-Xmx512m</span><br></pre></td></tr></table></figure>
 
 <p>开启服务 <code>elasticsearch-8.1.3\bin\elasticsearch.bat</code>，进入 localhost:9200 页面出现界面：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfTNP1"><img src="https://s1.ax1x.com/2022/04/23/LfTNP1.png" alt="LfTNP1.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfTNP1"><img data-src="https://s1.ax1x.com/2022/04/23/LfTNP1.png" alt="LfTNP1.png"></a></p>
 <p>代表安装成功。</p>
 <br/>
 
@@ -447,7 +447,7 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Enable security features</span></span><br><span class="line"><span class="attr">xpack.security.enabled:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="attr">xpack.security.enrollment.enabled:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Enable encryption for HTTP API client connections, such as Kibana, Logstash, and Agents</span></span><br><span class="line"><span class="attr">xpack.security.http.ssl:</span></span><br><span class="line">  <span class="attr">enabled:</span> <span class="literal">false</span></span><br><span class="line">  <span class="attr">keystore.path:</span> <span class="string">certs/http.p12</span></span><br><span class="line"><span class="string">...</span></span><br><span class="line"><span class="attr">http:</span> </span><br><span class="line">  <span class="attr">cors:</span> </span><br><span class="line">    <span class="attr">enabled:</span> <span class="literal">true</span></span><br><span class="line">    <span class="attr">allow-origin:</span> <span class="string">&quot;*&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>再开启 elasticsearch 服务后访问 localhost：9100 即可进入可视化界面：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfTLR0"><img src="https://s1.ax1x.com/2022/04/23/LfTLR0.png" alt="LfTLR0.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfTLR0"><img data-src="https://s1.ax1x.com/2022/04/23/LfTLR0.png" alt="LfTLR0.png"></a></p>
 <br/>
 
 <p><strong>kibana</strong></p>
@@ -455,7 +455,7 @@
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">i18n.locale:</span> <span class="string">&quot;zh-CN&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>运行 <code>kibana-8.1.3\bin\kibana.bat</code> 访问 localhost:5601 界面：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Lf7ndH"><img src="https://s1.ax1x.com/2022/04/23/Lf7ndH.png" alt="Lf7ndH.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Lf7ndH"><img data-src="https://s1.ax1x.com/2022/04/23/Lf7ndH.png" alt="Lf7ndH.png"></a></p>
 <br/>
 
 <p><strong>IK</strong></p>
@@ -485,11 +485,11 @@
 
 <h2 id="ES-的结构"><a href="#ES-的结构" class="headerlink" title="ES 的结构"></a>ES 的结构</h2><h3 id="Index-索引"><a href="#Index-索引" class="headerlink" title="Index 索引"></a>Index 索引</h3><p>在 ES 的服务中可以创建多个索引，每一个索引默认被分为 5片，每一个分片都会存在至少一个备份分片。</p>
 <p>备份分片不会帮助检索数据，当 ES 检索压力特别大时才会帮助检索数据。备份的分片必须放在不同的服务器中。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/L77Xss"><img src="https://s1.ax1x.com/2022/04/26/L77Xss.png" alt="L77Xss.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/L77Xss"><img data-src="https://s1.ax1x.com/2022/04/26/L77Xss.png" alt="L77Xss.png"></a></p>
 <br/>
 
 <h3 id="Type-类型"><a href="#Type-类型" class="headerlink" title="Type 类型"></a>Type 类型</h3><p>一个索引下可以创建多个类型。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/L7qMKH"><img src="https://s1.ax1x.com/2022/04/26/L7qMKH.png" alt="L7qMKH.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/L7qMKH"><img data-src="https://s1.ax1x.com/2022/04/26/L7qMKH.png" alt="L7qMKH.png"></a></p>
 <p><strong>注意：</strong></p>
 <ul>
 <li>在 ES 5.x 版本中，一个 Index 下可以创建多个 Type</li>
@@ -499,11 +499,11 @@
 <br>
 
 <h3 id="Doc-文档"><a href="#Doc-文档" class="headerlink" title="Doc 文档"></a>Doc 文档</h3><p>一个类型下可以有多个文档。相当于MySQL表中的多行数据</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/L7LdfK"><img src="https://s1.ax1x.com/2022/04/26/L7LdfK.png" alt="L7LdfK.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/L7LdfK"><img data-src="https://s1.ax1x.com/2022/04/26/L7LdfK.png" alt="L7LdfK.png"></a></p>
 <br/>
 
 <h3 id="Field-属性"><a href="#Field-属性" class="headerlink" title="Field 属性"></a>Field 属性</h3><p>一个文档中可以包含多个属性。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/L7LTmj"><img src="https://s1.ax1x.com/2022/04/26/L7LTmj.png" alt="L7LTmj.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/L7LTmj"><img data-src="https://s1.ax1x.com/2022/04/26/L7LTmj.png" alt="L7LTmj.png"></a></p>
 <br/>
 
 <h1 id="ES-的基本操作"><a href="#ES-的基本操作" class="headerlink" title="ES 的基本操作"></a>ES 的基本操作</h1><h2 id="ES-的-RESTful-风格"><a href="#ES-的-RESTful-风格" class="headerlink" title="ES 的 RESTful 风格"></a>ES 的 RESTful 风格</h2><h3 id="GET-请求"><a href="#GET-请求" class="headerlink" title="GET 请求"></a>GET 请求</h3><ul>
@@ -536,7 +536,7 @@
 <h3 id="查看索引信息"><a href="#查看索引信息" class="headerlink" title="查看索引信息"></a>查看索引信息</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">GET /person</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;person&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;aliases&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;mappings&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;settings&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;index&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;routing&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;allocation&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;include&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">              <span class="attr">&quot;_tier_preference&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;data_content&quot;</span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">          <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;number_of_shards&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;5&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;provided_name&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;person&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;creation_date&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;1650961791806&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;number_of_replicas&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;1&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;uuid&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;8V_k19znTDWyqzPY8phJug&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;version&quot;</span> <span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;created&quot;</span> <span class="punctuation">:</span> <span class="string">&quot;8010399&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>也可以在 Kibana 中进入 Stack Management 中的索引管理来查看：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LHAlp4"><img src="https://s1.ax1x.com/2022/04/26/LHAlp4.png" alt="LHAlp4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LHAlp4"><img data-src="https://s1.ax1x.com/2022/04/26/LHAlp4.png" alt="LHAlp4.png"></a></p>
 <h3 id="删除索引"><a href="#删除索引" class="headerlink" title="删除索引"></a>删除索引</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">DELETE /person</span><br><span class="line"></span><br><span class="line"><span class="comment">// 输出</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;acknowledged&quot;</span> <span class="punctuation">:</span> <span class="keyword">true</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>同样在图形化界面可以很方便的删除索引</p>

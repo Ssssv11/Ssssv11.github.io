@@ -664,7 +664,7 @@
 </li>
 <li><p><strong>阻塞状态</strong></p>
 <p>当线程访问临界区（同步块代码）时，如果没有拿到访问锁，便进入阻塞状态。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/08/54fbb2fb43166d224f4a2ed857721ef7905298227464.png" alt="54fbb2fb43166d224f4a2ed857721ef7905298227464.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/08/54fbb2fb43166d224f4a2ed857721ef7905298227464.png" alt="54fbb2fb43166d224f4a2ed857721ef7905298227464.png"></p>
 <p>在JDK1.5之后，把就绪状态和运行状态合成了一个Runnable状态，可以通过<code>public Thread.State getState()</code>方法获取当前线程的状态。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 源码</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> <span class="title class_">State</span> &#123;</span><br><span class="line">    NEW,</span><br><span class="line">    RUNNABLE,</span><br><span class="line">    BLOCKED,</span><br><span class="line">    WAITING,</span><br><span class="line">    TIMED_WAITING,</span><br><span class="line">    TERMINATED;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -721,7 +721,7 @@
 <br/>
 
 <h2 id="线程池原理"><a href="#线程池原理" class="headerlink" title="线程池原理"></a><strong>线程池原理</strong></h2><p>假如线程池里固定有三个线程，有四个任务。线程池中的三个线程分别完成三个任务，第四个任务则进入等待状态，线程执行完前三个任务后继续执行第四个任务。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/08/54fbb2fb43166d224f4a2ed857721ef790529822746405f6a31b29cfb2c9.png" alt="54fbb2fb43166d224f4a2ed857721ef790529822746405f6a31b29cfb2c9.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/08/54fbb2fb43166d224f4a2ed857721ef790529822746405f6a31b29cfb2c9.png" alt="54fbb2fb43166d224f4a2ed857721ef790529822746405f6a31b29cfb2c9.png"></p>
 <p>将任务提交给线程池，由线程池分配线程、运行任务，并在当前任务结束后<strong>复用线程</strong>。</p>
 <br/>
 
@@ -789,7 +789,7 @@
 <p><strong>异步有多条执行路径</strong>。</p>
 </li>
 </ul>
-<p><img src="https://s1.imagehub.cc/images/2022/03/08/58ee3d6d55fbb2fb4316615e5e1b37a4462309f77664.png" alt="58ee3d6d55fbb2fb4316615e5e1b37a4462309f77664.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/08/58ee3d6d55fbb2fb4316615e5e1b37a4462309f77664.png" alt="58ee3d6d55fbb2fb4316615e5e1b37a4462309f77664.png"></p>
 <br/>
 
 <h1 id="Lock接口"><a href="#Lock接口" class="headerlink" title="Lock接口"></a><strong>Lock接口</strong></h1><hr>
@@ -851,11 +851,11 @@
 <ul>
 <li>Collection体系集合</li>
 </ul>
-<p><img src="https://s1.imagehub.cc/images/2022/03/09/42166d224f4a20a44623198b81038f22720e0cf37a64.png" alt="42166d224f4a20a44623198b81038f22720e0cf37a64.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/09/42166d224f4a20a44623198b81038f22720e0cf37a64.png" alt="42166d224f4a20a44623198b81038f22720e0cf37a64.png"></p>
 <ul>
 <li>Map安全集合体系</li>
 </ul>
-<p><img src="https://s1.imagehub.cc/images/2022/03/09/e1fe9925bc315c6034a8da4d73e1dc1349540923d94a.png" alt="e1fe9925bc315c6034a8da4d73e1dc1349540923d94a.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/09/e1fe9925bc315c6034a8da4d73e1dc1349540923d94a.png" alt="e1fe9925bc315c6034a8da4d73e1dc1349540923d94a.png"></p>
 <p><strong>在多线程中使用线程不安全的集合会出现异常</strong>。在JDK1.5之前，可以使用Collections中的工具类方法。</p>
 <p>Collections工具类中提供了多个可以获得线程安全集合的方法：</p>
 <ul>

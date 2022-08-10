@@ -377,14 +377,14 @@
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ServletConfiguration</span> &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="https://s1.imagehub.cc/images/2022/03/31/80a52ad51c38b106ba043b5a0deef21c.png" alt="80a52ad51c38b106ba043b5a0deef21c.png" style="zoom:67%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/03/31/80a52ad51c38b106ba043b5a0deef21c.png" alt="80a52ad51c38b106ba043b5a0deef21c.png" style="zoom:67%;" />
 
 <br/>
 
 <h1 id="Controller控制器"><a href="#Controller控制器" class="headerlink" title="Controller控制器"></a>Controller控制器</h1><p>使用SpringMVC后，我们不必再为每一个请求地址创建一个Servlet</p>
 <p>SpringMVC使用DispatcherServlet替代Tomcat来提供的默认的静态资源Servlet。</p>
 <p>也就是说，现在所有的请求（除了jsp，因为Tomcat还提供了一个jsp的Servlet）都会经过DispatcherServlet进行处理。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/31/08382cb3f4cb6d11c9c6d820a7b947d9.jpg" alt="08382cb3f4cb6d11c9c6d820a7b947d9.jpg"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/31/08382cb3f4cb6d11c9c6d820a7b947d9.jpg" alt="08382cb3f4cb6d11c9c6d820a7b947d9.jpg"></p>
 <p>我们的请求到达Tomcat服务器之后，会交给当前的Web应用程序进行处理，而SpringMVC使用<code>DispatcherServlet</code>来处理所有的请求，也就是说它被作为一个统一的访问点，所有的请求全部由它来进行调度。</p>
 <p>当一个请求经过<code>DispatcherServlet</code>之后，会进入<code>HandlerMapping</code>，它会将请求映射为<code>HandlerExecutionChain</code>，依次经过<code>HandlerInterceptor</code>(类似于过滤器，但在SpringMVC中使用的是拦截器)，然后再交给<code>HandlerAdapter</code>，根据请求的路径选择合适的控制器进行处理，控制器处理完成之后，会返回一个<code>ModelAndView</code>对象，包括数据模型和视图，通俗的讲就是页面中数据和页面本身（只包含视图名称即可）。</p>
 <p>返回<code>ModelAndView</code>后，会交给<code>ViewResolver</code>（视图解析器）进行处理，视图解析器会对整个视图页面进行解析，SpringMVC自带了一些视图解析器，但是只适用于JSP页面，我们也可以使用Thymeleaf作为视图解析器，这样我们就可以根据给定的视图名称，直接读取HTML编写的页面，解析为一个真正的View。</p>
@@ -654,7 +654,7 @@
 <p>通过在后台与服务器进行少量数据交换，Ajax可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
 <br/>
 
-<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><img src="https://s1.imagehub.cc/images/2022/03/31/QQ20220331193323.png" alt="QQ20220331193323.png" style="zoom:67%;" />
+<h2 id="工作原理"><a href="#工作原理" class="headerlink" title="工作原理"></a>工作原理</h2><img data-src="https://s1.imagehub.cc/images/2022/03/31/QQ20220331193323.png" alt="QQ20220331193323.png" style="zoom:67%;" />
 
 <p>Ajax是基于现有的Internet标准，并且联合使用:</p>
 <ul>
@@ -848,7 +848,7 @@
 
 <h1 id="拦截器"><a href="#拦截器" class="headerlink" title="拦截器"></a>拦截器</h1><p>拦截器可以抽取handler中的冗余功能(类似于web中的过滤器)。</p>
 <p>它在Servlet与RequestMapping之间，相当于DispatcherServlet在将请求交给对应Controller中的方法之前进行拦截处理，它只会拦截所有Controller中定义的请求映射对应的请求（不会拦截静态资源）。</p>
-<img src="https://s1.imagehub.cc/images/2022/03/31/abdfad1f9e130dff34b5b025d41ccae9.jpg" alt="abdfad1f9e130dff34b5b025d41ccae9.jpg" style="zoom:67%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/03/31/abdfad1f9e130dff34b5b025d41ccae9.jpg" alt="abdfad1f9e130dff34b5b025d41ccae9.jpg" style="zoom:67%;" />
 
 <h2 id="定义拦截器"><a href="#定义拦截器" class="headerlink" title="定义拦截器"></a>定义拦截器</h2><p>实现<code>HandlerInterceptor</code>接口：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MyInterceptor</span> <span class="keyword">implements</span> <span class="title class_">HandlerInterceptor</span> &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;preHandle&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">//只有true才继续</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">postHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;postHandle&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">afterCompletion</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)</span> <span class="keyword">throws</span> Exception &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;afterCompletion&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>

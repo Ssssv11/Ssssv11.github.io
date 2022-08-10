@@ -412,7 +412,7 @@
 
 <span id="more"></span>
 
-<h1 id="一个-SQL-如何执行"><a href="#一个-SQL-如何执行" class="headerlink" title="一个 SQL 如何执行"></a>一个 SQL 如何执行</h1><h2 id="MySQL-软件架构"><a href="#MySQL-软件架构" class="headerlink" title="MySQL 软件架构"></a>MySQL 软件架构</h2><p>MySQL Server 架构自顶向下大致可以分<strong>网络连接层</strong>、<strong>服务层</strong>、<strong>存储引擎层</strong>和<strong>系统文件层</strong>。<img src="https://s1.ax1x.com/2022/05/12/OBkxqs.png" alt="OBkxqs.png"></p>
+<h1 id="一个-SQL-如何执行"><a href="#一个-SQL-如何执行" class="headerlink" title="一个 SQL 如何执行"></a>一个 SQL 如何执行</h1><h2 id="MySQL-软件架构"><a href="#MySQL-软件架构" class="headerlink" title="MySQL 软件架构"></a>MySQL 软件架构</h2><p>MySQL Server 架构自顶向下大致可以分<strong>网络连接层</strong>、<strong>服务层</strong>、<strong>存储引擎层</strong>和<strong>系统文件层</strong>。<img data-src="https://s1.ax1x.com/2022/05/12/OBkxqs.png" alt="OBkxqs.png"></p>
 <p>上图中，Connection pool 为连接层，Management Services &amp; Utilities … Caches &amp; Buffers 为 SQL 层，Pluggable Storage Engines 为存储引擎层，File system、Files &amp; Logs 为文件系统层。</p>
 <p>可以看出数据库架构使用了分层架构、管道-过滤器、微核架构。</p>
 <h3 id="客户端（Connectors）"><a href="#客户端（Connectors）" class="headerlink" title="客户端（Connectors）"></a>客户端（Connectors）</h3><p>客户端连接器（Client Connectors）：指各类语言与 MySQL 服务器的交互 API，提供与 MySQL 服务器建立的支持。目前几乎支持所有主流的服务器编程技术，例如常见的 Java、C、Python、.NET 等，它们通过各自的 API 技术与 MySQL 建立连接。</p>
@@ -474,7 +474,7 @@
 <h4 id="断开连接"><a href="#断开连接" class="headerlink" title="断开连接"></a>断开连接</h4><ol>
 <li>客户端 -&gt; 服务端：发送退出命令包</li>
 </ol>
-<h4 id="MySQL-TCP-报文格式"><a href="#MySQL-TCP-报文格式" class="headerlink" title="MySQL TCP 报文格式"></a>MySQL TCP 报文格式</h4><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OBWnFU"><img src="https://s1.ax1x.com/2022/05/12/OBWnFU.png" alt="OBWnFU.png"></a></p>
+<h4 id="MySQL-TCP-报文格式"><a href="#MySQL-TCP-报文格式" class="headerlink" title="MySQL TCP 报文格式"></a>MySQL TCP 报文格式</h4><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OBWnFU"><img data-src="https://s1.ax1x.com/2022/05/12/OBWnFU.png" alt="OBWnFU.png"></a></p>
 <ul>
 <li><p>消息头 Header：3 字节报文长度、1 字节序号</p>
 </li>
@@ -494,7 +494,7 @@
 <h3 id="UNIX-域套接字"><a href="#UNIX-域套接字" class="headerlink" title="UNIX 域套接字"></a>UNIX 域套接字</h3><p>在 UNIX 中建立内部的 Socket，服务端配置 <code>--socket=/tmp/mysql.sock</code>，客户端配置 <code>-S=/tmp/mysql.sock</code></p>
 <br>
 
-<h2 id="SQL-语句执行机制"><a href="#SQL-语句执行机制" class="headerlink" title="SQL 语句执行机制"></a>SQL 语句执行机制</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OBLTBD"><img src="https://s1.ax1x.com/2022/05/12/OBLTBD.png" alt="OBLTBD.png"></a></p>
+<h2 id="SQL-语句执行机制"><a href="#SQL-语句执行机制" class="headerlink" title="SQL 语句执行机制"></a>SQL 语句执行机制</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OBLTBD"><img data-src="https://s1.ax1x.com/2022/05/12/OBLTBD.png" alt="OBLTBD.png"></a></p>
 <p>整体流程描述：</p>
 <ol>
 <li><p>客户端发送查询到服务器。</p>
@@ -635,38 +635,38 @@
 <h3 id="主流索引查找算法"><a href="#主流索引查找算法" class="headerlink" title="主流索引查找算法"></a>主流索引查找算法</h3><ul>
 <li>线性查找 Linear Search</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODF3Pf"><img src="https://s1.ax1x.com/2022/05/13/ODF3Pf.png" alt="ODF3Pf.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODF3Pf"><img data-src="https://s1.ax1x.com/2022/05/13/ODF3Pf.png" alt="ODF3Pf.png"></a></p>
 <p>线性查找的时间复杂度为 O(N)。由于线性查找是从第一个数据开始逐个匹配，因此线性查找的效率比较低。</p>
 <ul>
 <li>二分查找 Binary Search</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODF2L9"><img src="https://s1.ax1x.com/2022/05/13/ODF2L9.png" alt="ODF2L9.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODF2L9"><img data-src="https://s1.ax1x.com/2022/05/13/ODF2L9.png" alt="ODF2L9.png"></a></p>
 <p>二分查找的时间复杂度为 O(logN)。二分查找取出有序数列的中点位置作为比较对象，根据中点位置数据的大小选取一半数据作为新的数列，这样每次可以减少一半数据量。</p>
 <p>但二分查找需要在有序的前提且必须知道数列的中点的位置。实际情况中，表中的数据在磁盘中是随机读写的并不是连续读写的，我们无从得知中点的位置。</p>
 <ul>
 <li>二叉查找树 Binary Search Tree</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODkfXQ"><img src="https://s1.ax1x.com/2022/05/13/ODkfXQ.png" alt="ODkfXQ.png" style="zoom:50%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODkfXQ"><img data-src="https://s1.ax1x.com/2022/05/13/ODkfXQ.png" alt="ODkfXQ.png" style="zoom:50%;" /></a></p>
 <p>二叉查找树的时间复杂度为 O(logN)。二叉查找树与二分查找相似，根据当前结点与被查找的数的大小选取左或右子树。使用了经典的二叉树数据结构，从根节点开始查找。当二分查找树为满树时，查找的效率与二分查找相同，且不会出现找不到中点的情况。</p>
 <p>但考虑下面这种情况：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODAl38"><img src="https://s1.ax1x.com/2022/05/13/ODAl38.png" alt="ODAl38.png" style="zoom:50%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODAl38"><img data-src="https://s1.ax1x.com/2022/05/13/ODAl38.png" alt="ODAl38.png" style="zoom:50%;" /></a></p>
 <p>当数据大小递增时，二分查找树就会退化成线性查找。此时最坏情况的时间复杂度为 O(N)。</p>
 <ul>
 <li>平衡二叉树 AVL Tree</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODA03T"><img src="https://s1.ax1x.com/2022/05/13/ODA03T.png" alt="ODA03T.png" style="zoom:50%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODA03T"><img data-src="https://s1.ax1x.com/2022/05/13/ODA03T.png" alt="ODA03T.png" style="zoom:50%;" /></a></p>
 <p>平衡二叉树的时间复杂度为 O(logN)。在查找时，平衡二叉树与二叉查找树相同。在增删改时，平衡二叉树会通过旋转操作来维护树的平衡，AVL 树可以保证不会退化成线性查找。</p>
 <p>但平衡二叉树一个结点所包含但数据量太少，会造成磁盘空间的浪费且读写效率低。</p>
 <ul>
 <li>B-Tree</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODEyz8"><img src="https://s1.ax1x.com/2022/05/13/ODEyz8.png" alt="ODEyz8.png" style="zoom:67%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODEyz8"><img data-src="https://s1.ax1x.com/2022/05/13/ODEyz8.png" alt="ODEyz8.png" style="zoom:67%;" /></a></p>
 <p>B-树是线性数据结构和树的结合。在节点内部的查找为线性查找，在节点外部的查找为树结果查找。B-树通过多数据结点大大降低了树的高度，且 B-树不需要旋转就可以保证树的平衡。</p>
 <p>但 B-树对于范围查找的效率是非常低的，每次查找都需要从根节点开始一层层查找。</p>
 <ul>
 <li>B+ Tree</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODZYHH"><img src="https://s1.ax1x.com/2022/05/13/ODZYHH.png" alt="ODZYHH.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/ODZYHH"><img data-src="https://s1.ax1x.com/2022/05/13/ODZYHH.png" alt="ODZYHH.png"></a></p>
 <p>B+ 树是由 B 树发展而来的一种数据结构。B+ 树的所有数据均在叶子结点，且这些数据形成了一个线性表。非叶子节点并不存储真正的数据而是作为了索引。</p>
 <p><strong>B+ 树是目前最主流的数据库索引算法</strong>，它由线性表、二叉树、B-树发展而来，集成了线性表、平衡二叉树、B树的优势。</p>
 <p>其他细节可以参考：<span class="exturl" data-url="aHR0cHM6Ly93d3cuY25ibG9ncy5jb20vd3h6aGUvcC85OTUxMzMzLmh0bWw=">https://www.cnblogs.com/wxzhe/p/9951333.html<i class="fa fa-external-link-alt"></i></span></p>
@@ -677,7 +677,7 @@
 <br>
 
 <h3 id="聚簇索引"><a href="#聚簇索引" class="headerlink" title="聚簇索引"></a>聚簇索引</h3><p>InnoDB 存储引擎是索引组织表，即表中的数据按照主键顺序存放。而聚簇索引（Clustered Index）就是按照每张表的<strong>主键</strong>构造一棵 B+ 树，同时<strong>叶子节点中的存放的即为整张表的行记录数据</strong>，<strong>每张表只有一个聚集索引</strong>，也将聚簇索引的叶子节点称为数据页（Page）。聚簇索引的这个特性决定了索引组织表中数据也是索引的一部分。同 B+ 树数据结构一样，每个数据页都通过一个双向链表来连接。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrUdQU"><img src="https://s1.ax1x.com/2022/05/13/OrUdQU.png" alt="OrUdQU.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrUdQU"><img data-src="https://s1.ax1x.com/2022/05/13/OrUdQU.png" alt="OrUdQU.png"></a></p>
 <p>InnoDB 使用 B+ 树实现的聚簇索引与 B+ 树不太相同，每个结点都具有下限指针和上限指针，在叶子结点的上层结点之间还有双向链表结构，结点之内数据条目之间为单向链表。并且非叶子结点中两个数据只有两个指针。</p>
 <p>当需要查询时，会从根节点根据范围找到下一步需要查询的页号，再从该页的下限指针开始继续查询，直到到达叶子结点并查询成功。</p>
 <p><strong>所谓索引即数据，是把数据直接记录在了主索引中。</strong></p>
@@ -691,24 +691,24 @@
 </ol>
 <br>
 
-<h2 id="InnoDB-数据表的存储"><a href="#InnoDB-数据表的存储" class="headerlink" title="InnoDB 数据表的存储"></a>InnoDB 数据表的存储</h2><h3 id="InnoDB-逻辑存储结构"><a href="#InnoDB-逻辑存储结构" class="headerlink" title="InnoDB 逻辑存储结构"></a>InnoDB 逻辑存储结构</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrRYxH"><img src="https://s1.ax1x.com/2022/05/13/OrRYxH.png" alt="OrRYxH.png"></a></p>
+<h2 id="InnoDB-数据表的存储"><a href="#InnoDB-数据表的存储" class="headerlink" title="InnoDB 数据表的存储"></a>InnoDB 数据表的存储</h2><h3 id="InnoDB-逻辑存储结构"><a href="#InnoDB-逻辑存储结构" class="headerlink" title="InnoDB 逻辑存储结构"></a>InnoDB 逻辑存储结构</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrRYxH"><img data-src="https://s1.ax1x.com/2022/05/13/OrRYxH.png" alt="OrRYxH.png"></a></p>
 <h3 id="表空间-TableSpace"><a href="#表空间-TableSpace" class="headerlink" title="表空间(TableSpace)"></a>表空间(TableSpace)</h3><p>表空间指的是数据表在硬盘上的存储空间。InnoDB 提供了两种表空间存储数据的方式，一种是共享表空间，一种是独占表空间。InnoDB 默认会将其所有的表数据存储在一个共享表空间中，即 ibdata1。</p>
 <p>我们可以通过设置 <code>innodb_file_per_table</code> 参数为 1（1 代表独占方式）开启独占表空间模式。开启之后，每个表都有自己独立的表空间物理文件，所有的数据以及索引都会存储在该文件中，这样方便备份以及恢复数据。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrWHtf"><img src="https://s1.ax1x.com/2022/05/13/OrWHtf.png" alt="OrWHtf.png" style="zoom:20%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrWHtf"><img data-src="https://s1.ax1x.com/2022/05/13/OrWHtf.png" alt="OrWHtf.png" style="zoom:20%;" /></a></p>
 <br>
 
 <h3 id="段-Segment"><a href="#段-Segment" class="headerlink" title="段(Segment)"></a>段(Segment)</h3><p>表空间是由各个段组成的，段一般分为数据段、索引段和回滚段等。InnoDB 中，段由存储引擎自动管理。</p>
 <p>这里的索引段则是指的 B+ 树的非叶子节点，数据段则是 B+ 树的叶子节点。而回滚段则指的是回滚数据，事务隔离的 MVCC 利用了回滚段实现了多版本查询数据。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrWsTx"><img src="https://s1.ax1x.com/2022/05/13/OrWsTx.png" alt="OrWsTx.png" style="zoom:25%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrWsTx"><img data-src="https://s1.ax1x.com/2022/05/13/OrWsTx.png" alt="OrWsTx.png" style="zoom:25%;" /></a></p>
 <br>
 
 <h3 id="区-Extent"><a href="#区-Extent" class="headerlink" title="区(Extent)"></a>区(Extent)</h3><p>区是表空间的单元结构，每个区的大小为 1MB。每个页的大小默认为 16KB，一个区中有 64 个页。为了保证页的<strong>连续性</strong>，InnoDB 存储引擎每次从磁盘申请 4-5 个区。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Orfzxe"><img src="https://s1.ax1x.com/2022/05/13/Orfzxe.png" alt="Orfzxe.png" style="zoom:25%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Orfzxe"><img data-src="https://s1.ax1x.com/2022/05/13/Orfzxe.png" alt="Orfzxe.png" style="zoom:25%;" /></a></p>
 <p>虽然页在区中是连续的，但页之间的 B+ 树结构是依靠它们之间的指针来构成的。因此物理上连续相邻的页在逻辑上不一定连续相邻。</p>
 <br>
 
 <h3 id="页-Page-x2F-行-Row"><a href="#页-Page-x2F-行-Row" class="headerlink" title="页(Page)&#x2F;行(Row)"></a>页(Page)&#x2F;行(Row)</h3><p>页是组成区的最小单元，默认为 16KB。页也是 InnoDB 存储引擎磁盘管理的最小单元。页的大小充分考虑了机械硬盘和 SSD 的最小单元（512B 和 4KB），确保页的存储效率是最高的。一个数据页就是一个 B+ 树的结点。InnoDB 存储引擎是面向列的（row-oriented），也就是说数据是按行进行存放的，每个页存放的行记录也是有硬性定义的，最多允许存放 16KB&#x2F;2-200 行，即 7992 行记录。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrhyRO"><img src="https://s1.ax1x.com/2022/05/13/OrhyRO.png" alt="OrhyRO.png" style="zoom:25%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrhyRO"><img data-src="https://s1.ax1x.com/2022/05/13/OrhyRO.png" alt="OrhyRO.png" style="zoom:25%;" /></a></p>
 <p>InnoDB 中 的页是自身的逻辑概念，与硬件中的页无关。</p>
 <p>为什么页的大小不为 16MB 或 16B ？</p>
 <p>由于页是磁盘管理的最小单元，因此16MB 的页会大大增加磁盘读写的压力，而且 16MB 的页即 16MB 的链表，在这样大的页中线性查找的效率太低。</p>
@@ -729,9 +729,9 @@
 </ul>
 <br>
 
-<h3 id="行溢出数据"><a href="#行溢出数据" class="headerlink" title="行溢出数据"></a>行溢出数据</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrHR91"><img src="https://s1.ax1x.com/2022/05/13/OrHR91.png" alt="OrHR91.png" style="zoom:25%;" /></a></p>
+<h3 id="行溢出数据"><a href="#行溢出数据" class="headerlink" title="行溢出数据"></a>行溢出数据</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrHR91"><img data-src="https://s1.ax1x.com/2022/05/13/OrHR91.png" alt="OrHR91.png" style="zoom:25%;" /></a></p>
 <p>由于 InnoDB 每个数据页容量有限，导致数据字段也是有限的。而在当数据段过大时，InnoDB 会使用行溢出机制，它会将超长的字段放入单独开辟的数据页中。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrbEvV"><img src="https://s1.ax1x.com/2022/05/13/OrbEvV.png" alt="OrbEvV.png" style="zoom:25%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrbEvV"><img data-src="https://s1.ax1x.com/2022/05/13/OrbEvV.png" alt="OrbEvV.png" style="zoom:25%;" /></a></p>
 <p>在一个数据行中当一个数据段过大时，就会将超长的字段存入到 BLOB 页中，这样就避免了在一个数据页中页数据量过少导致 B+ 树效率退化的问题。因此在 InnoDB 中采用数据转移的操作来使得页数据量恢复，从而维持 B+ 树硬盘读写的优势。但如果要查询大数据段，只能多一步利用该数据段指向 Blob 页的指针查找到对应的数据，这也是种折中方案。</p>
 <br>
 
@@ -742,7 +742,7 @@
 <li>Dynamic &#x2F; Compressed (Barracuda 文件格式)</li>
 </ul>
 <h4 id="Redundant"><a href="#Redundant" class="headerlink" title="Redundant"></a>Redundant</h4><p>MySQL 5.0 之前的 InnoDB 默认行记录格式，主要物理结构如下：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrbcqS"><img src="https://s1.ax1x.com/2022/05/13/OrbcqS.png" alt="OrbcqS.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrbcqS"><img data-src="https://s1.ax1x.com/2022/05/13/OrbcqS.png" alt="OrbcqS.png"></a></p>
 <p>其中每个字段间没有分割，是连续记录的。</p>
 <ul>
 <li><p>字段偏移列表：记录每个字段的相对位置，按照列的顺序逆序放置</p>
@@ -764,7 +764,7 @@
 <br>
 
 <h4 id="Compact"><a href="#Compact" class="headerlink" title="Compact"></a>Compact</h4><p>MySQL 5.1 默认的行记录格式：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrOvGj"><img src="https://s1.ax1x.com/2022/05/13/OrOvGj.png" alt="OrOvGj.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrOvGj"><img data-src="https://s1.ax1x.com/2022/05/13/OrOvGj.png" alt="OrOvGj.png"></a></p>
 <ul>
 <li>变长字段长度表：记录每个<strong>变长</strong>字段的长度，按照列的顺序逆序放置</li>
 <li>NULL 标志位：指示记录中的 Null 值，每个 bit 代表一个字段</li>
@@ -773,7 +773,7 @@
 <br>
 
 <h4 id="Dynamic"><a href="#Dynamic" class="headerlink" title="Dynamic"></a>Dynamic</h4><p>MySQL 5.7 之后默认的行记录格式（最多使用）：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrvqZ6"><img src="https://s1.ax1x.com/2022/05/13/OrvqZ6.png" alt="OrvqZ6.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OrvqZ6"><img data-src="https://s1.ax1x.com/2022/05/13/OrvqZ6.png" alt="OrvqZ6.png"></a></p>
 <p>Dynamic 的结构与 Compact 相同，唯一不同的地方在于在 Dynamic 中数据小于 40 Byte 才算未溢出。当数据大于 40 Byte 就将数据全部存入 BLOB 页中，该处 Col 只存放指向 BLOB 页的指针。</p>
 <br>
 
@@ -786,7 +786,7 @@
 
 <h2 id="索引的“左侧用法”"><a href="#索引的“左侧用法”" class="headerlink" title="索引的“左侧用法”"></a>索引的“左侧用法”</h2><p><strong>带头大哥不能死，中间兄都不能断，索引列上无操作，范围右边全失效，like百分加右边，字符串中有引号</strong></p>
 <h3 id="联合索引"><a href="#联合索引" class="headerlink" title="联合索引"></a>联合索引</h3><p>联合索引指使用两个及以上字段生成的索引。对于联合索引，MySQL 从左到右地使用索引中的字段，一个查询可以只使用索引中的一部份，但只能是最左侧部分。联合索引可以加速“最左前缀”的查询，可以替代最左侧字段的单独索引。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oslk7V"><img src="https://s1.ax1x.com/2022/05/13/Oslk7V.png" alt="Oslk7V.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oslk7V"><img data-src="https://s1.ax1x.com/2022/05/13/Oslk7V.png" alt="Oslk7V.png"></a></p>
 <p>联合索引首先按最左侧字段排序，因此可以替代最左侧字段的单独索引。在联合索引匹配过程中，首先会将联合索引中的第一个索引条件和节点中的第一个索引列进行匹配。如果匹配成功，那么接着匹配第二个索引条件和第二个索引列。依次类推，直到所有的索引条件都完成匹配。</p>
 <br>
 
@@ -883,20 +883,20 @@
 <p>查询以下语句：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> store_id, film_id <span class="keyword">from</span> sakila.`inventory_1` <span class="keyword">where</span> store_id <span class="operator">=</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsLyoF"><img src="https://s1.ax1x.com/2022/05/13/OsLyoF.png" alt="OsLyoF.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsLyoF"><img data-src="https://s1.ax1x.com/2022/05/13/OsLyoF.png" alt="OsLyoF.png"></a></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> store_id, film_id <span class="keyword">from</span> sakila.`inventory` <span class="keyword">where</span> store_id <span class="operator">=</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsLOSA"><img src="https://s1.ax1x.com/2022/05/13/OsLOSA.png" alt="OsLOSA.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsLOSA"><img data-src="https://s1.ax1x.com/2022/05/13/OsLOSA.png" alt="OsLOSA.png"></a></p>
 <p>可以看到，我们复制的删除了外键、联合索引的数据表在查询时并没有走索引(Extra &#x3D; Using where)</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsOsXt"><img src="https://s1.ax1x.com/2022/05/13/OsOsXt.png" alt="OsOsXt.png"></a>而原本的 inventory 数据表由于存在一个组合索引(store_id，film_id)且这个索引以及包含我们查询的 store_id 和 film_id，因此 MySQL 从查询到数据返回就都可以使用这个索引，实现覆盖索引(Extra &#x3D; Using index)：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsOmwT"><img src="https://s1.ax1x.com/2022/05/13/OsOmwT.png" alt="OsOmwT.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsOsXt"><img data-src="https://s1.ax1x.com/2022/05/13/OsOsXt.png" alt="OsOsXt.png"></a>而原本的 inventory 数据表由于存在一个组合索引(store_id，film_id)且这个索引以及包含我们查询的 store_id 和 film_id，因此 MySQL 从查询到数据返回就都可以使用这个索引，实现覆盖索引(Extra &#x3D; Using index)：</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsOmwT"><img data-src="https://s1.ax1x.com/2022/05/13/OsOmwT.png" alt="OsOmwT.png"></a></p>
 <p>查询以下语句：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> inventory_id, store_id, film_id <span class="keyword">from</span> sakila.`inventory` <span class="keyword">where</span> store_id <span class="operator">=</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsXtvn"><img src="https://s1.ax1x.com/2022/05/13/OsXtvn.png" alt="OsXtvn.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsXtvn"><img data-src="https://s1.ax1x.com/2022/05/13/OsXtvn.png" alt="OsXtvn.png"></a></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> inventory_id, store_id, film_id, last_update <span class="keyword">from</span> sakila.`inventory` <span class="keyword">where</span> store_id <span class="operator">=</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsXy8J"><img src="https://s1.ax1x.com/2022/05/13/OsXy8J.png" alt="OsXy8J.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OsXy8J"><img data-src="https://s1.ax1x.com/2022/05/13/OsXy8J.png" alt="OsXy8J.png"></a></p>
 <p>首先这两句 SQL 查询都可以使用联合索引（最左字段）。但第一句走了覆盖索引而不需要回表，这是因为虽然查询到内容比联合索引多了一个字段，但这个字段是主键，本来就存在于联合索引中。因此比联合索引中的字段多一个主键字段就不需要回表而走了覆盖索引。</p>
 <p>对于第二句 SQL，它可以使用联合索引搜索符合条件的记录，但它不仅多了主键字段还多了一条非主键非联合索引中字段的字段，因此它无法覆盖索引而回表。这种情况若多余的字段非必须则应该去掉，这样对查询效率有很大影响。</p>
 <br>
@@ -918,7 +918,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"># 分别使用 city 字段的前 <span class="number">1</span><span class="number">-8</span> 个字符作为前缀索引</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> sakila.city_1 <span class="keyword">add</span> key (city(<span class="number">1</span>));</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> sakila.city_1 <span class="keyword">add</span> key (city(<span class="number">2</span>));</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> sakila.city_1 <span class="keyword">add</span> key (city(<span class="number">3</span>));</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> sakila.city_1 <span class="keyword">add</span> key (city(<span class="number">4</span>));</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> sakila.city_1 <span class="keyword">add</span> key (city(<span class="number">5</span>));</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> sakila.city_1 <span class="keyword">add</span> key (city(<span class="number">6</span>));</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> sakila.city_1 <span class="keyword">add</span> key (city(<span class="number">7</span>));</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> sakila.city_1 <span class="keyword">add</span> key (city(<span class="number">8</span>));</span><br></pre></td></tr></table></figure>
 
 <p>查看各个索引的基数：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Osz8Zq"><img src="https://s1.ax1x.com/2022/05/13/Osz8Zq.png" alt="Osz8Zq.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Osz8Zq"><img data-src="https://s1.ax1x.com/2022/05/13/Osz8Zq.png" alt="Osz8Zq.png"></a></p>
 <p>可以看到当我们使用第一个字符作为前缀索引时的基数为 26，即有 26 种可能的取值。当使用前两个字符作为前缀索引时的基数为 186，这样以城市名进行查询时的粒度更细，扫描所有行的数量更少。在以前五个字符作为前缀索引以后的熟悉明显的变低了(基数增长不大)，因此这里使用前三个或前四个字符作为前缀索引收益较好且占用磁盘少。</p>
 <p>因此 MySQL 会根据 Cardinality 的大小来选择区分度更大的索引。但这个值是估算出来的有可能不准确，因此需要我们强制使用索引。</p>
 <br>
@@ -935,20 +935,20 @@
 <li>Server 层逐个判断结果是否为 NULL，不为 NULL 则加 1</li>
 </ol>
 <p>使用 customer 表测试，查询表中的索引 <code>show index from customer</code>：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy9FsJ"><img src="https://s1.ax1x.com/2022/05/13/Oy9FsJ.png" alt="Oy9FsJ.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy9FsJ"><img data-src="https://s1.ax1x.com/2022/05/13/Oy9FsJ.png" alt="Oy9FsJ.png"></a></p>
 <br>
 
 <h3 id="COUNT-非索引字段"><a href="#COUNT-非索引字段" class="headerlink" title="COUNT(非索引字段)"></a>COUNT(非索引字段)</h3><p>使用 COUNT() 统计非索引字段时，Server 层需要判断每个数据是否为 NULL，而且查询本身无法使用覆盖索引，理论上最慢：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="built_in">count</span>(first_name) <span class="keyword">from</span> sakila.customer;</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyCA1S"><img src="https://s1.ax1x.com/2022/05/13/OyCA1S.png" alt="OyCA1S.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyCA1S"><img data-src="https://s1.ax1x.com/2022/05/13/OyCA1S.png" alt="OyCA1S.png"></a></p>
 <p>可以看到没有任何可能的索引因此使用了全表扫描，首先查询出所有的行，再将所有行中的 first_name 列解析出来，然后交给 Server 层一个一个地判断结果是否为 NULL 来计算行的数量。</p>
 <br>
 
 <h3 id="COUNT-索引字段"><a href="#COUNT-索引字段" class="headerlink" title="COUNT(索引字段)"></a>COUNT(索引字段)</h3><p>使用 COUNT() 统计索引字段时，不需要对行记录进行解析且使用了覆盖索引，但依然需要判断字段是否为 NULL：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="built_in">count</span>(last_name) <span class="keyword">from</span> sakila.customer;</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyCvCV"><img src="https://s1.ax1x.com/2022/05/13/OyCvCV.png" alt="OyCvCV.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyCvCV"><img data-src="https://s1.ax1x.com/2022/05/13/OyCvCV.png" alt="OyCvCV.png"></a></p>
 <p>对于使用 COUNT() 统计主键也是如此，MySQL 并没有对主键的 COUNT() 函数进行优化，就算主键不能为 NULL，查询出的记录也会被送往 Server 层进行非空统计：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="built_in">count</span>(customer_id) <span class="keyword">from</span> sakila.customer;</span><br></pre></td></tr></table></figure>
 
@@ -957,7 +957,7 @@
 <h3 id="COUNT-1"><a href="#COUNT-1" class="headerlink" title="COUNT(1)"></a>COUNT(1)</h3><p>COUNT(1) 只扫描了索引树，没有解析数据行的过程，理论上更快。但 Server 层仍然每次都需要判断 1 是否为 NULL：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explain <span class="keyword">select</span> <span class="built_in">count</span>(<span class="number">1</span>) <span class="keyword">from</span> sakila.customer;</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyPxII"><img src="https://s1.ax1x.com/2022/05/13/OyPxII.png" alt="OyPxII.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyPxII"><img data-src="https://s1.ax1x.com/2022/05/13/OyPxII.png" alt="OyPxII.png"></a></p>
 <br>
 
 <h3 id="COUNT"><a href="#COUNT" class="headerlink" title="COUNT(*)"></a>COUNT(*)</h3><p>COUNT(*) 一般用来返回数据表的行数。在 MyISAM 中的 COUNT(*) 直接返回数据库中记录的数据表行数。但由于 InnoDB 支持事务，导致其数据库中的数据表的行数无法准确的记录而不被记录。但 MySQL 专门优化了 COUNT(*) 函数，使其直接返回索引树中数据的个数。</p>
@@ -996,7 +996,7 @@
 <h3 id="覆盖索引-1"><a href="#覆盖索引-1" class="headerlink" title="覆盖索引"></a>覆盖索引</h3><p>覆盖索引可以跳过生成中间结果集而直接输出查询结果(WHERE 和 ORDER BY 的条件使用同一个索引)。要求 ORDER 字段需要有索引(活在联合索引左侧)；其他相关字段(条件、输出)均在上诉的索引中：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> index <span class="keyword">from</span> film;</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyVHzt"><img src="https://s1.ax1x.com/2022/05/13/OyVHzt.png" alt="OyVHzt.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyVHzt"><img data-src="https://s1.ax1x.com/2022/05/13/OyVHzt.png" alt="OyVHzt.png"></a></p>
 <p>因此对于下面的 SQL 语句就可以使用覆盖索引：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> film_id, title <span class="keyword">from</span> film <span class="keyword">order</span> <span class="keyword">by</span> title;</span><br></pre></td></tr></table></figure>
 
@@ -1013,16 +1013,16 @@
 
 <ol>
 <li><p>创建一个临时表，临时表的字段为 rand、title、description</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy1Vwq"><img src="https://s1.ax1x.com/2022/05/13/Oy1Vwq.png" alt="Oy1Vwq.png" style="zoom: 50%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy1Vwq"><img data-src="https://s1.ax1x.com/2022/05/13/Oy1Vwq.png" alt="Oy1Vwq.png" style="zoom: 50%;" /></a></p>
 </li>
 <li><p>从表中取出一行，调用 RAND() 将结果和数据放入临时表，以此类推</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy1tk6"><img src="https://s1.ax1x.com/2022/05/13/Oy1tk6.png" alt="Oy1tk6.png" style="zoom: 50%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy1tk6"><img data-src="https://s1.ax1x.com/2022/05/13/Oy1tk6.png" alt="Oy1tk6.png" style="zoom: 50%;" /></a></p>
 </li>
 <li><p>针对临时表，将 rand 字段 + 行位置(或主键) 放入 sort_buffer 中</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy1T7q"><img src="https://s1.ax1x.com/2022/05/13/Oy1T7q.png" alt="Oy1T7q.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy1T7q"><img data-src="https://s1.ax1x.com/2022/05/13/Oy1T7q.png" alt="Oy1T7q.png"></a></p>
 </li>
 <li><p>对 sort_buffer 进行排序，取出第一个行位置(或主键)来查询临时表</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy3aEq"><img src="https://s1.ax1x.com/2022/05/13/Oy3aEq.png" alt="Oy3aEq.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy3aEq"><img data-src="https://s1.ax1x.com/2022/05/13/Oy3aEq.png" alt="Oy3aEq.png"></a></p>
 <p>这里 MySQL 进行了优化：若只需要前几个数据，那么只关心前行数据的排序而对之后数据的排序不关心。</p>
 </li>
 </ol>
@@ -1086,27 +1086,27 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> `inventory_2` <span class="keyword">where</span> `store_id` <span class="keyword">in</span> (<span class="number">1</span>,<span class="number">2</span>) <span class="keyword">and</span> `film_id` <span class="operator">=</span> <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
 
 <p>联合索引是主要以第一个字段排序的，当第一个字段相同时才使用第二个字段排序。当我们查询出 <code>store_id in(1, 2) </code> 的数据后会先按照 store_id 排序，然后再按照 film_id 进行排序。但这样排序出来的 film_id 是乱序的，因此无法使用同一条索引将需要的 <code>film_id = 3</code> 的数据查询出来。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyNi4I"><img src="https://s1.ax1x.com/2022/05/13/OyNi4I.png" alt="OyNi4I.png" style="zoom: 33%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyNi4I"><img data-src="https://s1.ax1x.com/2022/05/13/OyNi4I.png" alt="OyNi4I.png" style="zoom: 33%;" /></a></p>
 <p>在没有使用 ICP 时，由于无法使用覆盖索引，因此本次查询需要四次回表才能完成。而在使用 ICP 的情况下，只需要在找到符合条件的记录时回表获取全部信息即可，只需要一次回表。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy0X8A"><img src="https://s1.ax1x.com/2022/05/13/Oy0X8A.png" alt="Oy0X8A.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy0X8A"><img data-src="https://s1.ax1x.com/2022/05/13/Oy0X8A.png" alt="Oy0X8A.png"></a></p>
 <br>
 
 <h3 id="索引跳跃扫描"><a href="#索引跳跃扫描" class="headerlink" title="索引跳跃扫描"></a>索引跳跃扫描</h3><p>当执行下列 SQL 语句时，由于 film_id 不是联合索引的最左字段，因此这条 SQL 无法使用联合索引，需要进行全表扫描：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> `film_id` <span class="keyword">from</span> `inventory_2` <span class="keyword">where</span> `film_id` <span class="operator">=</span> <span class="number">3</span>;</span><br></pre></td></tr></table></figure>
 
 <p>但在 MySQL 8.0.13 开始支持 Index Skip Scan 即索引跳跃扫描。该优化方式支持那些 SQL 在不符合组合索引最左前缀的原则的情况，优化器依然能使用组合索引。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyDDTU"><img src="https://s1.ax1x.com/2022/05/13/OyDDTU.png" alt="OyDDTU.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyDDTU"><img data-src="https://s1.ax1x.com/2022/05/13/OyDDTU.png" alt="OyDDTU.png"></a></p>
 <p>因此索引跳跃扫描可以打破左侧原则，在带头大哥丢了的情况下也不需要进行全表扫描，解决带头大哥丢失的问题。</p>
 <br>
 
 <h2 id="索引失效"><a href="#索引失效" class="headerlink" title="索引失效"></a>索引失效</h2><p>尝试以下 SQL 语句：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> film <span class="keyword">where</span> film_id <span class="operator">+</span> <span class="number">1</span> <span class="operator">=</span> <span class="number">100</span>;</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyrkXq"><img src="https://s1.ax1x.com/2022/05/14/OyrkXq.png" alt="OyrkXq.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyrkXq"><img data-src="https://s1.ax1x.com/2022/05/14/OyrkXq.png" alt="OyrkXq.png"></a></p>
 <p>虽然我们查询的条件为主键，但还是未使用索引。这是因为在 MySQL 中对索引字段做函数操作，优化器会放弃索引。</p>
 <h3 id="时间函数"><a href="#时间函数" class="headerlink" title="时间函数"></a>时间函数</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> `rental` <span class="keyword">where</span> <span class="keyword">month</span>(rental_date) <span class="operator">=</span> <span class="number">5</span>;</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyrJHK"><img src="https://s1.ax1x.com/2022/05/14/OyrJHK.png" alt="OyrJHK.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OyrJHK"><img data-src="https://s1.ax1x.com/2022/05/14/OyrJHK.png" alt="OyrJHK.png"></a></p>
 <p>使用 month() 函数后无法使用索引。一旦使用函数后就会破坏原来索引的顺序而导致无法使用索引。</p>
 <p>可以去掉 month() 函数，使用 between 来优化(很麻烦)：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> `rental` <span class="keyword">where</span> `rental_date` <span class="keyword">between</span> <span class="string">&#x27;2005-5-1&#x27;</span> <span class="keyword">and</span> <span class="string">&#x27;2005-6-1&#x27;</span> <span class="keyword">or</span> `rental_date` <span class="keyword">between</span> <span class="string">&#x27;2006-5-1&#x27;</span> <span class="keyword">and</span> <span class="string">&#x27;2006-6-1&#x27;</span>;</span><br></pre></td></tr></table></figure>
@@ -1131,7 +1131,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> t2.<span class="operator">*</span> <span class="keyword">from</span> t1, t2 <span class="keyword">where</span> t1.f1 <span class="operator">=</span> t2.f1 <span class="keyword">and</span> t1.f2 <span class="operator">=</span> <span class="number">6</span>;</span><br></pre></td></tr></table></figure>
 
 <p>这条 SQL 语句按理首先查询 t1.f2 时能使用索引，然后查询 t2.f1 时也能使用索引。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy6SAK"><img src="https://s1.ax1x.com/2022/05/14/Oy6SAK.png" alt="Oy6SAK.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oy6SAK"><img data-src="https://s1.ax1x.com/2022/05/14/Oy6SAK.png" alt="Oy6SAK.png"></a></p>
 <p>但是我们发现在查询 t2 表时使用的全表扫描而未使用索引。</p>
 <p>仔细观察两个建表语句可以发现，它们使用了两种不同的字符编码。在 MySQL 中，utf8 与 utf8mb4 字段比较时会把 utf8 转换为 utf8mb4 编码。</p>
 <p>因此上面的 SQL 语句相当于：</p>
@@ -1208,7 +1208,7 @@
 
 <h3 id="redo-log-重做日志"><a href="#redo-log-重做日志" class="headerlink" title="redo log 重做日志"></a>redo log 重做日志</h3><p>redo log 是 InnoDB 产生的物理日志，用于记录数据页的变化。当修改数据页时，内存中的数据更新后 redo log 会记录数据页的具体变化，之后再根据 redo log 中记录的变化来将数据写入磁盘中持久化。因此，记录 redo log 即可视为数据已经更新。</p>
 <p>redo log 存放在 4 个 1GB 文件中并且是循环写入的：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O627TI"><img src="https://s1.ax1x.com/2022/05/14/O627TI.png" alt="O627TI.png" style="zoom: 33%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O627TI"><img data-src="https://s1.ax1x.com/2022/05/14/O627TI.png" alt="O627TI.png" style="zoom: 33%;" /></a></p>
 <ul>
 <li>write pos：当前日志写入点</li>
 <li>check point：擦除点，当数据更新到硬盘时擦除</li>
@@ -1226,7 +1226,7 @@
 </ol>
 <br>
 
-<h2 id="一条数据是如何更新的"><a href="#一条数据是如何更新的" class="headerlink" title="一条数据是如何更新的"></a>一条数据是如何更新的</h2><h3 id="数据更新流程"><a href="#数据更新流程" class="headerlink" title="数据更新流程"></a>数据更新流程</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O6fYTA"><img src="https://s1.ax1x.com/2022/05/14/O6fYTA.png" alt="O6fYTA.png"></a></p>
+<h2 id="一条数据是如何更新的"><a href="#一条数据是如何更新的" class="headerlink" title="一条数据是如何更新的"></a>一条数据是如何更新的</h2><h3 id="数据更新流程"><a href="#数据更新流程" class="headerlink" title="数据更新流程"></a>数据更新流程</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O6fYTA"><img data-src="https://s1.ax1x.com/2022/05/14/O6fYTA.png" alt="O6fYTA.png"></a></p>
 <p>比如执行 <code>update T set c=c+1 where ID = 2</code> 语句：</p>
 <ol>
 <li>执行器先找引擎取 ID&#x3D;2 这一行。ID 是主键，引擎直接用树搜索找到这一行。如果 ID&#x3D;2 这一行所在的数据页本来就在内存中，就直接返回给执行器。否则需要先从磁盘将 ID&#x3D;2 这一行所在的数据页读入内存，然后从页中取出行数据。 注意加载缓存的单位是 “page” 而非行。</li>
@@ -1297,7 +1297,7 @@
 </ul>
 <p>只有读锁和读锁之间能够兼容。</p>
 <p>加锁后的数据更新操作：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O6XwUf"><img src="https://s1.ax1x.com/2022/05/14/O6XwUf.png" alt="O6XwUf.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O6XwUf"><img data-src="https://s1.ax1x.com/2022/05/14/O6XwUf.png" alt="O6XwUf.png"></a></p>
 <br>
 
 <h3 id="总结-8"><a href="#总结-8" class="headerlink" title="总结"></a>总结</h3><ul>
@@ -1331,7 +1331,7 @@
 <p>MySQL 的 redo log 实现了事务的持久性。</p>
 <br>
 
-<h2 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcpQUI"><img src="https://s1.ax1x.com/2022/05/14/OcpQUI.png" alt="OcpQUI.png"></a></p>
+<h2 id="事务的隔离级别"><a href="#事务的隔离级别" class="headerlink" title="事务的隔离级别"></a>事务的隔离级别</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcpQUI"><img data-src="https://s1.ax1x.com/2022/05/14/OcpQUI.png" alt="OcpQUI.png"></a></p>
 <h3 id="隔离级别"><a href="#隔离级别" class="headerlink" title="隔离级别"></a>隔离级别</h3><ul>
 <li>读未提交（Read Uncommitted）</li>
 <li>读提交（Read Committed）</li>
@@ -1357,7 +1357,7 @@
 <br>
 
 <h2 id="MVCC-并发版本控制"><a href="#MVCC-并发版本控制" class="headerlink" title="MVCC 并发版本控制"></a>MVCC 并发版本控制</h2><h3 id="行记录的版本控制"><a href="#行记录的版本控制" class="headerlink" title="行记录的版本控制"></a>行记录的版本控制</h3><p>由于 undo log 的存在，MySQL 可以从最新版本推算之前的版本。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oc3LI1"><img src="https://s1.ax1x.com/2022/05/14/Oc3LI1.png" alt="Oc3LI1.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oc3LI1"><img data-src="https://s1.ax1x.com/2022/05/14/Oc3LI1.png" alt="Oc3LI1.png"></a></p>
 <h3 id="快照读（一致性非锁定读）"><a href="#快照读（一致性非锁定读）" class="headerlink" title="快照读（一致性非锁定读）"></a>快照读（一致性非锁定读）</h3><p>一致性的非锁定读是指 InnoDB 存储引擎通过行多版本控制（MVCC）的方式来读取当前数据库中的数据。</p>
 <p>即若待读取的数据正在执行 DELETE 或 UPDATE 操作，那么读取操作不会阻塞等待锁的释放，而是读取该行的一个历史快照。</p>
 <p>当事务需要读取正在被锁定的数据时，不会等待，而是去读取数据的一个历史版本，具体的实现方式是基于行数据的 undo log，undo log 主要用于事务的回滚，读取历史版本的数据无需上锁，因为历史数据是只读的（不会有事务修改历史数据）。</p>
@@ -1392,7 +1392,7 @@
 </ul>
 <br>
 
-<h3 id="MySQL-不同隔离级别的问题"><a href="#MySQL-不同隔离级别的问题" class="headerlink" title="MySQL 不同隔离级别的问题"></a>MySQL 不同隔离级别的问题</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Octets"><img src="https://s1.ax1x.com/2022/05/14/Octets.png" alt="Octets.png" style="zoom: 33%;" /></a></p>
+<h3 id="MySQL-不同隔离级别的问题"><a href="#MySQL-不同隔离级别的问题" class="headerlink" title="MySQL 不同隔离级别的问题"></a>MySQL 不同隔离级别的问题</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Octets"><img data-src="https://s1.ax1x.com/2022/05/14/Octets.png" alt="Octets.png" style="zoom: 33%;" /></a></p>
 <ul>
 <li>读未提交无法解决脏读、不可重复读、幻读问题。</li>
 <li>读提交可以解决脏读问题，不能解决不可重复读、幻读问题。</li>
@@ -1403,8 +1403,8 @@
 
 <h3 id="如何解决幻读问题"><a href="#如何解决幻读问题" class="headerlink" title="如何解决幻读问题"></a>如何解决幻读问题</h3><p>MySQL 在可重复读级别时，通过 Next-Key Lock 部分解决了幻读问题。Next-Key Lock是行锁 + 间隙锁(Gap Lock)。</p>
 <p>间隙锁锁的就是两个值之间的空隙。比如对如下表的数据，会产生三个间隙：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcNRIJ"><img src="https://s1.ax1x.com/2022/05/14/OcNRIJ.png" alt="OcNRIJ.png" style="zoom:33%;" /></a></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcUmQ0"><img src="https://s1.ax1x.com/2022/05/14/OcUmQ0.png" alt="OcUmQ0.png" style="zoom: 25%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcNRIJ"><img data-src="https://s1.ax1x.com/2022/05/14/OcNRIJ.png" alt="OcNRIJ.png" style="zoom:33%;" /></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcUmQ0"><img data-src="https://s1.ax1x.com/2022/05/14/OcUmQ0.png" alt="OcUmQ0.png" style="zoom: 25%;" /></a></p>
 <p>可重复读加锁时，不仅将给行加上了行锁还给行两边的间隙也加上了间隙锁。间隙锁部分读写，它不允许在间隙中修改数据(也可以认为是读锁)。这样在读取数据时其他事务就无法插入数据了，避免了幻读。</p>
 <br>
 
@@ -1413,7 +1413,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">create</span> <span class="keyword">table</span> `t3`(</span><br><span class="line">	`id` <span class="type">INT</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">	`c` <span class="type">INT</span>(<span class="number">11</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span>,</span><br><span class="line">	`d` <span class="type">INT</span>(<span class="number">11</span>) <span class="keyword">DEFAULT</span> <span class="keyword">NULL</span>,</span><br><span class="line">	<span class="keyword">PRIMARY</span> KEY(`id`),</span><br><span class="line">	KEY `c`(`c`)</span><br><span class="line">)ENGINE<span class="operator">=</span>INNODB;</span><br><span class="line"></span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `t3`</span><br><span class="line"><span class="keyword">VALUES</span> (<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>), (<span class="number">10</span>,<span class="number">10</span>,<span class="number">10</span>), (<span class="number">20</span>,<span class="number">20</span>,<span class="number">20</span>), (<span class="number">30</span>,<span class="number">30</span>,<span class="number">30</span>), (<span class="number">40</span>,<span class="number">40</span>,<span class="number">40</span>), (<span class="number">50</span>,<span class="number">50</span>,<span class="number">50</span>);</span><br></pre></td></tr></table></figure>
 
 <p>此时考虑间隙的主键索引：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oc0fvn"><img src="https://s1.ax1x.com/2022/05/14/Oc0fvn.png" alt="Oc0fvn.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oc0fvn"><img data-src="https://s1.ax1x.com/2022/05/14/Oc0fvn.png" alt="Oc0fvn.png"></a></p>
 <h3 id="等值查询间隙锁"><a href="#等值查询间隙锁" class="headerlink" title="等值查询间隙锁"></a>等值查询间隙锁</h3><p>Tx A：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">begin</span>;</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t3 <span class="keyword">where</span> id <span class="operator">=</span> <span class="number">11</span> <span class="keyword">for</span> <span class="keyword">update</span>;</span><br></pre></td></tr></table></figure>
 
@@ -1422,7 +1422,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t3 <span class="keyword">value</span>(<span class="number">12</span>,<span class="number">12</span>,<span class="number">12</span>);</span><br><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t3 <span class="keyword">where</span> id <span class="operator">=</span> <span class="number">20</span> <span class="keyword">for</span> <span class="keyword">update</span>;</span><br></pre></td></tr></table></figure>
 
 <p>可以发现 Tx B 插入数据时会被阻塞，但在 id &#x3D; 20 处不会，主键索引：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcD6pQ"><img src="https://s1.ax1x.com/2022/05/14/OcD6pQ.png" alt="OcD6pQ.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcD6pQ"><img data-src="https://s1.ax1x.com/2022/05/14/OcD6pQ.png" alt="OcD6pQ.png"></a></p>
 <br>
 
 <h3 id="非唯一索引等值锁"><a href="#非唯一索引等值锁" class="headerlink" title="非唯一索引等值锁"></a>非唯一索引等值锁</h3><p>Tx A：</p>
@@ -1433,7 +1433,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t3 <span class="keyword">where</span> id <span class="operator">=</span> <span class="number">20</span> <span class="keyword">for</span> <span class="keyword">update</span>;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t3 <span class="keyword">value</span>(<span class="number">12</span>,<span class="number">12</span>,<span class="number">12</span>);</span><br></pre></td></tr></table></figure>
 
 <p>可以发现可以 Tx B 对 id &#x3D; 20 上写锁，但在插入数据时被阻塞，辅助索引 c：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcsAxJ"><img src="https://s1.ax1x.com/2022/05/14/OcsAxJ.png" alt="OcsAxJ.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcsAxJ"><img data-src="https://s1.ax1x.com/2022/05/14/OcsAxJ.png" alt="OcsAxJ.png"></a></p>
 <br>
 
 <h3 id="主键索引范围锁"><a href="#主键索引范围锁" class="headerlink" title="主键索引范围锁"></a>主键索引范围锁</h3><p>Tx A：</p>
@@ -1444,7 +1444,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> <span class="keyword">from</span> t3 <span class="keyword">where</span> id <span class="operator">=</span> <span class="number">20</span> <span class="keyword">for</span> <span class="keyword">update</span>;</span><br><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> t3 <span class="keyword">value</span>(<span class="number">12</span>,<span class="number">12</span>,<span class="number">12</span>);</span><br></pre></td></tr></table></figure>
 
 <p>可以发现 Tx B 对 id &#x3D; 20 上写锁被阻塞，但可以插入数据，主键索引：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcyQwq"><img src="https://s1.ax1x.com/2022/05/14/OcyQwq.png" alt="OcyQwq.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OcyQwq"><img data-src="https://s1.ax1x.com/2022/05/14/OcyQwq.png" alt="OcyQwq.png"></a></p>
 <br>
 
 <h3 id="非唯一索引范围锁"><a href="#非唯一索引范围锁" class="headerlink" title="非唯一索引范围锁"></a>非唯一索引范围锁</h3><p>Tx A：</p>
@@ -1452,7 +1452,7 @@
 
 <p>首先等值查询 20，不是唯一索引因此锁 (10, 20]，向右扫描到 30，锁 (20, 30]，继续向右扫描，锁 (30, 40)。</p>
 <p>辅助索引 c：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oc4wBF"><img src="https://s1.ax1x.com/2022/05/14/Oc4wBF.png" alt="Oc4wBF.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oc4wBF"><img data-src="https://s1.ax1x.com/2022/05/14/Oc4wBF.png" alt="Oc4wBF.png"></a></p>
 <br>
 
 <h3 id="非索引字段查询"><a href="#非索引字段查询" class="headerlink" title="非索引字段查询"></a>非索引字段查询</h3><p>Tx A：</p>
@@ -1460,7 +1460,7 @@
 
 <p>由于该字段没有索引，因此使用主键索引扫描，锁全表。</p>
 <p>主键索引：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oc56aQ"><img src="https://s1.ax1x.com/2022/05/14/Oc56aQ.png" alt="Oc56aQ.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oc56aQ"><img data-src="https://s1.ax1x.com/2022/05/14/Oc56aQ.png" alt="Oc56aQ.png"></a></p>
 <br>
 
 <h3 id="总结-9"><a href="#总结-9" class="headerlink" title="总结"></a>总结</h3><ul>
@@ -1537,7 +1537,7 @@
 
 <h3 id="MDL-锁导致-MySQL-崩溃"><a href="#MDL-锁导致-MySQL-崩溃" class="headerlink" title="MDL 锁导致 MySQL 崩溃"></a>MDL 锁导致 MySQL 崩溃</h3><p>在事务访问数据时会自动给表加 MDL 读锁，在事务修改元数据时会自动给表加 MDL 写锁。当遇到锁不兼容的时候，申请 MDL 锁的事务会形成一个队列。</p>
 <p>申请 MDL 的等待队列容易出现问题：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OgeTmt"><img src="https://s1.ax1x.com/2022/05/15/OgeTmt.png" alt="OgeTmt.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OgeTmt"><img data-src="https://s1.ax1x.com/2022/05/15/OgeTmt.png" alt="OgeTmt.png"></a></p>
 <p>当 Tx A 申请完 MDL 读锁后，Tx B 此时想要申请 MDL 写锁就会被阻塞后加入等待队列。此时若有 Tx C 和 Tx D 也需要申请 MDL 读锁，虽然 Tx A 的读锁之间不互斥，但由于等待队列中已经有 Tx B 在等待申请 MDL 写锁了，队列中在 Tx B 之后的 Tx C 和 Tx D 也无法获取到 MDL 读锁。</p>
 <p>解决方案：</p>
 <ul>
@@ -1606,7 +1606,7 @@
 <li>Python：Django、SQLALchemy</li>
 <li>GO：GORM</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O2KyQg"><img src="https://s1.ax1x.com/2022/05/15/O2KyQg.png" alt="O2KyQg.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O2KyQg"><img data-src="https://s1.ax1x.com/2022/05/15/O2KyQg.png" alt="O2KyQg.png"></a></p>
 <br>
 
 <h3 id="ORM-框架的意义"><a href="#ORM-框架的意义" class="headerlink" title="ORM 框架的意义"></a>ORM 框架的意义</h3><ul>
@@ -1624,7 +1624,7 @@
 <li>支撑层：事务管理、连接池管理</li>
 <li>连接层：数据库连接驱动</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O2QjxO"><img src="https://s1.ax1x.com/2022/05/15/O2QjxO.png" alt="O2QjxO.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/O2QjxO"><img data-src="https://s1.ax1x.com/2022/05/15/O2QjxO.png" alt="O2QjxO.png"></a></p>
 <p>可以看出 ORM 框架体现了软件架构设计的经典模式，如分层架构、管道-过滤器、微核架构。</p>
 <br>
 
@@ -1920,7 +1920,7 @@
 </ul>
 <br>
 
-<h2 id="复制的原理和类型"><a href="#复制的原理和类型" class="headerlink" title="复制的原理和类型"></a>复制的原理和类型</h2><h3 id="复制的基本原理"><a href="#复制的基本原理" class="headerlink" title="复制的基本原理"></a>复制的基本原理</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWWgBT"><img src="https://s1.ax1x.com/2022/05/16/OWWgBT.png" alt="OWWgBT.png"></a></p>
+<h2 id="复制的原理和类型"><a href="#复制的原理和类型" class="headerlink" title="复制的原理和类型"></a>复制的原理和类型</h2><h3 id="复制的基本原理"><a href="#复制的基本原理" class="headerlink" title="复制的基本原理"></a>复制的基本原理</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWWgBT"><img data-src="https://s1.ax1x.com/2022/05/16/OWWgBT.png" alt="OWWgBT.png"></a></p>
 <p>MySQL 使用 3 个线程来执行复制功能（1 个在主服务器上，另 2 个在从服务器上）。当发出 START SLAVE 时，从服务器创建一个 I&#x2F;O 线程，以连接主服务器并让它发送记录在其二进制日志 Binlog 中的语句。</p>
 <p>主服务器创建一个 dump thread 线程将 Binlog 中的内容读取并发送到从服务器的 I&#x2F;O 线程。从服务器 I&#x2F;O 线程读取主服务器 dump thread 发送的内容并将该数据拷贝到从服务器数据目录中的本地文件中，即中继日志 relay log。</p>
 <p>第 3 个线程是从服务器的 SQL 线程，是从服务器创建用于读取中继日志并执行日志中包含的更新。</p>
@@ -1933,25 +1933,25 @@
 <li>组复制(Group Replication)</li>
 </ul>
 <h3 id="异步复制"><a href="#异步复制" class="headerlink" title="异步复制"></a>异步复制</h3><p>MYSQL 默认的复制方式。主库写入 Binlog 日志后提价完成即可成功返回客户端，无须等待 Binlog 日志传递给从库的过程。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWfXLV"><img src="https://s1.ax1x.com/2022/05/16/OWfXLV.png" alt="OWfXLV.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWfXLV"><img data-src="https://s1.ax1x.com/2022/05/16/OWfXLV.png" alt="OWfXLV.png"></a></p>
 <p>异步复制原理简单，对网络延迟要求较小。但主从库数据有延迟、不能保证日志被传送到了从库，可能会造成数据丢失。</p>
 <br>
 
 <h3 id="半同步复制"><a href="#半同步复制" class="headerlink" title="半同步复制"></a>半同步复制</h3><p>主库写入 Binlog 日志后需要等待从库生成自己的 relay log 后发送 ACK 给主库才能提交。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWhaWj"><img src="https://s1.ax1x.com/2022/05/16/OWhaWj.png" alt="OWhaWj.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWhaWj"><img data-src="https://s1.ax1x.com/2022/05/16/OWhaWj.png" alt="OWhaWj.png"></a></p>
 <p>半同步复制原理简单，可以保证日志被传送到了从库，不易丢失数据。但对网络延迟有一定要求，且若某从库一直未发送 ACK 或 ACK 发送了但网络延迟太高则会导致主库一直等待从库的 ACK 而无法提交。因此可以配置参数 <code>rpl_semi_sync_master_timeout</code> 来调整超时时间，当超时时则会自动退化成异步复制。也可以配置参数 <code>rpl_semi_sync_master_wait_for_slave_count</code> 来指定至少等待到几个从库提交 ACK 主库才可以返回提交。</p>
 <br>
 
 <h3 id="组复制"><a href="#组复制" class="headerlink" title="组复制"></a>组复制</h3><p>组由多个服务器构成，通过传递消息进行交互，通信层保证原子消息传递。组中的每个服务器独立地执行事务，但是所有读写事务只有在得到组的批准后才会提交。只读事务在组内不需要协调，因此立即提交。对于任何读写事务，当事务准备好在始发服务器处提交时，服务器以原子方式广播写入值（更改的行）和对应的写入集（更新的行的唯一标识符），然后将该事务加入全局事务列表。最终所有服务器都以相同的顺序接收并应用相同的事务集，所以它们在组内保持一致。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OW5BZV"><img src="https://s1.ax1x.com/2022/05/16/OW5BZV.png" alt="OW5BZV.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OW5BZV"><img data-src="https://s1.ax1x.com/2022/05/16/OW5BZV.png" alt="OW5BZV.png"></a></p>
 <p>组复制的原理复杂，需要依赖共识算法。虽然组复制实际使用的很少，但它是数据库走向原生分布式的示范。</p>
 <br>
 
 <h2 id="主从复制的配置"><a href="#主从复制的配置" class="headerlink" title="主从复制的配置"></a>主从复制的配置</h2><p>修改 MySQL 主库和从库的配置文件：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-8-13-centos ~]<span class="comment"># vim /etc/my.cnf</span></span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWqnFx"><img src="https://s1.ax1x.com/2022/05/16/OWqnFx.png" alt="OWqnFx.png"></a></p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWqGmd"><img src="https://s1.ax1x.com/2022/05/16/OWqGmd.png" alt="OWqGmd.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWqnFx"><img data-src="https://s1.ax1x.com/2022/05/16/OWqnFx.png" alt="OWqnFx.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWqGmd"><img data-src="https://s1.ax1x.com/2022/05/16/OWqGmd.png" alt="OWqGmd.png"></a></p>
 <p>重启 Mysql：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-8-13-centos ~]<span class="comment"># systemctl restart mysqld</span></span><br></pre></td></tr></table></figure>
 
@@ -1964,7 +1964,7 @@
 <p>配置半同步复制：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-8-13-centos ~]<span class="comment"># vim /etc/my.cnf</span></span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWvcWt"><img src="https://s1.ax1x.com/2022/05/16/OWvcWt.png" alt="OWvcWt.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OWvcWt"><img data-src="https://s1.ax1x.com/2022/05/16/OWvcWt.png" alt="OWvcWt.png"></a></p>
 <br>
 
 <h2 id="更方便地复制"><a href="#更方便地复制" class="headerlink" title="更方便地复制"></a>更方便地复制</h2><p>使用 LOG_FILE + LOG_POS 对于主从复制的配置十分不方便，需要指明 Binlog 的位置即当前 Binlog 写的位置。造成这样的原因就是从库不知道该从哪个 log 开始复制。因此可以为每个事务分配一个唯一 ID。</p>
@@ -2021,7 +2021,7 @@
 <br>
 
 <h3 id="并行复制的思路"><a href="#并行复制的思路" class="headerlink" title="并行复制的思路"></a>并行复制的思路</h3><p>从库的 SQL_Thread 的线程不再重放 relay log，它负责读取并将 relay log 分配给多线程的 worker，让 worker 对分配到的 relay log 进行重放。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfiAC4"><img src="https://s1.ax1x.com/2022/05/16/OfiAC4.png" alt="OfiAC4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfiAC4"><img data-src="https://s1.ax1x.com/2022/05/16/OfiAC4.png" alt="OfiAC4.png"></a></p>
 <p>这样就能解决主从库一个多线程一个单线程的问题。但现在需要解决的是如何进行分配的问题。对于多线程并行重放 relay log 来说，我们不能将相互依赖的语句并行执行，如插入并修改一条数据，若并行执行先执行了修改但此时插入还未执行就会导致产生问题。</p>
 <br>
 
@@ -2036,9 +2036,9 @@
 <li>调用 fsync 持久化到硬盘</li>
 </ol>
 <p>不考虑 redo log 时 Binlog 的并行刷盘：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfE4mR"><img src="https://s1.ax1x.com/2022/05/16/OfE4mR.png" alt="OfE4mR.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfE4mR"><img data-src="https://s1.ax1x.com/2022/05/16/OfE4mR.png" alt="OfE4mR.png"></a></p>
 <p>虽然是并行执行，但其实读写磁盘进行了多次，其实可以只进行一次持久化：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfVkcQ"><img src="https://s1.ax1x.com/2022/05/16/OfVkcQ.png" alt="OfVkcQ.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfVkcQ"><img data-src="https://s1.ax1x.com/2022/05/16/OfVkcQ.png" alt="OfVkcQ.png"></a></p>
 <p>这样，这里的 1、2、3 号就属于一个事务组。对于事务组的配置：</p>
 <ul>
 <li><code>binlog_group_commit_sync_delay</code>：延迟调用 fsync 的微秒数</li>
@@ -2077,11 +2077,11 @@
 <br>
 
 <h2 id="实现最简单的高可用架构"><a href="#实现最简单的高可用架构" class="headerlink" title="实现最简单的高可用架构"></a>实现最简单的高可用架构</h2><h3 id="主-主复制架构"><a href="#主-主复制架构" class="headerlink" title="主-主复制架构"></a>主-主复制架构</h3><p>在主-主复制架构中两个节点均为 Master，同时两个节点又互为 Slave。这样，当一个节点出现故障时无需切换仍能继续正常使用服务。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfMiad"><img src="https://s1.ax1x.com/2022/05/16/OfMiad.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfMiad"><img data-src="https://s1.ax1x.com/2022/05/16/OfMiad.png"></a></p>
 <p>当 MySQL A 出现故障时，只需要关闭 MySQL B 的只读即可：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfM7SP"><img src="https://s1.ax1x.com/2022/05/16/OfM7SP.png" alt="OfM7SP.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfM7SP"><img data-src="https://s1.ax1x.com/2022/05/16/OfM7SP.png" alt="OfM7SP.png"></a></p>
 <p>若 MySQL A 重新上线，也只需要开启 MySQL A 的只读：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfQSWq"><img src="https://s1.ax1x.com/2022/05/16/OfQSWq.png" alt="OfQSWq.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfQSWq"><img data-src="https://s1.ax1x.com/2022/05/16/OfQSWq.png" alt="OfQSWq.png"></a></p>
 <p>在之前主从复制的配置时已经配置了从库复制主库，因此要配置主-主复制架构只需要让主库去复制从库即可：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> change master <span class="keyword">to</span> </span><br><span class="line">		<span class="operator">-</span><span class="operator">&gt;</span> MASTER_HOST<span class="operator">=</span><span class="string">&#x27;43.138.201.82&#x27;</span></span><br><span class="line">		<span class="operator">-</span><span class="operator">&gt;</span> MASTER_USER<span class="operator">=</span><span class="string">&#x27;root&#x27;</span>,</span><br><span class="line">		<span class="operator">-</span><span class="operator">&gt;</span> MASTER_PASSWORD<span class="operator">=</span><span class="string">&#x27;123456&#x27;</span>,</span><br><span class="line">		<span class="operator">-</span><span class="operator">&gt;</span> MASTER_AUTO_POSITION<span class="operator">=</span><span class="number">1</span>;</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">start</span> slave;</span><br></pre></td></tr></table></figure>
 
@@ -2171,11 +2171,11 @@
 </ul>
 <br>
 
-<h3 id="垂直分表"><a href="#垂直分表" class="headerlink" title="垂直分表"></a>垂直分表</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfwoM4"><img src="https://s1.ax1x.com/2022/05/16/OfwoM4.png" alt="OfwoM4.png"></a></p>
+<h3 id="垂直分表"><a href="#垂直分表" class="headerlink" title="垂直分表"></a>垂直分表</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfwoM4"><img data-src="https://s1.ax1x.com/2022/05/16/OfwoM4.png" alt="OfwoM4.png"></a></p>
 <p>一般根据字段的冷热来进行切分，热数据和冷数据分开来存放。</p>
 <br>
 
-<h3 id="水平分表"><a href="#水平分表" class="headerlink" title="水平分表"></a>水平分表</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Of0H1S"><img src="https://s1.ax1x.com/2022/05/16/Of0H1S.png" alt="Of0H1S.png"></a></p>
+<h3 id="水平分表"><a href="#水平分表" class="headerlink" title="水平分表"></a>水平分表</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Of0H1S"><img data-src="https://s1.ax1x.com/2022/05/16/Of0H1S.png" alt="Of0H1S.png"></a></p>
 <br>
 
 <h3 id="分库"><a href="#分库" class="headerlink" title="分库"></a>分库</h3><ul>
@@ -2184,10 +2184,10 @@
 </ul>
 <br>
 
-<h3 id="垂直分库"><a href="#垂直分库" class="headerlink" title="垂直分库"></a>垂直分库</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfByEn"><img src="https://s1.ax1x.com/2022/05/16/OfByEn.png" alt="OfByEn.png"></a></p>
+<h3 id="垂直分库"><a href="#垂直分库" class="headerlink" title="垂直分库"></a>垂直分库</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfByEn"><img data-src="https://s1.ax1x.com/2022/05/16/OfByEn.png" alt="OfByEn.png"></a></p>
 <br>
 
-<h3 id="水平分库"><a href="#水平分库" class="headerlink" title="水平分库"></a>水平分库</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfB5DJ"><img src="https://s1.ax1x.com/2022/05/16/OfB5DJ.png" alt="OfB5DJ.png"></a></p>
+<h3 id="水平分库"><a href="#水平分库" class="headerlink" title="水平分库"></a>水平分库</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfB5DJ"><img data-src="https://s1.ax1x.com/2022/05/16/OfB5DJ.png" alt="OfB5DJ.png"></a></p>
 <br>
 
 <h3 id="分库分表的优劣"><a href="#分库分表的优劣" class="headerlink" title="分库分表的优劣"></a>分库分表的优劣</h3><p><strong>优势</strong></p>
@@ -2220,7 +2220,7 @@
 </ol>
 <br>
 
-<h3 id="DBLE-架构设计"><a href="#DBLE-架构设计" class="headerlink" title="DBLE 架构设计"></a>DBLE 架构设计</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfrztI"><img src="https://s1.ax1x.com/2022/05/16/OfrztI.png" alt="OfrztI.png"></a></p>
+<h3 id="DBLE-架构设计"><a href="#DBLE-架构设计" class="headerlink" title="DBLE 架构设计"></a>DBLE 架构设计</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfrztI"><img data-src="https://s1.ax1x.com/2022/05/16/OfrztI.png" alt="OfrztI.png"></a></p>
 <p>首先外部应用通过 NIO&#x2F;AIO 进行连接操作来到 SQL Parser 层进行解析。SQL Parser 进行判断是否为 Simply Query，如果是则直接继续普通流程；如果不是则进行生产执行计划分为多个 Basic SQL，然后路由下发到 SQL Executer 作为客户端与各个底层 MySQL Sharding 数据库进行连接并执行 SQL，这个后台执行的过程也是通过 NIO&#x2F;AIO 来实现的。底层各个数据库执行完成之后再返回到中间层进行合并、过滤、分组、排序等操作，最终在返回给客户端。</p>
 <br>
 
@@ -2240,7 +2240,7 @@
 <li>database：实际的 database</li>
 </ul>
 <p><strong>DBLE 表拆分图示</strong>：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfgpVg"><img src="https://s1.ax1x.com/2022/05/16/OfgpVg.png" alt="OfgpVg.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfgpVg"><img data-src="https://s1.ax1x.com/2022/05/16/OfgpVg.png" alt="OfgpVg.png"></a></p>
 <br>
 
 <h3 id="DBLE-表的类型"><a href="#DBLE-表的类型" class="headerlink" title="DBLE 表的类型"></a>DBLE 表的类型</h3><ul>
@@ -2250,7 +2250,7 @@
 </ul>
 <br>
 
-<h2 id="安装-DBLE"><a href="#安装-DBLE" class="headerlink" title="安装 DBLE"></a>安装 DBLE</h2><h3 id="DBLE-最简运行环境搭建"><a href="#DBLE-最简运行环境搭建" class="headerlink" title="DBLE 最简运行环境搭建"></a>DBLE 最简运行环境搭建</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Of2uOf"><img src="https://s1.ax1x.com/2022/05/16/Of2uOf.png" alt="Of2uOf.png"></a></p>
+<h2 id="安装-DBLE"><a href="#安装-DBLE" class="headerlink" title="安装 DBLE"></a>安装 DBLE</h2><h3 id="DBLE-最简运行环境搭建"><a href="#DBLE-最简运行环境搭建" class="headerlink" title="DBLE 最简运行环境搭建"></a>DBLE 最简运行环境搭建</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Of2uOf"><img data-src="https://s1.ax1x.com/2022/05/16/Of2uOf.png" alt="Of2uOf.png"></a></p>
 <p>首先需要 Java 运行环境。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@VM-8-13-centos ~]<span class="comment"># yum install java</span></span><br></pre></td></tr></table></figure>
 
@@ -2290,7 +2290,7 @@
 <br>
 
 <h2 id="提高分库分表架构的可靠性"><a href="#提高分库分表架构的可靠性" class="headerlink" title="提高分库分表架构的可靠性"></a>提高分库分表架构的可靠性</h2><h3 id="复制与分库分表架构的结合"><a href="#复制与分库分表架构的结合" class="headerlink" title="复制与分库分表架构的结合"></a>复制与分库分表架构的结合</h3><p>对于分库分表的数据库来说，如果其中有一个数据库宕机出现问题，那么会导致整个数据库数据的丢失，因此可以考虑为每个数据库配置从节点实现主从复制。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfTqjH"><img src="https://s1.ax1x.com/2022/05/16/OfTqjH.png" alt="OfTqjH.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfTqjH"><img data-src="https://s1.ax1x.com/2022/05/16/OfTqjH.png" alt="OfTqjH.png"></a></p>
 <br>
 
 <h3 id="使用-DBLE-进行读写分离"><a href="#使用-DBLE-进行读写分离" class="headerlink" title="使用 DBLE 进行读写分离"></a>使用 DBLE 进行读写分离</h3><p>DBLE 会分析 SQL 语义，然后将写语句发给主节点，将读语句发给从节点。</p>
@@ -2301,7 +2301,7 @@
 <li><code>rwSplitMode=3</code>：读操作尽量在所有从实例中均衡</li>
 </ul>
 <p>此时的架构：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfHudI"><img src="https://s1.ax1x.com/2022/05/16/OfHudI.png" alt="OfHudI.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfHudI"><img data-src="https://s1.ax1x.com/2022/05/16/OfHudI.png" alt="OfHudI.png"></a></p>
 <br>
 
 <h2 id="解决分库分表后性能下降问题"><a href="#解决分库分表后性能下降问题" class="headerlink" title="解决分库分表后性能下降问题"></a>解决分库分表后性能下降问题</h2><h3 id="查询语句中尽量带有拆分字段"><a href="#查询语句中尽量带有拆分字段" class="headerlink" title="查询语句中尽量带有拆分字段"></a>查询语句中尽量带有拆分字段</h3><p>DBLE 是根据拆分字段来判断数据在哪个节点的，若无法判断数据节点则只能遍历全部节点的数据。</p>
@@ -2350,23 +2350,23 @@
 <br>
 
 <h2 id="数据库切换了业务怎么办"><a href="#数据库切换了业务怎么办" class="headerlink" title="数据库切换了业务怎么办"></a>数据库切换了业务怎么办</h2><h3 id="业务切换至新地址"><a href="#业务切换至新地址" class="headerlink" title="业务切换至新地址"></a>业务切换至新地址</h3><p>可以在业务预留接口，通知新的数据库地址；也可以使用微服务框架通知业务。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfXJVH"><img src="https://s1.ax1x.com/2022/05/16/OfXJVH.png" alt="OfXJVH.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfXJVH"><img data-src="https://s1.ax1x.com/2022/05/16/OfXJVH.png" alt="OfXJVH.png"></a></p>
 <br>
 
 <h3 id="使用内部-DNS-通过域名链接"><a href="#使用内部-DNS-通过域名链接" class="headerlink" title="使用内部 DNS 通过域名链接"></a>使用内部 DNS 通过域名链接</h3><p>通过自己搭建的 CoreDNS 解析域名，当切换完数据库后修改 DNS 域名解析即可。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfXTZ4"><img src="https://s1.ax1x.com/2022/05/16/OfXTZ4.png" alt="OfXTZ4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfXTZ4"><img data-src="https://s1.ax1x.com/2022/05/16/OfXTZ4.png" alt="OfXTZ4.png"></a></p>
 <br>
 
 <h3 id="VIP-漂移"><a href="#VIP-漂移" class="headerlink" title="VIP 漂移"></a>VIP 漂移</h3><p>使用 Keepalived 实现自动 VIP 漂移。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfjFJI"><img src="https://s1.ax1x.com/2022/05/16/OfjFJI.png" alt="OfjFJI.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfjFJI"><img data-src="https://s1.ax1x.com/2022/05/16/OfjFJI.png" alt="OfjFJI.png"></a></p>
 <br>
 
 <h3 id="使用代理"><a href="#使用代理" class="headerlink" title="使用代理"></a>使用代理</h3><p>使用 HaProxy 等代理组件将转发地址切换至新库。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfjeOS"><img src="https://s1.ax1x.com/2022/05/16/OfjeOS.png" alt="OfjeOS.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfjeOS"><img data-src="https://s1.ax1x.com/2022/05/16/OfjeOS.png" alt="OfjeOS.png"></a></p>
 <br>
 
 <h3 id="使用-DBLE-时的主从切换"><a href="#使用-DBLE-时的主从切换" class="headerlink" title="使用 DBLE 时的主从切换"></a>使用 DBLE 时的主从切换</h3><p>使用 DBLE 等分库分表中间件将数据分片地址切换至新库。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfjaTJ"><img src="https://s1.ax1x.com/2022/05/16/OfjaTJ.png" alt="OfjaTJ.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfjaTJ"><img data-src="https://s1.ax1x.com/2022/05/16/OfjaTJ.png" alt="OfjaTJ.png"></a></p>
 <br>
 
 <h3 id="总结-15"><a href="#总结-15" class="headerlink" title="总结"></a>总结</h3><ul>
@@ -2380,36 +2380,36 @@
 
 <h2 id="实现自动主从切换"><a href="#实现自动主从切换" class="headerlink" title="实现自动主从切换"></a>实现自动主从切换</h2><h3 id="Keepalived"><a href="#Keepalived" class="headerlink" title="Keepalived"></a>Keepalived</h3><p>Keepalived 是集群管理中保证集群高可用的一个服务软件。它可以监测节点的状态自动执行切换脚本来切换负载。</p>
 <p>可以使用 Keepalived 进行身份切换 + VIP 漂移。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfjFJI"><img src="https://s1.ax1x.com/2022/05/16/OfjFJI.png" alt="OfjFJI.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OfjFJI"><img data-src="https://s1.ax1x.com/2022/05/16/OfjFJI.png" alt="OfjFJI.png"></a></p>
 <br>
 
 <h3 id="MHA-Master-High-Availability"><a href="#MHA-Master-High-Availability" class="headerlink" title="MHA(Master High Availability)"></a>MHA(Master High Availability)</h3><p>MHA是一款成熟且开源的 MySQ L高可用程序，它实现了 MySQL 主从环境下 MASTER 宕机后能够自动进行单次故障转移的功能，其本身由perl语言编写，安装方便使用简单。MHA 支持 GTID 方式，它可以在 Binlog 来不及传送时会尝试登录 A 库传送 Binlog，但 MHA 不能自动漂移 VIP。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ofx5sf"><img src="https://s1.ax1x.com/2022/05/16/Ofx5sf.png" alt="Ofx5sf.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ofx5sf"><img data-src="https://s1.ax1x.com/2022/05/16/Ofx5sf.png" alt="Ofx5sf.png"></a></p>
 <p>当主库宕机后，MHA 会从宕机崩溃的 Master 中抢救还未传送的 Binlog，等待 Slave 执行中继日志追赶 Master，然后在 Slave 执行从 Master 中抢救出的 Binlog，再根据算法提升一个 Slave 成为新的 Master，使用其他 Slave 连接新的 Master 进行复制，同时旧的已宕机主库信息将会从 Manager 项目配置文件中移除。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ofz6XV"><img src="https://s1.ax1x.com/2022/05/16/Ofz6XV.png" alt="Ofz6XV.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ofz6XV"><img data-src="https://s1.ax1x.com/2022/05/16/Ofz6XV.png" alt="Ofz6XV.png"></a></p>
 <p>至此整个 MHA 软件服务结束，Manager 不会再对 Node 进行管理，接下来需要管理员手动对已宕机主库进行排查恢复，并且手动搭建旧主库与新主库之间的主从关系然后重新启动整个 MHA 服务。</p>
 <br>
 
-<h3 id="MHA-与-DBLE-联动"><a href="#MHA-与-DBLE-联动" class="headerlink" title="MHA 与 DBLE 联动"></a>MHA 与 DBLE 联动</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhSm3n"><img src="https://s1.ax1x.com/2022/05/16/OhSm3n.png" alt="OhSm3n.png"></a></p>
+<h3 id="MHA-与-DBLE-联动"><a href="#MHA-与-DBLE-联动" class="headerlink" title="MHA 与 DBLE 联动"></a>MHA 与 DBLE 联动</h3><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhSm3n"><img data-src="https://s1.ax1x.com/2022/05/16/OhSm3n.png" alt="OhSm3n.png"></a></p>
 <br>
 
 <h2 id="实现高可用集群还是会挂"><a href="#实现高可用集群还是会挂" class="headerlink" title="实现高可用集群还是会挂"></a>实现高可用集群还是会挂</h2><h3 id="DRDS-Distributed-Relational-Database-Service"><a href="#DRDS-Distributed-Relational-Database-Service" class="headerlink" title="DRDS(Distributed Relational Database Service)"></a>DRDS(Distributed Relational Database Service)</h3><p>在 MHA 与 DBLE 的架构中仍有单点问题：DBLE。若 DBLE 服务宕机那么也会导致整个服务不可用。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhpYdS"><img src="https://s1.ax1x.com/2022/05/16/OhpYdS.png" alt="OhpYdS.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhpYdS"><img data-src="https://s1.ax1x.com/2022/05/16/OhpYdS.png" alt="OhpYdS.png"></a></p>
 <p>这样我们很容易就能想到可以冗余布置 DBLE 服务：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ohp2i4"><img src="https://s1.ax1x.com/2022/05/16/Ohp2i4.png" alt="Ohp2i4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ohp2i4"><img data-src="https://s1.ax1x.com/2022/05/16/Ohp2i4.png" alt="Ohp2i4.png"></a></p>
 <p>布置多台 DBLE 服务，每个 DBLE 都做相同的配置。但这样布置造成 DBLE 集群之间元数据的同步问题，客户端连接某个 DBLE 进行建表的配置对于其他 DBLE 来说是不可知的，这样就会造成 DBLE 配置不同的问题。为了解决这个问题 DBLE 使用了 Zookeeper：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oh9vh4"><img src="https://s1.ax1x.com/2022/05/16/Oh9vh4.png" alt="Oh9vh4.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Oh9vh4"><img data-src="https://s1.ax1x.com/2022/05/16/Oh9vh4.png" alt="Oh9vh4.png"></a></p>
 <p>Zookeeper 可以保存元数据，在保存数据量不大时 Zookeeper 自己也能做到高可用。这样就不需要 DBLE 如何进行主从复制，当遇到任何与元数据相关的问题都可以从 Zookeeper 中拉取。</p>
 <p>同时还需要考虑的问题是 DBLE 如何进行负载均衡。对于 Client 来说可以进行人为的负载均衡，而对于 MHA Manager 来说它只能配置连接一个 DBLE，当该 DBLE 宕机故障时 MHA Manager 就无法找到其他的 DBLE 服务器了，因此可以为 DBLE 配置 VIP 并使用 Keepalived 实现自动切换的功能：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhPtIO"><img src="https://s1.ax1x.com/2022/05/16/OhPtIO.png" alt="OhPtIO.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhPtIO"><img data-src="https://s1.ax1x.com/2022/05/16/OhPtIO.png" alt="OhPtIO.png"></a></p>
 <p>Client 与 MHA Manager 都能够连接 VIP，当当前连接的 DBLE 宕机时，其他 DBLE 会选择一个优先级高的 DBLE 赋予VIP，这样 Client 与 MHA Manger 就能够在不知不觉中切换了 DBLE。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhP7wV"><img src="https://s1.ax1x.com/2022/05/16/OhP7wV.png" alt="OhP7wV.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhP7wV"><img data-src="https://s1.ax1x.com/2022/05/16/OhP7wV.png" alt="OhP7wV.png"></a></p>
 <p>但对于 Client 来说，若所有的业务都连接同一个 DBLE 会导致 DBLE 负载过大而容易宕机。因此可以考虑使用云服务厂商提供的 SLB 或使用 Haproxy 等负载均衡服务：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ohi0tU"><img src="https://s1.ax1x.com/2022/05/16/Ohi0tU.png" alt="Ohi0tU.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ohi0tU"><img data-src="https://s1.ax1x.com/2022/05/16/Ohi0tU.png" alt="Ohi0tU.png"></a></p>
 <p>这样就解决了负载均衡的问题。若不使用 SLB 我们还需要解决 Haproxy 等负载均衡服务单点故障的问题，可以通过冗余部署与 Keepalived 结合的方式：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ohiv4S"><img src="https://s1.ax1x.com/2022/05/16/Ohiv4S.png" alt="Ohiv4S.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Ohiv4S"><img data-src="https://s1.ax1x.com/2022/05/16/Ohiv4S.png" alt="Ohiv4S.png"></a></p>
 <p>为了进一步实现三高架构，还可以实现读写分离（粗线写细线读）：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhFlHx"><img src="https://s1.ax1x.com/2022/05/16/OhFlHx.png" alt="OhFlHx.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/OhFlHx"><img data-src="https://s1.ax1x.com/2022/05/16/OhFlHx.png" alt="OhFlHx.png"></a></p>
 <p>这样就达成了我们追求的<strong>高并发、高性能、高可用的分布式 MySQL 集群</strong>。</p>
 <br>
 

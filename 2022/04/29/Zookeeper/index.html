@@ -322,7 +322,7 @@
 
 <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><ul>
 <li><p>分布式协调组件</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfMGkD"><img src="https://s1.ax1x.com/2022/04/23/LfMGkD.png" alt="LfMGkD.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfMGkD"><img data-src="https://s1.ax1x.com/2022/04/23/LfMGkD.png" alt="LfMGkD.png"></a></p>
 </li>
 </ul>
 <p>在分布式系统中，需要有 Zookeeper 作为分布式协调组件，协调分布式系统中的状态。</p>
@@ -333,7 +333,7 @@
 <ul>
 <li>⽆状态化的实现</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfQNUU"><img src="https://s1.ax1x.com/2022/04/23/LfQNUU.png" alt="LfQNUU.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LfQNUU"><img data-src="https://s1.ax1x.com/2022/04/23/LfQNUU.png" alt="LfQNUU.png"></a></p>
 <br/>
 
 <h1 id="搭建-zookeeper-服务器"><a href="#搭建-zookeeper-服务器" class="headerlink" title="搭建 zookeeper 服务器"></a>搭建 zookeeper 服务器</h1><h2 id="安装-zookeeper"><a href="#安装-zookeeper" class="headerlink" title="安装 zookeeper"></a>安装 zookeeper</h2><p>官方网站一键安装解压即可：<span class="exturl" data-url="aHR0cHM6Ly96b29rZWVwZXIuYXBhY2hlLm9yZy9yZWxlYXNlcy5odG1s">https://zookeeper.apache.org/releases.html<i class="fa fa-external-link-alt"></i></span></p>
@@ -363,7 +363,7 @@
 <br>
 
 <h1 id="Zookeeper-内部的数据模型"><a href="#Zookeeper-内部的数据模型" class="headerlink" title="Zookeeper 内部的数据模型"></a>Zookeeper 内部的数据模型</h1><h2 id="zk-保存数据的方式"><a href="#zk-保存数据的方式" class="headerlink" title="zk 保存数据的方式"></a>zk 保存数据的方式</h2><p>zk 中的数据是保存在节点 Znode 上的，多个 Znode 之间构成一颗树的目录结构。 Zookeeper 的数据模型很像数据结构当中的树，也很像文件系统的目录。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXF9Fx"><img src="https://s1.ax1x.com/2022/04/28/LXF9Fx.png" alt="LXF9Fx.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXF9Fx"><img data-src="https://s1.ax1x.com/2022/04/28/LXF9Fx.png" alt="LXF9Fx.png"></a></p>
 <p>树是由节点所组成，Zookeeper 的数据存储也同样是基于节点，这种节点叫做 Znode</p>
 <p>不同于树的节点，Znode 的引用方式是路径引用，类似于文件路径：</p>
 <figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/动物/</span>猫</span><br><span class="line"><span class="regexp">/汽车/</span>奥迪</span><br></pre></td></tr></table></figure>
@@ -392,7 +392,7 @@
 <li>持久序号节点：创建出的节点，根据先后顺序，会在节点之后带上一个数值，越后执行数值越大，适用于分布式锁的应用场景 - 单调递增 </li>
 <li>临时节点：临时节点会在会话结束后自动被删除。通过这个特性，zk 可以实现服务注册与发现的效果。</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXELNR"><img src="https://s1.ax1x.com/2022/04/28/LXELNR.png" alt="LXELNR.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXELNR"><img data-src="https://s1.ax1x.com/2022/04/28/LXELNR.png" alt="LXELNR.png"></a></p>
 <ul>
 <li>临时序号节点：跟持久序号节点相同，适用于临时的分布式锁。</li>
 <li>Container 节点(3.5.3版本新增)：当容器中没有任何子节点时，该容器节点会被 zk 定期删除(60s)。 </li>
@@ -497,7 +497,7 @@
 </ul>
 </li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXY0d1"><img src="https://s1.ax1x.com/2022/04/28/LXY0d1.png" alt="LXY0d1.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXY0d1"><img data-src="https://s1.ax1x.com/2022/04/28/LXY0d1.png" alt="LXY0d1.png"></a></p>
 <br>
 
 <h3 id="写锁"><a href="#写锁" class="headerlink" title="写锁"></a>写锁</h3><ul>
@@ -512,7 +512,7 @@
 </ul>
 </li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXtw6g"><img src="https://s1.ax1x.com/2022/04/28/LXtw6g.png" alt="LXtw6g.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXtw6g"><img data-src="https://s1.ax1x.com/2022/04/28/LXtw6g.png" alt="LXtw6g.png"></a></p>
 <br>
 
 <h2 id="羊群效应"><a href="#羊群效应" class="headerlink" title="羊群效应"></a>羊群效应</h2><blockquote>
@@ -520,7 +520,7 @@
 </blockquote>
 <p>如果用上诉的上锁方式，那么只要有节点发生变化就会触发其他节点的监听事件，这对 zk 的压力非常大。</p>
 <p>可以调整为链式监听来解决羊群效应问题</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXUNQS"><img src="https://s1.ax1x.com/2022/04/28/LXUNQS.png" alt="LXUNQS.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LXUNQS"><img data-src="https://s1.ax1x.com/2022/04/28/LXUNQS.png" alt="LXUNQS.png"></a></p>
 <p>在链式监听中每个节点只需要监听上一个节点，只关心自己是不是第一个节点、上一个节点是否释放。这样当一个节点发生变化时只会对后一个节点产生影响，减小了 zk 的压力。</p>
 <br>
 
@@ -530,7 +530,7 @@
 <li>客户端调用 <code>get</code> 方法，watch 参数是 true。服务端接到请求，返回节点数据，并 且在对应的哈希表里插入被 Watch 的 Znode 路径，以及 Watcher 列表。</li>
 <li>当被 Watch 的 Znode 已删除，服务端会查找哈希表，找到该 Znode 对应的所有 Watcher，异步通知客户端，并且删除哈希表中对应的 Key-Value。</li>
 </ul>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LX0hjK"><img src="https://s1.ax1x.com/2022/04/28/LX0hjK.png" alt="LX0hjK.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LX0hjK"><img data-src="https://s1.ax1x.com/2022/04/28/LX0hjK.png" alt="LX0hjK.png"></a></p>
 <p>客户端使用了NIO通信模式监听服务端的调用。</p>
 <br>
 
@@ -635,7 +635,7 @@
 <br>
 
 <h1 id="ZAB-协议"><a href="#ZAB-协议" class="headerlink" title="ZAB 协议"></a>ZAB 协议</h1><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>Zookeeper 作为非常重要的分布式协调组件，需要进行集群部署，集群中会以一主多从的形式进行部署。Zookeeper 为了保证数据的一致性，使用了 ZAB(Zookeeper Atomic Broadcast) 协议，这个协议解决了 Zookeeper 的崩溃恢复和主从数据同步的问题。</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Lj9vbn"><img src="https://s1.ax1x.com/2022/04/28/Lj9vbn.png" alt="Lj9vbn.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/Lj9vbn"><img data-src="https://s1.ax1x.com/2022/04/28/Lj9vbn.png" alt="Lj9vbn.png"></a></p>
 <br>
 
 <h2 id="ZAB-协议中的节点状态"><a href="#ZAB-协议中的节点状态" class="headerlink" title="ZAB 协议中的节点状态"></a>ZAB 协议中的节点状态</h2><ul>
@@ -647,7 +647,7 @@
 <br>
 
 <h2 id="集群上线时的-Leader-选举过程"><a href="#集群上线时的-Leader-选举过程" class="headerlink" title="集群上线时的 Leader 选举过程"></a>集群上线时的 Leader 选举过程</h2><p>Zookeeper 集群中的节点在上线时，将会进入到 Looking 状态，也就是选举 Leader 的状态：</p>
-<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LjPxhV"><img src="https://s1.ax1x.com/2022/04/28/LjPxhV.png" alt="LjPxhV.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LjPxhV"><img data-src="https://s1.ax1x.com/2022/04/28/LjPxhV.png" alt="LjPxhV.png"></a></p>
 <blockquote>
 <p>Zookeeper 会给每一个节点分配一个 zxid，当节点中的数据经过变化时 zxid 就会自增，zxid 越大说明数据就越新</p>
 </blockquote>
@@ -663,7 +663,7 @@
 <h2 id="崩溃恢复时的-Leader-选举过程"><a href="#崩溃恢复时的-Leader-选举过程" class="headerlink" title="崩溃恢复时的 Leader 选举过程"></a>崩溃恢复时的 Leader 选举过程</h2><p>Leader 选举完后，Leader 会周期性地不断向 Follower 发送心跳(ping 命令，没有内容的 socket)。当 Leader 崩溃后，Follower 发现 socket 通道已关闭，于是 Follower 开始进入到 Looking 状态，重新执行集群上线时的 Leader 选举过程，此时集群不能对外提供服务。</p>
 <br>
 
-<h2 id="主从服务器之间的数据同步"><a href="#主从服务器之间的数据同步" class="headerlink" title="主从服务器之间的数据同步"></a>主从服务器之间的数据同步</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LjmHjP"><img src="https://s1.ax1x.com/2022/04/28/LjmHjP.png" alt="LjmHjP.png"></a></p>
+<h2 id="主从服务器之间的数据同步"><a href="#主从服务器之间的数据同步" class="headerlink" title="主从服务器之间的数据同步"></a>主从服务器之间的数据同步</h2><p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LjmHjP"><img data-src="https://s1.ax1x.com/2022/04/28/LjmHjP.png" alt="LjmHjP.png"></a></p>
 <p>提出阶段：Leader 生成提议并广播给 Followers，Follower 收到提议后先将事务写到本地事务日志，然后反馈 ACK</p>
 <p>提交阶段：Leader 收到半数以上的 ACK 后，再广播 Commit 消息，同时将事务操作应用到内存中。</p>
 <blockquote>

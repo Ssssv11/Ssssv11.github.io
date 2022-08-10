@@ -520,7 +520,7 @@
 
 <h1 id="Shiro"><a href="#Shiro" class="headerlink" title="Shiro"></a>Shiro</h1><h2 id="概述-2"><a href="#概述-2" class="headerlink" title="概述"></a>概述</h2><p>Apache Shiro是Java的一个安全框架。目前，使用Apache Shiro的人越来越多，因为它相当简单，对比Spring Security，可能没有Spring Security做的功能强大，但是在实际工作时可能并不需要那么复杂的东西，所以使用小而简单的Shiro就足够了。</p>
 <p>Shiro可以非常容易的开发出足够好的应用，其不仅可以用在JavaSE环境，也可以用在JavaEE环境。Shiro可以帮助我们完成：认证、授权、加密、会话管理、与Web集成、缓存等。基本功能点如下图所示：</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/11/1cfc27aa2ec7ab7ac.png" alt="1cfc27aa2ec7ab7ac.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/11/1cfc27aa2ec7ab7ac.png" alt="1cfc27aa2ec7ab7ac.png"></p>
 <ul>
 <li><strong>Authentication</strong>：身份认证&#x2F;登录，验证用户是不是拥有相应的身份</li>
 <li><strong>Authorization</strong>：授权，即权限验证，验证某个已认证的用户是否拥有某个权限；即判断用户是否能做事情，常见的如：验证某个用户是否拥有某个角色。或者细粒度的验证某个用户对某个资源是否具有某个权限</li>
@@ -536,7 +536,7 @@
 <p><strong>Shiro 不会去维护用户、维护权限。这些需要我们自己去设计&#x2F;提供，然后通过相应的接口注入给 Shiro。</strong></p>
 <p>接下来分别从外部和内部来看看Shiro的架构，对于一个好的框架，从外部来看应该具有非常简单易于使用的 API，且API契约明确；从内部来看的话，其应该有一个可扩展的架构，即非常容易插入用户自定义实现，因为任何框架都不能满足所有需求。</p>
 <p>首先从应用程序角度的来观察如何使用Shiro完成工作。如下图：</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/11/29b0f97cac7caf6e0.png" alt="29b0f97cac7caf6e0.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/11/29b0f97cac7caf6e0.png" alt="29b0f97cac7caf6e0.png"></p>
 <p>可以看到：应用代码直接交互的对象是Subject，也就是说Shiro的对外API核心就是Subject；其每个 API的含义：</p>
 <p><strong>Subject</strong>：主体，代表了当前 “用户”，这个用户不一定是一个具体的人，与当前应用交互的任何东西都是 Subject，如网络爬虫，机器人等；即一个抽象概念；所有Subject都绑定到SecurityManager，与 Subject的所有交互都会委托给SecurityManager；可以把Subject认为是一个门面；SecurityManager 才是实际的执行者；</p>
 <p><strong>SecurityManager</strong>：安全管理器；即所有与安全有关的操作都会与SecurityManager交互；且它管理着所有Subject；可以看出它是 Shiro 的核心，它负责与后边介绍的其他组件进行交互，你可以把它看成SpringMVC中的DispatcherServlet前端控制器；</p>
@@ -548,7 +548,7 @@
 </ol>
 <p><strong>从以上也可以看出Shiro不提供维护用户&#x2F;权限，而是通过Realm让开发人员自己注入。</strong></p>
 <p>接下来我们来从Shiro内部来看下Shiro的架构，如下图所示：</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/11/3c6c5f44c75a8d9af.png" alt="3c6c5f44c75a8d9af.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/11/3c6c5f44c75a8d9af.png" alt="3c6c5f44c75a8d9af.png"></p>
 <ul>
 <li><strong>Subject</strong>：主体，可以看到主体可以是任何可以与应用交互的”用户”</li>
 <li><strong>SecurityManager</strong>：相当于SpringMVC中的 DispatcherServlet或者Struts2中的 FilterDispatcher，是Shiro的心脏。所有具体的交互都通过SecurityManager进行控制，它管理着所有Subject、且负责进行认证和授权、及会话、缓存的管理</li>

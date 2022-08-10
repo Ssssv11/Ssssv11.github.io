@@ -321,7 +321,7 @@
 <br/>
 
 <h2 id="JDBC核心思想"><a href="#JDBC核心思想" class="headerlink" title="JDBC核心思想"></a>JDBC核心思想</h2><p>Java中定义了访问数据库的接口，可以为多种关系型数据库提供统一的访问方式。由数据库厂商提供驱动实现类(Driver数据库驱动)。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190117.png" alt="QQ20220325190117.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190117.png" alt="QQ20220325190117.png"></p>
 <h2 id="MySQL数据库驱动"><a href="#MySQL数据库驱动" class="headerlink" title="MySQL数据库驱动"></a>MySQL数据库驱动</h2><ul>
 <li><p>mysql-connector-iava-5.1.X适用于5.X版本</p>
 </li>
@@ -530,7 +530,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Username：</span></span><br><span class="line">abc<span class="string">&#x27; OR 1=1;#</span></span><br><span class="line"><span class="string">// Password：</span></span><br><span class="line"><span class="string">1111111</span></span><br></pre></td></tr></table></figure>
 
 <p>则会导致虽然不存在该用户名与密码，但是仍会提示登录成功。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190212.png" alt="QQ20220325190212.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190212.png" alt="QQ20220325190212.png"></p>
 <p>这是因为若将输入的<code>abc&#39; OR 1=1;#</code>与我们的<code>statement</code>语句拼接起来，则会形成以下语句：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> `<span class="keyword">user</span>` <span class="keyword">WHERE</span> `username` <span class="operator">=</span> <span class="string">&#x27;abc&#x27;</span> <span class="keyword">OR</span> <span class="number">1</span><span class="operator">=</span><span class="number">1</span>;# <span class="keyword">AND</span> `password` <span class="operator">=</span> <span class="string">&#x27;password&#x27;</span></span><br></pre></td></tr></table></figure>
 
@@ -572,7 +572,7 @@
 <p>我们需要把传统的JDBC代码进行重构，抽取出通用的JDBC工具类。以后连接任何数据库、释放资源都可以使用这个工具类来实现。</p>
 <br/>
 
-<h2 id="工具类核心思想"><a href="#工具类核心思想" class="headerlink" title="工具类核心思想"></a>工具类核心思想</h2><p><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190224.png" alt="QQ20220325190224.png"></p>
+<h2 id="工具类核心思想"><a href="#工具类核心思想" class="headerlink" title="工具类核心思想"></a>工具类核心思想</h2><p><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190224.png" alt="QQ20220325190224.png"></p>
 <br/>
 
 <h2 id="重用性方案"><a href="#重用性方案" class="headerlink" title="重用性方案"></a>重用性方案</h2><p>封装获取连接、释放资源两个方法</p>
@@ -648,7 +648,7 @@
 </ul>
 <br/>
 
-<h2 id="DAO流程"><a href="#DAO流程" class="headerlink" title="DAO流程"></a>DAO流程</h2><p><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190241.png" alt="QQ20220325190241.png"></p>
+<h2 id="DAO流程"><a href="#DAO流程" class="headerlink" title="DAO流程"></a>DAO流程</h2><p><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190241.png" alt="QQ20220325190241.png"></p>
 <br/>
 
 <h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> person(</span><br><span class="line"> `id` <span class="type">INT</span> <span class="keyword">PRIMARY</span> KEY AUTO_INCREMENT,</span><br><span class="line"> `name` <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line"> `age` <span class="type">INT</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line"> `borndate` <span class="type">DATE</span>,</span><br><span class="line"> `email` <span class="type">VARCHAR</span>(<span class="number">20</span>),</span><br><span class="line"> `address` <span class="type">VARCHAR</span>(<span class="number">20</span>)</span><br><span class="line">)CHARSET<span class="operator">=</span>utf8;</span><br></pre></td></tr></table></figure>
@@ -691,7 +691,7 @@
 <h1 id="Service业务逻辑层"><a href="#Service业务逻辑层" class="headerlink" title="Service业务逻辑层"></a>Service业务逻辑层</h1><h2 id="定义-2"><a href="#定义-2" class="headerlink" title="定义"></a>定义</h2><p>业务，代表用户完成的一个业务功能，可以由一个或多个DAO的调用组成。(软件所提供的某个功能都叫业务)</p>
 <br/>
 
-<h2 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h2><p><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190300.png" alt="QQ20220325190300.png"></p>
+<h2 id="核心思想"><a href="#核心思想" class="headerlink" title="核心思想"></a>核心思想</h2><p><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190300.png" alt="QQ20220325190300.png"></p>
 <br/>
 
 <p>以上一节PersonDao为例，我们添加PersonServiceImpl类实现注册业务：</p>
@@ -703,7 +703,7 @@
 <br/>
 
 <h2 id="开发流程"><a href="#开发流程" class="headerlink" title="开发流程"></a>开发流程</h2><p>模拟转账：</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190342.png" alt="QQ20220325190342.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190342.png" alt="QQ20220325190342.png"></p>
 <br/>
 
 <h3 id="创建数据库-1"><a href="#创建数据库-1" class="headerlink" title="创建数据库"></a>创建数据库</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> account(</span><br><span class="line">	`cardNo` <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">PRIMARY</span> KEY,</span><br><span class="line">	`password` <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">	`name` <span class="type">VARCHAR</span>(<span class="number">20</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">	`balance` <span class="keyword">double</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line">)CHARSET<span class="operator">=</span>utf8;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> account(`cardNo`, `password`, `name`, `balance`)</span><br><span class="line"><span class="keyword">VALUES</span>(<span class="string">&#x27;1001&#x27;</span>, <span class="string">&#x27;123456&#x27;</span>, <span class="string">&#x27;xiaoA&#x27;</span>, <span class="number">10000</span>),</span><br><span class="line">(<span class="string">&#x27;1002&#x27;</span>, <span class="string">&#x27;123456&#x27;</span>, <span class="string">&#x27;xiaoB&#x27;</span>, <span class="number">5000</span>)</span><br></pre></td></tr></table></figure>
@@ -761,7 +761,7 @@
 <br/>
 
 <h3 id="核心流程"><a href="#核心流程" class="headerlink" title="核心流程"></a>核心流程</h3><p>一个线程共享同一个ThreadLocal，在整个流程中任一环节可以存值或取值。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190401.png" alt="QQ20220325190401.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190401.png" alt="QQ20220325190401.png"></p>
 <br/>
 
 <h4 id="参数绑定"><a href="#参数绑定" class="headerlink" title="参数绑定"></a>参数绑定</h4><p>在DBUtils中，将当前connection对象添加到ThreadLocal中。</p>
@@ -828,7 +828,7 @@
 </ol>
 <br/>
 
-<h2 id="三层架构核心流程"><a href="#三层架构核心流程" class="headerlink" title="三层架构核心流程"></a>三层架构核心流程</h2><p><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190432.png" alt="QQ20220325190432.png"></p>
+<h2 id="三层架构核心流程"><a href="#三层架构核心流程" class="headerlink" title="三层架构核心流程"></a>三层架构核心流程</h2><p><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190432.png" alt="QQ20220325190432.png"></p>
 <br/>
 
 <h2 id="三层架构项目搭建"><a href="#三层架构项目搭建" class="headerlink" title="三层架构项目搭建"></a>三层架构项目搭建</h2><p><strong>按开发步骤</strong></p>

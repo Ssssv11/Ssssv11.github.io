@@ -356,7 +356,7 @@
 <h2 id="反向代理"><a href="#反向代理" class="headerlink" title="反向代理"></a>反向代理</h2><p>与一般访问流程相比，使用反向代理后，直接收到请求的服务器是代理服务器，然后将请求转发给内部网络上真正进行处理的服务器，得到的结果返回给客户端。反向代理隐藏了真实的服务器，为服务器收发请求，使真实服务器对客户端不可见。一般在处理跨域请求的时候比较常用。现在基本上所有的大型网站都设置了反向代理。</p>
 <p>比如，去饭店吃饭，可以点川菜、粤菜、江浙菜，饭店也分别有三个菜系的厨师 ，但是你作为顾客不用管哪个厨师给你做的菜，只用点菜即可，小二将你菜单中的菜分配给不同的厨师来具体处理，那么这个小二就是反向代理服务器。</p>
 <p><strong>总结: 一般给客户端做代理的都是正向代理，给服务器做代理的就是反向代理。</strong></p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/21/fbc389c82a0d284ab1389e39e771750621852c06.png942w_1016h_progressive.webp" alt="fbc389c82a0d284ab1389e39e771750621852c06.png942w_1016h_progressive.webp"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/21/fbc389c82a0d284ab1389e39e771750621852c06.png942w_1016h_progressive.webp" alt="fbc389c82a0d284ab1389e39e771750621852c06.png942w_1016h_progressive.webp"></p>
 <br/>
 
 <h2 id="Nginx-实现反向代理"><a href="#Nginx-实现反向代理" class="headerlink" title="Nginx 实现反向代理"></a>Nginx 实现反向代理</h2><p>反向代理是工作中最常用的服务器功能，经常被用来解决跨域问题，</p>
@@ -409,7 +409,7 @@
 <p>这种模式对于早期的系统来说，功能要求不复杂，且并发请求相对较少的情况下还能胜任，成本也低。随着信息数量不断增长，访问量和数据量飞速增长，以及系统业务复杂度持续增加，这种做法已无法满足要求，并发量特别大时，服务器容易崩。</p>
 <p>很明显这是由于服务器性能的瓶颈造成的问题，除了堆机器之外，最重要的做法就是负载均衡。</p>
 <p>请求爆发式增长的情况下，单个机器性能再强劲也无法满足要求了，这个时候集群的概念产生了，单个服务器解决不了的问题，可以使用多个服务器，然后将请求分发到各个服务器上，将负载分发到不同的服务器，这就是负载均衡，核心是「分摊压力」。Nginx 实现负载均衡，一般来说指的是将请求转发给服务器集群。</p>
-<img src="https://s1.imagehub.cc/images/2022/04/21/91dc6c7512c9e11498b524f857a6dc5d04df1817.png942w_311h_progressive.webp" alt="91dc6c7512c9e11498b524f857a6dc5d04df1817.png942w_311h_progressive.webp"  />
+<img data-src="https://s1.imagehub.cc/images/2022/04/21/91dc6c7512c9e11498b524f857a6dc5d04df1817.png942w_311h_progressive.webp" alt="91dc6c7512c9e11498b524f857a6dc5d04df1817.png942w_311h_progressive.webp"  />
 
 <br/>
 
@@ -431,7 +431,7 @@
 <br/>
 
 <h1 id="动静分离"><a href="#动静分离" class="headerlink" title="动静分离"></a>动静分离</h1><p>为了加快网站的解析速度，可以把动态页面和静态页面由不同的服务器来解析，加快解析速度，降低原来单个服务器的压力。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/21/60e275629cfafcda4502a7fe749c0801088afb71.png942w_270h_progressive.webp" alt="60e275629cfafcda4502a7fe749c0801088afb71.png942w_270h_progressive.webp"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/21/60e275629cfafcda4502a7fe749c0801088afb71.png942w_270h_progressive.webp" alt="60e275629cfafcda4502a7fe749c0801088afb71.png942w_270h_progressive.webp"></p>
 <p>一般来说，都需要将动态资源和静态资源分开，由于 Nginx 的高并发和静态资源缓存等特性，经常将静态资源部署在 Nginx 上。如果请求的是静态资源，直接到静态资源目录获取资源，如果是动态资源的请求，则利用反向代理的原理，把请求转发给对应后台应用去处理，从而实现动静分离。</p>
 <p>使用前后端分离后，可以很大程度提升静态资源的访问速度，即使动态服务不可用，静态资源的访问也不会受到影响。 </p>
 <br/>

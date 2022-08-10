@@ -374,7 +374,7 @@
 <td align="left">类</td>
 </tr>
 </tbody></table>
-<p><img src="https://s1.imagehub.cc/images/2022/04/20/srchttp___assets.d2iq.com_production_uploads_posts_attachments_docker-host-5d47dcbc68e7d.pngreferhttp___assets.d2iq.webp" alt="srchttp___assets.d2iq.com_production_uploads_posts_attachments_docker-host-5d47dcbc68e7d.pngreferhttp___assets.d2iq.webp"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/20/srchttp___assets.d2iq.com_production_uploads_posts_attachments_docker-host-5d47dcbc68e7d.pngreferhttp___assets.d2iq.webp" alt="srchttp___assets.d2iq.com_production_uploads_posts_attachments_docker-host-5d47dcbc68e7d.pngreferhttp___assets.d2iq.webp"></p>
 <table>
 <thead>
 <tr>
@@ -521,7 +521,7 @@
 
 <br/>
 
-<p><img src="https://s1.imagehub.cc/images/2022/04/21/QQ20220421155506.png" alt="QQ20220421155506.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/21/QQ20220421155506.png" alt="QQ20220421155506.png"></p>
 <br/>
 
 <h1 id="Docker-镜像讲解"><a href="#Docker-镜像讲解" class="headerlink" title="Docker 镜像讲解"></a>Docker 镜像讲解</h1><h2 id="镜像是什么"><a href="#镜像是什么" class="headerlink" title="镜像是什么"></a>镜像是什么</h2><p>镜像是一种轻量级、可执行的独立软件包，用来打包软件运行环境和基于运行环境开发的软件，它包含 运行某个软件所需的所有内容，包括代码、运行时、库、环境变量和配置文件。</p>
@@ -545,18 +545,18 @@
 <h3 id="理解"><a href="#理解" class="headerlink" title="理解"></a>理解</h3><p>所有的 Docker 镜像都起始于一个基础镜像层，当进行修改或增加新的内容时，就会在当前镜像层之<br>上，创建新的镜像层。</p>
 <p>假如基于 Ubuntu Linux 16.04 创建一个新的镜像，这就是新镜像的第一层；如果在该镜像中添加 Python包，就会在基础镜像层之上创建第二个镜像层；如果继续添加一个安全补丁，就会创建第三个镜像层。</p>
 <p>该镜像当前已经包含 3 个镜像层，如下图所示</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/21/QQ20210719175444.png" alt="QQ20210719175444.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/21/QQ20210719175444.png" alt="QQ20210719175444.png"></p>
 <p>在添加额外的镜像层的同时，镜像始终保持是当前所有镜像的组合，理解这一点非常重要。下图中举了<br>一个简单的例子，每个镜像层包含 3 个文件，而镜像包含了来自两个镜像层的 6 个文件。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/21/QQ20210719175635.png" alt="QQ20210719175635.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/21/QQ20210719175635.png" alt="QQ20210719175635.png"></p>
 <p>上图中的镜像层跟之前图中的略有区别，主要目的是便于展示文件。</p>
 <p>下图中展示了一个稍微复杂的三层镜像，在外部看来整个镜像只有 6 个文件，这是因为最上层中的文件<br>7 是文件 5 的一个更新版本。</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/21/QQ20210719180003.png" alt="QQ20210719180003.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/21/QQ20210719180003.png" alt="QQ20210719180003.png"></p>
 <p>这种情况下，上层镜像层中的文件覆盖了底层镜像层中的文件。这样就使得文件的更新版本作为一个新<br>镜像层添加到镜像当中。</p>
 <p>Docker 通过存储引擎（新版本采用快照机制）的方式来实现镜像层堆栈，并保证多镜像层对外展示为统<br>一的文件系统。</p>
 <p>Linux 上可用的存储引擎有 AUFS、Overlay2、Device Mapper、Btrfs 以及 ZFS。顾名思义，每种存储引擎都基于 Linux 中对应的文件系统或者块设备技术，并且每种存储引擎都有其独有的性能特点。</p>
 <p>Docker 在 Windows 上仅支持 windowsfilter 一种存储引擎，该引擎基于 NTFS 文件系统之上实现了分层和 CoW[1]。</p>
 <p>下图展示了与系统显示相同的三层镜像。所有镜像层堆叠并合并，对外提供统一的视图</p>
-<p><img src="https://s1.imagehub.cc/images/2022/04/21/QQ20210719180119.png" alt="QQ20210719180119.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/04/21/QQ20210719180119.png" alt="QQ20210719180119.png"></p>
 <br>
 
 <h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>Docker 镜像都是只读的，当容器启动时，一个新的可写层被加载到镜像的顶部。这一层就是容器层，容器之下的都叫镜像层。</p>
@@ -757,7 +757,7 @@ ENV FLASK_RUN_HOST 0.0.0.0
 <li><strong>global</strong>：全局服务，服务将部署至集群的每个节点。</li>
 <li>图解：下图中黄色的方块是 replicated 模式的运行情况，灰色方块是 global 模式的运行情况。</li>
 </ul>
-<img src="https://www.runoob.com/wp-content/uploads/2019/11/docker-composex.png" style="zoom:67%;" />
+<img data-src="https://www.runoob.com/wp-content/uploads/2019/11/docker-composex.png" style="zoom:67%;" />
 
 <p><strong>replicas：mode</strong> 为 replicated 时，需要使用此参数配置具体运行的节点数量。</p>
 <p><strong>resources</strong>：配置服务器资源使用的限制，例如上例子，配置 redis 集群运行需要的 cpu 的百分比 和 内存的占用。避免占用资源过高出现异常。</p>

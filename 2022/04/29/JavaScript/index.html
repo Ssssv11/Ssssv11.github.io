@@ -454,14 +454,14 @@
 <h2 id="数组类型"><a href="#数组类型" class="headerlink" title="数组类型"></a>数组类型</h2><p>定义数组：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="string">&quot;a&quot;</span>, <span class="literal">true</span>, <span class="literal">null</span>, &#123;<span class="attr">name</span>:<span class="string">&quot;xiaoA&quot;</span>, <span class="attr">age</span>:<span class="number">20</span>&#125;];</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>; i&lt;a.<span class="property">length</span>; i++)&#123;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(a[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325191136.png" alt="QQ20220325191136.png" style="zoom:67%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325191136.png" alt="QQ20220325191136.png" style="zoom:67%;" />
 
 <p>可以看到JavaScript中的数组中可以存入不同类型的变量，而且当越界时会返回undefined而不是报错。</p>
 <p><strong>并且，数组可以定义长度，如果增大长度，则没有值的位置均为undefined；如果缩小长度，则会丢弃后面的元素。</strong></p>
 <p>还可以为数组任意位置赋值：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="string">&quot;a&quot;</span>, <span class="literal">true</span>];</span><br><span class="line">arr[<span class="number">0</span>] = arr[<span class="number">6</span>] = <span class="number">9</span>;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325191034.png" alt="QQ20220325191034.png"></p>
+<p><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325191034.png" alt="QQ20220325191034.png"></p>
 <ol>
 <li>截取数组</li>
 </ol>
@@ -762,7 +762,7 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/[1-9][0-9]&#123;3&#125;/</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;1999&quot;</span>;</span><br><span class="line"><span class="title function_">alert</span>(reg.<span class="title function_">test</span>(str));</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/C7zvH"><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190846.md.png" alt="QQ20220325190846.md.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/C7zvH"><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190846.md.png" alt="QQ20220325190846.md.png"></a></p>
 <br/>
 
 <ul>
@@ -770,7 +770,7 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/[1-9][0-9]&#123;3&#125;/</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;19999&quot;</span>;</span><br><span class="line"><span class="title function_">alert</span>(str.<span class="title function_">match</span>(reg));</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/C7vxf"><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190851.md.png" alt="QQ20220325190851.md.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/C7vxf"><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190851.md.png" alt="QQ20220325190851.md.png"></a></p>
 <br/>
 
 <ul>
@@ -778,7 +778,7 @@
 </ul>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg = <span class="regexp">/a/igm</span>;</span><br><span class="line"><span class="keyword">var</span> str = <span class="string">&quot;Aabab\ncdeaAfjahij&quot;</span>;</span><br><span class="line"><span class="title function_">alert</span>(str.<span class="title function_">match</span>(reg));</span><br></pre></td></tr></table></figure>
 
-<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/C7kZv"><img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190857.md.png" alt="QQ20220325190857.md.png"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.imagehub.cc/image/C7kZv"><img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190857.md.png" alt="QQ20220325190857.md.png"></a></p>
 <br/>
 
 <h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p><strong>RegExp对象方法</strong>：</p>
@@ -939,7 +939,7 @@
 <br/>
 
 <h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><p>父类的实例作为子类的原型</p>
-<img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190804.png" alt="QQ20220325190804.png" style="zoom:67%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325190804.png" alt="QQ20220325190804.png" style="zoom:67%;" />
 
 <br/>
 
@@ -1069,7 +1069,7 @@
 <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>通过HTML DOM，可以访问JavaScript HTML文档的所有元素。</p>
 <p>当网页被加载时，浏览器会创建页面的<strong>文档对象模型</strong>(Document Object Model) 。</p>
 <p>HTML DOM模型被构造为对象的树:</p>
-<img src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325191234.png" alt="QQ20220325191234.png" style="zoom:67%;" />
+<img data-src="https://s1.imagehub.cc/images/2022/03/25/QQ20220325191234.png" alt="QQ20220325191234.png" style="zoom:67%;" />
 
 <p>通过可编程的对象模型，JavaScript获得了足够的能力来创建动态的HTML。</p>
 <ul>
