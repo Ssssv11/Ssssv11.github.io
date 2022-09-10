@@ -50,8 +50,8 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/12/jgoAOA.png">
 <meta property="og:image" content="https://files.catbox.moe/6eu9q1.png#crop=0&crop=0&crop=1&crop=1&id=YBUqQ&originHeight=1228&originWidth=1468&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
 <meta property="og:image" content="https://files.catbox.moe/dhbbub.png#crop=0&crop=0&crop=1&crop=1&id=YOt8K&originHeight=1234&originWidth=1460&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://files.catbox.moe/po3nwl.png#crop=0&crop=0&crop=1&crop=1&id=oeX9v&originHeight=736&originWidth=1142&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
-<meta property="og:image" content="https://files.catbox.moe/gcezr2.png#crop=0&crop=0&crop=1&crop=1&id=yEZdr&originHeight=768&originWidth=980&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
+<meta property="og:image" content="https://ssssv-1311247406.cos.ap-chengdu.myqcloud.com/blog/image-20220910231048466.png">
+<meta property="og:image" content="https://ssssv-1311247406.cos.ap-chengdu.myqcloud.com/blog/image-20220910230823307.png">
 <meta property="og:image" content="https://s2.loli.net/2022/07/14/Q84MnoJvxsPpeZW.png#crop=0&crop=0&crop=1&crop=1&id=xJBUU&originHeight=648&originWidth=1186&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=shadow&title=">
 <meta property="og:image" content="https://s2.loli.net/2022/07/14/fi5Cq8gJ9banuwZ.png#crop=0&crop=0&crop=1&crop=1&id=QFF7q&originHeight=1020&originWidth=1450&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=shadow&title=">
 <meta property="og:image" content="https://s1.ax1x.com/2022/07/14/jfM4Xt.png#crop=0&crop=0&crop=1&crop=1&id=VIdLS&originHeight=1110&originWidth=1462&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=shadow&title=">
@@ -316,7 +316,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/08/10/v3wwgf.png#crop=0&crop=0&crop=1&crop=1&id=h7igr&originHeight=514&originWidth=1740&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
 <meta property="og:image" content="https://s1.ax1x.com/2022/08/10/v3BZf1.png#crop=0&crop=0&crop=1&crop=1&id=BHykT&originHeight=752&originWidth=1486&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title=">
 <meta property="article:published_time" content="2022-07-06T08:26:01.683Z">
-<meta property="article:modified_time" content="2022-08-22T18:38:24.216Z">
+<meta property="article:modified_time" content="2022-09-10T15:11:00.931Z">
 <meta property="article:author" content="Ssssv11">
 <meta property="article:tag" content="算法">
 <meta name="twitter:card" content="summary">
@@ -571,7 +571,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-08-23 02:38:24" itemprop="dateModified" datetime="2022-08-23T02:38:24+08:00">2022-08-23</time>
+        <time title="Modified: 2022-09-10 23:11:00" itemprop="dateModified" datetime="2022-09-10T23:11:00+08:00">2022-09-10</time>
       </span>
 
   
@@ -1259,11 +1259,13 @@
 
 <p><strong>快速排序是先将一个元素排好序，然后再将剩下的元素排好序。</strong></p>
 <p>快速排序的核心就是 <code>partition</code> 函数， <code>partition</code> 函数的作用是在 <code>nums[lo..hi]</code> 中寻找一个分界点 <code>p</code>，通过交换元素使得 <code>nums[lo..p-1]</code> 都小于等于 <code>nums[p]</code>，且 <code>nums[p+1..hi]</code> 都大于 <code>nums[p]</code>：</p>
-<p><img data-src="https://files.catbox.moe/po3nwl.png#crop=0&crop=0&crop=1&crop=1&id=oeX9v&originHeight=736&originWidth=1142&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<img data-src="https://ssssv-1311247406.cos.ap-chengdu.myqcloud.com/blog/image-20220910231048466.png" alt="image-20220910231048466" style="zoom:50%;" />
+
 <p>通过 <code>partition</code> 就可以将 <code>nums[p]</code> 放在正确的位置。再用同样的方法把 <code>p</code> 左边和右边的子数组进行递归用 <code>partition</code> 把剩下的元素也排好序。</p>
 <p><strong>从二叉树的视角，我们可以把子数组 <code>nums[lo..hi]</code> 理解成二叉树节点上的值，sort 函数理解成二叉树的遍历函数。</strong></p>
 <p>这样，根据每次排序的元素的顺序，快速排序最后形成的二叉树就是一颗二叉搜索树：</p>
-<p><img data-src="https://files.catbox.moe/gcezr2.png#crop=0&crop=0&crop=1&crop=1&id=yEZdr&originHeight=768&originWidth=980&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<img data-src="https://ssssv-1311247406.cos.ap-chengdu.myqcloud.com/blog/image-20220910230823307.png" alt="image-20220910230823307" style="zoom:50%;" />
+
 <p>但这样就需要考虑二叉搜索树不平衡的问题，在极端情况下会退化成链表，导致操作效率大幅降低。为了避免这种情况，需要引入随机性。常见的方式是在进行排序之前对整个数组执行 「洗牌算法」 进行打乱，或者在 <code>partition</code> 函数中随机选择数组元素作为分界点。</p>
 <p>洗牌算法可以参考 <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL1Nzc3N2MTEvQWxnb3JpdGhtTm90ZS9ibG9iL21hc3Rlci9BcnJheS8zODQuJUU2JTg5JTkzJUU0JUI5JUIxJUU2JTk1JUIwJUU3JUJCJTg0LmphdmE=">#384<i class="fa fa-external-link-alt"></i></span></p>
 <p>这样就可以使用代码实现快速排序：</p>
@@ -2994,7 +2996,7 @@
 <li>如果某个节点 A 比它的父节点大，那么 A 不应该做子节点，应该把父节点换下来，自己去做父节点，这就是对 A 的上浮。</li>
 </ol>
 <p>当然，错位的节点 A 可能要上浮（或下沉）很多次，才能到达正确的位置，恢复堆的性质。</p>
-<p>虽然上h和下沉操作是互逆等价的，但是最终我们的操作只会在堆底和堆顶进行，显然堆底的「错位」元素需要上浮，堆顶的「错位」元素需要下沉。</p>
+<p>虽然上浮和下沉操作是互逆等价的，但是最终我们的操作只会在堆底和堆顶进行，显然堆底的「错位」元素需要上浮，堆顶的「错位」元素需要下沉。</p>
 <p>上浮代码实现：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title function_">swim</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    <span class="comment">// 浮到堆顶就不能再上浮</span></span><br><span class="line">    <span class="keyword">while</span>(x &gt; <span class="number">1</span> &amp;&amp; less(parent(x), x)) &#123;</span><br><span class="line">        <span class="comment">// 如果第 x 个元素比上层大</span></span><br><span class="line">        <span class="comment">// 将 x 换上去</span></span><br><span class="line">        swap(parent(x), x);</span><br><span class="line">        x = parent(x);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
