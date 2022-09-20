@@ -33,7 +33,7 @@
 <meta property="og:description" content="MySQL数据库">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2022-04-29T13:41:56.061Z">
-<meta property="article:modified_time" content="2022-04-29T13:42:00.370Z">
+<meta property="article:modified_time" content="2022-09-16T07:54:44.866Z">
 <meta property="article:author" content="Ssssv11">
 <meta property="article:tag" content="Database">
 <meta name="twitter:card" content="summary">
@@ -130,8 +130,8 @@
   <ul class="main-menu menu">
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">25</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">43</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">26</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">44</span></a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
         </a>
@@ -204,14 +204,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">43</span>
+          <span class="site-state-item-count">44</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">25</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">tags</span></a>
       </div>
   </nav>
@@ -279,10 +279,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">Posted on</span>
-      
 
-      <time title="Created: 2022-04-29 21:41:56 / Modified: 21:42:00" itemprop="dateCreated datePublished" datetime="2022-04-29T21:41:56+08:00">2022-04-29</time>
+      <time title="Created: 2022-04-29 21:41:56" itemprop="dateCreated datePublished" datetime="2022-04-29T21:41:56+08:00">2022-04-29</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">Edited on</span>
+        <time title="Modified: 2022-09-16 15:54:44" itemprop="dateModified" datetime="2022-09-16T15:54:44+08:00">2022-09-16</time>
+      </span>
 
   
     <span class="post-meta-item" title="Views" id="busuanzi_container_page_pv" style="display: none;">
@@ -307,14 +313,14 @@
 
 <span id="more"></span>
 
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a><strong>引言</strong></h1><hr>
-<h2 id="传统数据存储方式"><a href="#传统数据存储方式" class="headerlink" title="传统数据存储方式"></a><strong>传统数据存储方式</strong></h2><ul>
+<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><hr>
+<h2 id="传统数据存储方式"><a href="#传统数据存储方式" class="headerlink" title="传统数据存储方式"></a>传统数据存储方式</h2><ul>
 <li>Java程序存储数据（变量、对象、数组、集合），数据保存在内存中，属于瞬时状态存储。</li>
 <li>文件（File）存储数据，保存在硬盘上，属于持久状态存储。</li>
 </ul>
 <br/>
 
-<h2 id="传统存储方式缺点"><a href="#传统存储方式缺点" class="headerlink" title="传统存储方式缺点"></a><strong>传统存储方式缺点</strong></h2><ul>
+<h2 id="传统存储方式缺点"><a href="#传统存储方式缺点" class="headerlink" title="传统存储方式缺点"></a>传统存储方式缺点</h2><ul>
 <li>没有数据类型的区分。</li>
 <li>存储数据量极小。</li>
 <li>没有安全访问限制。</li>
@@ -322,12 +328,12 @@
 </ul>
 <br/>
 
-<h1 id="初识数据库"><a href="#初识数据库" class="headerlink" title="初识数据库"></a><strong>初识数据库</strong></h1><hr>
+<h1 id="初识数据库"><a href="#初识数据库" class="headerlink" title="初识数据库"></a>初识数据库</h1><hr>
 <hr>
-<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a><strong>概念</strong></h2><p> 数据库是按照数据接口来<strong>组织</strong>、<strong>存储和管理数据的仓库</strong>。是一个长期存储在计算机内的、有组织的、有共享的、统一管理的数据集合。</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p> 数据库是按照数据接口来<strong>组织</strong>、<strong>存储和管理数据的仓库</strong>。是一个长期存储在计算机内的、有组织的、有共享的、统一管理的数据集合。</p>
 <br/>
 
-<h2 id="数据库的分类"><a href="#数据库的分类" class="headerlink" title="数据库的分类"></a><strong>数据库的分类</strong></h2><ul>
+<h2 id="数据库的分类"><a href="#数据库的分类" class="headerlink" title="数据库的分类"></a>数据库的分类</h2><ul>
 <li>网状结构数据库：美国通用电气公司IDS（Integrated Data Store），以节点形式存储和访问。</li>
 <li>层次结构数据库：IBM公司IMS（Information Management System）定向有序的树状结构实现存储和访问。</li>
 <li>关系结构数据库：Oracle、DB2、MySQL、SQL Server，以表格（Table）存储，多表间建立关联关系，通过分类、合并、连接、选取等运算实现访问。</li>
@@ -335,10 +341,10 @@
 </ul>
 <br/>
 
-<h2 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a><strong>数据库管理系统</strong></h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a><strong>概念</strong></h3><p> <strong>数据库管理系统</strong>（DataBase Management System，DBMS）：指一种操作和管理数据库的大型软件，用于建立、使用、和维护数据库，对数据库进行统一管理和控制，以保证数据库的安全性和完整性。用户通过数据库管理系统访问数据库中的数据。</p>
+<h2 id="数据库管理系统"><a href="#数据库管理系统" class="headerlink" title="数据库管理系统"></a>数据库管理系统</h2><h3 id="概念-1"><a href="#概念-1" class="headerlink" title="概念"></a>概念</h3><p> <strong>数据库管理系统</strong>（DataBase Management System，DBMS）：指一种操作和管理数据库的大型软件，用于建立、使用、和维护数据库，对数据库进行统一管理和控制，以保证数据库的安全性和完整性。用户通过数据库管理系统访问数据库中的数据。</p>
 <br/>
 
-<h3 id="常见数据库管理系统"><a href="#常见数据库管理系统" class="headerlink" title="常见数据库管理系统"></a><strong>常见数据库管理系统</strong></h3><ul>
+<h3 id="常见数据库管理系统"><a href="#常见数据库管理系统" class="headerlink" title="常见数据库管理系统"></a>常见数据库管理系统</h3><ul>
 <li>Oracle：被认为是业界目前比较成功的关系型数据库管理系统。Oracle数据库可以运行在UNIX、Windows等主流操作平台，完全支持所有的工业标准，并获得最高级别的ISO标准安全性认证。</li>
 <li>DB2：IBM公司的产品，DB2数据库采用多进程多线索体系结构，其功能足以满足大中公司的需求，并可灵活地服务于中小型电子商务解决方案。</li>
 <li>SQL Server： Microsoft公司退出的关系型数据库管理系统。具有使用方便可伸缩性好与相关软件集成程度高等优点。</li>
@@ -346,15 +352,15 @@
 </ul>
 <br/>
 
-<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a><strong>MySQL</strong></h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a><strong>简介</strong></h3><p> MySQL是一个<strong>关系型数据库管理系统</strong>，由瑞典MySQL AB公司开发，属于Oracle旗下产品。MySQL是最流行的关系型数据库管理系统之一，在WEB应用方面，MySQL是最好RDBM（Relational Database Management System，关系型数据库管理系统）应用软件之一。</p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p> MySQL是一个<strong>关系型数据库管理系统</strong>，由瑞典MySQL AB公司开发，属于Oracle旗下产品。MySQL是最流行的关系型数据库管理系统之一，在WEB应用方面，MySQL是最好RDBM（Relational Database Management System，关系型数据库管理系统）应用软件之一。</p>
 <br/>
 
-<h3 id="访问与下载"><a href="#访问与下载" class="headerlink" title="访问与下载"></a><strong>访问与下载</strong></h3><p>官网地址： <span class="exturl" data-url="aHR0cHM6Ly93d3cubXlzcWwuY29tLw==">https://www.mysql.com/<i class="fa fa-external-link-alt"></i></span></p>
+<h3 id="访问与下载"><a href="#访问与下载" class="headerlink" title="访问与下载"></a>访问与下载</h3><p>官网地址： <span class="exturl" data-url="aHR0cHM6Ly93d3cubXlzcWwuY29tLw==">https://www.mysql.com/<i class="fa fa-external-link-alt"></i></span></p>
 <p>下载地址： <span class="exturl" data-url="aHR0cHM6Ly9kZXYubXlzcWwuY29tL2Rvd25sb2Fkcy9teXNxbC8=">https://dev.mysql.com/downloads/mysql/<i class="fa fa-external-link-alt"></i></span></p>
 <p>具体安装方式参考网上教程。</p>
 <br/>
 
-<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a><strong>卸载</strong></h3><ul>
+<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><ul>
 <li>控制台卸载。</li>
 <li>找到mysql的安装目录进行删除。</li>
 <li>programdata删除mysql。</li>
@@ -368,12 +374,12 @@
 <p>如果某个MySQL组件无法删除，可以尝试从注册表搜索信息删除相关文件夹。具体可百度。</p>
 <br/>
 
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a><strong>配置环境变量</strong></h3><ul>
+<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><ul>
 <li>追加PATH: <code>C:\Program Files\MySQL\MySQL Server 8.0</code></li>
 </ul>
 <br/>
 
-<h3 id="MySQL目录结构"><a href="#MySQL目录结构" class="headerlink" title="MySQL目录结构"></a><strong>MySQL目录结构</strong></h3><p>核心文件介绍：</p>
+<h3 id="MySQL目录结构"><a href="#MySQL目录结构" class="headerlink" title="MySQL目录结构"></a>MySQL目录结构</h3><p>核心文件介绍：</p>
 <table>
 <thead>
 <tr>
@@ -400,7 +406,7 @@
 </tbody></table>
 <br/>
 
-<h3 id="MySQL配置文件"><a href="#MySQL配置文件" class="headerlink" title="MySQL配置文件"></a><strong>MySQL配置文件</strong></h3><p>在MySQL安装目录中新建my.ini文件，并打开my.ini文件查看几个常用配置参数。</p>
+<h3 id="MySQL配置文件"><a href="#MySQL配置文件" class="headerlink" title="MySQL配置文件"></a>MySQL配置文件</h3><p>在MySQL安装目录中新建my.ini文件，并打开my.ini文件查看几个常用配置参数。</p>
 <table>
 <thead>
 <tr>
@@ -435,7 +441,7 @@
 </tbody></table>
 <br/>
 
-<h2 id="SQL语言"><a href="#SQL语言" class="headerlink" title="SQL语言"></a><strong>SQL语言</strong></h2><h3 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a><strong>概念</strong></h3><p> SQL（Structured Query Language）结构化查询语言，用于存储数据、更新、查询和管理关系数据库系统的程序设计语言。</p>
+<h2 id="SQL语言"><a href="#SQL语言" class="headerlink" title="SQL语言"></a>SQL语言</h2><h3 id="概念-2"><a href="#概念-2" class="headerlink" title="概念"></a>概念</h3><p> SQL（Structured Query Language）结构化查询语言，用于存储数据、更新、查询和管理关系数据库系统的程序设计语言。</p>
 <ul>
 <li><strong>经验</strong>：通常执行对数据库的“增删改查”，简称<strong>C</strong>（Create）<strong>R</strong>（Read）<strong>U</strong>（Update）<strong>D</strong>（Delete）。</li>
 </ul>
@@ -443,7 +449,7 @@
 
 
 
-<h3 id="SQL语言分类"><a href="#SQL语言分类" class="headerlink" title="SQL语言分类"></a><strong>SQL语言分类</strong></h3><ol>
+<h3 id="SQL语言分类"><a href="#SQL语言分类" class="headerlink" title="SQL语言分类"></a>SQL语言分类</h3><ol>
 <li><strong>数据查询语言</strong>DQL（Data Query Language）：SELECT、WHERE、ORDER BY、GROUP BY、HAVING；</li>
 <li><strong>数据定义语言</strong>DDL（Data Definition Language）：CREATE、ALTER、DROP；</li>
 <li><strong>数据操作语言</strong>DML（Data Manipulation Language）：INSERT、UNPATE、DELETE；</li>
@@ -452,10 +458,10 @@
 </ol>
 <br/>
 
-<h3 id="MySQL应用"><a href="#MySQL应用" class="headerlink" title="MySQL应用"></a><strong>MySQL应用</strong></h3><p>对于数据库操作，需要在<strong>进入MySQL环境下</strong>进行指令输入，并在一句指令的末尾<strong>使用 ;</strong> 结束。</p>
+<h3 id="MySQL应用"><a href="#MySQL应用" class="headerlink" title="MySQL应用"></a>MySQL应用</h3><p>对于数据库操作，需要在<strong>进入MySQL环境下</strong>进行指令输入，并在一句指令的末尾<strong>使用 ;</strong> 结束。</p>
 <br/>
 
-<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a><strong>基本命令</strong></h3><ul>
+<h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ul>
 <li><p><strong>登录数据库系统</strong>：<code>mysql -u root -p password</code></p>
 <p>root和password分别写自己设置的用户名和密码，用户名默认是root。该方式登录数据库系统会有一个warning提示你正在明文登录。</p>
 <p><strong>你可以分别填写用户名和密码</strong>：<code>mysql -u root -p</code></p>
@@ -487,18 +493,18 @@
 </ul>
 <br/>
 
-<h2 id="客户端工具"><a href="#客户端工具" class="headerlink" title="客户端工具"></a><strong>客户端工具</strong></h2><hr>
+<h2 id="客户端工具"><a href="#客户端工具" class="headerlink" title="客户端工具"></a>客户端工具</h2><hr>
 <p>在使用命令行对数据库进行操作时，你会发现有很多弊端或者说麻烦的地方。比如命令行不能对自己的语法提前进行校验，需要在回车之后看到结果；输入的时候没有语法提示，编写速度慢等。如同JAVA编写所使用的IDE，MySQL也有相应的数据库管理工具，提供了便利的可视化操作。</p>
 <br/>
 
-<h3 id="Navicat"><a href="#Navicat" class="headerlink" title="Navicat"></a><strong>Navicat</strong></h3><p><strong>Navicat是一套快速</strong>、<strong>可靠并价格相宜的数据库管理工具</strong>，<strong>专为简化数据库的管理及降低系统管理成本而设</strong>。它的设计符合数据库管理员、开发人员及中小企业的需要。Navicat是以直觉化的图形用户界面而建的，让你可以安全并且以简单的方式创建、组织、访问和共用信息。</p>
+<h3 id="Navicat"><a href="#Navicat" class="headerlink" title="Navicat"></a>Navicat</h3><p><strong>Navicat是一套快速</strong>、<strong>可靠并价格相宜的数据库管理工具</strong>，<strong>专为简化数据库的管理及降低系统管理成本而设</strong>。它的设计符合数据库管理员、开发人员及中小企业的需要。Navicat是以直觉化的图形用户界面而建的，让你可以安全并且以简单的方式创建、组织、访问和共用信息。</p>
 <br/>
 
-<h3 id="SQLyog"><a href="#SQLyog" class="headerlink" title="SQLyog"></a><strong>SQLyog</strong></h3><p>MySQL可能是世界上最流行的开源数据库引擎，但是使用基于文本的工具和配置文件可能很难进行管理。SQLyog提供了完整的图形界面，即使初学者也可以轻松使用MySQL的强大功能。其拥有广泛的预定义工具和查询、友好的视觉界面、类似Excel的查询界面编辑界面等优点。</p>
+<h3 id="SQLyog"><a href="#SQLyog" class="headerlink" title="SQLyog"></a>SQLyog</h3><p>MySQL可能是世界上最流行的开源数据库引擎，但是使用基于文本的工具和配置文件可能很难进行管理。SQLyog提供了完整的图形界面，即使初学者也可以轻松使用MySQL的强大功能。其拥有广泛的预定义工具和查询、友好的视觉界面、类似Excel的查询界面编辑界面等优点。</p>
 <br/>
 
-<h1 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a><strong>操作数据库</strong></h1><hr>
-<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a><strong>数据类型</strong></h2><h3 id="数值"><a href="#数值" class="headerlink" title="数值"></a><strong>数值</strong></h3><ul>
+<h1 id="操作数据库"><a href="#操作数据库" class="headerlink" title="操作数据库"></a>操作数据库</h1><hr>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="数值"><a href="#数值" class="headerlink" title="数值"></a>数值</h3><ul>
 <li>tinyint : 1个字节</li>
 <li>smallint : 2个字节</li>
 <li>mediumint : 3个字节</li>
@@ -510,7 +516,7 @@
 </ul>
 <br/>
 
-<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a><strong>字符串</strong></h3><ul>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><ul>
 <li>char : 字符串固定大小0 ~ 255</li>
 <li><strong>varchar : 可变字符串 0 ~ 65535</strong></li>
 <li>tinytext</li>
@@ -518,7 +524,7 @@
 </ul>
 <br/>
 
-<h3 id="时间与日期"><a href="#时间与日期" class="headerlink" title="时间与日期"></a><strong>时间与日期</strong></h3><ul>
+<h3 id="时间与日期"><a href="#时间与日期" class="headerlink" title="时间与日期"></a>时间与日期</h3><ul>
 <li>date : yyyy-MM-dd</li>
 <li>time : HH:mm:ss</li>
 <li><strong>datetime : yyyy-MM-dd HH:mm:ss</strong></li>
@@ -527,31 +533,31 @@
 </ul>
 <br/>
 
-<h3 id="空值"><a href="#空值" class="headerlink" title="空值"></a><strong>空值</strong></h3><ul>
+<h3 id="空值"><a href="#空值" class="headerlink" title="空值"></a>空值</h3><ul>
 <li>NULL</li>
 </ul>
 <br/>
 
-<h2 id="数据库字段属性"><a href="#数据库字段属性" class="headerlink" title="数据库字段属性"></a><strong>数据库字段属性</strong></h2><h3 id="Unsigned"><a href="#Unsigned" class="headerlink" title="Unsigned"></a><strong>Unsigned</strong></h3><p>无符号整数，声明了改列不能为负数。</p>
+<h2 id="数据库字段属性"><a href="#数据库字段属性" class="headerlink" title="数据库字段属性"></a>数据库字段属性</h2><h3 id="Unsigned"><a href="#Unsigned" class="headerlink" title="Unsigned"></a>Unsigned</h3><p>无符号整数，声明了改列不能为负数。</p>
 <br/>
 
-<h3 id="ZeroFill"><a href="#ZeroFill" class="headerlink" title="ZeroFill"></a><strong>ZeroFill</strong></h3><p>以0填充。不足的位置用0来填充。</p>
+<h3 id="ZeroFill"><a href="#ZeroFill" class="headerlink" title="ZeroFill"></a>ZeroFill</h3><p>以0填充。不足的位置用0来填充。</p>
 <br/>
 
-<h3 id="Auto-Increment"><a href="#Auto-Increment" class="headerlink" title="Auto_Increment"></a><strong>Auto_Increment</strong></h3><p>自增。自动在上一条记录的基础上+1（默认）。通常用来设计唯一的主键，必须是整数类型。可以自定义主键的自增的初始值和步长。</p>
+<h3 id="Auto-Increment"><a href="#Auto-Increment" class="headerlink" title="Auto_Increment"></a>Auto_Increment</h3><p>自增。自动在上一条记录的基础上+1（默认）。通常用来设计唯一的主键，必须是整数类型。可以自定义主键的自增的初始值和步长。</p>
 <br/>
 
-<h3 id="Not-NUll"><a href="#Not-NUll" class="headerlink" title="Not NUll"></a><strong>Not NUll</strong></h3><p>设置属性非空。若在NOT NULL属性中不填值则会报错。未选择NOT NULL时则默认为null。</p>
+<h3 id="Not-NUll"><a href="#Not-NUll" class="headerlink" title="Not NUll"></a>Not NUll</h3><p>设置属性非空。若在NOT NULL属性中不填值则会报错。未选择NOT NULL时则默认为null。</p>
 <br/>
 
-<h3 id="Default"><a href="#Default" class="headerlink" title="Default"></a><strong>Default</strong></h3><p>设置列默认的值。若在添加数据时没有为设置了默认值的列添加数据，则该列值为设置的默认值。</p>
+<h3 id="Default"><a href="#Default" class="headerlink" title="Default"></a>Default</h3><p>设置列默认的值。若在添加数据时没有为设置了默认值的列添加数据，则该列值为设置的默认值。</p>
 <br/>
 
-<h3 id="Alibaba规范"><a href="#Alibaba规范" class="headerlink" title="Alibaba规范"></a><strong>Alibaba规范</strong></h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">每个表都必须存在以下五个字段(做项目时，表示一个记录存在的意义)</span><br><span class="line">id          主键</span><br><span class="line">version     乐观锁</span><br><span class="line">is_delete   伪删除</span><br><span class="line">gmt_create  创建时间</span><br><span class="line">gmt_update  修改时间</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
+<h3 id="Alibaba规范"><a href="#Alibaba规范" class="headerlink" title="Alibaba规范"></a>Alibaba规范</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">/*</span><br><span class="line">每个表都必须存在以下五个字段(做项目时，表示一个记录存在的意义)</span><br><span class="line">id          主键</span><br><span class="line">version     乐观锁</span><br><span class="line">is_delete   伪删除</span><br><span class="line">gmt_create  创建时间</span><br><span class="line">gmt_update  修改时间</span><br><span class="line">*/</span><br></pre></td></tr></table></figure>
 
 <br/>
 
-<h2 id="操作数据库-1"><a href="#操作数据库-1" class="headerlink" title="操作数据库"></a><strong>操作数据库</strong></h2><blockquote>
+<h2 id="操作数据库-1"><a href="#操作数据库-1" class="headerlink" title="操作数据库"></a>操作数据库</h2><blockquote>
 <p>[ ]中的表示可选</p>
 </blockquote>
 <ul>
@@ -571,7 +577,7 @@
 </ul>
 <br/>
 
-<h2 id="数据库引擎"><a href="#数据库引擎" class="headerlink" title="数据库引擎"></a><strong>数据库引擎</strong></h2><ul>
+<h2 id="数据库引擎"><a href="#数据库引擎" class="headerlink" title="数据库引擎"></a>数据库引擎</h2><ul>
 <li>INNODB ： 默认使用</li>
 <li>MYISAM ： 早期使用</li>
 </ul>
@@ -617,8 +623,8 @@
 <p>设置数据库表的字符集编码: <code>CHARSET=utf8</code>。如果不设置，会是mysql默认的字符集编码Latin1（不支持中文）。可以在my.ini中配置默认的编码：<code>character-set-server=utf8</code>。</p>
 <br/>
 
-<h1 id="操作数据表DDL"><a href="#操作数据表DDL" class="headerlink" title="操作数据表DDL"></a><strong>操作数据表DDL</strong></h1><hr>
-<h2 id="创建表（CREATE）"><a href="#创建表（CREATE）" class="headerlink" title="创建表（CREATE）"></a><strong>创建表（CREATE）</strong></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">-- 目标：创建一个school数据库</span><br><span class="line">-- 创建student学生表，使用sql创建</span><br><span class="line">-- 学号 姓名 性别 出生日期 家庭地址  email</span><br><span class="line"></span><br><span class="line">-- 注意:</span><br><span class="line">-- 符号均为英文, 表名和字段名尽量用反引号``括起来</span><br><span class="line">-- 字符串使用单引号&#x27;&#x27;括起来</span><br><span class="line">-- 除最后一句外, 其他语句均要在最后加逗号</span><br><span class="line">-- 通常一个表只有一个PRIMARY KEY 主键</span><br><span class="line">CREATE TABLE IF NOT EXISTS `student` (</span><br><span class="line">	`id` int(4) NOT NULL COMMENT &#x27;学号&#x27; AUTO_INCREMENT,</span><br><span class="line">	`name` VARCHAR(30) NOT NULL DEFAULT &#x27;匿名&#x27; COMMENT &#x27;姓名&#x27;,</span><br><span class="line">	`gender` VARCHAR(2) NOT NULL DEFAULT &#x27;男&#x27; COMMENT &#x27;性别&#x27;,</span><br><span class="line">	`birthday` DATETIME DEFAULT NULL COMMENT &#x27;出生日期&#x27;,</span><br><span class="line">	`address` VARCHAR(100) DEFAULT NULL COMMENT&#x27; 家庭地址&#x27;,</span><br><span class="line">	`email` VARCHAR(30) DEFAULT NULL COMMENT &#x27;邮箱&#x27;,</span><br><span class="line">	PRIMARY KEY (`id`)</span><br><span class="line">)ENGINE=INNODB DEFAULT CHARSET=utf8</span><br></pre></td></tr></table></figure>
+<h1 id="操作数据表DDL"><a href="#操作数据表DDL" class="headerlink" title="操作数据表DDL"></a>操作数据表DDL</h1><hr>
+<h2 id="创建表（CREATE）"><a href="#创建表（CREATE）" class="headerlink" title="创建表（CREATE）"></a>创建表（CREATE）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">-- 目标：创建一个school数据库</span><br><span class="line">-- 创建student学生表，使用sql创建</span><br><span class="line">-- 学号 姓名 性别 出生日期 家庭地址  email</span><br><span class="line"></span><br><span class="line">-- 注意:</span><br><span class="line">-- 符号均为英文, 表名和字段名尽量用反引号``括起来</span><br><span class="line">-- 字符串使用单引号&#x27;&#x27;括起来</span><br><span class="line">-- 除最后一句外, 其他语句均要在最后加逗号</span><br><span class="line">-- 通常一个表只有一个PRIMARY KEY 主键</span><br><span class="line">CREATE TABLE IF NOT EXISTS `student` (</span><br><span class="line">	`id` int(4) NOT NULL COMMENT &#x27;学号&#x27; AUTO_INCREMENT,</span><br><span class="line">	`name` VARCHAR(30) NOT NULL DEFAULT &#x27;匿名&#x27; COMMENT &#x27;姓名&#x27;,</span><br><span class="line">	`gender` VARCHAR(2) NOT NULL DEFAULT &#x27;男&#x27; COMMENT &#x27;性别&#x27;,</span><br><span class="line">	`birthday` DATETIME DEFAULT NULL COMMENT &#x27;出生日期&#x27;,</span><br><span class="line">	`address` VARCHAR(100) DEFAULT NULL COMMENT&#x27; 家庭地址&#x27;,</span><br><span class="line">	`email` VARCHAR(30) DEFAULT NULL COMMENT &#x27;邮箱&#x27;,</span><br><span class="line">	PRIMARY KEY (`id`)</span><br><span class="line">)ENGINE=INNODB DEFAULT CHARSET=utf8</span><br></pre></td></tr></table></figure>
 
 <p>格式：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> [IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span>] `表名` (</span><br><span class="line">    `字段名` 列类型[属性]  [索引]  [注释],</span><br><span class="line">    `字段名` 列类型[属性]  [索引]  [注释],</span><br><span class="line">    ...</span><br><span class="line">    `字段名` 列类型[属性]  [索引]  [注释]</span><br><span class="line">)[表类型][字符集设置][注释]</span><br></pre></td></tr></table></figure>
