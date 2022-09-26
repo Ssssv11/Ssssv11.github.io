@@ -68,7 +68,7 @@
 <meta property="og:image" content="https://s1.ax1x.com/2022/03/13/bq6b28.png">
 <meta property="og:image" content="https://s1.ax1x.com/2022/03/13/bqWbnO.jpg">
 <meta property="article:published_time" content="2022-04-29T13:39:43.365Z">
-<meta property="article:modified_time" content="2022-09-24T06:41:47.010Z">
+<meta property="article:modified_time" content="2022-09-25T12:06:24.200Z">
 <meta property="article:author" content="Ssssv11">
 <meta property="article:tag" content="Java JVM">
 <meta name="twitter:card" content="summary">
@@ -323,7 +323,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">Edited on</span>
-        <time title="Modified: 2022-09-24 14:41:47" itemprop="dateModified" datetime="2022-09-24T14:41:47+08:00">2022-09-24</time>
+        <time title="Modified: 2022-09-25 20:06:24" itemprop="dateModified" datetime="2022-09-25T20:06:24+08:00">2022-09-25</time>
       </span>
 
   
@@ -547,7 +547,7 @@
 <li>当使用JDK1.7中的动态语言支持时，如果一个<code>java.lang.invoke.MethidHandle</code>实例最后的解析结果为<code>REF_getStatic</code>,<code>REF_putStatic</code>,<code>REF_invokeStatic</code>,<code>REF_newInvokeSpecial</code>四种类型的方法句柄，并且这个句柄对应的类没有被初始化。</li>
 <li>当一个接口实现了JDK1.8中的默认方法的时候，如果这个接口的实现类被初始化，则该接口要在其之前进行实例化。</li>
 </ol>
-<p>对于以上6中触发类的初始化条件，在JVM规范中有一个很强制的词，<code>if and only if</code> （有且只有）。这六种行为被称为<strong>对类进行主动引用</strong>，除此之外，其他引用类的方式均不会触发类的初始化。</p>
+<p>对于以上6种触发类的初始化条件，在JVM规范中有一个很强制的词，<code>if and only if</code> （有且只有）。这六种行为被称为<strong>对类进行主动引用</strong>，除此之外，其他引用类的方式均不会触发类的初始化。</p>
 <p>除此之外，所有引用类的方式都不会触发初始化，称为被动引用，例如：</p>
 <ol>
 <li>通过子类引用父类的静态字段，不会导致子类初始化。</li>
